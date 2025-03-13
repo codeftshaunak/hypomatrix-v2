@@ -1,5 +1,12 @@
 # HypoMatrix v2
 
+## Technologies
+
+- Next JS
+- Typescript
+- TailwindCSS
+- ShadCn
+
 ## Folder Structure
 
 ```
