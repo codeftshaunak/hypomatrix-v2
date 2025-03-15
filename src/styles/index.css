@@ -48,19 +48,19 @@
   --font-body: var(--font-body);
 
   /* Typography */
-  --heading-1: 80px;
-  --heading-2: 50px;
-  --heading-2--line-height: 60;
-  --heading-3: 27px;
-  --heading-4: 24px;
-  --heading-5: 20px;
-  --heading-6: 16px;
-  --heading-6--line-height: 27;
-  --heading-6--letter-spacing: 3%;
+  --text-heading-1: 80px;
+  --text-heading-2: 50px;
+  --text-heading-2--line-height: 60;
+  --text-heading-3: 27px;
+  --text-heading-4: 24px;
+  --text-heading-5: 20px;
+  --text-heading-6: 16px;
+  --text-heading-6--line-height: 27;
+  --text-heading-6--letter-spacing: 3%;
 
-  --body: 16px;
-  --body--line-height: 27;
-  --body--letter-spacing: 3%;
+  --text-body: 16px;
+  --text-body--line-height: 27;
+  --text-body--letter-spacing: 3%;
 }
 
 :root {
@@ -139,6 +139,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-background text-foreground font-body text-body;
   }
 }
