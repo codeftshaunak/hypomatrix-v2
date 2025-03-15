@@ -20,42 +20,49 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-black text-white px-6 md:px-10 py-3 flex justify-between items-center relative">
-      {/* Logo */}
-      <div className="flex items-center">
-        <span className="text-lg font-bold flex items-center">
-          <span className="bg-white text-black px-2 py-1 rounded">A</span>genko
-        </span>
-      </div>
+    <nav className="text-white px-6 py-3 flex justify-between items-center relative pt-8 z-50">
+      <div className="flex gap-10">
+        {/* Logo */}
+        <div className="flex items-center border border-gray-500 bg-transparent rounded-full px-2 py-1">
+          <span className="text-xl font-bold flex items-center">
+            <span className="text-white px-6 py-2 bg-gray-900 rounded-full p-2">
+              HypoMatrix
+            </span>
+          </span>
+        </div>
 
-      {/* Desktop Menu */}
-      <div className="hidden md:flex space-x-6 items-center">
-        {["Home", "Pages", "Portfolio", "Blogs", "Contact"].map((item) => (
-          <div key={item} className="relative dropdown-container">
-            <button
-              className="flex items-center space-x-1 hover:text-lime-400 transition"
-              onClick={(e) => {
-                e.stopPropagation();
-                setDropdownOpen(dropdownOpen === item ? null : item);
-              }}
-            >
-              <span>{item}</span>
-              {(item === "Pages" || item === "Portfolio") && (
-                <ChevronDown size={16} />
-              )}
-            </button>
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-10  items-center border border-gray-600 bg-black rounded-full px-6 py-2 font-semibold">
+          {["Home", "Pages", "Portfolio", "Blogs", "Contact"].map((item) => (
+            <div key={item} className="relative dropdown-container">
+              <button
+                className="flex items-center space-x-1 hover:text-lime-400 transition"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setDropdownOpen(dropdownOpen === item ? null : item);
+                }}
+              >
+                <span>{item}</span>
+                {(item === "Pages" || item === "Portfolio") && (
+                  <ChevronDown size={16} />
+                )}
+              </button>
 
-            {/* Dropdown */}
-            {(item === "Pages" || item === "Portfolio") &&
-              dropdownOpen === item && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  className="absolute left-0 mt-2 w-40 bg-white text-black shadow-lg rounded-md py-2"
-                >
-                  {["Sub-item 1", "Sub-item 2", "Sub-item 3", "Sub-item 4"].map(
-                    (subItem, index) => (
+              {/* Dropdown */}
+              {(item === "Pages" || item === "Portfolio") &&
+                dropdownOpen === item && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="absolute left-0 mt-2 w-40 bg-white text-black shadow-lg rounded-md py-2"
+                  >
+                    {[
+                      "Sub-item 1",
+                      "Sub-item 2",
+                      "Sub-item 3",
+                      "Sub-item 4",
+                    ].map((subItem, index) => (
                       <a
                         key={index}
                         href="#"
@@ -63,17 +70,17 @@ export default function Navbar() {
                       >
                         {subItem}
                       </a>
-                    )
-                  )}
-                </motion.div>
-              )}
-          </div>
-        ))}
+                    ))}
+                  </motion.div>
+                )}
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Right Side (CTA + Mobile Menu) */}
       <div className="flex items-center space-x-4">
-        <button className="bg-[#9CFE4F] text-black px-4 py-2 rounded-full text-sm font-bold">
+        <button className="bg-[#9CFE4F] text-black px-6 py-4 rounded-full text-sm font-bold">
           LET'S TALK
         </button>
 
