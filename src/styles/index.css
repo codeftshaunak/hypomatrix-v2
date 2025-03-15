@@ -43,6 +43,22 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* Typography */
+
+  --heading-1: 80px;
+  --heading-2: 50px;
+  --heading-2--line-height: 60;
+  --heading-3: 27px;
+  --heading-4: 24px;
+  --heading-5: 20px;
+  --heading-6: 16px;
+  --heading-6--line-height: 27;
+  --heading-6--letter-spacing: 3%;
+
+  --body: 16px;
+  --body--line-height: 27;
+  --body--letter-spacing: 3%;
 }
 
 :root {
