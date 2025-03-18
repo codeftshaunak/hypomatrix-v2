@@ -55,16 +55,16 @@
   /* Typography */
   --text-heading-1: 80px;
   --text-heading-2: 50px;
-  --text-heading-2--line-height: 60;
+  --text-heading-2--line-height: 60px;
   --text-heading-3: 27px;
   --text-heading-4: 24px;
   --text-heading-5: 20px;
   --text-heading-6: 16px;
-  --text-heading-6--line-height: 27;
+  --text-heading-6--line-height: 27px;
   --text-heading-6--letter-spacing: 3%;
 
   --text-body: 16px;
-  --text-body--line-height: 27;
+  --text-body--line-height: 27px;
   --text-body--letter-spacing: 3%;
 }
 

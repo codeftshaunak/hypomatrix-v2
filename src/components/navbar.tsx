@@ -43,19 +43,23 @@ export default function Navbar() {
                 }}
               >
                 <span>{item}</span>
-                {(item === "Pages" || item === "Portfolio") && (
-                  <ChevronDown size={16} />
-                )}
+                {(item === "Pages" ||
+                  item === "Portfolio" ||
+                  item === "Home" ||
+                  item === "Blogs") && <ChevronDown size={16} />}
               </button>
 
               {/* Dropdown */}
-              {(item === "Pages" || item === "Portfolio") &&
+              {(item === "Pages" ||
+                item === "Portfolio" ||
+                item === "Home" ||
+                item === "Blogs") &&
                 dropdownOpen === item && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="absolute left-0 mt-2 w-40 bg-white text-black shadow-lg rounded-md py-2"
+                    className="absolute left-0 mt-2 w-40 bg-black text-white shadow-lg rounded-md py-2"
                   >
                     {[
                       "Sub-item 1",
