@@ -28,7 +28,7 @@ const articles = [
 
 export default function LatestArticles() {
   return (
-    <section className="py-16 px-6 lg:px-20 bg-black text-white">
+    <section className="py-16 px-6 bg-black text-white">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <Header
