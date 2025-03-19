@@ -1,4 +1,6 @@
+import { AwardsSection } from "@/components/awards";
 import Hero from "@/components/hero";
+import LatestArticles from "@/components/latest-article";
 import { ProjectsSection } from "@/components/project";
 import Services from "@/components/service";
 import { TeamSection } from "@/components/team";
@@ -18,6 +20,8 @@ const HomeView = (props: Props) => {
       <TrustedCompanySection />
       <TeamSection />
       <TestimonialsSection />
+      <AwardsSection />
+      <LatestArticles />
     </div>
   );
 };

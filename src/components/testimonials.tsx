@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import img1 from "../assets/testimonial1.png";
+import img1 from "../assets/testimonial.jpg";
+import Image from "next/image";
 export function TestimonialsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -62,15 +63,14 @@ export function TestimonialsSection() {
       <div className="container mx-auto px-6 lg:px-8 ">
         <div className="relative">
           <div className="flex items-center justify-center gap-12 md:gap-20">
-            <div className="hidden md:block w-[410px] aspect-square bg-gray-700/30 rounded-lg flex-shrink-0 flex items-center justify-center"></div>
+            <div className="hidden md:block w-[410px] aspect-square bg-gray-700/30 rounded-lg flex-shrink-0 flex items-center justify-center">
+              <Image src={img1} alt="Image not found" />
+            </div>
 
-            <div className="flex-1">
+            <div className="flex-1 cursor-pointer">
               <div className="flex mb-4">
                 {[...Array(testimonials[currentSlide].rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 fill-primary text-neon-green"
-                  />
+                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
                 ))}
               </div>
 
@@ -89,16 +89,26 @@ export function TestimonialsSection() {
               <div className="flex gap-3 mt-8">
                 <button
                   onClick={prevSlide}
-                  className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-neon-green transition-colors cursor-pointer"
+                  className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary transition-colors cursor-pointer"
                 >
                   <ChevronLeft className="w-5 h-5" />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-neon-green transition-colors cursor-pointer"
+                  className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary transition-colors cursor-pointer"
                 >
                   <ChevronRight className="w-5 h-5" />
                 </button>
+              </div>
+              <div className="absolute bottom-0 left-0 px-4 md:left-[410px] h-1 bg-white/10 w-full md:w-[calc(100%-410px-5rem)]">
+                <div
+                  className="h-full bg-primary transition-all duration-500 ease-in-out"
+                  style={{
+                    width: `${
+                      ((currentSlide + 1) / testimonials.length) * 100
+                    }%`,
+                  }}
+                ></div>
               </div>
             </div>
           </div>
