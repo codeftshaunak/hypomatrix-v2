@@ -2,7 +2,7 @@
 
 import { MousePointer, Lightbulb, Code, Rocket } from "lucide-react";
 import React from "react";
-import Header from "./common/Header";
+import SectionHeader from "../../components/common/section-header";
 
 type Step = {
   id: string;
@@ -50,7 +50,7 @@ export function ProcessSection() {
 
   return (
     <section className="px-4 md:px-8 lg:px-16 py-16">
-      <Header
+      <SectionHeader
         item="Working Proses"
         title="The Process Behind the Magic Step by Step"
         className="mb-[100px] w-[700px]"

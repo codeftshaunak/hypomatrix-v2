@@ -1,9 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, Plus } from "lucide-react";
-import Header from "./common/Header";
 import img from "@/assets/blog1.jpg";
 import Image from "next/image";
+import SectionHeader from "../../components/common/section-header";
 
 const articles = [
   {
@@ -31,7 +31,7 @@ export default function LatestArticles() {
     <section className="py-16 px-6 bg-black text-white">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <Header
+          <SectionHeader
             item="Latest Articles"
             title="Stay Updated with Our Recent Articles"
             className="w-[700px] mb-6"

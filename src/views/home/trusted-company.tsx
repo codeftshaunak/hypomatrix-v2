@@ -1,5 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
-
 export default function TrustedCompanySection() {
   return (
     <section className="bg-black text-white py-16 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between">

@@ -1,8 +1,7 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import img1 from "../assets/testimonial.jpg";
+import img1 from "@/assets/testimonial.jpg";
 import Image from "next/image";
 export function TestimonialsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -75,7 +74,7 @@ export function TestimonialsSection() {
               </div>
 
               <blockquote className="text-lg md:text-xl mb-8">
-                "{testimonials[currentSlide].quote}"
+                {testimonials[currentSlide].quote}
               </blockquote>
 
               <div>
