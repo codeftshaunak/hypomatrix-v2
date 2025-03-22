@@ -3,12 +3,11 @@
 import { useEffect, useState } from "react";
 import { NeonButton } from "./ui/neon-button";
 import { Plus } from "lucide-react";
+import Header from "./common/Header";
 
 export function ProjectsSection() {
-  const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
 
-  // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (!(event.target as HTMLElement).closest(".dropdown-container")) {
@@ -68,15 +67,11 @@ export function ProjectsSection() {
     <section id="projects" className="py-20">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between mb-16">
-          <div>
-            <h3 className="text-sm tracking-wide text-white flex items-center gap-3">
-              Complete Work
-              <span className="h-px w-16 bg-white"></span>
-            </h3>
-            <h2 className="text-6xl text-white font-bold mt-2">
-              Creative Projects We've <br /> Delivered To Client
-            </h2>
-          </div>
+          <Header
+            item="Complete Work"
+            title="Creative Projects We've Delivered To Client"
+            className="w-[700px]"
+          />
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-10  items-center border border-gray-600 bg-black rounded-full px-6 py-2 font-semibold mt-10">
             {["All Item", "Website", "Mobile App", "SAAS"].map((item) => (

@@ -11,8 +11,9 @@ import {
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden"; // Import VisuallyHidden if needed
 
 export default function VideoPlaceholder() {
-  const videoUrl = "https://www.youtube.com/embed/X8I8lYEh2ak?autoplay=1"; // Added autoplay
-  const thumbnailUrl = "https://img.youtube.com/vi/X8I8lYEh2ak/0.jpg";
+  const videoId = "F31nAJR-IiI";
+  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+  const videoUrl = `https://www.youtube.com/embed/${videoId}`;
 
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
@@ -22,7 +23,6 @@ export default function VideoPlaceholder() {
 
   return (
     <div className="mt-12 w-full relative">
-      {/* <div className="absolute -top-20 inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(34,197,94,1)_0%,_transparent_50%)]"></div> */}
       <div className="bg-gray-300 w-full h-[250px] md:h-[500px] flex items-center justify-center rounded-lg relative">
         {!isVideoPlaying ? (
           <img
