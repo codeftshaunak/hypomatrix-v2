@@ -1,7 +1,6 @@
 "use client";
 
 import VideoPlaceholder from "@/components/video-modal";
-// import { Play, X } from "lucide-react";
 
 export default function Hero() {
   return (

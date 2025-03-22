@@ -1,14 +1,13 @@
-import CommonCard from "@/components/common/common-card";
-import React from "react";
-import WhyChooseUs from "./why-choose-us";
-import OurServices from "./top-service";
 import OurClient from "@/components/common/our-client";
+import PageHeader from "@/components/common/page-header";
 import LatestBlogs from "./latest-blog";
+import OurServices from "./top-service";
+import WhyChooseUs from "./why-choose-us";
 
 const ServiceView = () => {
   return (
     <div>
-      <CommonCard title="Our Services" text="Services" link="service" />
+      <PageHeader title="Our Services" text="Services" link="service" />
       <WhyChooseUs />
       <OurServices />
       <OurClient />

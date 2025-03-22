@@ -1,13 +1,12 @@
-import CommonCard from "@/components/common/common-card";
-import React from "react";
+import OurClient from "@/components/common/our-client";
+import PageHeader from "@/components/common/page-header";
 import ClientSuccessSection from "./client-success";
 import StepsSection from "./steps";
-import OurClient from "@/components/common/our-client";
 
 const ServiceDetailsView = () => {
   return (
     <div>
-      <CommonCard
+      <PageHeader
         title="Services Details"
         text="Services Details"
         link="service-details"
