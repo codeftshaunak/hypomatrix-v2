@@ -150,10 +150,11 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
+import { ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { Button } from "./ui/button";
 
 const menuItems = ["Home", "Pages", "Portfolio", "Blogs", "Contact"];
 const dropdownItems = ["Pages", "Portfolio", "Home", "Blogs"];
@@ -207,7 +208,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="text-white px-6 py-3 flex justify-between items-center relative pt-8 z-50">
+    <nav className="container flex justify-between items-center relative mt-8 z-50">
       <div className="flex gap-10">
         {/* Logo */}
         <div className="flex items-center border border-gray-500 bg-transparent rounded-full px-2 py-1">
@@ -259,9 +260,7 @@ export default function Navbar() {
 
       {/* Right Side */}
       <div className="flex items-center space-x-4">
-        <button className="bg-[#9CFE4F] text-black px-6 py-4 rounded-full text-sm font-bold">
-          LET`&apos;`S TALK
-        </button>
+        <Button size={"lg"}>LETS TALK</Button>
         <button
           className="md:hidden"
           onClick={() => setIsOpen(!isOpen)}

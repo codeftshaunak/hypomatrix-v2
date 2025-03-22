@@ -23,10 +23,8 @@ const RootLayout = (props: Props) => {
       <body
         className={cn(headingFont.variable, bodyFont.variable, "antialiased")}
       >
-        <div className="md:px-40 bg-black">
-          <Navbar />
-          {children}
-        </div>
+        <Navbar />
+        {children}
         <Footer />
       </body>
     </html>

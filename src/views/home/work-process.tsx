@@ -1,6 +1,6 @@
 "use client";
 
-import { MousePointer, Lightbulb, Code, Rocket } from "lucide-react";
+import { Code, Lightbulb, MousePointer, Rocket } from "lucide-react";
 import React from "react";
 import SectionHeader from "../../components/common/section-header";
 
@@ -49,7 +49,7 @@ export function ProcessSection() {
   ];
 
   return (
-    <section className="px-4 md:px-8 lg:px-16 py-16">
+    <section className="container">
       <SectionHeader
         item="Working Proses"
         title="The Process Behind the Magic Step by Step"
