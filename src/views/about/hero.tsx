@@ -1,9 +1,9 @@
-import Image from "next/image";
 import img from "@/assets/about1.jpg";
+import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="bg-black text-white mb-20">
+    <section className="container py-[130px]">
       <div className="flex justify-between gap-12 items-center">
         <div className="w-[600px]">
           <span className="border-lime-500 border text-white px-3 py-1 rounded-full text-sm font-semibold">

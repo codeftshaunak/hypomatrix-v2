@@ -1,12 +1,12 @@
 export default function TrustedCompanySection() {
   return (
-    <section className="bg-black text-white py-16 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between">
+    <section className="container text-white py-16 flex flex-col md:flex-row items-center justify-between">
       {/* Left Side Content */}
       <div className="max-w-lg text-center md:text-left">
         <p className="text-sm text-white flex items-center gap-2">
           Company <span className="h-[1px] w-12 bg-gray-400"></span>
         </p>
-        <h2 className="text-4xl font-bold mt-2">Trusted Our Company</h2>
+        <h2 className="text-heading-2 font-bold mt-2">Trusted Our Company</h2>
         <p className="mt-4 text-gray-300 font-semibold"></p>
         <p className="text-gray-400">
           <span className="text-white font-semibold">

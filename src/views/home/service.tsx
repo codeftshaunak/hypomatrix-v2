@@ -1,7 +1,7 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { Code, Paintbrush, Camera } from "lucide-react";
+import { Camera, Code, Paintbrush } from "lucide-react";
 
 interface ServiceCardProps {
   icon: React.ReactNode;
@@ -36,19 +36,19 @@ function ServiceCard({
 
 export default function Services() {
   return (
-    <section className="bg-black text-white">
+    <section className="container">
       <div className="flex items-center justify-between">
         <div>
-          <h3 className="text-sm tracking-wide text-white flex items-center gap-3">
+          <h3 className="text-sm tracking-wide flex items-center gap-3">
             Our Service
-            <span className="h-px w-16 bg-white"></span>
+            <span className="h-px w-16 bg-foreground"></span>
           </h3>
           <h2 className="text-6xl font-bold mt-2">
             Innovative Services That <br /> Elevate Your Brand
           </h2>
         </div>
-        <p className="text-gray-400 text-sm mt-62">
-          <span className="font-semibold text-white">
+        <p className="text-muted-foreground text-sm mt-62">
+          <span className="font-semibold text-foreground">
             We are a digital creative agency
           </span>{" "}
           with <br /> 25 years of experience, specializing in <br /> delivering

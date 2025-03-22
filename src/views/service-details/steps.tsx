@@ -1,5 +1,5 @@
-import Image from "next/image";
 import img from "@/assets/process1.jpg";
+import Image from "next/image";
 
 const steps = [
   {
@@ -30,7 +30,7 @@ const steps = [
 
 const StepsSection: React.FC = () => {
   return (
-    <section className="bg-black text-white py-12">
+    <section className="container pt-[130px]">
       <div className="">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step) => (
