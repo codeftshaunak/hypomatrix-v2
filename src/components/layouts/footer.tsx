@@ -1,10 +1,10 @@
 "use client";
+import img from "@/assets/vector.png";
+import img2 from "@/assets/vector2.png";
 import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
-import img from "../assets/vector.png";
-import img2 from "../assets/vector2.png";
 
 export function Footer() {
   const [email, setEmail] = useState("");

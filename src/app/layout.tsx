@@ -1,5 +1,4 @@
-import { Footer } from "@/components/footer";
-import Navbar from "@/components/navbar";
+import MainLayout from "@/components/layouts";
 import { cn } from "@/lib/utils";
 import "@/styles/index.css";
 import type { Metadata } from "next";
@@ -23,9 +22,7 @@ const RootLayout = (props: Props) => {
       <body
         className={cn(headingFont.variable, bodyFont.variable, "antialiased")}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <MainLayout>{children}</MainLayout>
       </body>
     </html>
   );
