@@ -10,10 +10,13 @@ const JoinTeamSection: React.FC = () => {
           Join Our
         </p>
         <div className="flex items-center gap-4 mb-5">
-          <Image src={img} alt="image not found" width={100} />
-          <span className="text-white text-[100px] font-bold">
-            Talented
-          </span>{" "}
+          <Image
+            src={img}
+            alt="image not found"
+            width={100}
+            className="spin-in animate-spin duration-7000"
+          />
+          <span className="text-white text-[100px] font-bold">Talented</span>{" "}
           <br />
         </div>
         <p className="text-white text-[100px] font-bold">Team</p>

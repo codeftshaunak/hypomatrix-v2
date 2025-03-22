@@ -44,7 +44,7 @@ const CommonCard: React.FC<Props> = ({ title, link, text }) => {
               {/* Star/Asterisk Icon */}
               <Image
                 src={img}
-                alt=""
+                alt="image not found"
                 priority
                 className="spin-in animate-spin duration-7000"
               />

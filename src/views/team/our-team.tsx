@@ -1,12 +1,12 @@
 import { Twitter, Linkedin, Dribbble, Plus } from "lucide-react";
-import SectionHeader from "../../components/common/section-header";
-
+import img from "@/assets/team8.jpg";
+import Image from "next/image";
 export function TeamSection() {
   const team = [
     {
       name: "Alex Johnson",
       position: "Creative Director",
-      image: "300 × 300",
+      image: img,
       social: {
         twitter: "#",
         linkedin: "#",
@@ -16,7 +16,7 @@ export function TeamSection() {
     {
       name: "Sarah Chen",
       position: "Art Director",
-      image: "300 × 300",
+      image: img,
       social: {
         twitter: "#",
         linkedin: "#",
@@ -26,7 +26,7 @@ export function TeamSection() {
     {
       name: "Michael Rodriguez",
       position: "Lead Developer",
-      image: "300 × 300",
+      image: img,
       social: {
         twitter: "#",
         linkedin: "#",
@@ -36,7 +36,7 @@ export function TeamSection() {
     {
       name: "Emily Williams",
       position: "Marketing Strategist",
-      image: "300 × 300",
+      image: img,
       social: {
         twitter: "#",
         linkedin: "#",
@@ -46,7 +46,7 @@ export function TeamSection() {
     {
       name: "Alex Johnson",
       position: "Creative Director",
-      image: "300 × 300",
+      image: img,
       social: {
         twitter: "#",
         linkedin: "#",
@@ -56,7 +56,7 @@ export function TeamSection() {
     {
       name: "Sarah Chen",
       position: "Art Director",
-      image: "300 × 300",
+      image: img,
       social: {
         twitter: "#",
         linkedin: "#",
@@ -66,7 +66,7 @@ export function TeamSection() {
     {
       name: "Michael Rodriguez",
       position: "Lead Developer",
-      image: "300 × 300",
+      image: img,
       social: {
         twitter: "#",
         linkedin: "#",
@@ -76,7 +76,7 @@ export function TeamSection() {
     {
       name: "Emily Williams",
       position: "Marketing Strategist",
-      image: "300 × 300",
+      image: img,
       social: {
         twitter: "#",
         linkedin: "#",
@@ -111,9 +111,7 @@ export function TeamSection() {
           {team.map((member, index) => (
             <div key={index} className="group relative cursor-pointer">
               <div className="bg-gray-700/30 aspect-square rounded-lg flex items-center justify-center overflow-hidden">
-                <p className="text-gray-400 text-xl font-light">
-                  {member.image}
-                </p>
+                <Image src={img} alt="image not found" />
               </div>
               <div className="text-white bg-black p-2 rounded-full right-4 absolute top-2 cursor-pointer">
                 <Plus size={24} />
