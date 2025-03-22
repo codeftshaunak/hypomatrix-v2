@@ -3,8 +3,15 @@ import Image from "next/image";
 import img from "@/assets/Pattan.png";
 import img1 from "@/assets/Join Cercle.png";
 import img3 from "@/assets/Ellipse 2397.png";
+import React from "react";
 
-export default function CommonCard() {
+type Props = {
+  title: string;
+  link: string;
+  text: string;
+};
+
+const CommonCard: React.FC<Props> = ({ title, link, text }) => {
   return (
     <div className="bg-black text-white overflow-hidden relative mb-20 w-full">
       {/* Background elements */}
@@ -29,7 +36,7 @@ export default function CommonCard() {
       <main className="relative  px-6 pt-20 pb-20">
         <div className="">
           {/* About Us Title */}
-          <h1 className="text-6xl md:text-7xl font-bold mb-10">About Us</h1>
+          <h1 className="text-6xl md:text-7xl font-bold mb-10">{title}</h1>
 
           {/* About Content */}
           <div className="flex flex-col md:flex-row items-start">
@@ -55,12 +62,12 @@ export default function CommonCard() {
             <div className="flex items-center">
               <div className="mx-4 h-[1px] w-32 bg-gray-300"></div>
               <div className="border border-gray-700 rounded-full text-sm py-3 px-6 cursor-pointer">
-                <Link href="/" className="text-gray-400">
+                <Link href="/" className="text-gray-400 hover:text-[#9eff3c]">
                   Home
                 </Link>
                 <span className="border-r border border-gray-400 mx-5"></span>
-                <Link href="/about" className="text-[#9eff3c]">
-                  About us
+                <Link href={`/${link}`} className="text-[#9eff3c]">
+                  {text}
                 </Link>
               </div>
             </div>
@@ -72,4 +79,6 @@ export default function CommonCard() {
       </main>
     </div>
   );
-}
+};
+
+export default CommonCard;

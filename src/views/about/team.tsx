@@ -1,5 +1,4 @@
-import { Twitter, Linkedin, Dribbble, Plus } from "lucide-react";
-import Header from "./common/Header";
+import { Twitter, Linkedin, Dribbble } from "lucide-react";
 
 export function TeamSection() {
   const team = [
@@ -47,24 +46,23 @@ export function TeamSection() {
 
   return (
     <section id="team" className="py-20">
-      <div className="container mx-auto px-6 lg:px-8">
-        <Header
-          item="Our Team"
-          title="Meet Our Talented 
-Skillful Team!"
-          className="w-[500px] mb-10"
-        />
+      <div className=" px-6 lg:px-8">
+        <div className="mb-16 flex flex-col items-center">
+          <span className="inline-block px-4 py-1 border border-lime-400 text-white rounded-full text-sm mb-4">
+            How We Are
+          </span>
+          <h2 className="section-heading text-3xl md:text-4xl font-bold text-center">
+            Success Stories From Around <br /> the Globe
+          </h2>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {team.map((member, index) => (
-            <div key={index} className="group relative">
+            <div key={index} className="group relative cursor-pointer">
               <div className="bg-gray-700/30 aspect-square rounded-lg flex items-center justify-center overflow-hidden">
                 <p className="text-gray-400 text-xl font-light">
                   {member.image}
                 </p>
-              </div>
-              <div className="text-white bg-black p-2 rounded-full right-4 absolute top-2 cursor-pointer">
-                <Plus size={24} />
               </div>
 
               <div className="mt-4">

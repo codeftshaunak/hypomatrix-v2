@@ -1,16 +1,14 @@
-import { AwardsSection } from "@/components/awards";
-import Hero from "@/components/hero";
-import LatestArticles from "@/components/latest-article";
-import { ProjectsSection } from "@/components/project";
-import Services from "@/components/service";
-import { TeamSection } from "@/components/team";
-import { TestimonialsSection } from "@/components/testimonials";
-import TrustedCompanySection from "@/components/trusted-company";
-import ProcessSection from "@/components/work-process";
+import { AwardsSection } from "./awards";
+import Hero from "./hero";
+import LatestArticles from "./latest-article";
+import { ProjectsSection } from "./project";
+import Services from "./service";
+import { TeamSection } from "./team";
+import { TestimonialsSection } from "./testimonials";
+import TrustedCompanySection from "./trusted-company";
+import ProcessSection from "./work-process";
 
-type Props = {};
-
-const HomeView = (props: Props) => {
+const HomeView = () => {
   return (
     <div>
       <Hero />

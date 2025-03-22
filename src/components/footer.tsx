@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Mail, Phone, ArrowUp } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import img from "../assets/vector.png";
@@ -50,12 +50,12 @@ export function Footer() {
           <div className="md:col-span-1">
             <a href="#" className="flex items-center gap-2 mb-6">
               <div className="w-8 h-8 rounded-full bg-[#5cff44]"></div>
-              <span className="font-bold text-xl">AGENKO</span>
+              <span className="font-bold text-xl">Hypomatrix</span>
             </a>
 
             <p className="text-sm text-muted-foreground mb-6">
-              Agenko creative digital agency delivering innovate web Development
-              marketing
+              Hypomatrix creative digital agency delivering innovate web
+              Development marketing
             </p>
 
             <div className="flex items-center gap-2 bg-black/30 p-1 pl-4 rounded-full border border-white/10 mb-6">
@@ -193,12 +193,12 @@ export function Footer() {
             </a>
           </div>
 
-          <a
+          {/* <a
             href="#"
             className="w-10 h-10 rounded-full border border-[#5cff44] flex items-center justify-center"
           >
             <ArrowUp className="w-5 h-5 text-[#5cff44]" />
-          </a>
+          </a> */}
         </div>
       </div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(120,197,94,0.8)_0%,_transparent_30%)]"></div>

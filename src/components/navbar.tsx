@@ -153,6 +153,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const menuItems = ["Home", "Pages", "Portfolio", "Blogs", "Contact"];
 const dropdownItems = ["Pages", "Portfolio", "Home", "Blogs"];
@@ -172,6 +173,22 @@ const subMenus: Record<string, string[]> = {
   ],
   Portfolio: ["Web Design", "Graphic Design", "UI/UX", "Branding"],
   Home: ["Landing Page", "Main Home", "Corporate Home"],
+  Blogs: ["Latest News", "Technology", "Business", "Lifestyle"],
+};
+const navLinks: Record<string, string[]> = {
+  Pages: [
+    "/about",
+    "/service",
+    "/service-details",
+    "Our Team",
+    "Team Details",
+    "Pricing",
+    "FAQS",
+    "Contact Us",
+    "404",
+  ],
+  Portfolio: ["Web Design", "Graphic Design", "UI/UX", "Branding"],
+  Home: ["/", "Main Home", "Corporate Home"],
   Blogs: ["Latest News", "Technology", "Business", "Lifestyle"],
 };
 
@@ -225,13 +242,13 @@ export default function Navbar() {
                   className="absolute left-0 mt-2 w-40 bg-black text-white shadow-lg rounded-md py-2"
                 >
                   {subMenus[item]?.map((subItem, index) => (
-                    <a
+                    <Link
                       key={index}
-                      href="#"
+                      href={navLinks[item][index]}
                       className="block px-4 py-2 hover:bg-gray-200 hover:text-black hover:rounded-lg transition"
                     >
                       {subItem}
-                    </a>
+                    </Link>
                   ))}
                 </motion.div>
               )}
@@ -243,7 +260,7 @@ export default function Navbar() {
       {/* Right Side */}
       <div className="flex items-center space-x-4">
         <button className="bg-[#9CFE4F] text-black px-6 py-4 rounded-full text-sm font-bold">
-          LET'S TALK
+          LET`&apos;`S TALK
         </button>
         <button
           className="md:hidden"

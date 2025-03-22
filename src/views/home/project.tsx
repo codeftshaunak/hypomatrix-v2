@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { NeonButton } from "./ui/neon-button";
 import { Plus } from "lucide-react";
-import Header from "./common/Header";
+import { NeonButton } from "@/components/ui/neon-button";
+import SectionHeader from "@/components/common/section-header";
 
 export function ProjectsSection() {
   const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
@@ -67,7 +67,7 @@ export function ProjectsSection() {
     <section id="projects" className="py-20">
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between mb-16">
-          <Header
+          <SectionHeader
             item="Complete Work"
             title="Creative Projects We've Delivered To Client"
             className="w-[700px]"

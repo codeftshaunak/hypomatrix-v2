@@ -6,7 +6,7 @@ type Props = {
   className: string;
 };
 
-const Header: React.FC<Props> = ({ item, title, className }) => {
+const SectionHeader: React.FC<Props> = ({ item, title, className }) => {
   return (
     <div className={`${className}`}>
       <h3 className="text-sm tracking-wide text-white flex items-center gap-3">
@@ -18,4 +18,4 @@ const Header: React.FC<Props> = ({ item, title, className }) => {
   );
 };
 
-export default Header;
+export default SectionHeader;
