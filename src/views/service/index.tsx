@@ -6,13 +6,13 @@ import WhyChooseUs from "./why-choose-us";
 
 const ServiceView = () => {
   return (
-    <div>
+    <>
       <PageHeader title="Our Services" text="Services" link="service" />
       <WhyChooseUs />
       <OurServices />
       <OurClient />
       <LatestBlogs />
-    </div>
+    </>
   );
 };
 

@@ -12,7 +12,7 @@ type Props = {
 
 const PageHeader: React.FC<Props> = ({ title, link, text }) => {
   return (
-    <header className="bg-secondary text-white overflow-hidden relative w-full pt-[210px]">
+    <header className="bg-card text-white overflow-hidden relative w-full pt-[210px]">
       {/* Background elements */}
       <div className="absolute -left-[5%] -top-[45%]">
         <div className="border border-foreground/20 size-[979px] rounded-full" />
