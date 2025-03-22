@@ -97,9 +97,7 @@ export function ProjectsSection() {
               className="group relative overflow-hidden rounded-lg p-6 bg-gray-700/30"
             >
               <div className="bg-white aspect-[1.3/1] w-full flex items-center justify-center rounded-lg">
-                <p className="text-black text-xl font-light ">
-                  {project.image}
-                </p>
+                <p className="text-black text-xl font-light">{project.image}</p>
               </div>
               <div className="text-white bg-black p-2 rounded-full right-10 absolute top-8 cursor-pointer">
                 <Plus size={26} />
@@ -128,7 +126,6 @@ export function ProjectsSection() {
             </div>
           ))}
         </div>
-
         <div className="mt-12 text-center text-white">
           <NeonButton className="text-black bg-lime-400 cursor-pointer">
             View All Projects
