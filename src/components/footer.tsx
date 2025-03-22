@@ -1,7 +1,10 @@
 "use client";
 import { useState } from "react";
 import { Mail, Phone, ArrowUp } from "lucide-react";
-import { NeonButton } from "./ui/neon-button";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import img from "../assets/vector.png";
+import img2 from "../assets/vector2.png";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -9,28 +12,37 @@ export function Footer() {
   return (
     <footer className="relative pt-20 pb-10 bg-gradient-to-r from-[#1a1a1a] to-[#0f0f0f] overflow-hidden text-white">
       {/* Left spiral decoration */}
-      <div className="absolute left-0 top-20 w-[150px] h-[150px] opacity-20">
-        <div
-          className="w-full h-full bg-[#5cff44] rounded-full animate-spin-slow"
-          style={{
-            backgroundImage:
-              "conic-gradient(from 0deg, transparent 0%, transparent 40%, #5cff44 70%, transparent 80%, transparent 100%)",
-            transform: "scale(1.5)",
-          }}
-        ></div>
-      </div>
-
+      <motion.div
+        className="absolute -left-10 bottom-30 opacity-60"
+        animate={{ rotate: 360 }}
+        transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
+      >
+        <div className="w-full h-full overflow-hidden rounded-full">
+          <Image
+            src={img}
+            width={170}
+            height={200}
+            alt="Profile picture"
+            className="object-cover"
+          />
+        </div>
+      </motion.div>
       {/* Right spiral decoration */}
-      <div className="absolute right-0 bottom-40 w-[150px] h-[150px] opacity-10">
-        <div
-          className="w-full h-full bg-[#5cff44] rounded-full animate-spin-slow"
-          style={{
-            backgroundImage:
-              "conic-gradient(from 180deg, transparent 0%, transparent 40%, #5cff44 70%, transparent 80%, transparent 100%)",
-            transform: "scale(1.5)",
-          }}
-        ></div>
-      </div>
+      <motion.div
+        className="absolute right-30 bottom-30 opacity-100"
+        animate={{ rotate: 360 }}
+        transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
+      >
+        <div className="w-full h-full overflow-hidden rounded-full">
+          <Image
+            src={img2}
+            width={100}
+            height={200}
+            alt="Profile picture"
+            className="object-cover"
+          />
+        </div>
+      </motion.div>
 
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
@@ -189,6 +201,8 @@ export function Footer() {
           </a>
         </div>
       </div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(120,197,94,0.8)_0%,_transparent_30%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(100,97,94,0.8)_0%,_transparent_30%)]"></div>
     </footer>
   );
 }

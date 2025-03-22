@@ -1,6 +1,7 @@
 "use client";
 
 import { Play, X } from "lucide-react";
+import VideoPlaceholder from "./video-modal";
 
 export default function Hero() {
   return (
@@ -9,6 +10,7 @@ export default function Hero() {
       {/* <div className="absolute inset-0 bg-gradient-to-r from-green-400 via-black to-purple-400 opacity-40"></div> */}
       {/* <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(34,197,94,1)_0%,_transparent_30%)]"></div> */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(34,197,94,0.8)_0%,_transparent_30%),radial-gradient(ellipse_at_top_right,_rgba(168,85,247,0.8)_0%,_transparent_30%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(34,197,94,1)_0%,_transparent_35%)]"></div>
       <div className="absolute inset-0 grid grid-cols-18 grid-rows-8 gap-0 opacity-10">
         {[...Array(72)].map((_, i) => (
           <div key={i} className="border border-white"></div>
@@ -52,16 +54,7 @@ export default function Hero() {
         </div>
       </div>
       {/* Video Placeholder */}
-      <div className="mt-12 w-full">
-        <div className="bg-gray-300 w-full h-[250px] md:h-[500px] flex items-center justify-center rounded-lg relative">
-          <span className="text-gray-600 text-3xl md:text-5xl font-bold">
-            1290 × 500
-          </span>
-          <button className="absolute bg-[#9CFE4F] p-4 rounded-full flex items-center justify-center">
-            <Play size={24} className="text-black" />
-          </button>
-        </div>
-      </div>
+      <VideoPlaceholder />
     </section>
   );
 }
