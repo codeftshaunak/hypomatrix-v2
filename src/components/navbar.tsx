@@ -180,7 +180,7 @@ const navLinks: Record<string, string[]> = {
     "/about",
     "/service",
     "/service-details",
-    "Our Team",
+    "/team",
     "Team Details",
     "Pricing",
     "FAQS",
@@ -210,18 +210,20 @@ export default function Navbar() {
     <nav className="text-white px-6 py-3 flex justify-between items-center relative pt-8 z-50">
       <div className="flex gap-10">
         {/* Logo */}
-        <div className="flex items-center border border-gray-500 bg-transparent rounded-full px-2 py-1">
+        <div className="flex items-center border border-gray-500 bg-transparent rounded-full px-2 py-1 cursor-pointer">
           <span className="text-xl font-bold flex items-center">
-            <span className="text-white px-6 py-2 bg-gray-900 rounded-full p-2">
-              HypoMatrix
-            </span>
+            <Link href={"/"}>
+              <span className="text-white px-6 py-2 bg-gray-900 rounded-full p-2">
+                HypoMatrix
+              </span>
+            </Link>
           </span>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-10 items-center border border-gray-600 bg-black rounded-full px-6 py-2 font-semibold">
           {menuItems.map((item) => (
-            <div key={item} className="relative dropdown-container ">
+            <div key={item} className="relative dropdown-container">
               <button
                 className="flex items-center space-x-1 hover:text-lime-400 transition"
                 onClick={(e) => {
@@ -230,7 +232,9 @@ export default function Navbar() {
                 }}
               >
                 <span className="cursor-pointer">{item}</span>
-                {dropdownItems.includes(item) && <ChevronDown size={16} />}
+                {dropdownItems.includes(item) && (
+                  <ChevronDown size={16} className="cursor-pointer" />
+                )}
               </button>
 
               {/* Submenu Dropdown */}
