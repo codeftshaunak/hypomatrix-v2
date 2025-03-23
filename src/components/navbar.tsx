@@ -184,7 +184,7 @@ const navLinks: Record<string, string[]> = {
     "/team-details",
     "Pricing",
     "/faq",
-    "Contact Us",
+    "/contact",
     "404",
   ],
   Portfolio: ["Web Design", "Graphic Design", "UI/UX", "Branding"],
@@ -264,7 +264,7 @@ export default function Navbar() {
       {/* Right Side */}
       <div className="flex items-center space-x-4">
         <button className="bg-[#9CFE4F] text-black px-6 py-4 rounded-full text-sm font-bold">
-          LET`&apos;`S TALK
+          LET&apos;S TALK
         </button>
         <button
           className="md:hidden"

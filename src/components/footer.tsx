@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import { Mail, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -7,10 +6,8 @@ import img from "../assets/vector.png";
 import img2 from "../assets/vector2.png";
 
 export function Footer() {
-  const [email, setEmail] = useState("");
-
   return (
-    <footer className="relative pt-20 pb-10 bg-gradient-to-r from-[#1a1a1a] to-[#0f0f0f] overflow-hidden text-white">
+    <footer className="relative pt-20 pb-10 bg-gradient-to-r from-[#1a1a1a] to-[#0f0f0f] overflow-hidden text-white font-semibold md:px-40 z-50">
       {/* Left spiral decoration */}
       <motion.div
         className="absolute -left-10 bottom-30 opacity-60"
@@ -44,43 +41,44 @@ export function Footer() {
         </div>
       </motion.div>
 
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
+      <div>
+        <div className="flex gap-20 mb-16 justify-between">
           {/* Column 1: Logo and subscribe */}
           <div className="md:col-span-1">
             <a href="#" className="flex items-center gap-2 mb-6">
               <div className="w-8 h-8 rounded-full bg-[#5cff44]"></div>
-              <span className="font-bold text-xl">Hypomatrix</span>
+              <span className="font-bold text-xl text-white">Hypomatrix</span>
             </a>
 
-            <p className="text-sm text-muted-foreground mb-6">
-              Hypomatrix creative digital agency delivering innovate web
+            <p className="text-base font-semibold  mb-6 text-white">
+              Hypomatrix creative digital agency delivering <br /> innovate web
               Development marketing
             </p>
 
-            <div className="flex items-center gap-2 bg-black/30 p-1 pl-4 rounded-full border border-white/10 mb-6">
+            <div className="flex items-center border border-gray-300 bg-white rounded-full overflow-hidden max-w-xs">
+              <div className="flex items-center px-3">
+                <Mail className="h-5 w-5 text-gray-500" />
+              </div>
               <input
                 type="email"
                 placeholder="Email address"
-                className="bg-transparent border-none outline-none text-sm flex-1"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                className="flex-1 py-4 text-sm outline-none text-black placeholder:text-black"
               />
-              <button className="bg-[#5cff44] text-black rounded-full px-5 py-2 text-sm font-medium">
+              <button className="bg-[#9CFE4F] text-black font-semibold px-6 py-2 rounded-full mr-1">
                 Subscribe
               </button>
             </div>
           </div>
 
           {/* Column 2: Main Address */}
-          <div className="md:col-span-1">
+          <div className="">
             <h3 className="font-bold text-lg mb-6">Main Address</h3>
-            <p className="text-sm text-muted-foreground mb-6">
-              6801 Hollywood Blvd, Los Angeles, CA 90028
+            <p className="text-base text-white mb-6">
+              6801 Hollywood Blvd, Los <br /> Angeles CA 90028
             </p>
 
             <h3 className="font-bold text-lg mb-6">Sub-Address</h3>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-white">
               200 Santa Monica Pier,
               <br />
               Santa Monica, CA 90401
@@ -88,13 +86,13 @@ export function Footer() {
           </div>
 
           {/* Column 3: Our Link */}
-          <div className="md:col-span-1">
+          <div className="">
             <h3 className="font-bold text-lg mb-6">Our Link</h3>
             <ul className="space-y-3">
               <li>
                 <a
                   href="#"
-                  className="text-sm text-muted-foreground hover:text-[#5cff44] transition-colors"
+                  className="text-sm text-white hover:text-[#5cff44] transition-colors"
                 >
                   About us
                 </a>
@@ -102,7 +100,7 @@ export function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-sm text-muted-foreground hover:text-[#5cff44] transition-colors"
+                  className="text-sm text-white hover:text-[#5cff44] transition-colors"
                 >
                   Contact us
                 </a>
@@ -110,7 +108,7 @@ export function Footer() {
               <li>
                 <a
                   href="#services"
-                  className="text-sm text-muted-foreground hover:text-[#5cff44] transition-colors"
+                  className="text-sm text-white hover:text-[#5cff44] transition-colors"
                 >
                   Services
                 </a>
@@ -118,7 +116,7 @@ export function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-sm text-muted-foreground hover:text-[#5cff44] transition-colors"
+                  className="text-sm text-white hover:text-[#5cff44] transition-colors"
                 >
                   Our gallery
                 </a>
@@ -126,7 +124,7 @@ export function Footer() {
               <li>
                 <a
                   href="#"
-                  className="text-sm text-muted-foreground hover:text-[#5cff44] transition-colors"
+                  className="text-sm text-white hover:text-[#5cff44] transition-colors"
                 >
                   FAQ
                 </a>
@@ -135,31 +133,27 @@ export function Footer() {
           </div>
 
           {/* Column 4: Contact */}
-          <div className="md:col-span-1">
+          <div className="">
             <h3 className="font-bold text-lg mb-6">Contact</h3>
 
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-black/40 flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-muted-foreground" />
+                  <Mail className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <p className="text-sm font-medium">Email</p>
-                  <p className="text-sm text-muted-foreground">
-                    Info@agenko45.com
-                  </p>
+                  <p className="text-sm text-white">Info@agenko45.com</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-full bg-black/40 flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-muted-foreground" />
+                  <Phone className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <p className="text-sm font-medium">Phone</p>
-                  <p className="text-sm text-muted-foreground">
-                    +555-7659-9854
-                  </p>
+                  <p className="text-sm text-white">+555-7659-9854</p>
                 </div>
               </div>
             </div>
@@ -167,38 +161,31 @@ export function Footer() {
         </div>
 
         {/* Bottom section */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
-            © 2024 All rights reserved by Pixelfit
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row  gap-4 justify-between">
+          <p className="text-sm text-white">
+            © 2024 All rights reserved by HypoMatrix
           </p>
 
           <div className="flex gap-6">
             <a
               href="#"
-              className="text-xs text-muted-foreground hover:text-[#5cff44] transition-colors"
+              className="text-base text-white hover:text-[#5cff44] transition-colors"
             >
               Terms & Condition
             </a>
             <a
               href="#"
-              className="text-xs text-muted-foreground hover:text-[#5cff44] transition-colors"
+              className="text-base text-white hover:text-[#5cff44] transition-colors"
             >
               Privacy
             </a>
             <a
               href="#"
-              className="text-xs text-muted-foreground hover:text-[#5cff44] transition-colors"
+              className="text-base text-white hover:text-[#5cff44] transition-colors"
             >
               Policy
             </a>
           </div>
-
-          {/* <a
-            href="#"
-            className="w-10 h-10 rounded-full border border-[#5cff44] flex items-center justify-center"
-          >
-            <ArrowUp className="w-5 h-5 text-[#5cff44]" />
-          </a> */}
         </div>
       </div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(120,197,94,0.8)_0%,_transparent_30%)]"></div>
