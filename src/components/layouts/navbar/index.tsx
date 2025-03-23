@@ -4,10 +4,66 @@ import { motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
+import DesktopLinks from "./desktop-links";
 
 const menuItems = ["Home", "Pages", "Portfolio", "Blogs", "Contact"];
 const dropdownItems = ["Pages", "Portfolio", "Home", "Blogs"];
+
+type LinkItem = {
+  title: string;
+  href: string;
+};
+
+type LinkItemDropdown = {
+  title: string;
+  items: LinkItem[];
+};
+
+type Link = LinkItem | LinkItemDropdown;
+
+const links: Link[] = [
+  {
+    title: "Home",
+    href: "/",
+  },
+  {
+    title: "Pages",
+    items: [
+      { title: "About Us", href: "/about" },
+      { title: "Our Services", href: "/service" },
+      { title: "Service Details", href: "/service-details" },
+      { title: "Our Team", href: "/our-team" },
+      { title: "Team Details", href: "/team-details" },
+      { title: "Pricing", href: "/pricing" },
+      { title: "FAQS", href: "/faqs" },
+      { title: "Contact Us", href: "/contact" },
+      { title: "404", href: "/404" },
+    ],
+  },
+  {
+    title: "Portfolio",
+    items: [
+      { title: "Web Design", href: "/web-design" },
+      { title: "Graphic Design", href: "/graphic-design" },
+      { title: "UI/UX", href: "/ui-ux" },
+      { title: "Branding", href: "/branding" },
+    ],
+  },
+  {
+    title: "Blogs",
+    items: [
+      { title: "Latest News", href: "/latest-news" },
+      { title: "Technology", href: "/technology" },
+      { title: "Business", href: "/business" },
+      { title: "Lifestyle", href: "/lifestyle" },
+    ],
+  },
+  {
+    title: "Contact Us",
+    href: "/contact",
+  },
+];
 
 // Submenu Mapping
 const subMenus: Record<string, string[]> = {
@@ -59,7 +115,7 @@ export default function Navbar() {
 
   return (
     <nav className="container flex justify-between items-center z-50 absolute top-0 left-1/2 -translate-x-1/2 mt-[30px]">
-      <div className="flex gap-10">
+      <div className="flex gap-10 items-center">
         {/* Logo */}
         <div className="flex items-center border border-gray-500 bg-transparent rounded-full px-2 py-1">
           <span className="text-xl font-bold flex items-center">
@@ -70,42 +126,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-10 items-center border border-gray-600 bg-black rounded-full px-6 py-2 font-semibold">
-          {menuItems.map((item) => (
-            <div key={item} className="relative dropdown-container ">
-              <button
-                className="flex items-center space-x-1 hover:text-lime-400 transition"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setDropdownOpen(dropdownOpen === item ? null : item);
-                }}
-              >
-                <span className="cursor-pointer">{item}</span>
-                {dropdownItems.includes(item) && <ChevronDown size={16} />}
-              </button>
-
-              {/* Submenu Dropdown */}
-              {dropdownItems.includes(item) && dropdownOpen === item && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  className="absolute left-0 mt-2 w-40 bg-black text-white shadow-lg rounded-md py-2"
-                >
-                  {subMenus[item]?.map((subItem, index) => (
-                    <Link
-                      key={index}
-                      href={navLinks[item][index]}
-                      className="block px-4 py-2 hover:bg-gray-200 hover:text-black hover:rounded-lg transition"
-                    >
-                      {subItem}
-                    </Link>
-                  ))}
-                </motion.div>
-              )}
-            </div>
-          ))}
-        </div>
+        <DesktopLinks />
       </div>
 
       {/* Right Side */}
