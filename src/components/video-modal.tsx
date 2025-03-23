@@ -11,7 +11,7 @@ export default function VideoPlaceholder() {
   return (
     <div className="w-full relative">
       <Dialog>
-        <div className="w-full h-[500px] flex items-center justify-center rounded-lg relative">
+        <div className="w-full aspect-[2.58] flex items-center justify-center rounded-lg relative">
           <Image
             src={thumbnailUrl}
             alt="Video Thumbnail"

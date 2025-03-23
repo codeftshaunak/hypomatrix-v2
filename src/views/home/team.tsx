@@ -19,7 +19,7 @@ function TeamSection() {
       />
 
       <Carousel>
-        <CarouselContent className="-ml-6">
+        <CarouselContent className="-ml-6 mb-16">
           {team.map((member) => (
             <CarouselItem
               key={member.id}
@@ -29,8 +29,8 @@ function TeamSection() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="static" />
+        <CarouselNext className="static ml-2" />
       </Carousel>
     </section>
   );

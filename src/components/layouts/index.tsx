@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "./footer";
 import Navbar from "./navbar";
 
 type Props = {
@@ -11,7 +12,7 @@ const MainLayout = (props: Props) => {
     <>
       <Navbar />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
