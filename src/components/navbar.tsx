@@ -181,7 +181,7 @@ const navLinks: Record<string, string[]> = {
     "/service",
     "/service-details",
     "/team",
-    "Team Details",
+    "/team-details",
     "Pricing",
     "FAQS",
     "Contact Us",

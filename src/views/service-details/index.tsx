@@ -3,7 +3,6 @@ import React from "react";
 import ClientSuccessSection from "./client-success";
 import StepsSection from "./steps";
 import OurClient from "@/components/common/our-client";
-import ProjectsSection from "./project";
 
 const ServiceDetailsView = () => {
   return (
@@ -16,7 +15,6 @@ const ServiceDetailsView = () => {
       <ClientSuccessSection />
       <StepsSection />
       <OurClient />
-      <ProjectsSection />
     </div>
   );
 };
