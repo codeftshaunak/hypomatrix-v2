@@ -1,11 +1,11 @@
 import React from "react";
 import ContactSection from "./contact";
-import CommonCard from "@/components/common/common-card";
+import PageHeader from "@/components/common/page-header";
 
 const ContactView = () => {
   return (
     <div>
-      <CommonCard title="Contact" link="contact" text="Contact" />
+      <PageHeader title="Contact" link="contact" text="Contact" />
       <ContactSection />
     </div>
   );

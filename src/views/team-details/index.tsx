@@ -1,12 +1,12 @@
 import React from "react";
 import UserProfile from "./user-profile";
 import Experience from "./experience";
-import CommonCard from "@/components/common/common-card";
+import PageHeader from "@/components/common/page-header";
 
 const TeamDetailsView = () => {
   return (
     <div>
-      <CommonCard
+      <PageHeader
         link="team-details"
         text="Team Details"
         title="Team Details"

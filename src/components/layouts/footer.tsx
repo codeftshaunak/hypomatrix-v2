@@ -42,10 +42,10 @@ export function Footer() {
         </div>
       </motion.div>
 
-      <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
+      <div className="">
+        <div className="md:flex items-start justify-between gap-10 mb-16 container">
           {/* Column 1: Logo and subscribe */}
-          <div className="md:col-span-1">
+          <div>
             <a href="#" className="flex items-center gap-2 mb-6">
               <div className="w-8 h-8 rounded-full bg-[#5cff44]"></div>
               <span className="font-bold text-xl text-white">Hypomatrix</span>
@@ -56,7 +56,7 @@ export function Footer() {
               Development marketing
             </p>
 
-            <div className="flex items-center border border-gray-300 bg-white rounded-full overflow-hidden max-w-xs">
+            <div className="flex items-center border border-gray-300 bg-white rounded-full overflow-hidden max-w-xs md:mb-0 mb-4">
               <div className="flex items-center px-3">
                 <Mail className="h-5 w-5 text-gray-500" />
               </div>
@@ -65,20 +65,20 @@ export function Footer() {
                 placeholder="Email address"
                 className="flex-1 py-4 text-sm outline-none text-black placeholder:text-black"
               />
-              <button className="bg-[#9CFE4F] text-black font-semibold px-6 py-2 rounded-full mr-1">
+              <button className="bg-[#9CFE4F] text-black font-semibold px-6 py-2 rounded-full mr-1 cursor-pointer">
                 Subscribe
               </button>
             </div>
           </div>
 
           {/* Column 2: Main Address */}
-          <div className="">
-            <h3 className="font-bold text-lg mb-6">Main Address</h3>
+          <div>
+            <h3 className="font-bold mb-6 text-heading-4">Main Address</h3>
             <p className="text-base text-white mb-6">
               6801 Hollywood Blvd, Los <br /> Angeles CA 90028
             </p>
 
-            <h3 className="font-bold text-lg mb-6">Sub-Address</h3>
+            <h3 className="font-bold text-heading-4 mb-6">Sub-Address</h3>
             <p className="text-sm text-white">
               200 Santa Monica Pier,
               <br />
@@ -88,7 +88,9 @@ export function Footer() {
 
           {/* Column 3: Our Link */}
           <div className="">
-            <h3 className="font-bold text-lg mb-6">Our Link</h3>
+            <h3 className="font-bold text-lg mb-6  text-heading-4 mt-4 md:mt-0">
+              Our Link
+            </h3>
             <ul className="space-y-3">
               <li>
                 <a
@@ -135,62 +137,64 @@ export function Footer() {
 
           {/* Column 4: Contact */}
           <div className="">
-            <h3 className="font-bold text-lg mb-6">Contact</h3>
+            <h3 className="font-bold text-lg mb-6  text-heading-4 mt-4 md:mt-0">
+              Contact
+            </h3>
 
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-black/40 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-[#212224] flex items-center justify-center">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium">Email</p>
+                  <p className="text-lg font-semibold">Email</p>
                   <p className="text-sm text-white">Info@agenko45.com</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-black/40 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-[#212224] flex items-center justify-center">
                   <Phone className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm font-medium">Phone</p>
+                  <p className="text-lg font-semibold">Phone</p>
                   <p className="text-sm text-white">+555-7659-9854</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row  gap-4 justify-between"></div>
         {/* Bottom section */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row  gap-4 justify-between">
-          <p className="text-sm text-white">
+        <div className="pt-8 flex flex-col md:flex-row  gap-4 justify-between container">
+          <p className="text-lg text-white font-semibold">
             © 2024 All rights reserved by HypoMatrix
           </p>
 
           <div className="flex gap-6">
             <a
               href="#"
-              className="text-base text-white hover:text-[#5cff44] transition-colors"
+              className="text-lg text-white hover:text-[#5cff44] transition-colors font-semibold"
             >
               Terms & Condition
             </a>
             <a
               href="#"
-              className="text-base text-white hover:text-[#5cff44] transition-colors"
+              className="text-lg text-white hover:text-[#5cff44] transition-colors font-semibold"
             >
               Privacy
             </a>
             <a
               href="#"
-              className="text-base text-white hover:text-[#5cff44] transition-colors"
+              className="text-lg text-white hover:text-[#5cff44] transition-colors font-semibold"
             >
               Policy
             </a>
           </div>
         </div>
       </div>
-      <div className="absolute bg-primary size-[261px] rounded-full blur-[150px] -left-[150px] -top-[150px]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(100,97,94,0.8)_0%,_transparent_30%)]"></div>
+      <div className="absolute bg-primary size-[261px] rounded-full blur-[150px] -left-[150px] -top-[150px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(100,97,94,0.8)_0%,_transparent_30%)] pointer-events-none"></div>
     </footer>
   );
 }

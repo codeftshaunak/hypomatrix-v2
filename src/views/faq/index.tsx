@@ -1,11 +1,11 @@
 import React from "react";
 import FAQ from "./faq-section";
-import CommonCard from "@/components/common/common-card";
+import PageHeader from "@/components/common/page-header";
 
 const FaqView = () => {
   return (
     <div>
-      <CommonCard title="Faqs" link="faq" text="Faqs" />
+      <PageHeader title="Faqs" link="faq" text="Faqs" />
       <FAQ />
     </div>
   );
