@@ -3,9 +3,9 @@ import SectionHeader from "@/components/common/section-header";
 import { NeonButton } from "@/components/ui/neon-button";
 import { projects } from "@/db/projects";
 
-export function ProjectsSection() {
+function ProjectsSection() {
   return (
-    <section id="projects" className="py-20 container">
+    <section id="projects" className="container pb-[130px]">
       <SectionHeader
         subtitle="Complete Work"
         title="Creative Projects We've Delivered To Client"
@@ -26,3 +26,5 @@ export function ProjectsSection() {
     </section>
   );
 }
+
+export default ProjectsSection;

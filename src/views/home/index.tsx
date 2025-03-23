@@ -2,7 +2,7 @@ import BgGridEffect from "@/components/common/bg-grid-effect";
 import { AwardsSection } from "./awards";
 import Hero from "./hero";
 import LatestArticles from "./latest-article";
-import { ProjectsSection } from "./project";
+import ProjectsSection from "./project";
 import Services from "./service";
 import { TeamSection } from "./team";
 import { TestimonialsSection } from "./testimonials";
