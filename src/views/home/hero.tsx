@@ -24,7 +24,7 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <Button size={"xl"} className="mt-8 lg:mt-0">
+      <Button size={"xl"} className="mt-8 lg:mt-0 mb-[130px]">
         Learn More
       </Button>
 

@@ -1,63 +1,41 @@
-"use client";
-import { useState } from "react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Play } from "lucide-react";
-import {
-  Dialog,
-  DialogContent,
-  DialogTrigger,
-  DialogClose,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
+import Image from "next/image";
+import { Button } from "./ui/button";
 
 export default function VideoPlaceholder() {
   const videoId = "qzGxK6Uiu04";
   const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
   const videoUrl = `https://www.youtube.com/embed/${videoId}`;
 
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-
-  const handleDialogClose = () => {
-    setIsVideoPlaying(false); // Reset to show the thumbnail
-  };
-
   return (
-    <div className="mt-12 w-full relative">
-      <div className="bg-gray-300 w-full h-[250px] md:h-[500px] flex items-center justify-center rounded-lg relative">
-        {isVideoPlaying ? (
-          <img
+    <div className="w-full relative">
+      <Dialog>
+        <div className="w-full h-[500px] flex items-center justify-center rounded-lg relative">
+          <Image
             src={thumbnailUrl}
             alt="Video Thumbnail"
-            className="w-full h-full object-cover rounded-lg"
+            className="w-full h-full object-cover rounded-lg absolute left-0 top-0 -z-[1]"
+            fill
           />
-        ) : null}
-        <Dialog>
-          <DialogTrigger
-            className="absolute bg-[#9CFE4F] p-8 rounded-full flex items-center justify-center cursor-pointer"
-            onClick={() => setIsVideoPlaying(true)} // Set video to play
-          >
-            <Play size={32} className="text-black" />
+          <DialogTrigger asChild>
+            <Button className="size-24 [&_svg]:!size-6">
+              <Play />
+            </Button>
           </DialogTrigger>
-          <DialogContent className="max-w-3xl w-full p-0 overflow-hidden">
-            {/* DialogTitle added for accessibility */}
-            <DialogTitle>
-              <VisuallyHidden>Video Player</VisuallyHidden>
-            </DialogTitle>
-            {isVideoPlaying && (
-              <iframe
-                width="100%"
-                height="500px"
-                src={videoUrl}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-              ></iframe>
-            )}
-          </DialogContent>
-          <DialogClose onClick={handleDialogClose} />{" "}
-        </Dialog>
-      </div>
+        </div>
+        <DialogContent className="sm:max-w-4xl w-full p-0 overflow-hidden">
+          <iframe
+            width="100%"
+            height="100%"
+            className="aspect-video"
+            src={videoUrl}
+            title="YouTube video player"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
