@@ -1,6 +1,7 @@
 "use client";
 import img from "@/assets/award.jpg";
 import Image from "next/image";
+
 export function AwardsSection() {
   const awards = [
     {

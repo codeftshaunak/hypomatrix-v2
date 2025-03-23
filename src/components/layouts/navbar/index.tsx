@@ -80,7 +80,7 @@ export default function Navbar() {
       <div className="flex items-center space-x-4">
         <Button size={"lg"}>LETS TALK</Button>
         <button
-          className="md:hidden"
+          className="lg:hidden"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
         >
@@ -90,7 +90,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-14 left-0 w-full bg-black text-white flex flex-col space-y-4 p-6 md:hidden">
+        <div className="absolute top-14 left-0 w-full bg-black text-white flex flex-col space-y-4 p-6 lg:hidden">
           {menuItems.map((item) => (
             <div key={item} className="dropdown-container">
               <button

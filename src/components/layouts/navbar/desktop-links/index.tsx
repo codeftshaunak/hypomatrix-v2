@@ -6,7 +6,7 @@ type Props = {};
 
 const DesktopLinks = (props: Props) => {
   return (
-    <ul className="md:flex flex-wrap items-center gap-1 hidden border rounded-full px-6 bg-background py-[2.5px]">
+    <ul className="lg:flex flex-wrap items-center gap-1 hidden border rounded-full px-6 bg-background py-[2.5px]">
       {desktopLinks.map((link, index) => {
         if ("items" in link) {
           return <NavDropdown key={index} link={link} />;

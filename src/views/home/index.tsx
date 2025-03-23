@@ -1,3 +1,4 @@
+import BgGridEffect from "@/components/common/bg-grid-effect";
 import { AwardsSection } from "./awards";
 import Hero from "./hero";
 import LatestArticles from "./latest-article";
@@ -11,6 +12,7 @@ import ProcessSection from "./work-process";
 const HomeView = () => {
   return (
     <>
+      <BgGridEffect />
       <Hero />
       <Services />
       <ProjectsSection />
