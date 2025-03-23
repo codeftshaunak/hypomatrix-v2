@@ -51,7 +51,7 @@ export function ProcessSection() {
   return (
     <section className="container">
       <SectionHeader
-        item="Working Proses"
+        subtitle="Working Proses"
         title="The Process Behind the Magic Step by Step"
         className="mb-[100px] w-[700px]"
       />

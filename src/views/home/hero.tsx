@@ -3,7 +3,7 @@ import VideoPlaceholder from "@/components/video-modal";
 
 export default function Hero() {
   return (
-    <header className="container pt-[210px] w-full">
+    <header className="container pt-[210px] pb-[130px] w-full">
       {/* Content */}
       <div className="relative w-full">
         <h1 className="text-heading-1 leading-[80px] pb-6 lg:pb-0 lg:text-[140px] lg:leading-[140px] xl:text-[200px] xl:leading-[200px] font-extrabold font-heading uppercase text-right">

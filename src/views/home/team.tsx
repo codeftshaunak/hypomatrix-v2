@@ -48,7 +48,7 @@ export function TeamSection() {
   return (
     <section id="team" className="py-20 container">
       <SectionHeader
-        item="Our Team"
+        subtitle="Our Team"
         title="Meet Our Talented Skillful Team!"
         className="w-[500px] mb-10"
       />

@@ -31,7 +31,7 @@ export default function LatestArticles() {
     <section className="py-16 container">
       <div className="flex justify-between items-center mb-8">
         <SectionHeader
-          item="Latest Articles"
+          subtitle="Latest Articles"
           title="Stay Updated with Our Recent Articles"
           className="w-[700px] mb-6"
         />
