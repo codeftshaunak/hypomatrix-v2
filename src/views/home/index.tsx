@@ -4,8 +4,8 @@ import Hero from "./hero";
 import LatestArticles from "./latest-article";
 import ProjectsSection from "./project";
 import Services from "./service";
-import { TeamSection } from "./team";
-import { TestimonialsSection } from "./testimonials";
+import TeamSection from "./team";
+import TestimonialsSection from "./testimonials";
 import TrustedCompanySection from "./trusted-company";
 import ProcessSection from "./work-process";
 

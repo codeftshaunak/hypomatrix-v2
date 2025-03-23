@@ -8,6 +8,10 @@ const paths = {
     root: "/services",
     details: (slug: string) => `/services/${slug}`,
   },
+  team: {
+    root: "/team",
+    details: (slug: string) => `/team/${slug}`,
+  },
 };
 
 export default paths;

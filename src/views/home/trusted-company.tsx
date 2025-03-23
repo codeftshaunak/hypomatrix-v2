@@ -27,7 +27,13 @@ export default function TrustedCompanySection() {
             className="border flex justify-center items-center h-[100px] xl:px-10"
             key={index}
           >
-            <Image src={item.logo} alt={item.name} width={100} height={100} />
+            <Image
+              src={item.logo}
+              alt={item.name}
+              width={100}
+              height={100}
+              className="!max-w-[100px] !w-full !h-auto"
+            />
           </div>
         ))}
       </div>

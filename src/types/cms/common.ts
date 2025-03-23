@@ -3,3 +3,10 @@ export type TAsset = {
   width: number;
   height: number;
 };
+
+export type SocialIconsType =
+  | "facebook"
+  | "x"
+  | "linkedin"
+  | "github"
+  | "instagram";
