@@ -1,6 +1,6 @@
 "use client";
-import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { useEffect, useState } from "react";
 export function TestimonialsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -56,56 +56,39 @@ export function TestimonialsSection() {
   };
 
   return (
-    <section className="py-20 relative overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-8 ">
-        <div className="relative">
-          <div className="">
-            <div className="flex flex-col items-center cursor-pointer">
-              <div className="flex mb-4">
-                {[...Array(testimonials[currentSlide].rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                ))}
-              </div>
+    <section className="py-[130px] bg-card relative overflow-hidden">
+      <div className="container mx-auto px-6 lg:px-8 flex flex-col items-center cursor-pointer relative">
+        <div className="flex mb-4">
+          {[...Array(testimonials[currentSlide].rating)].map((_, i) => (
+            <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+          ))}
+        </div>
 
-              <blockquote className="text-lg w-[500px] md:text-xl mb-4 text-center">
-                {testimonials[currentSlide].quote}
-              </blockquote>
+        <blockquote className="text-lg w-[500px] md:text-xl mb-4 text-center">
+          {testimonials[currentSlide].quote}
+        </blockquote>
 
-              <div className="text-center">
-                <h4 className="font-bold">{testimonials[currentSlide].name}</h4>
-                <p className="text-sm text-muted-foreground">
-                  {testimonials[currentSlide].position},{" "}
-                  {testimonials[currentSlide].company}
-                </p>
-              </div>
+        <div className="text-center">
+          <h4 className="font-bold">{testimonials[currentSlide].name}</h4>
+          <p className="text-sm text-muted-foreground">
+            {testimonials[currentSlide].position},{" "}
+            {testimonials[currentSlide].company}
+          </p>
+        </div>
 
-              <div className="flex gap-3 mt-8 ">
-                <button
-                  onClick={prevSlide}
-                  className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary transition-colors cursor-pointer absolute left-46 top-1/2"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={nextSlide}
-                  className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary transition-colors cursor-pointer absolute right-46 top-1/2"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-              </div>
-
-              <div className="bottom-0 left-0 px-4  h-1 bg-white/10 md:w-[calc(100%-410px-5rem)]">
-                <div
-                  className="h-full bg-primary transition-all duration-500 ease-in-out"
-                  style={{
-                    width: `${
-                      ((currentSlide + 1) / testimonials.length) * 100
-                    }%`,
-                  }}
-                ></div>
-              </div>
-            </div>
-          </div>
+        <div className="flex gap-3 mt-8 ">
+          <button
+            onClick={prevSlide}
+            className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary transition-colors cursor-pointer absolute left-46 top-1/2"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            onClick={nextSlide}
+            className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-primary transition-colors cursor-pointer absolute right-46 top-1/2"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </section>

@@ -1,11 +1,13 @@
 "use client";
 
+import {
+  default as img,
+  default as img1,
+  default as img2,
+} from "@/assets/about1.jpg";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
-import img from "@/assets/about1.jpg";
-import img1 from "@/assets/about1.jpg";
-import img2 from "@/assets/about1.jpg";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [img, img1, img2];
 
@@ -23,7 +25,7 @@ const WhyChooseUs = () => {
   };
 
   return (
-    <section className="bg-black text-white py-16 flex flex-col md:flex-row items-center gap-30">
+    <section className="container pt-[130px] flex flex-col md:flex-row items-center gap-30">
       <div className="flex-1">
         <span className="border-primary border text-white text-sm px-4 py-2 rounded-full">
           Why Choose Us

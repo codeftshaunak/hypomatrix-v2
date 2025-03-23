@@ -2,7 +2,7 @@
 
 const OurClient = () => {
   return (
-    <section className="bg-black text-white py-16 px-6 text-center">
+    <section className="py-[130px] px-6 text-center">
       <div className="max-w-6xl mx-auto">
         <span className="inline-block px-4 py-1 border border-primary text-white rounded-full text-sm mb-4">
           Our Client

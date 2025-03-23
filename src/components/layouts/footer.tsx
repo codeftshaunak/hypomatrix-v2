@@ -1,16 +1,16 @@
 "use client";
-import { useState } from "react";
-import { Mail, Phone } from "lucide-react";
+import img from "@/assets/vector.png";
+import img2 from "@/assets/vector2.png";
 import { motion } from "framer-motion";
+import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
-import img from "../assets/vector.png";
-import img2 from "../assets/vector2.png";
+import { useState } from "react";
 
 export function Footer() {
   const [email, setEmail] = useState("");
 
   return (
-    <footer className="relative pt-20 pb-10 bg-gradient-to-r from-[#1a1a1a] to-[#0f0f0f] overflow-hidden text-white">
+    <footer className="relative pt-20 pb-10 bg-card overflow-hidden">
       {/* Left spiral decoration */}
       <motion.div
         className="absolute -left-10 bottom-30 opacity-60"
@@ -44,7 +44,7 @@ export function Footer() {
         </div>
       </motion.div>
 
-      <div className="container mx-auto px-6 lg:px-8">
+      <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
           {/* Column 1: Logo and subscribe */}
           <div className="md:col-span-1">
@@ -201,7 +201,7 @@ export function Footer() {
           </a> */}
         </div>
       </div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(120,197,94,0.8)_0%,_transparent_30%)]"></div>
+      <div className="absolute bg-primary size-[261px] rounded-full blur-[150px] -left-[150px] -top-[150px]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(100,97,94,0.8)_0%,_transparent_30%)]"></div>
     </footer>
   );
