@@ -20,7 +20,9 @@ const SectionHeader: React.FC<Props> = (props) => {
           <div className="size-2 bg-foreground absolute left-0 top-1/2 -translate-y-1/2 rotate-45" />
         </div>
       </h3>
-      <h2 className="text-heading-2 font-heading font-bold">{title}</h2>
+      <h2 className="text-4xl sm:text-heading-2 font-heading font-bold">
+        {title}
+      </h2>
       {description && <>{description}</>}
     </div>
   );

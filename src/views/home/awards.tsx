@@ -2,7 +2,7 @@
 import img from "@/assets/award.jpg";
 import Image from "next/image";
 
-export function AwardsSection() {
+function AwardsSection() {
   const awards = [
     {
       name: "Web Design Award of Excellence",
@@ -88,3 +88,5 @@ export function AwardsSection() {
     </section>
   );
 }
+
+export default AwardsSection;

@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { hostname: "img.youtube.com" },
       { hostname: "html.pixelfit.agency" },
+      { hostname: "picsum.photos" },
     ],
   },
 };

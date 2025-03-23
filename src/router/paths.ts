@@ -12,6 +12,10 @@ const paths = {
     root: "/team",
     details: (slug: string) => `/team/${slug}`,
   },
+  blog: {
+    root: "/blog",
+    details: (slug: string) => `/blog/${slug}`,
+  },
 };
 
 export default paths;
