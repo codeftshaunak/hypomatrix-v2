@@ -44,7 +44,7 @@ const OurServices = () => {
   return (
     <section className="bg-black text-white py-16 px-4 md:px-12">
       <div className="">
-        <span className="text-primary border border-primary text-sm px-4 py-2 rounded-full">
+        <span className="text-white border border-primary text-sm px-4 py-2 rounded-full">
           Our Service
         </span>
         <h2 className="text-4xl font-bold mt-4">Top Services We Offer</h2>
