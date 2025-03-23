@@ -10,7 +10,7 @@ import ProcessSection from "./work-process";
 
 const HomeView = () => {
   return (
-    <div>
+    <>
       <Hero />
       <Services />
       <ProjectsSection />
@@ -20,7 +20,7 @@ const HomeView = () => {
       <TestimonialsSection />
       <AwardsSection />
       <LatestArticles />
-    </div>
+    </>
   );
 };
 

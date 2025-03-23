@@ -1,4 +1,4 @@
-import { Twitter, Linkedin, Dribbble } from "lucide-react";
+import { Dribbble, Linkedin, Twitter } from "lucide-react";
 
 export function TeamSection() {
   const team = [
@@ -45,7 +45,7 @@ export function TeamSection() {
   ];
 
   return (
-    <section id="team" className="py-20">
+    <section id="team" className="py-[130px]">
       <div className=" px-6 lg:px-8">
         <div className="mb-16 flex flex-col items-center">
           <span className="inline-block px-4 py-1 border border-lime-400 text-white rounded-full text-sm mb-4">

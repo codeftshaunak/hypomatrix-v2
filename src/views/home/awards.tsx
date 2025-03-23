@@ -1,7 +1,6 @@
 "use client";
 import img from "@/assets/award.jpg";
 import Image from "next/image";
-import { useState } from "react";
 export function AwardsSection() {
   const awards = [
     {
@@ -38,7 +37,7 @@ export function AwardsSection() {
 
   return (
     <section id="awards" className="py-20">
-      <div className="flex items-center justify-between mb-10">
+      <div className="flex items-center justify-between mb-10 container">
         <div>
           <h3 className="text-sm tracking-wide text-white flex items-center gap-3">
             Our Service
@@ -56,7 +55,7 @@ export function AwardsSection() {
           cutting-edge solutions.
         </p>
       </div>
-      <div className="container mx-auto px-6 lg:px-8">
+      <div className="container">
         <div className="flex flex-col md:flex-row gap-12 md:gap-20">
           <div className="md:w-1/3">
             <div className=" bg-gray-700/30 aspect-[410/543] rounded-lg flex items-center justify-center">

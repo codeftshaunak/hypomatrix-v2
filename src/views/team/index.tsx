@@ -1,12 +1,11 @@
-import React from "react";
-import { TeamSection } from "./our-team";
+import PageHeader from "@/components/common/page-header";
 import JoinTeamSection from "./join-team";
-import CommonCard from "@/components/common/common-card";
+import { TeamSection } from "./our-team";
 
 const TeamView = () => {
   return (
     <div>
-      <CommonCard title="Our Team" link="team" text="Team" />
+      <PageHeader title="Our Team" link="team" text="Team" />
       <TeamSection />
       <JoinTeamSection />
     </div>

@@ -1,11 +1,9 @@
 import HomeView from "@/views/home";
 
-const HomePage = () => {
-  return (
-    <div>
-      <HomeView />
-    </div>
-  );
+type Props = {};
+
+const HomePage = (props: Props) => {
+  return <HomeView />;
 };
 
 export default HomePage;
