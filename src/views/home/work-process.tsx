@@ -12,7 +12,7 @@ type Step = {
   color: string;
 };
 
-export function ProcessSection() {
+function ProcessSection() {
   const steps: Step[] = [
     {
       id: "01",
