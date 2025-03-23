@@ -1,5 +1,6 @@
 "use client";
 
+import paths from "@/router/paths";
 import { motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
@@ -9,61 +10,6 @@ import DesktopLinks from "./desktop-links";
 
 const menuItems = ["Home", "Pages", "Portfolio", "Blogs", "Contact"];
 const dropdownItems = ["Pages", "Portfolio", "Home", "Blogs"];
-
-type LinkItem = {
-  title: string;
-  href: string;
-};
-
-type LinkItemDropdown = {
-  title: string;
-  items: LinkItem[];
-};
-
-type Link = LinkItem | LinkItemDropdown;
-
-const links: Link[] = [
-  {
-    title: "Home",
-    href: "/",
-  },
-  {
-    title: "Pages",
-    items: [
-      { title: "About Us", href: "/about" },
-      { title: "Our Services", href: "/service" },
-      { title: "Service Details", href: "/service-details" },
-      { title: "Our Team", href: "/our-team" },
-      { title: "Team Details", href: "/team-details" },
-      { title: "Pricing", href: "/pricing" },
-      { title: "FAQS", href: "/faqs" },
-      { title: "Contact Us", href: "/contact" },
-      { title: "404", href: "/404" },
-    ],
-  },
-  {
-    title: "Portfolio",
-    items: [
-      { title: "Web Design", href: "/web-design" },
-      { title: "Graphic Design", href: "/graphic-design" },
-      { title: "UI/UX", href: "/ui-ux" },
-      { title: "Branding", href: "/branding" },
-    ],
-  },
-  {
-    title: "Blogs",
-    items: [
-      { title: "Latest News", href: "/latest-news" },
-      { title: "Technology", href: "/technology" },
-      { title: "Business", href: "/business" },
-      { title: "Lifestyle", href: "/lifestyle" },
-    ],
-  },
-  {
-    title: "Contact Us",
-    href: "/contact",
-  },
-];
 
 // Submenu Mapping
 const subMenus: Record<string, string[]> = {
@@ -117,13 +63,14 @@ export default function Navbar() {
     <nav className="container flex justify-between items-center z-50 absolute top-0 left-1/2 -translate-x-1/2 mt-[30px]">
       <div className="flex gap-10 items-center">
         {/* Logo */}
-        <div className="flex items-center border border-gray-500 bg-transparent rounded-full px-2 py-1">
-          <span className="text-xl font-bold flex items-center">
-            <span className="text-white px-6 py-2 bg-gray-900 rounded-full p-2">
-              HypoMatrix
-            </span>
-          </span>
-        </div>
+        <h2 className="p-[3px] border rounded-full">
+          <Link
+            href={paths.root}
+            className="h-10 px-5 bg-card text-card-foreground inline-flex items-center justify-center rounded-full text-heading-4 font-heading font-bold"
+          >
+            HypoMatrix
+          </Link>
+        </h2>
 
         {/* Desktop Menu */}
         <DesktopLinks />
