@@ -5,10 +5,11 @@ type Props = {
   subtitle: ReactNode;
   title: ReactNode;
   className?: string;
+  description?: ReactNode;
 };
 
 const SectionHeader: React.FC<Props> = (props) => {
-  const { subtitle, title, className } = props;
+  const { subtitle, title, className, description } = props;
 
   return (
     <div className={cn(className)}>
@@ -20,6 +21,7 @@ const SectionHeader: React.FC<Props> = (props) => {
         </div>
       </h3>
       <h2 className="text-heading-2 font-heading font-bold">{title}</h2>
+      {description && <>{description}</>}
     </div>
   );
 };
