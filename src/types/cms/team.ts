@@ -1,12 +1,12 @@
 import { SocialIconsType, TAsset } from "./common";
 
-export type TTeamSocial = {
+export type TMemberSocial = {
   id: string;
   icon: SocialIconsType;
   href: string;
 };
 
-export type TTeam = {
+export type TMember = {
   id: string;
   slug: string;
   name: string;
@@ -15,5 +15,5 @@ export type TTeam = {
   about: {
     html: string; // rich text
   };
-  social: TTeamSocial[];
+  social: TMemberSocial[];
 };

@@ -1,11 +1,11 @@
 import PageHeader from "@/components/common/page-header";
 import paths from "@/router/paths";
-import { TTeam } from "@/types/cms/team";
+import { TMember } from "@/types/cms/team";
 import Experience from "./experience";
 import UserProfile from "./user-profile";
 
 type Props = {
-  member: TTeam;
+  member: TMember;
 };
 
 const TeamDetailsView = (props: Props) => {

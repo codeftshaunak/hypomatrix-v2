@@ -1,5 +1,5 @@
 import { TAsset } from "./common";
-import { TTeam } from "./team";
+import { TMember } from "./team";
 
 export type TBlogPost = {
   id: string;
@@ -9,7 +9,7 @@ export type TBlogPost = {
   description: string;
   category: TBlogCategory | null;
   content: { html: string }; // rich text
-  author: TTeam | null;
+  author: TMember | null;
   publishDate: string; // ISO timestamp
   tags: string[];
 };
