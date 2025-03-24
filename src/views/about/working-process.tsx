@@ -6,13 +6,13 @@ const WorkingProcess = () => {
   return (
     <section className="py-[130px] bg-card">
       <div className="container">
-        <div className="flex items-center mb-[100px]">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-center mb-[100px]">
           <SectionHeader
             subtitle={"Working Process"}
             title={"We are leading Innovative marketing agency."}
           />
 
-          <p className="text-muted-foreground max-w-2xl">
+          <p className="text-muted-foreground max-w-xl">
             <strong className="text-foreground">
               Leading Innovation marketing agency
             </strong>{" "}

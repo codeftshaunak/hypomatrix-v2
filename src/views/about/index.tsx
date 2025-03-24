@@ -4,7 +4,6 @@ import paths from "@/router/paths";
 import { TPage } from "@/types/cms/page";
 import Hero from "./hero";
 import TeamSection from "./team";
-import { TestimonialsSection } from "./testimonials";
 import WorkingProcess from "./working-process";
 
 type Props = {
@@ -24,7 +23,6 @@ const AboutView = (props: Props) => {
       <Hero />
       <WorkingProcess />
       <TeamSection />
-      <TestimonialsSection />
       <OurClient />
     </>
   );

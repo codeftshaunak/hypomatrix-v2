@@ -7,20 +7,20 @@ import CarouselContainer from "./carousel-container";
 function TeamSection() {
   return (
     <section id="team" className="py-[130px]">
-      <div className=" px-6 lg:px-8">
-        <SectionHeader
-          title={"Success Stories From Around the Globe"}
-          subtitle={"Our Experts"}
-          className="mb-[100px] max-w-2xl mx-auto"
-          align="center"
-        />
+      <SectionHeader
+        title={"Success Stories From Around the Globe"}
+        subtitle={"Our Experts"}
+        className="mb-[100px] max-w-2xl mx-auto"
+        align="center"
+      />
 
+      <div className="min-[2000px]:container">
         <CarouselContainer>
-          <CarouselContent className="-ml-6 mb-16">
+          <CarouselContent className="-ml-6">
             {team.map((member) => (
               <CarouselItem
                 key={member.id}
-                className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/5 pl-6"
+                className="basis-[75%] md:basis-1/2 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/5 pl-6"
               >
                 <TeamCard data={member} />
               </CarouselItem>

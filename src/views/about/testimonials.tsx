@@ -1,7 +1,8 @@
 "use client";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { useEffect, useState } from "react";
-export function TestimonialsSection() {
+
+function TestimonialsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const testimonials = [
@@ -94,3 +95,5 @@ export function TestimonialsSection() {
     </section>
   );
 }
+
+export default TestimonialsSection;
