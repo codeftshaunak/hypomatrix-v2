@@ -1,0 +1,63 @@
+import socialIcons from "@/assets/icons/socials";
+import { Button } from "@/components/ui/button";
+import paths from "@/router/paths";
+import type { TTeam } from "@/types/cms/team";
+import { LucideGlobe, Plus } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+
+type Props = {
+  data: TTeam;
+};
+
+const TeamCard = (props: Props) => {
+  const { data } = props;
+
+  return (
+    <article className="group">
+      <div className="aspect-square rounded-lg overflow-hidden relative mb-4">
+        <Image
+          src={data.avatar.url || "/placeholder.svg"}
+          fill
+          alt={data.name}
+        />
+
+        {/* Social Links */}
+        <div className="absolute top-3 right-3 group/social focus-within:z-10 flex flex-col gap-2">
+          <Button size="icon" variant="secondary" className="relative z-10">
+            <Plus />
+          </Button>
+
+          {data.social.map((item, index) => {
+            const Icon = socialIcons?.[item.icon] ?? LucideGlobe;
+            return (
+              <Link href={item.href} target="_blank" passHref key={index}>
+                <Button
+                  size="icon"
+                  variant="secondary"
+                  className="lg:scale-0 transition-transform duration-300 ease-in-out group-hover/social:scale-100 group-hover/social:delay-[50ms] group-focus-within/social:scale-100 group-focus-within/social:delay-[50ms]"
+                >
+                  <Icon />
+                </Button>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+
+      <div>
+        <h3 className="font-bold">
+          <Link
+            href={paths.team.details(data.slug)}
+            className="hover:underline decoration-wavy decoration-primary"
+          >
+            {data.name}
+          </Link>
+        </h3>
+        <p className="text-sm text-muted-foreground">{data.role}</p>
+      </div>
+    </article>
+  );
+};
+
+export default TeamCard;
