@@ -1,9 +1,10 @@
+import { faqPage } from "@/db/pages";
 import FaqView from "@/views/faq";
 
 const page = () => {
   return (
     <>
-      <FaqView />
+      <FaqView page={faqPage} />
     </>
   );
 };
