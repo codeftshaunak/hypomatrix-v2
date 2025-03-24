@@ -1,14 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import SectionHeader from "@/components/common/section-header";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card } from "@/components/ui/card";
-import { Plus, Minus } from "lucide-react";
-
-import img from "@/assets/team-single2.jpg";
-import Image from "next/image";
+import { Minus, Plus } from "lucide-react";
+import { useState } from "react";
 
 const faqs = [
   {
@@ -46,20 +44,19 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="grid md:grid-cols-4 gap-8 bg-black text-white py-12">
+    <div className="grid md:grid-cols-3 gap-8 container py-[130px]">
       {/* FAQ Section */}
-      <div className="md:col-span-3">
-        <span className="text-white border border-primary text-sm px-4 py-2 rounded-full">
-          FAQ&apos;S
-        </span>
-        <h2 className="text-3xl font-bold mb-6 mt-6">
-          Answers at Your Fingertips
-        </h2>
+      <div className="md:col-span-2">
+        <SectionHeader
+          title={"Answers at Your Fingertips"}
+          subtitle={"FAQ"}
+          className="mb-16"
+        />
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div key={index} className="border rounded-lg overflow-hidden">
               <button
-                className="w-full flex justify-between items-center text-left p-4 bg-[#313131] cursor-pointer"
+                className="w-full flex justify-between items-center text-left p-4 bg-card hover:bg-secondary"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
                 <span className="font-bold">{faq.question}</span>
@@ -70,14 +67,7 @@ export default function FAQ() {
                 )}
               </button>
               {openIndex === index && (
-                <div
-                  className="p-4 bg-[#313131] text-gray-300 cursor-pointer"
-                  onClick={() =>
-                    setOpenIndex(openIndex === index ? null : index)
-                  }
-                >
-                  {faq.answer}
-                </div>
+                <div className="p-4 bg-secondary">{faq.answer}</div>
               )}
             </div>
           ))}
@@ -86,62 +76,29 @@ export default function FAQ() {
 
       {/* Contact Form */}
       <div className="space-y-6">
-        <Card className="p-6 bg-black text-white rounded-xl">
-          <h3 className="text-xl font-bold mb-4">Get In Touch</h3>
-          <p className="text-gray-400 mb-4">
-            Contact for support inquiries & collaboration
-          </p>
-          <Input type="text" placeholder="Name" className="mb-3 bg-[#1A1B1D]" />
-          <Input
-            type="email"
-            placeholder="Email"
-            className="mb-3 bg-[#1A1B1D]"
-          />
-          <Input
-            type="text"
-            placeholder="Subject"
-            className="mb-3 bg-[#1A1B1D]"
-          />
-          <Textarea placeholder="Message." className="mb-4 bg-[#1A1B1D]" />
-          <Button className="w-full bg-[#9CFE4F] hover:bg-primary cursor-pointer">
-            Send Message
-          </Button>
+        <Card>
+          <CardContent>
+            <h3 className="text-heading-4 font-heading font-bold">
+              Get In Touch
+            </h3>
+            <p className="text-muted-foreground mb-5">
+              Contact for support inquiries & collaboration
+            </p>
+            <Input type="text" placeholder="Name" className="mb-3" />
+            <Input type="email" placeholder="Email" className="mb-3" />
+            <Input type="text" placeholder="Subject" className="mb-3" />
+            <Textarea placeholder="Message." className="mb-4" />
+            <Button className="w-full">Send Message</Button>
+          </CardContent>
         </Card>
 
         {/* Contact Us Section */}
-
-        {/* <div className="relative">
-          <Image src={img} alt="image not found" className="object-cover" />
-
-          <div className="text-center text-white px-4 py-2 rounded absolute bottom-0">
-            <p className="text-2xl font-bold mb-2">
-              Expert & Experienced Business Services.
-            </p>
-            <Button className="bg-[#9CFE4F] cursor-pointer py-6 w-full">
-              Contact us
-            </Button>
-          </div>
-        </div> */}
-
-        <div className="relative group cursor-pointer">
-          <Image
-            src={img}
-            alt="image not found"
-            className="object-cover w-full h-full"
-          />
-
-          {/* Gradient overlay on hover */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-75 transition-opacity"></div>
-
-          <div className="text-center text-white px-4 py-2 rounded absolute bottom-0 w-full">
-            <p className="text-2xl font-bold mb-2">
-              Expert & Experienced Business Services.
-            </p>
-            <Button className="bg-[#9CFE4F] cursor-pointer py-6 w-full">
-              Contact us
-            </Button>
-          </div>
-        </div>
+        <Card className="p-6 bg-gradient-to-b from-transparent to-card items-center justify-center text-center gap-0 h-[300px]">
+          <p className="text-2xl font-bold mb-5">
+            Expert & Experienced Business Services.
+          </p>
+          <Button>Contact us</Button>
+        </Card>
       </div>
     </div>
   );
