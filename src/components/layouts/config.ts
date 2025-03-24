@@ -26,7 +26,7 @@ export const desktopLinks: Link[] = [
       { title: "Our Team", href: "/team" },
       { title: "Team Details", href: "/team-details" },
       { title: "Pricing", href: "/pricing" },
-      { title: "FAQS", href: "/faqs" },
+      { title: "FAQ", href: "/faq" },
       { title: "Contact Us", href: "/contact" },
       { title: "404", href: "/404" },
     ],
