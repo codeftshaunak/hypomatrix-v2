@@ -24,9 +24,11 @@ const PageHeader: React.FC<Props> = (props) => {
       </div>
 
       <div className="container relative">
-        <h1 className="text-6xl md:text-7xl font-bold mb-10">{title}</h1>
+        <h1 className="text-heading-2 md:text-[70px] font-heading font-bold mb-2 md:mb-8">
+          {title}
+        </h1>
 
-        <div className="flex flex-col lg:flex-row items-center w-full gap-6">
+        <div className="flex flex-col lg:flex-row items-center w-full gap-y-10 gap-x-6">
           <div className="flex items-center gap-x-6">
             <Image
               src={pattan}
@@ -36,23 +38,24 @@ const PageHeader: React.FC<Props> = (props) => {
             />
 
             {/* Description */}
-            <p className="text-xl font-heading lg:max-w-[500px] w-full">
+            <p className="md:text-xl font-heading lg:max-w-[500px] w-full">
               {description}
             </p>
           </div>
 
-          <div className="flex items-center ml-auto">
-            <div className="mx-4 h-[1px] w-32 bg-border"></div>
+          <div className="flex items-center ml-auto max-md:w-full">
+            <div className="mx-4 h-[1px] w-full grow md:w-32 bg-border"></div>
             <Breadcrumb links={links} />
           </div>
         </div>
-        <div className="spin-in animate-spin duration-7000 absolute right-4 top-0 -translate-y-full md:-translate-y-1/2 md:right-20">
+
+        <div className="absolute right-4 top-0 -translate-y-full md:-translate-y-1/2 md:right-20">
           <Image
             src={img1}
             alt="Join Our Team"
             priority
             width={100}
-            className="md:w-[130px]"
+            className="md:w-[130px] spin-in animate-spin duration-7000"
           />
         </div>
       </div>
