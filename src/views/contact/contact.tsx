@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function ContactSection() {
   return (
     <div className="bg-black text-white py-16">
-      <div className="flex gap-28">
+      <div className="flex gap-28 container">
         {/* Contact Info */}
         <Card className="bg-[#0E0F11] p-6 flex flex-col justify-center">
           <h3 className="text-3xl font-bold text-primary mt-4">
