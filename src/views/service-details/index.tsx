@@ -8,7 +8,7 @@ const ServiceDetailsView = () => {
     <div>
       <PageHeader
         title="Services Details"
-        text="Services Details"
+        description="Services Details"
         link="service-details"
       />
       <ClientSuccessSection />

@@ -1,5 +1,6 @@
 const paths = {
   root: "/",
+  about: "/about",
   portfolio: {
     root: "/portfolio",
     details: (slug: string) => `/portfolio/${slug}`,

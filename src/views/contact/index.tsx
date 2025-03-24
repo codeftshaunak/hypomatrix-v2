@@ -1,11 +1,10 @@
-import React from "react";
-import ContactSection from "./contact";
 import PageHeader from "@/components/common/page-header";
+import ContactSection from "./contact";
 
 const ContactView = () => {
   return (
     <div>
-      <PageHeader title="Contact" link="contact" text="Contact" />
+      <PageHeader title="Contact" link="contact" description="Contact" />
       <ContactSection />
     </div>
   );

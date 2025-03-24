@@ -7,7 +7,7 @@ import WhyChooseUs from "./why-choose-us";
 const ServiceView = () => {
   return (
     <>
-      <PageHeader title="Our Services" text="Services" link="service" />
+      <PageHeader title="Our Services" description="Services" link="service" />
       <WhyChooseUs />
       <OurServices />
       <OurClient />

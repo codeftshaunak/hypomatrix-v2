@@ -5,7 +5,7 @@ import UserProfile from "./user-profile";
 const TeamDetailsView = () => {
   return (
     <>
-      <PageHeader title="Team Details" text="Team Details" link="#" />
+      <PageHeader title="Team Details" description="Team Details" link="#" />
       <UserProfile />
       <Experience />
     </>

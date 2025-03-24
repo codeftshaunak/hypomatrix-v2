@@ -1,13 +1,13 @@
+import { aboutPage } from "@/db/pages";
 import AboutView from "@/views/about";
-import React from "react";
 
 type Props = {};
 
 const about = (props: Props) => {
   return (
-    <div>
-      <AboutView />
-    </div>
+    <>
+      <AboutView page={aboutPage} />
+    </>
   );
 };
 

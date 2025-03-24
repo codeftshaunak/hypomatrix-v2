@@ -5,7 +5,7 @@ import { TeamSection } from "./our-team";
 const TeamView = () => {
   return (
     <>
-      <PageHeader title="Our Team" link="team" text="Team" />
+      <PageHeader title="Our Team" link="team" description="Team" />
       <TeamSection />
       <JoinTeamSection />
     </>

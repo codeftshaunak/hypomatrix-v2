@@ -4,7 +4,11 @@ import FAQ from "./faq-section";
 const FaqView = () => {
   return (
     <>
-      <PageHeader title="Frequently Asked Questions" link="#" text="FAQ" />
+      <PageHeader
+        title="Frequently Asked Questions"
+        link="#"
+        description="FAQ"
+      />
       <FAQ />
     </>
   );
