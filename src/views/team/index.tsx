@@ -4,11 +4,11 @@ import { TeamSection } from "./our-team";
 
 const TeamView = () => {
   return (
-    <div>
+    <>
       <PageHeader title="Our Team" link="team" text="Team" />
       <TeamSection />
       <JoinTeamSection />
-    </div>
+    </>
   );
 };
 

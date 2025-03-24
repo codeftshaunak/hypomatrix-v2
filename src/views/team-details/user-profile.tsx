@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { Linkedin, Instagram, Twitter } from "lucide-react";
 import img from "@/assets/team-single1.jpg";
+import { Instagram, Linkedin, Twitter } from "lucide-react";
+import Image from "next/image";
 
 const userData = {
   name: "Oliver Bennett",
@@ -12,7 +12,7 @@ const userData = {
 
 const UserProfile: React.FC = () => {
   return (
-    <section className="flex items-center bg-black text-white py-11 gap-16 rounded-lg shadow-lg">
+    <section className="container flex items-center py-[130px] gap-16 rounded-lg shadow-lg">
       <Image
         src={userData.imageUrl}
         alt={userData.name}

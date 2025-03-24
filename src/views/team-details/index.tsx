@@ -1,13 +1,14 @@
-import React from "react";
-import UserProfile from "./user-profile";
+import PageHeader from "@/components/common/page-header";
 import Experience from "./experience";
+import UserProfile from "./user-profile";
 
 const TeamDetailsView = () => {
   return (
-    <div>
+    <>
+      <PageHeader title="Team Details" text="Team Details" link="#" />
       <UserProfile />
       <Experience />
-    </div>
+    </>
   );
 };
 
