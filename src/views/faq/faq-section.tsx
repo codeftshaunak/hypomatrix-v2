@@ -59,7 +59,7 @@ export default function FAQ() {
                 className="w-full flex justify-between items-center text-left p-4 bg-card hover:bg-secondary"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <span className="font-semibold">{faq.question}</span>
+                <span className="font-bold">{faq.question}</span>
                 {openIndex === index ? (
                   <Minus className="w-5 h-5" />
                 ) : (
