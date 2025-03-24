@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import SectionHeader from "@/components/common/section-header";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card } from "@/components/ui/card";
-import { Plus, Minus } from "lucide-react";
+import { Minus, Plus } from "lucide-react";
+import { useState } from "react";
 
 const faqs = [
   {
@@ -43,18 +44,19 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="grid md:grid-cols-3 gap-8 bg-black text-white">
+    <div className="grid md:grid-cols-3 gap-8 container py-[130px]">
       {/* FAQ Section */}
       <div className="md:col-span-2">
-        <span className="text-white border border-primary text-sm px-4 py-2 rounded-full">
-          Our Service
-        </span>
-        <h2 className="text-3xl font-bold mb-6">Answers at Your Fingertips</h2>
+        <SectionHeader
+          title={"Answers at Your Fingertips"}
+          subtitle={"FAQ"}
+          className="mb-16"
+        />
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div key={index} className="border rounded-lg overflow-hidden">
               <button
-                className="w-full flex justify-between items-center text-left p-4 bg-gray-800 hover:bg-gray-700"
+                className="w-full flex justify-between items-center text-left p-4 bg-card hover:bg-secondary"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
                 <span className="font-semibold">{faq.question}</span>
@@ -65,9 +67,7 @@ export default function FAQ() {
                 )}
               </button>
               {openIndex === index && (
-                <div className="p-4 bg-gray-900 text-gray-300">
-                  {faq.answer}
-                </div>
+                <div className="p-4 bg-secondary">{faq.answer}</div>
               )}
             </div>
           ))}
@@ -76,36 +76,28 @@ export default function FAQ() {
 
       {/* Contact Form */}
       <div className="space-y-6">
-        <Card className="p-6 bg-gray-900 text-white rounded-xl">
-          <h3 className="text-xl font-bold mb-4">Get In Touch</h3>
-          <p className="text-gray-400 mb-4">
-            Contact for support inquiries & collaboration
-          </p>
-          <Input type="text" placeholder="Name" className="mb-3 bg-gray-800" />
-          <Input
-            type="email"
-            placeholder="Email"
-            className="mb-3 bg-gray-800"
-          />
-          <Input
-            type="text"
-            placeholder="Subject"
-            className="mb-3 bg-gray-800"
-          />
-          <Textarea placeholder="Message." className="mb-4 bg-gray-800" />
-          <Button className="w-full bg-green-500 hover:bg-green-600">
-            Send Message
-          </Button>
+        <Card>
+          <CardContent>
+            <h3 className="text-heading-4 font-heading font-bold">
+              Get In Touch
+            </h3>
+            <p className="text-muted-foreground mb-5">
+              Contact for support inquiries & collaboration
+            </p>
+            <Input type="text" placeholder="Name" className="mb-3" />
+            <Input type="email" placeholder="Email" className="mb-3" />
+            <Input type="text" placeholder="Subject" className="mb-3" />
+            <Textarea placeholder="Message." className="mb-4" />
+            <Button className="w-full">Send Message</Button>
+          </CardContent>
         </Card>
 
         {/* Contact Us Section */}
-        <Card className="p-6 bg-gradient-to-b from-gray-700 to-gray-900 text-white rounded-xl flex flex-col items-center justify-center text-center">
-          <p className="text-2xl font-bold mb-2">
+        <Card className="p-6 bg-gradient-to-b from-transparent to-card items-center justify-center text-center gap-0 h-[300px]">
+          <p className="text-2xl font-bold mb-5">
             Expert & Experienced Business Services.
           </p>
-          <Button className="mt-4 bg-green-500 hover:bg-green-600">
-            Contact us
-          </Button>
+          <Button>Contact us</Button>
         </Card>
       </div>
     </div>
