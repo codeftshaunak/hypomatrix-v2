@@ -18,7 +18,7 @@ export function NavLink({ link }: NavLinkProps) {
       <Link
         href={link.href}
         className={cn(
-          "block px-3 py-2 text-body font-medium transition-colors",
+          "block px-3 py-2 text-body font-heading font-medium transition-colors",
           isActive ? "text-primary" : "text-foreground hover:text-primary"
         )}
       >

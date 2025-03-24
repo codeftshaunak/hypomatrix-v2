@@ -1,6 +1,6 @@
-import { TTeam } from "@/types/cms/team";
+import { TMember } from "@/types/cms/team";
 
-export const team: TTeam[] = [
+export const members: TMember[] = [
   {
     id: "1",
     slug: "john-doe",

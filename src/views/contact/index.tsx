@@ -1,13 +1,28 @@
-import React from "react";
-import ContactSection from "./contact";
 import PageHeader from "@/components/common/page-header";
+import paths from "@/router/paths";
+import { TPage } from "@/types/cms/page";
+import ContactSection from "./contact";
 
-const ContactView = () => {
+type Props = {
+  page: TPage;
+};
+
+const ContactView = (props: Props) => {
+  const { page } = props;
   return (
-    <div>
-      <PageHeader title="Contact" link="contact" text="Contact" />
+    <>
+      <PageHeader
+        title={page.title}
+        links={[
+          {
+            title: "Contact",
+            href: paths.contact,
+          },
+        ]}
+        description={page.description}
+      />
       <ContactSection />
-    </div>
+    </>
   );
 };
 

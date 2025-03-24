@@ -1,3 +1,5 @@
+import paths from "@/router/paths";
+
 export type LinkItem = {
   title: string;
   href: string;
@@ -20,14 +22,14 @@ export const desktopLinks: Link[] = [
   {
     title: "Pages",
     items: [
-      { title: "About Us", href: "/about" },
-      { title: "Our Services", href: "/service" },
-      { title: "Service Details", href: "/service-details" },
-      { title: "Our Team", href: "/team" },
-      { title: "Team Details", href: "/team-details" },
+      { title: "About Us", href: paths.about },
+      { title: "Our Services", href: paths.services.root },
+      { title: "Service Details", href: paths.services.details("slug") },
+      { title: "Our Team", href: paths.team.root },
+      { title: "Team Details", href: paths.team.details("slug") },
       { title: "Pricing", href: "/pricing" },
-      { title: "FAQ", href: "/faq" },
-      { title: "Contact Us", href: "/contact" },
+      { title: "FAQ", href: paths.faq },
+      { title: "Contact Us", href: paths.contact },
       { title: "404", href: "/404" },
     ],
   },

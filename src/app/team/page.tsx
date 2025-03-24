@@ -1,11 +1,12 @@
+import { teamPage } from "@/db/pages";
 import TeamView from "@/views/team";
 
-const page = () => {
+const TeamPage = () => {
   return (
     <>
-      <TeamView />
+      <TeamView page={teamPage} />
     </>
   );
 };
 
-export default page;
+export default TeamPage;

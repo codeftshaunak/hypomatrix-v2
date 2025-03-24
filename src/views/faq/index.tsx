@@ -1,10 +1,26 @@
 import PageHeader from "@/components/common/page-header";
+import paths from "@/router/paths";
+import { TPage } from "@/types/cms/page";
 import FAQ from "./faq-section";
 
-const FaqView = () => {
+type Props = {
+  page: TPage;
+};
+
+const FaqView = (props: Props) => {
+  const { page } = props;
   return (
     <>
-      <PageHeader title="Frequently Asked Questions" link="#" text="FAQ" />
+      <PageHeader
+        title={page.title}
+        links={[
+          {
+            title: "FAQ",
+            href: paths.faq,
+          },
+        ]}
+        description={page.description}
+      />
       <FAQ />
     </>
   );

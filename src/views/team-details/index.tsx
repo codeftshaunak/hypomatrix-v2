@@ -1,11 +1,25 @@
 import PageHeader from "@/components/common/page-header";
+import paths from "@/router/paths";
+import { TMember } from "@/types/cms/team";
 import Experience from "./experience";
 import UserProfile from "./user-profile";
 
-const TeamDetailsView = () => {
+type Props = {
+  member: TMember;
+};
+
+const TeamDetailsView = (props: Props) => {
+  const { member } = props;
   return (
     <>
-      <PageHeader title="Team Details" text="Team Details" link="#" />
+      <PageHeader
+        title={member.name}
+        description={member.role}
+        links={[
+          { title: "Team", href: paths.team.root },
+          { title: "Details", href: paths.team.details(member.slug) },
+        ]}
+      />
       <UserProfile />
       <Experience />
     </>

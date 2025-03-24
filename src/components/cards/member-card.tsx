@@ -1,13 +1,13 @@
 import socialIcons from "@/assets/icons/socials";
 import { Button } from "@/components/ui/button";
 import paths from "@/router/paths";
-import type { TTeam } from "@/types/cms/team";
+import type { TMember } from "@/types/cms/team";
 import { LucideGlobe, Plus } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
-  data: TTeam;
+  data: TMember;
 };
 
 const TeamCard = (props: Props) => {

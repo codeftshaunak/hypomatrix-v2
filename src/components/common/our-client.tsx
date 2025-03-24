@@ -1,27 +1,31 @@
-"use client";
+import { companies } from "@/db/companies";
+import Image from "next/image";
+import SectionHeader from "./section-header";
 
 const OurClient = () => {
   return (
-    <section className="py-[130px] px-6 text-center">
-      <div className="max-w-6xl mx-auto">
-        <span className="inline-block px-4 py-1 border border-primary text-white rounded-full text-sm mb-4">
-          Our Client
-        </span>
-        <h2 className="text-3xl md:text-5xl font-bold mb-8">
-          Trusted Industry Leader
-        </h2>
-        <div className="flex justify-center gap-6">
-          {Array(5)
-            .fill(0)
-            .map((_, index) => (
-              <div
-                key={index}
-                className="w-52 h-52 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 text-lg"
-              >
-                234 × 234
-              </div>
-            ))}
-        </div>
+    <section className="pb-[130px] px-6 text-center">
+      <SectionHeader
+        title={"Trusted Industry Leader"}
+        subtitle={"Our Client"}
+        className="mb-[100px] max-w-2xl mx-auto"
+        align="center"
+      />
+
+      <div className="flex justify-center gap-6 flex-wrap">
+        {companies.map((company, index) => (
+          <div
+            key={index}
+            className="size-36 sm:size-52 bg-card rounded-full flex items-center justify-center"
+          >
+            <Image
+              src={company.logo}
+              alt={company.name}
+              width={100}
+              height={100}
+            />
+          </div>
+        ))}
       </div>
     </section>
   );

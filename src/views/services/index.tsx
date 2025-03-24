@@ -2,30 +2,35 @@ import OurClient from "@/components/common/our-client";
 import PageHeader from "@/components/common/page-header";
 import paths from "@/router/paths";
 import { TPage } from "@/types/cms/page";
-import Hero from "./hero";
-import TeamSection from "./team";
-import WorkingProcess from "./working-process";
+import LatestBlogs from "./latest-blog";
+import OurServices from "./top-service";
+import WhyChooseUs from "./why-choose-us";
 
 type Props = {
   page: TPage;
 };
 
-const AboutView = (props: Props) => {
+const ServicesView = (props: Props) => {
   const { page } = props;
 
   return (
     <>
       <PageHeader
         title={page.title}
-        links={[{ title: page.title, href: paths.about }]}
+        links={[
+          {
+            title: "Services",
+            href: paths.services.root,
+          },
+        ]}
         description={page.description}
       />
-      <Hero />
-      <WorkingProcess />
-      <TeamSection />
+      <WhyChooseUs />
+      <OurServices />
       <OurClient />
+      <LatestBlogs />
     </>
   );
 };
 
-export default AboutView;
+export default ServicesView;
