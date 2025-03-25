@@ -22,7 +22,7 @@ const ServiceDetailsView = (props: Props) => {
         ]}
       />
       <ContentSection service={service} />
-      <StepsSection />
+      <StepsSection steps={service.steps} />
       <OurClient />
     </>
   );

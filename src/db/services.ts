@@ -38,21 +38,33 @@ export const services: TService[] = [
         title: "Research & Strategy",
         description:
           "Understanding your brand, audience, and objectives to plan the perfect website.",
-        image: "https://picsum.photos/600/400?random=11",
+        image: {
+          url: "https://picsum.photos/600/400?random=11",
+          width: 800,
+          height: 600,
+        },
       },
       {
         id: "2",
         title: "Design & Development",
         description:
           "Creating a visually appealing and functional website tailored to your needs.",
-        image: "https://picsum.photos/600/400?random=12",
+        image: {
+          url: "https://picsum.photos/600/400?random=12",
+          width: 800,
+          height: 600,
+        },
       },
       {
         id: "3",
         title: "Testing & Deployment",
         description:
           "Ensuring performance, security, and smooth deployment to make your site live.",
-        image: "https://picsum.photos/600/400?random=13",
+        image: {
+          url: "https://picsum.photos/600/400?random=13",
+          width: 800,
+          height: 600,
+        },
       },
     ],
   },
@@ -95,21 +107,33 @@ export const services: TService[] = [
         title: "Brand Research",
         description:
           "Understanding your business, market, and competitors to define a unique identity.",
-        image: "https://picsum.photos/600/400?random=21",
+        image: {
+          url: "https://picsum.photos/600/400?random=21",
+          width: 800,
+          height: 600,
+        },
       },
       {
         id: "2",
         title: "Visual Concept & Design",
         description:
           "Developing creative concepts and visual elements that represent your brand.",
-        image: "https://picsum.photos/600/400?random=22",
+        image: {
+          url: "https://picsum.photos/600/400?random=22",
+          width: 800,
+          height: 600,
+        },
       },
       {
         id: "3",
         title: "Brand Implementation",
         description:
           "Ensuring consistency across all platforms, from digital to print.",
-        image: "https://picsum.photos/600/400?random=23",
+        image: {
+          url: "https://picsum.photos/600/400?random=23",
+          width: 800,
+          height: 600,
+        },
       },
     ],
   },
@@ -151,21 +175,33 @@ export const services: TService[] = [
         id: "1",
         title: "Concept Planning",
         description: "Defining the vision, style, and purpose of the shoot.",
-        image: "https://picsum.photos/600/400?random=31",
+        image: {
+          url: "https://picsum.photos/600/400?random=31",
+          width: 800,
+          height: 600,
+        },
       },
       {
         id: "2",
         title: "Shooting & Production",
         description:
           "Capturing high-quality visuals with professional equipment.",
-        image: "https://picsum.photos/600/400?random=32",
+        image: {
+          url: "https://picsum.photos/600/400?random=32",
+          width: 800,
+          height: 600,
+        },
       },
       {
         id: "3",
         title: "Editing & Delivery",
         description:
           "Enhancing visuals through editing and delivering the final product.",
-        image: "https://picsum.photos/600/400?random=33",
+        image: {
+          url: "https://picsum.photos/600/400?random=33",
+          width: 800,
+          height: 600,
+        },
       },
     ],
   },
