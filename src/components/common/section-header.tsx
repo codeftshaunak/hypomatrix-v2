@@ -13,7 +13,13 @@ const SectionHeader: React.FC<Props> = (props) => {
   const { subtitle, title, className, description, align = "left" } = props;
 
   return (
-    <div className={cn(className, align === "center" ? "text-center" : "")}>
+    <div
+      className={cn(
+        className,
+        align === "center" ? "text-center" : "",
+        align === "right" ? "text-right" : ""
+      )}
+    >
       <h3
         className={cn(
           "text-body flex items-center gap-3 mb-4",
@@ -38,7 +44,9 @@ const SectionHeader: React.FC<Props> = (props) => {
       <h2 className="text-4xl sm:text-heading-2 font-heading font-bold">
         {title}
       </h2>
-      {description && <>{description}</>}
+      {description && (
+        <p className="text-muted-foreground mt-1">{description}</p>
+      )}
     </div>
   );
 };

@@ -1,10 +1,10 @@
 import { TAsset } from "./common";
 
-export type TServiceSteps = {
+export type TServiceStep = {
   id: string;
   title: string;
   description: string;
-  image: string;
+  image: TAsset;
 };
 
 export type TService = {
@@ -18,5 +18,5 @@ export type TService = {
   completeProjects: number;
   successRate: number; // 0-100
   content: { html: string }; // richtext
-  steps: TServiceSteps[];
+  steps: TServiceStep[];
 };
