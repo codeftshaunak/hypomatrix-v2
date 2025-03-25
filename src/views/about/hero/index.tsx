@@ -1,9 +1,9 @@
 import img from "@/assets/about1.jpg";
 import SectionHeader from "@/components/common/section-header";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { PlayIcon } from "lucide-react";
 import Image from "next/image";
+import StatsSection from "./stats";
 
 const Hero = () => {
   return (
@@ -30,23 +30,7 @@ const Hero = () => {
           <Button size={"xl"} className="mb-10">
             Learn More
           </Button>
-          <div className="flex gap-12 items-center">
-            <div>
-              <h3 className="text-heading-2 font-bold text-primary font-heading mb-2">
-                240+
-              </h3>
-              <p className="text-muted-foreground">projects success rate 99%</p>
-            </div>
-            <Separator orientation="vertical" className="!h-[80px]" />
-            <div>
-              <h3 className="text-heading-2 font-bold text-primary font-heading mb-2">
-                23+
-              </h3>
-              <p className="text-muted-foreground">
-                Award for digital innovation
-              </p>
-            </div>
-          </div>
+          <StatsSection />
         </div>
       </div>
 

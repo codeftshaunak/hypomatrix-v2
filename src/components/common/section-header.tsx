@@ -38,7 +38,9 @@ const SectionHeader: React.FC<Props> = (props) => {
       <h2 className="text-4xl sm:text-heading-2 font-heading font-bold">
         {title}
       </h2>
-      {description && <>{description}</>}
+      {description && (
+        <p className="text-muted-foreground mt-1">{description}</p>
+      )}
     </div>
   );
 };
