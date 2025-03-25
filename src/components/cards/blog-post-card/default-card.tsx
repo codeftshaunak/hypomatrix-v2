@@ -3,14 +3,14 @@ import { TBlogPost } from "@/types/cms/blog";
 import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
-import { Badge } from "../ui/badge";
-import { Card, CardContent } from "../ui/card";
+import { Badge } from "../../ui/badge";
+import { Card, CardContent } from "../../ui/card";
 
 type Props = {
   data: TBlogPost;
 };
 
-const BlogPostCard = (props: Props) => {
+const DefaultCard = (props: Props) => {
   const { data } = props;
   return (
     <Card>
@@ -46,4 +46,4 @@ const BlogPostCard = (props: Props) => {
   );
 };
 
-export default BlogPostCard;
+export default DefaultCard;

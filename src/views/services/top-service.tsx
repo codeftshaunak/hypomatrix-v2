@@ -1,83 +1,47 @@
-"use client";
-
-import { useState } from "react";
-// import { ArrowRight } from "lucide-react";
-
-const services = [
-  {
-    id: 1,
-    title: "Development",
-    subtitle: "Web Development",
-    description:
-      "We innovate development solutions, combining technology and creativity to build efficient, scalable, and user-friendly digital platforms.",
-    number: "01",
-  },
-  {
-    id: 2,
-    title: "UI/UX Design",
-    subtitle: "Mobile apps Design",
-    description:
-      "We craft intuitive UI/UX designs focused on user engagement, seamless navigation, and delivering exceptional digital experiences.",
-    number: "02",
-  },
-  {
-    id: 3,
-    title: "Graphics",
-    subtitle: "Packaging Design",
-    description:
-      "We create visually stunning graphic communication that captivates audiences and enhances your overall visual identity.",
-    number: "03",
-  },
-  {
-    id: 4,
-    title: "Marketing",
-    subtitle: "SEO Marketing",
-    description:
-      "We deliver innovative marketing strategies to boost brand visibility, engage audiences, and drive measurable growth for your business.",
-    number: "04",
-  },
-];
+import SectionHeader from "@/components/common/section-header";
+import { Card, CardContent } from "@/components/ui/card";
+import { services } from "@/db/services";
+import Image from "next/image";
 
 const OurServices = () => {
-  const [active, setActive] = useState(2);
-
   return (
-    <section className="container pt-[130px] px-4 md:px-12">
-      <div className="text-center">
-        <span className="text-primary border border-primary text-sm px-4 py-2 rounded-full">
-          Our Service
-        </span>
-        <h2 className="text-4xl font-bold mt-4">Top Services We Offer</h2>
-      </div>
+    <section className="container pb-[130px]">
+      <SectionHeader
+        subtitle={"Our Services"}
+        title={"Top Services We Offer"}
+        align="center"
+        className="mb-16"
+      />
 
-      <div className="mt-8 space-y-4">
+      <div className="space-y-4">
         {services.map((service) => (
-          <div
-            key={service.id}
-            className={`flex items-center justify-between p-6 rounded-lg transition-all cursor-pointer overflow-hidden ${
-              active === service.id ? "bg-primary text-black" : "bg-[#18191B]"
-            }`}
-            onMouseEnter={() => setActive(service.id)}
-          >
-            <div className="w-40 h-18 bg-white rounded-full flex items-center justify-center text-black">
-              320 × 120
-            </div>
-            <div className="ml-4">
-              <h3 className="text-2xl font-bold ">{service.title}</h3>
-              <p className="">{service.subtitle}</p>
-            </div>
-            <div>
-              <p className="text-sm mt-2 w-[300px]">{service.description}</p>
-            </div>
-            <span className=" text-4xl font-bold opacity-20">
-              {service.number}
-            </span>
-            {/* {active === service.id && (
-                <div className="ml-4 bg-black p-2 rounded-full text-white">
-                  <ArrowRight size={20} />
+          <Card key={service.id}>
+            <CardContent className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 items-center">
+              <div className="lg:row-span-2 xl:row-span-1 mb-5 lg:mb-0">
+                <div className="w-full max-w-[300px] h-28 relative">
+                  <Image
+                    src={service.image.url}
+                    alt={service.title}
+                    fill
+                    className="rounded-3xl lg:rounded-full object-cover"
+                  />
                 </div>
-              )} */}
-          </div>
+              </div>
+              <div className="mb-2 xl:mb-0">
+                <h3 className="text-heading-3 lg:text-heading-2 font-heading font-bold ">
+                  {service.category}
+                </h3>
+                <h4 className="text-heading-6 lg:text-heading-4 font-medium text-muted-foreground">
+                  {service.title}
+                </h4>
+              </div>
+              <div>
+                <p className="text-body text-muted-foreground ml-auto">
+                  {service.description}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         ))}
       </div>
     </section>
