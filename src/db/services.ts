@@ -22,9 +22,7 @@ export const services: TService[] = [
     successRate: 98,
     content: {
       html: `
-        <h2>Build Stunning & High-Performance Websites</h2>
         <p>Our team specializes in crafting engaging, fully responsive, and SEO-friendly websites to boost your brand's online presence.</p>
-        <h3>What We Offer:</h3>
         <ul>
           <li>Custom website design & development</li>
           <li>Mobile-friendly and responsive layouts</li>

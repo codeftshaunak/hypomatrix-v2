@@ -1,3 +1,4 @@
+import StatCard from "@/components/cards/stat-card";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 
@@ -10,19 +11,9 @@ const StatsSection = (props: Props) => {
 
   return (
     <div className={cn("flex gap-12 items-center", className)}>
-      <div>
-        <h3 className="text-heading-2 font-bold text-primary font-heading mb-2">
-          240+
-        </h3>
-        <p className="text-muted-foreground">projects success rate 99%</p>
-      </div>
+      <StatCard count={"240+"} title={"Projects success rate 99%"} />
       <Separator orientation="vertical" className="!h-[80px]" />
-      <div>
-        <h3 className="text-heading-2 font-bold text-primary font-heading mb-2">
-          23+
-        </h3>
-        <p className="text-muted-foreground">Award for digital innovation</p>
-      </div>
+      <StatCard count={"23+"} title={"Award for digital innovation"} />
     </div>
   );
 };
