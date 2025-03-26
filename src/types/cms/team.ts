@@ -1,10 +1,4 @@
-import { SocialIconsType, TAsset } from "./common";
-
-export type TMemberSocial = {
-  id: string;
-  icon: SocialIconsType;
-  href: string;
-};
+import { TAsset, TSocial } from "./common";
 
 export type TMember = {
   id: string;
@@ -15,5 +9,5 @@ export type TMember = {
   about: {
     html: string; // rich text
   };
-  social: TMemberSocial[];
+  social: TSocial[];
 };
