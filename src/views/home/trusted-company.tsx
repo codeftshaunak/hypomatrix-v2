@@ -10,12 +10,12 @@ export default function TrustedCompanySection() {
         subtitle={"Company"}
         title={"Trusted Our Company"}
         description={
-          <p className="text-muted-foreground mt-1">
+          <>
             <span className="text-foreground font-semibold">
               We are a digital Creative agency
             </span>{" "}
             with 25 years of experience, specializing in delivering cutting-edge{" "}
-          </p>
+          </>
         }
         className="max-w-[500px]"
       />
