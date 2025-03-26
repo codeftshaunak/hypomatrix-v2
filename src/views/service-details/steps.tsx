@@ -11,7 +11,7 @@ const StepsSection = (props: Props) => {
   return (
     <section className="container py-[130px] grid min-[400px]:grid-cols-2 lg:grid-cols-4 gap-y-16">
       {steps.map((step, index) => (
-        <ServiceStepCard data={step} index={index + 1} />
+        <ServiceStepCard data={step} index={index + 1} key={index} />
       ))}
     </section>
   );

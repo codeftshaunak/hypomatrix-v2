@@ -40,7 +40,7 @@ const navLinks: Record<string, string[]> = {
     "Contact Us",
     "404",
   ],
-  Portfolio: ["Web Design", "Graphic Design", "UI/UX", "Branding"],
+  Portfolio: ["/project", "Graphic Design", "UI/UX", "Branding"],
   Home: ["/", "Main Home", "Corporate Home"],
   Blogs: ["Latest News", "Technology", "Business", "Lifestyle"],
 };
@@ -78,7 +78,9 @@ export default function Navbar() {
 
       {/* Right Side */}
       <div className="flex items-center space-x-4">
-        <Button size={"lg"}>LETS TALK</Button>
+        <Link href={"/contact"}>
+          <Button size={"lg"}>LETS TALK</Button>
+        </Link>
         <button
           className="lg:hidden"
           onClick={() => setIsOpen(!isOpen)}
