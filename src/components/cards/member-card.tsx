@@ -10,7 +10,7 @@ type Props = {
   data: TMember;
 };
 
-const TeamCard = (props: Props) => {
+const MemberCard = (props: Props) => {
   const { data } = props;
 
   return (
@@ -49,7 +49,7 @@ const TeamCard = (props: Props) => {
         <h3 className="font-bold">
           <Link
             href={paths.team.details(data.slug)}
-            className="hover:underline decoration-wavy decoration-primary"
+            className="hover:text-primary duration-200"
           >
             {data.name}
           </Link>
@@ -60,4 +60,4 @@ const TeamCard = (props: Props) => {
   );
 };
 
-export default TeamCard;
+export default MemberCard;

@@ -1,4 +1,4 @@
-import TeamCard from "@/components/cards/member-card";
+import MemberCard from "@/components/cards/member-card";
 import {
   Carousel,
   CarouselContent,
@@ -25,7 +25,7 @@ function TeamSection() {
               key={member.id}
               className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 pl-6"
             >
-              <TeamCard data={member} />
+              <MemberCard data={member} />
             </CarouselItem>
           ))}
         </CarouselContent>

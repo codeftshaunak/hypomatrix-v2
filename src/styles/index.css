@@ -2,6 +2,7 @@
 
 @plugin "tailwindcss-animate";
 @plugin "@tailwindcss/typography";
+@plugin "@designbycode/tailwindcss-text-stroke";
 
 @custom-variant dark (&:is(.dark *));
 

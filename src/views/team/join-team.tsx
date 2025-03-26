@@ -4,48 +4,47 @@ import Image from "next/image";
 
 const JoinTeamSection: React.FC = () => {
   return (
-    <section className="bg-background">
-      <section className="flex flex-col md:flex-row container items-center justify-between py-12  relative">
-        <div className="flex flex-col gap-5">
-          <p className="opacity-30 text-[100px] font-bold mb-5">Join Our</p>
-          <div className="flex items-center gap-4 mb-5">
-            <Image
-              src={img}
-              alt="image not found"
-              width={100}
-              className="spin-in animate-spin duration-7000"
-            />
-            <span className="text-[100px] font-bold">Talented</span> <br />
-          </div>
-          <p className="text-[100px] font-bold">Team</p>
-        </div>
+    <section className="flex flex-col container lg:flex-row lg:items-center justify-between pb-[130px] gap-y-16">
+      <div className="relative">
+        <h2 className="text-heading-1 leading-none font-bold font-heading md:max-w-[500px] md:text-[100px] xl:text-[120px]">
+          <span className="text-stroke text-stroke-muted-foreground text-transparent">
+            Join Our
+          </span>{" "}
+          <span className="sm:ml-24 md:ml-28 xl:ml-36">Talented </span>
+          Team
+        </h2>
+        <Image
+          src={img}
+          alt="image not found"
+          width={80}
+          className="spin-in animate-spin duration-7000 absolute top-1/2 left-0 -translate-y-1/2 md:w-[100px] xl:w-[130px] hidden sm:inline-block"
+        />
+      </div>
 
-        <div className="flex gap-16 relative">
-          <div className="w-[200px] h-[204px] mt-20">
-            <Image
-              src={img1}
-              alt="image not found"
-              className="rounded-tl-xl rounded-br-xl"
-            />
-          </div>
-          <div className="flex flex-col gap-10">
-            <div className="w-[190px] h-[192px]">
-              <Image
-                src={img1}
-                alt="image not found"
-                className="rounded-b-full"
-              />
-            </div>
-            <div className="w-[220px] h-[204px]">
-              <Image
-                src={img1}
-                alt="image not found"
-                className="rounded-tl-xl rounded-br-xl"
-              />
-            </div>
-          </div>
+      <div className="flex items-center gap-6 relative">
+        <Image
+          src={img1}
+          alt="image not found"
+          width={140}
+          className="rounded-tl-xl rounded-br-xl aspect-square xl:w-[200px]"
+        />
+
+        <div className="flex flex-col gap-6 shrink-0">
+          <Image
+            src={img1}
+            alt="image not found"
+            width={140}
+            className="rounded-b-full aspect-square xl:w-[180px]"
+          />
+
+          <Image
+            src={img1}
+            alt="image not found"
+            width={140}
+            className="rounded-tl-xl rounded-br-xl aspect-square xl:w-[200px]"
+          />
         </div>
-      </section>
+      </div>
     </section>
   );
 };
