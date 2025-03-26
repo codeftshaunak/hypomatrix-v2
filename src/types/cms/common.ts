@@ -10,3 +10,9 @@ export type SocialIconsType =
   | "linkedin"
   | "github"
   | "instagram";
+
+export type TSocial = {
+  id: string;
+  icon: SocialIconsType;
+  href: string;
+};
