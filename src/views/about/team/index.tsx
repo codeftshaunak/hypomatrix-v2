@@ -1,4 +1,4 @@
-import TeamCard from "@/components/cards/member-card";
+import MemberCard from "@/components/cards/member-card";
 import SectionHeader from "@/components/common/section-header";
 import { CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { members } from "@/db/team";
@@ -22,7 +22,7 @@ function TeamSection() {
                 key={member.id}
                 className="basis-[75%] md:basis-1/2 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/5 pl-6"
               >
-                <TeamCard data={member} />
+                <MemberCard data={member} />
               </CarouselItem>
             ))}
           </CarouselContent>

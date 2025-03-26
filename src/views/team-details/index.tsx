@@ -1,7 +1,7 @@
 import PageHeader from "@/components/common/page-header";
 import paths from "@/router/paths";
 import { TMember } from "@/types/cms/team";
-import Experience from "./experience";
+import WhyChooseUs from "../services/why-choose-us";
 import UserProfile from "./user-profile";
 
 type Props = {
@@ -13,15 +13,17 @@ const TeamDetailsView = (props: Props) => {
   return (
     <>
       <PageHeader
-        title={member.name}
-        description={member.role}
+        title={"Team Details"}
+        description={
+          "Agenko empowers businesses with innovative strategies & creative agency solutions"
+        }
         links={[
           { title: "Team", href: paths.team.root },
           { title: "Details", href: paths.team.details(member.slug) },
         ]}
       />
-      <UserProfile />
-      <Experience />
+      <UserProfile member={member} />
+      <WhyChooseUs />
     </>
   );
 };
