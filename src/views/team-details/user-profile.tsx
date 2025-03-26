@@ -1,6 +1,9 @@
+import socialIcons from "@/assets/icons/socials";
 import img from "@/assets/team-single1.jpg";
-import { Instagram, Linkedin, Twitter } from "lucide-react";
+import { TMember } from "@/types/cms/team";
+import { LucideGlobe } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const userData = {
   name: "Oliver Bennett",
@@ -10,40 +13,45 @@ const userData = {
   imageUrl: img,
 };
 
-const UserProfile: React.FC = () => {
+type Props = {
+  member: TMember;
+};
+
+const UserProfile = (props: Props) => {
+  const { member } = props;
+
   return (
-    <section className="container flex items-center py-[130px] gap-16 rounded-lg shadow-lg">
+    <section className="container flex flex-col md:flex-row items-start pt-[130px] gap-y-16 gap-x-10 lg:gap-x-16 xl:gap-x-32 rounded-lg shadow-lg">
       <Image
         src={userData.imageUrl}
         alt={userData.name}
-        className="rounded-lg h-full w-full"
+        className="rounded-lg shrink-0 lg:w-[400px]"
+        width={200}
       />
-      <div className="pl-6">
-        <h1 className="text-3xl font-bold">{userData.name}</h1>
-        <h2 className="text-lg text-gray-400">{userData.position}</h2>
-        <div className="mt-4">
-          <h3 className="text-xl font-semibold">About me</h3>
-          <p className="text-gray-300 mt-2">{userData.about}</p>
-        </div>
-        <div className="flex space-x-4 mt-6">
-          <a
-            href="#"
-            className="text-black text-2xl hover:bg-lime-400 bg-white p-3 rounded-full"
-          >
-            <Linkedin />
-          </a>
-          <a
-            href="#"
-            className="text-black text-2xl hover:bg-lime-400 bg-white p-3 rounded-full"
-          >
-            <Instagram />
-          </a>
-          <a
-            href="#"
-            className="text-black text-2xl hover:bg-lime-400 bg-white p-3 rounded-full"
-          >
-            <Twitter />
-          </a>
+      <div>
+        <h2 className="text-heading-2 font-bold font-heading mb-3">
+          {member.name}
+        </h2>
+        <h3 className="text-muted-foreground mb-8">{member.role}</h3>
+
+        <div
+          className="text-muted-foreground mb-16"
+          dangerouslySetInnerHTML={{ __html: member.about.html }}
+        ></div>
+
+        <div className="flex items-center gap-2 flex-wrap">
+          {member.social.map((social) => {
+            const Icon = socialIcons?.[social.icon] || LucideGlobe;
+
+            return (
+              <Link
+                href={social.href}
+                className="size-10 inline-flex items-center justify-center bg-foreground rounded-full text-background hover:bg-primary hover:text-primary-foreground duration-200"
+              >
+                <Icon size={18} />
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

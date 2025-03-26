@@ -13,7 +13,6 @@ export const members: TMember[] = [
     role: "Chief Executive Officer",
     about: {
       html: `
-        <h2>About John Doe</h2>
         <p>With over 15 years of leadership experience, John has successfully led multiple tech companies to global success. His expertise in business strategy and team building ensures the company stays ahead in innovation.</p>
       `,
     },
