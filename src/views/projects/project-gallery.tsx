@@ -99,24 +99,27 @@ export default function ProjectsGallery() {
     <section className="bg-black text-white py-10">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
-          <h2 className="text-2xl sm:text-3xl font-bold">
-            Projects That Inspire
-          </h2>
-          <div className="flex flex-wrap gap-2">
+        <div className="flex flex-col sm:flex-row justify-around items-start sm:items-center mb-6 gap-4">
+          <div className="flex flex-col">
+            <p className="text-white border border-primary py-0.5 w-[108px] text-center rounded-full mb-3">
+              Our Project
+            </p>
+            <h2 className="text-heading-2 font-bold">Projects That Inspire</h2>
+          </div>
+          <div className="flex flex-wrap gap-8 bg-black py-2 px-4 border border-gray-500 rounded-full font-semibold">
             {categories.map((category) => (
-              <Button
+              <button
                 key={category}
-                variant={activeCategory === category ? "default" : "outline"}
                 onClick={() => setActiveCategory(category)}
-                className={cn(
-                  "text-white border-white transition-all duration-200",
-                  activeCategory === category && "bg-white text-black"
-                )}
-                size="sm"
+                className={`cursor-pointer
+                  ${
+                    activeCategory === category &&
+                    "bg-popover text-white  py-2 px-5 rounded-full"
+                  }
+                `}
               >
                 {category}
-              </Button>
+              </button>
             ))}
           </div>
         </div>

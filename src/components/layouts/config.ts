@@ -1,4 +1,5 @@
 import paths from "@/router/paths";
+import path from "path";
 
 export type LinkItem = {
   title: string;
@@ -36,6 +37,8 @@ export const desktopLinks: Link[] = [
   {
     title: "Portfolio",
     items: [
+      { title: "Projects", href: "/portfolio" },
+      { title: "Project Details", href: paths.portfolio.details("slug") },
       { title: "Web Design", href: "/web-design" },
       { title: "Graphic Design", href: "/graphic-design" },
       { title: "UI/UX", href: "/ui-ux" },
@@ -45,7 +48,7 @@ export const desktopLinks: Link[] = [
   {
     title: "Blogs",
     items: [
-      { title: "Latest News", href: "/latest-news" },
+      { title: "Latest News", href: "/blog" },
       { title: "Technology", href: "/technology" },
       { title: "Business", href: "/business" },
       { title: "Lifestyle", href: "/lifestyle" },

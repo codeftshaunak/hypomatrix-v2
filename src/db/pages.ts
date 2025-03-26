@@ -34,3 +34,16 @@ export const teamPage: TPage = {
     "At Agenko Agency, we specialize in delivering strategic growth solutions tailored to elevate your business to new heights.",
   slug: "team",
 };
+
+export const blogPage: TPage = {
+  title: "Blog",
+  description:
+    "At Agenko Agency, we specialize in delivering strategic growth solutions tailored to elevate your business to new heights.",
+  slug: "blog",
+};
+export const projectPage: TPage = {
+  title: "Projects",
+  description:
+    "At Agenko Agency, we specialize in delivering strategic growth solutions tailored to elevate your business to new heights.",
+  slug: "blog",
+};

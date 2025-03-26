@@ -1,14 +1,13 @@
-import React from "react";
-import ProjectsGallery from "./project-gallery";
-import PageHeader from "@/components/common/page-header";
 import { TPage } from "@/types/cms/page";
+import BlogSection from "./blog";
 import paths from "@/router/paths";
+import PageHeader from "@/components/common/page-header";
 
 type Props = {
   page: TPage;
 };
 
-const ProjectsView = (props: Props) => {
+const BlogView = (props: Props) => {
   const { page } = props;
   return (
     <div>
@@ -17,14 +16,14 @@ const ProjectsView = (props: Props) => {
         description={page.description}
         links={[
           {
-            title: "Projects",
-            href: paths.portfolio.root,
+            title: "Blog",
+            href: paths.blog.root,
           },
         ]}
       />
-      <ProjectsGallery />
+      <BlogSection />
     </div>
   );
 };
 
-export default ProjectsView;
+export default BlogView;
