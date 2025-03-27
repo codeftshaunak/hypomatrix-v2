@@ -65,8 +65,13 @@ const MobileLinks = (props: Props) => {
               const Icon = socialIcons?.[social.icon] || LucideGlobe;
 
               return (
-                <Button size={"icon"} variant={"foreground"} asChild>
-                  <Link href={social.href} target={"_blank"} key={index}>
+                <Button
+                  size={"icon"}
+                  variant={"foreground"}
+                  asChild
+                  key={index}
+                >
+                  <Link href={social.href} target={"_blank"}>
                     <Icon />
                   </Link>
                 </Button>

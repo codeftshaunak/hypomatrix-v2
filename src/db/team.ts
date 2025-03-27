@@ -17,9 +17,9 @@ export const members: TMember[] = [
       `,
     },
     social: [
-      { id: "1", icon: "linkedin", href: "https://linkedin.com/in/johndoe" },
-      { id: "2", icon: "x", href: "https://twitter.com/johndoe" },
-      { id: "3", icon: "github", href: "https://github.com/johndoe" },
+      { icon: "linkedin", href: "https://linkedin.com/in/johndoe" },
+      { icon: "x", href: "https://twitter.com/johndoe" },
+      { icon: "github", href: "https://github.com/johndoe" },
     ],
   },
   {
@@ -39,8 +39,8 @@ export const members: TMember[] = [
       `,
     },
     social: [
-      { id: "1", icon: "linkedin", href: "https://linkedin.com/in/janesmith" },
-      { id: "2", icon: "github", href: "https://github.com/janesmith" },
+      { icon: "linkedin", href: "https://linkedin.com/in/janesmith" },
+      { icon: "github", href: "https://github.com/janesmith" },
     ],
   },
   {
@@ -61,12 +61,10 @@ export const members: TMember[] = [
     },
     social: [
       {
-        id: "1",
         icon: "linkedin",
         href: "https://linkedin.com/in/michaeljohnson",
       },
       {
-        id: "2",
         icon: "instagram",
         href: "https://instagram.com/michaeljohnson",
       },
@@ -89,9 +87,8 @@ export const members: TMember[] = [
       `,
     },
     social: [
-      { id: "1", icon: "facebook", href: "https://facebook.com/emilywilson" },
+      { icon: "facebook", href: "https://facebook.com/emilywilson" },
       {
-        id: "2",
         icon: "linkedin",
         href: "https://linkedin.com/in/emilywilson",
       },
@@ -114,8 +111,8 @@ export const members: TMember[] = [
       `,
     },
     social: [
-      { id: "1", icon: "github", href: "https://github.com/davidbrown" },
-      { id: "2", icon: "linkedin", href: "https://linkedin.com/in/davidbrown" },
+      { icon: "github", href: "https://github.com/davidbrown" },
+      { icon: "linkedin", href: "https://linkedin.com/in/davidbrown" },
     ],
   },
   {
@@ -136,7 +133,6 @@ export const members: TMember[] = [
     },
     social: [
       {
-        id: "1",
         icon: "linkedin",
         href: "https://linkedin.com/in/sophiamiller",
       },
@@ -159,8 +155,8 @@ export const members: TMember[] = [
       `,
     },
     social: [
-      { id: "1", icon: "x", href: "https://twitter.com/chrisanderson" },
-      { id: "2", icon: "github", href: "https://github.com/chrisanderson" },
+      { icon: "x", href: "https://twitter.com/chrisanderson" },
+      { icon: "github", href: "https://github.com/chrisanderson" },
     ],
   },
   {
@@ -181,12 +177,10 @@ export const members: TMember[] = [
     },
     social: [
       {
-        id: "1",
         icon: "instagram",
         href: "https://instagram.com/oliviathomas",
       },
       {
-        id: "2",
         icon: "linkedin",
         href: "https://linkedin.com/in/oliviathomas",
       },
