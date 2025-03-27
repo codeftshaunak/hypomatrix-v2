@@ -54,7 +54,7 @@ const MobileLinks = (props: Props) => {
           </Accordion>
 
           <Button size={"xl"} asChild className="mb-16">
-            <Link href={paths.contact}>Let's Talk</Link>
+            <Link href={paths.contact}>Lets Talk</Link>
           </Button>
 
           <h3 className="text-heading-5 font-heading font-bold mb-4">
