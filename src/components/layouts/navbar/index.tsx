@@ -1,9 +1,9 @@
 import { website } from "@/db/website";
 import paths from "@/router/paths";
-import { X } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../../ui/button";
 import DesktopLinks from "./desktop-links";
+import MobileLinks from "./mobile-links";
 
 export default function Navbar() {
   return (
@@ -25,12 +25,15 @@ export default function Navbar() {
 
       {/* Right Side */}
       <div className="flex items-center space-x-4">
-        <Button size={"lg"} asChild>
+        <Button size={"lg"} asChild className="max-sm:hidden">
           <Link href={"/contact"}>LETS TALK</Link>
         </Button>
-        <button className="lg:hidden" aria-label="Toggle Menu">
-          <X size={24} />
-        </button>
+        <MobileLinks
+          navLinks={website.navLinks}
+          socials={website.socials}
+          title={website.title}
+          description={website.description}
+        />
       </div>
     </nav>
   );

@@ -6,7 +6,7 @@ export default function Hero() {
     <header className="container pt-[210px] pb-[130px] w-full">
       {/* Content */}
       <div className="relative w-full">
-        <h1 className="text-heading-1 leading-[80px] pb-6 lg:pb-0 lg:text-[140px] lg:leading-[140px] xl:text-[200px] xl:leading-[200px] font-extrabold font-heading uppercase text-right">
+        <h1 className="text-heading-2 leading-[50px] min-[375px]:text-heading-1 min-[375px]:leading-[80px] pb-6 lg:pb-0 lg:text-[140px] lg:leading-[140px] xl:text-[200px] xl:leading-[200px] font-extrabold font-heading uppercase text-right">
           <span className="text-left w-full inline-block">Creative</span>
           <br />
           <span>Agency</span>
