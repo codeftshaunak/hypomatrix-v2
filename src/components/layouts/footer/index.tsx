@@ -1,48 +1,46 @@
+import { Separator } from "@/components/ui/separator";
 import { website } from "@/db/website";
 import paths from "@/router/paths";
-import { Mail, Phone } from "lucide-react";
+import { LucideMail, LucidePhone, Mail } from "lucide-react";
 import Link from "next/link";
 import FooterBackground from "./background";
 import LeftSpiral from "./left-spiral";
+import LegalSection from "./legal-section";
 import RightSpiral from "./right-spiral";
 
 export function Footer() {
   return (
-    <footer className="relative pt-20 pb-10 bg-card overflow-hidden">
+    <footer className="relative bg-card overflow-hidden">
       <LeftSpiral />
       <RightSpiral />
       <FooterBackground />
 
-      <div className="">
-        <div className="md:flex items-start justify-between gap-10 mb-16 container">
-          {/* Column 1: Logo and subscribe */}
-          <div>
-            <h2 className="text-heading-3 font-heading font-bold mb-6">
-              <Link href={paths.root}>Hypomatrix</Link>
-            </h2>
+      <div className="grid gap-y-16 xl:grid-cols-6 pt-[130px] mb-20 container">
+        {/* Column 1: Logo and subscribe */}
+        <div className="xl:col-span-2">
+          <h2 className="text-heading-3 font-heading font-bold mb-6">
+            <Link href={paths.root}>{website.title}</Link>
+          </h2>
+          <p className="mb-6 max-w-[350px]">{website.description}</p>
 
-            <p className="mb-6">
-              Hypomatrix creative digital agency delivering <br /> innovate web
-              Development marketing
-            </p>
-
-            <div className="flex items-center border border-gray-300 bg-white rounded-full overflow-hidden max-w-xs md:mb-0 mb-4">
-              <div className="flex items-center px-3">
-                <Mail className="h-5 w-5 text-gray-500" />
-              </div>
-              <input
-                type="email"
-                placeholder="Email address"
-                className="flex-1 py-4 text-sm outline-none text-black placeholder:text-black"
-              />
-              <button className="bg-[#9CFE4F] text-black font-semibold px-6 py-2 rounded-full mr-1 cursor-pointer">
-                Subscribe
-              </button>
+          <div className="flex items-center border border-gray-300 bg-white rounded-full overflow-hidden max-w-xs md:mb-0 mb-4">
+            <div className="flex items-center px-3">
+              <Mail className="h-5 w-5 text-gray-500" />
             </div>
+            <input
+              type="email"
+              placeholder="Email address"
+              className="flex-1 py-4 text-sm outline-none text-black placeholder:text-black"
+            />
+            <button className="bg-[#9CFE4F] text-black font-semibold px-6 py-2 rounded-full mr-1 cursor-pointer">
+              Subscribe
+            </button>
           </div>
+        </div>
 
+        <div className="xl:col-span-4 flex flex-col md:flex-row md:items-start md:justify-between gap-y-16">
           {/* Column 2: Address */}
-          <div className="max-w-[200px] space-y-8">
+          <div className="md:max-w-[200px] space-y-8">
             {website.addresses[0] && (
               <div>
                 <h3 className="font-bold font-heading mb-6 text-heading-4">
@@ -62,113 +60,74 @@ export function Footer() {
             )}
           </div>
 
-          {/* Column 3: Our Link */}
+          {/* Column 3: Quick Links */}
           <div className="">
             <h3 className="font-bold font-heading text-heading-4 mb-6">
-              Our Link
+              Quick Links
             </h3>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-white hover:text-[#5cff44] transition-colors"
-                >
-                  About us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-white hover:text-[#5cff44] transition-colors"
-                >
-                  Contact us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  className="text-sm text-white hover:text-[#5cff44] transition-colors"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-white hover:text-[#5cff44] transition-colors"
-                >
-                  Our gallery
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-white hover:text-[#5cff44] transition-colors"
-                >
-                  FAQ
-                </a>
-              </li>
+            <ul className="space-y-5">
+              {website.quickLinks.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    href={item.href}
+                    target={item.newTab ? "_blank" : undefined}
+                    className="hover:text-primary"
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Column 4: Contact */}
           <div className="">
-            <h3 className="font-bold text-lg mb-6  text-heading-4 mt-4 md:mt-0">
+            <h3 className="font-bold font-heading mb-6 text-heading-4">
               Contact
             </h3>
 
             <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#212224] flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-white" />
+              {website.emails[0] && (
+                <div className="flex items-center gap-4">
+                  <div className="size-10 rounded-full bg-border flex items-center justify-center">
+                    <LucideMail size={18} />
+                  </div>
+                  <div>
+                    <p className="text-lg font-heading font-bold">Email</p>
+                    <Link
+                      className="hover:text-primary"
+                      href={`mailto:${website.emails[0]}`}
+                      target="_blank"
+                    >
+                      {website.emails[0]}
+                    </Link>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-lg font-semibold">Email</p>
-                  <p className="text-sm text-white">Info@agenko45.com</p>
-                </div>
-              </div>
+              )}
 
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#212224] flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-white" />
+              {website.phones[0] && (
+                <div className="flex items-center gap-4">
+                  <div className="size-10 rounded-full bg-border flex items-center justify-center">
+                    <LucidePhone size={18} />
+                  </div>
+                  <div>
+                    <p className="text-lg font-heading font-bold">Phone</p>
+                    <Link
+                      className="hover:text-primary"
+                      href={`tel:${website.phones[0]}`}
+                      target="_blank"
+                    >
+                      {website.phones[0]}
+                    </Link>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-lg font-semibold">Phone</p>
-                  <p className="text-sm text-white">+555-7659-9854</p>
-                </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row  gap-4 justify-between"></div>
-        {/* Bottom section */}
-        <div className="pt-8 flex flex-col md:flex-row  gap-4 justify-between container">
-          <p className="text-lg text-white font-semibold">
-            © 2024 All rights reserved by HypoMatrix
-          </p>
-
-          <div className="flex gap-6">
-            <a
-              href="#"
-              className="text-lg text-white hover:text-[#5cff44] transition-colors font-semibold"
-            >
-              Terms & Condition
-            </a>
-            <a
-              href="#"
-              className="text-lg text-white hover:text-[#5cff44] transition-colors font-semibold"
-            >
-              Privacy
-            </a>
-            <a
-              href="#"
-              className="text-lg text-white hover:text-[#5cff44] transition-colors font-semibold"
-            >
-              Policy
-            </a>
-          </div>
-        </div>
       </div>
+      <Separator />
+      <LegalSection legalLinks={website.legalLinks} title={website.title} />
     </footer>
   );
 }

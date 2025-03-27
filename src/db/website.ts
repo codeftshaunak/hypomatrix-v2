@@ -17,8 +17,20 @@ export const website: TWebsite = {
     { icon: "github", href: "https://github.com/example" },
     { icon: "instagram", href: "https://instagram.com/example" },
   ],
-  footerLinks: [],
-  legalLink: [],
+  quickLinks: [
+    { title: "About Us", href: paths.about },
+    { title: "Contact Us", href: paths.contact },
+    { title: "Our Services", href: paths.services.root },
+    { title: "Portfolio", href: paths.portfolio.root },
+    { title: "FAQ", href: paths.faq },
+  ],
+  legalLinks: [
+    {
+      title: "Terms & Conditions",
+      href: "/terms-conditions",
+    },
+    { title: "Privacy Policy", href: "/privacy-policy" },
+  ],
   navLinks: [
     {
       title: "Home",

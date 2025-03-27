@@ -7,7 +7,7 @@ export type TWebsite = {
   emails: string[];
   addresses: string[];
   socials: TSocial[];
-  footerLinks: TLink[];
+  quickLinks: TLink[];
   navLinks: (TLink | TLinkGroup)[];
-  legalLink: TLink[];
+  legalLinks: TLink[];
 };
