@@ -7,8 +7,6 @@ import TeamSection from "./team";
 import TestimonialsSection from "./testimonials";
 import TrustedCompanySection from "./trusted-company";
 import ProcessSection from "./work-process";
-import ProjectsView from "../projects";
-import ProjectDetailsView from "../project-details";
 
 const HomeView = () => {
   return (
@@ -22,8 +20,6 @@ const HomeView = () => {
       <TeamSection />
       <TestimonialsSection />
       <LatestArticles />
-      <ProjectsView />
-      <ProjectDetailsView />
     </>
   );
 };
