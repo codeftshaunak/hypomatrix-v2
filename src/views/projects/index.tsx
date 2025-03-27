@@ -1,8 +1,7 @@
-import React from "react";
-import ProjectsGallery from "./project-gallery";
 import PageHeader from "@/components/common/page-header";
-import { TPage } from "@/types/cms/page";
 import paths from "@/router/paths";
+import { TPage } from "@/types/cms/page";
+import ProjectsGallery from "./project-gallery";
 
 type Props = {
   page: TPage;
@@ -11,7 +10,7 @@ type Props = {
 const ProjectsView = (props: Props) => {
   const { page } = props;
   return (
-    <div>
+    <>
       <PageHeader
         title={page.title}
         description={page.description}
@@ -23,7 +22,7 @@ const ProjectsView = (props: Props) => {
         ]}
       />
       <ProjectsGallery />
-    </div>
+    </>
   );
 };
 

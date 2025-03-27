@@ -36,6 +36,7 @@ export const projects: TProject[] = [
     startDate: "2024-01-01T00:00:00.000Z",
     endDate: "2024-06-01T00:00:00.000Z",
     tags: ["Website", "Landing Page", "UI/UX"],
+    size: "wide",
   },
   {
     id: "2",
@@ -73,6 +74,7 @@ export const projects: TProject[] = [
     startDate: "2023-11-15T00:00:00.000Z",
     endDate: "2024-03-15T00:00:00.000Z",
     tags: ["Website", "Landing Page", "UI/UX"],
+    size: "tall",
   },
   {
     id: "3",
@@ -110,6 +112,7 @@ export const projects: TProject[] = [
     startDate: "2023-12-01T00:00:00.000Z",
     endDate: "2024-04-01T00:00:00.000Z",
     tags: ["Website", "Landing Page", "UI/UX"],
+    size: "tall",
   },
   {
     id: "4",
@@ -147,5 +150,6 @@ export const projects: TProject[] = [
     startDate: "2024-02-01T00:00:00.000Z",
     endDate: "2024-07-01T00:00:00.000Z",
     tags: ["Website", "Landing Page", "UI/UX"],
+    size: "tall",
   },
 ];
