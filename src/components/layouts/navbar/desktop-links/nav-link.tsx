@@ -1,15 +1,16 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { TLink } from "@/types/cms/common";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LinkItem } from "../../config";
 
-interface NavLinkProps {
-  link: LinkItem;
+interface Props {
+  link: TLink;
 }
 
-export function NavLink({ link }: NavLinkProps) {
+export function NavLink(props: Props) {
+  const { link } = props;
   const pathname = usePathname();
   const isActive = pathname === link.href;
 

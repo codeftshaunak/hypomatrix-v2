@@ -1,57 +1,27 @@
-"use client";
-import img from "@/assets/vector.png";
-import img2 from "@/assets/vector2.png";
-import { motion } from "framer-motion";
+import { website } from "@/db/website";
+import paths from "@/router/paths";
 import { Mail, Phone } from "lucide-react";
-import Image from "next/image";
-import { useState } from "react";
+import Link from "next/link";
+import FooterBackground from "./background";
+import LeftSpiral from "./left-spiral";
+import RightSpiral from "./right-spiral";
 
 export function Footer() {
   return (
     <footer className="relative pt-20 pb-10 bg-card overflow-hidden">
-      {/* Left spiral decoration */}
-      <motion.div
-        className="absolute -left-10 bottom-30 opacity-60"
-        animate={{ rotate: 360 }}
-        transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
-      >
-        <div className="w-full h-full overflow-hidden rounded-full">
-          <Image
-            src={img}
-            width={170}
-            height={200}
-            alt="Profile picture"
-            className="object-cover"
-          />
-        </div>
-      </motion.div>
-      {/* Right spiral decoration */}
-      <motion.div
-        className="absolute right-30 bottom-30 opacity-100"
-        animate={{ rotate: 360 }}
-        transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
-      >
-        <div className="w-full h-full overflow-hidden rounded-full">
-          <Image
-            src={img2}
-            width={100}
-            height={200}
-            alt="Profile picture"
-            className="object-cover"
-          />
-        </div>
-      </motion.div>
+      <LeftSpiral />
+      <RightSpiral />
+      <FooterBackground />
 
       <div className="">
         <div className="md:flex items-start justify-between gap-10 mb-16 container">
           {/* Column 1: Logo and subscribe */}
           <div>
-            <a href="#" className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded-full bg-[#5cff44]"></div>
-              <span className="font-bold text-xl text-white">Hypomatrix</span>
-            </a>
+            <h2 className="text-heading-3 font-heading font-bold mb-6">
+              <Link href={paths.root}>Hypomatrix</Link>
+            </h2>
 
-            <p className="text-base font-semibold  mb-6 text-white">
+            <p className="mb-6">
               Hypomatrix creative digital agency delivering <br /> innovate web
               Development marketing
             </p>
@@ -71,24 +41,30 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Main Address */}
-          <div>
-            <h3 className="font-bold mb-6 text-heading-4">Main Address</h3>
-            <p className="text-base text-white mb-6">
-              6801 Hollywood Blvd, Los <br /> Angeles CA 90028
-            </p>
+          {/* Column 2: Address */}
+          <div className="max-w-[200px] space-y-8">
+            {website.addresses[0] && (
+              <div>
+                <h3 className="font-bold font-heading mb-6 text-heading-4">
+                  Main Address
+                </h3>
+                <p>{website.addresses[0]}</p>
+              </div>
+            )}
 
-            <h3 className="font-bold text-heading-4 mb-6">Sub-Address</h3>
-            <p className="text-sm text-white">
-              200 Santa Monica Pier,
-              <br />
-              Santa Monica, CA 90401
-            </p>
+            {website.addresses[1] && (
+              <div>
+                <h3 className="font-bold font-heading mb-6 text-heading-4">
+                  Sub Address
+                </h3>
+                <p>{website.addresses[1]}</p>
+              </div>
+            )}
           </div>
 
           {/* Column 3: Our Link */}
           <div className="">
-            <h3 className="font-bold text-lg mb-6  text-heading-4 mt-4 md:mt-0">
+            <h3 className="font-bold font-heading text-heading-4 mb-6">
               Our Link
             </h3>
             <ul className="space-y-3">
@@ -193,8 +169,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="absolute bg-primary size-[261px] rounded-full blur-[150px] -left-[150px] -top-[150px] pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_rgba(100,97,94,0.8)_0%,_transparent_30%)] pointer-events-none"></div>
     </footer>
   );
 }

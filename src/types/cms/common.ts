@@ -12,7 +12,17 @@ export type SocialIconsType =
   | "instagram";
 
 export type TSocial = {
-  id: string;
   icon: SocialIconsType;
   href: string;
+};
+
+export type TLink = {
+  title: string;
+  href: string;
+  newTab?: boolean;
+};
+
+export type TLinkGroup = {
+  title: string;
+  links: TLink[];
 };
