@@ -40,12 +40,13 @@ const UserProfile = (props: Props) => {
         ></div>
 
         <div className="flex items-center gap-2 flex-wrap">
-          {member.social.map((social) => {
+          {member.social.map((social, index) => {
             const Icon = socialIcons?.[social.icon] || LucideGlobe;
 
             return (
               <Link
                 href={social.href}
+                key={index}
                 className="size-10 inline-flex items-center justify-center bg-foreground rounded-full text-background hover:bg-primary hover:text-primary-foreground duration-200"
               >
                 <Icon size={18} />
