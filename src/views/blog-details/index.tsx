@@ -1,5 +1,5 @@
 import React from "react";
-import BlogCard from "./blog-card";
+import BlogDetails from "./blog-details";
 import PageHeader from "@/components/common/page-header";
 import { TPage } from "@/types/cms/page";
 import paths from "@/router/paths";
@@ -8,23 +8,23 @@ type Props = {
   page: TPage;
 };
 
-const BlogCardView = (props: Props) => {
+const BlogDetailsView = (props: Props) => {
   const { page } = props;
   return (
     <div>
       <PageHeader
-        title="Blog Cards"
+        title="Blog Details"
         description={page.description}
         links={[
           {
-            title: "Blog Cards",
+            title: "Blog Details",
             href: paths.blog.root,
           },
         ]}
       />
-      <BlogCard />
+      <BlogDetails />
     </div>
   );
 };
 
-export default BlogCardView;
+export default BlogDetailsView;

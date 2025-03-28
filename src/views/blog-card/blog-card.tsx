@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Plus, MessageSquare } from "lucide-react";
 import img from "@/assets/team-single2.jpg";
-import Pagination from "@/components/blog-pagination";
+import Pagination from "@/components/blog/blog-pagination";
 export default function BlogCard({}) {
   const projects = [
     {
