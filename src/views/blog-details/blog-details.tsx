@@ -30,15 +30,15 @@ const BlogDetails = () => {
               alt="image not found"
               className="w-full h-full rounded-lg"
             />
-            <div className="flex items-center gap-4 text-sm text-gray-400 mt-8">
-              <div className="flex items-center gap-1 px-4 py-2 bg-black rounded-full text-white border border-white">
+            <div className="flex flex-col items-center text-center justify-center md:flex-row gap-4 text-sm text-gray-400 mt-8">
+              <div className="md:flex items-center gap-1 px-4 py-2 bg-black rounded-full text-white border border-white">
                 <span>By:</span>
                 <span className="font-medium">Alex Mika</span>
               </div>
               <div className=" px-4 py-2  bg-black rounded-full text-white border border-white">
                 Dec12, 2024
               </div>
-              <div className="flex items-center gap-2 ml-auto text-white">
+              <div className="flex items-center gap-2 md:ml-auto text-white">
                 <MessageSquare size={16} />
                 <span className="text-heading-6 font-semibold">05 Comment</span>
               </div>
@@ -147,8 +147,8 @@ const BlogDetails = () => {
         {/* Tags and Social Section */}
         <section className="w-full py-8 border-y border-gray-800">
           <div className="container">
-            <div className="flex justify-between items-center">
-              <div className="flex gap-2">
+            <div className="md:flex justify-between items-center">
+              <div className="md:flex gap-2">
                 <span className="text-white py-1 rounded-full font-medium text-lg">
                   Tags:
                 </span>
@@ -218,7 +218,7 @@ const BlogDetails = () => {
                   Reply
                 </div>
               </div>
-              <div className="flex gap-4 items-center ml-20">
+              <div className="flex gap-4 items-center md:ml-20">
                 <div className="relative w-[100px] h-[100px] bg-gray-200 flex-shrink-0">
                   <Image src={img} alt="image not found" />
                 </div>
@@ -241,7 +241,7 @@ const BlogDetails = () => {
         </section>
         {/* Contact Form */}
         <section className="py-8 container ">
-          <div className="w-[700px]">
+          <div className="md:w-[700px]">
             <p className="text-heading-2 font-bold mb-6">Leave a comment</p>
             <form className="mt-6 space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
