@@ -48,6 +48,7 @@ export const projectPage: TPage = {
     "At Agenko Agency, we specialize in delivering strategic growth solutions tailored to elevate your business to new heights.",
   slug: "portfolio",
 };
+
 export const blogCard: TPage = {
   title: "Blog Cards",
   description:

@@ -1,7 +1,9 @@
 import PageHeader from "@/components/common/page-header";
 import paths from "@/router/paths";
 import { TPage } from "@/types/cms/page";
-import ContactSection from "./contact";
+import FormSection from "./form-section";
+import InfoSection from "./info-section";
+import MapSection from "./map-section";
 
 type Props = {
   page: TPage;
@@ -21,7 +23,17 @@ const ContactView = (props: Props) => {
         ]}
         description={page.description}
       />
-      <ContactSection />
+      <div className="container py-[130px]">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-16 gap-x-16 xl:gap-x-32">
+          <div className="lg:col-span-2">
+            <InfoSection />
+          </div>
+          <div className="lg:col-span-3">
+            <FormSection />
+          </div>
+        </div>
+      </div>
+      <MapSection />
     </>
   );
 };

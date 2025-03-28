@@ -1,13 +1,28 @@
-import React from "react";
+import PageHeader from "@/components/common/page-header";
+import paths from "@/router/paths";
+import { TProject } from "@/types/cms/project";
 import ProjectDetails from "./projects-details";
 
-type Props = {};
+type Props = {
+  project: TProject;
+};
 
 const ProjectDetailsView = (props: Props) => {
+  const { project } = props;
   return (
-    <div>
+    <>
+      <PageHeader
+        title={"Project Details"}
+        description={
+          "Agenko empowers businesses with innovative strategies & creative agency solutions"
+        }
+        links={[
+          { title: "Portfolio", href: paths.portfolio.root },
+          { title: "Details", href: paths.portfolio.details(project.slug) },
+        ]}
+      />
       <ProjectDetails />
-    </div>
+    </>
   );
 };
 

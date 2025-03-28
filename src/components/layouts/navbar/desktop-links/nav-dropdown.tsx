@@ -1,16 +1,17 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import { TLinkGroup } from "@/types/cms/common";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LinkItemDropdown } from "../../config";
 
-interface NavDropdownProps {
-  link: LinkItemDropdown;
+interface Props {
+  group: TLinkGroup;
 }
 
-export function NavDropdown({ link }: NavDropdownProps) {
+export function NavLinkGroup(props: Props) {
+  const { group } = props;
   const pathname = usePathname();
 
   return (
@@ -23,7 +24,7 @@ export function NavDropdown({ link }: NavDropdownProps) {
         )}
         aria-haspopup="true"
       >
-        {link.title}
+        {group.title}
         <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
       </button>
 
@@ -33,7 +34,7 @@ export function NavDropdown({ link }: NavDropdownProps) {
         aria-orientation="vertical"
       >
         <div className="py-2 px-2">
-          {link.items.map((item, itemIndex) => (
+          {group.links.map((item, itemIndex) => (
             <Link
               key={itemIndex}
               href={item.href}

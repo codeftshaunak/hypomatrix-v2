@@ -1,5 +1,6 @@
 "use client";
 
+import { AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 import { TLink } from "@/types/cms/common";
 import Link from "next/link";
@@ -15,16 +16,17 @@ export function NavLink(props: Props) {
   const isActive = pathname === link.href;
 
   return (
-    <li>
+    <AccordionItem value={link.href} className="px-4">
       <Link
         href={link.href}
         className={cn(
-          "block px-3 py-2 text-body font-heading font-medium transition-colors",
           isActive ? "text-primary" : "text-foreground hover:text-primary"
         )}
       >
-        {link.title}
+        <AccordionTrigger icon={null} className="py-2">
+          {link.title}
+        </AccordionTrigger>
       </Link>
-    </li>
+    </AccordionItem>
   );
 }
