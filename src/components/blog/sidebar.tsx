@@ -1,8 +1,7 @@
-import React from "react";
 import img from "@/assets/blog.jpg";
 import { Search } from "lucide-react";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
-import Image from "next/image";
 
 type Category = {
   name: string;
@@ -14,7 +13,7 @@ type LatestPost = {
   title: string;
   author: string;
   type: string;
-  image: string;
+  image: string | StaticImageData;
 };
 
 type Tag = {
