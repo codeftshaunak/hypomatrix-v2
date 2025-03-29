@@ -24,16 +24,20 @@ const ProjectDetails = () => {
       <div className="container">
         {/* Banner Image */}
         <div className="w-full h-full flex items-center justify-center mb-8">
-          <Image src={banner} alt="image not found" className="rounded-lg" />
+          <Image
+            src={banner}
+            alt="image not found"
+            className="rounded-lg min-h-[250px] min-w-[250px]"
+          />
         </div>
 
-        <div className="flex justify-between items-center">
+        <div className="md:flex justify-between items-center">
           {/* Title and Description */}
           <div>
-            <h2 className="text-heading-2 font-bold w-[600px]">
+            <h2 className="text-heading-2 font-bold md:w-[600px]">
               {projectData.title}
             </h2>
-            <p className="text-white mt-2 w-[650px]">
+            <p className="text-white mt-2 md:w-[650px]">
               {projectData.description}
             </p>
           </div>
