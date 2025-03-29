@@ -1,7 +1,7 @@
+import PageHeader from "@/components/common/page-header";
+import paths from "@/router/paths";
 import { TPage } from "@/types/cms/page";
 import BlogSection from "./blog";
-import paths from "@/router/paths";
-import PageHeader from "@/components/common/page-header";
 
 type Props = {
   page: TPage;
@@ -10,7 +10,7 @@ type Props = {
 const BlogView = (props: Props) => {
   const { page } = props;
   return (
-    <div>
+    <>
       <PageHeader
         title={page.title}
         description={page.description}
@@ -22,7 +22,7 @@ const BlogView = (props: Props) => {
         ]}
       />
       <BlogSection />
-    </div>
+    </>
   );
 };
 
