@@ -18,7 +18,7 @@ const CarouselSection = (props: Props) => {
     <Carousel>
       <CarouselContent className="mb-16 lg:mb-0">
         {images.map((image, index) => (
-          <CarouselItem key={index} className=" sm:basis-1/2">
+          <CarouselItem key={index} className="sm:basis-1/2">
             <div className="relative aspect-square">
               <Image
                 src={image.url}
