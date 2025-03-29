@@ -1,4 +1,4 @@
-import { blogDetails } from "@/db/pages";
+import { blogPosts } from "@/db/blog";
 import BlogDetailsView from "@/views/blog-details";
 
 type Props = {};
@@ -6,7 +6,7 @@ type Props = {};
 function BlogDetailsPage({}: Props) {
   return (
     <>
-      <BlogDetailsView page={blogDetails} />
+      <BlogDetailsView post={blogPosts[0]} />
     </>
   );
 }
