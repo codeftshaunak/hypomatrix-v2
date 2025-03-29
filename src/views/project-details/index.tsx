@@ -1,7 +1,7 @@
 import PageHeader from "@/components/common/page-header";
 import paths from "@/router/paths";
 import { TProject } from "@/types/cms/project";
-import ProjectDetails from "./projects-details";
+import DetailsSection from "./details-section";
 
 type Props = {
   project: TProject;
@@ -21,7 +21,7 @@ const ProjectDetailsView = (props: Props) => {
           { title: "Details", href: paths.portfolio.details(project.slug) },
         ]}
       />
-      <ProjectDetails />
+      <DetailsSection project={project} />
     </>
   );
 };
