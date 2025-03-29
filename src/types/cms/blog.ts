@@ -17,6 +17,7 @@ export type TBlogPost = {
 export type TBlogCategory = {
   id: string;
   title: string;
+  slug: string;
   description: string;
   posts: Omit<TBlogPost, "category">[]; // Prevents circular reference
 };
