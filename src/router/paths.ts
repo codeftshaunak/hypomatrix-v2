@@ -18,6 +18,7 @@ const paths = {
   blog: {
     root: "/blog",
     details: (slug: string) => `/blog/${slug}`,
+    category: (slug: string) => `/blog/category/${slug}`,
   },
 };
 
