@@ -15,5 +15,5 @@ export type TProject = {
   startDate: string; // iso timestamp
   endDate: string; // iso timestamp
   tags: string[];
-  size: "tall" | "wide";
+  cardSize: "auto" | "tall" | "wide";
 };

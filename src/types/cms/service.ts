@@ -9,7 +9,7 @@ export type TServiceStep = {
 
 export type TService = {
   id: string;
-  image: TAsset;
+  thumbnail: TAsset;
   icon: TAsset;
   slug: string;
   title: string;

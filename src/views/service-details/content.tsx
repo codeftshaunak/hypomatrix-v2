@@ -16,7 +16,7 @@ const ContentSection = (props: Props) => {
       <div className="container">
         <div className="relative w-full aspect-[2.58]">
           <Image
-            src={service.image.url}
+            src={service.thumbnail.url}
             alt={service.title}
             fill
             className="object-cover"

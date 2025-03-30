@@ -11,8 +11,8 @@ export default function ProjectsGallery() {
           <div
             key={index}
             className={cn("w-full aspect-square", {
-              "aspect-[4/3]": project.size === "wide",
-              "aspect-[3/4]": project.size === "tall",
+              "aspect-[4/3]": project.cardSize === "wide",
+              "aspect-[3/4]": project.cardSize === "tall",
             })}
           >
             <ProjectCard data={project} variant="cover" />
@@ -22,8 +22,8 @@ export default function ProjectsGallery() {
           <div
             key={index}
             className={cn("w-full aspect-square", {
-              "aspect-[4/3]": project.size === "wide",
-              "aspect-[3/4]": project.size === "tall",
+              "aspect-[4/3]": project.cardSize === "wide",
+              "aspect-[3/4]": project.cardSize === "tall",
             })}
           >
             <ProjectCard data={project} variant="cover" />

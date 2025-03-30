@@ -20,7 +20,7 @@ const OurServices = () => {
               <div className="lg:row-span-2 xl:row-span-1 mb-5 lg:mb-0">
                 <div className="w-full max-w-[300px] h-28 relative">
                   <Image
-                    src={service.image.url}
+                    src={service.thumbnail.url}
                     alt={service.title}
                     fill
                     className="rounded-3xl lg:rounded-full object-cover"

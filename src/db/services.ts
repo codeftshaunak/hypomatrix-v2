@@ -3,7 +3,7 @@ import { TService } from "@/types/cms/service";
 export const services: TService[] = [
   {
     id: "1",
-    image: {
+    thumbnail: {
       url: "https://picsum.photos/800/600?random=1",
       width: 800,
       height: 600,
@@ -70,7 +70,7 @@ export const services: TService[] = [
   },
   {
     id: "2",
-    image: {
+    thumbnail: {
       url: "https://picsum.photos/800/600?random=2",
       width: 800,
       height: 600,
@@ -139,7 +139,7 @@ export const services: TService[] = [
   },
   {
     id: "3",
-    image: {
+    thumbnail: {
       url: "https://picsum.photos/800/600?random=3",
       width: 800,
       height: 600,
