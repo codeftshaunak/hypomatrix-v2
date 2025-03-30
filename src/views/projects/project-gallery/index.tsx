@@ -1,24 +1,15 @@
 import ProjectCard from "@/components/cards/project-card";
-import { projects } from "@/db/projects";
 import { cn } from "@/lib/utils";
+import { getProjects } from "@/services/apis/project";
 import Container from "./container";
 
-export default function ProjectsGallery() {
+export default async function ProjectsGallery() {
+  const projectsRes = await getProjects();
+
   return (
     <section className="py-[130px] container">
       <Container>
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className={cn("w-full aspect-square", {
-              "aspect-[4/3]": project.cardSize === "wide",
-              "aspect-[3/4]": project.cardSize === "tall",
-            })}
-          >
-            <ProjectCard data={project} variant="cover" />
-          </div>
-        ))}
-        {projects.map((project, index) => (
+        {projectsRes.data?.map((project, index) => (
           <div
             key={index}
             className={cn("w-full aspect-square", {

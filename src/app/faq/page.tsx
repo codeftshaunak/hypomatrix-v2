@@ -1,12 +1,19 @@
-import { faqPage } from "@/db/pages";
+import { getPage } from "@/services/apis/page";
 import FaqView from "@/views/faq";
+import { notFound } from "next/navigation";
 
-const page = () => {
+const FaqPage = async () => {
+  const pageRes = await getPage("faq");
+
+  if (!pageRes.data) {
+    notFound();
+  }
+
   return (
     <>
-      <FaqView page={faqPage} />
+      <FaqView page={pageRes.data} />
     </>
   );
 };
 
-export default page;
+export default FaqPage;

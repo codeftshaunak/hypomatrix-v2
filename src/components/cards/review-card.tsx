@@ -1,8 +1,8 @@
-import { TReview } from "@/types/cms/review";
+import { TClient } from "@/types/cms/clients";
 import { Star } from "lucide-react";
 
 type Props = {
-  data: TReview;
+  data: TClient;
 };
 
 const ReviewCard = (props: Props) => {
@@ -16,7 +16,7 @@ const ReviewCard = (props: Props) => {
         ))}
       </div>
 
-      <blockquote className="text-lg md:text-xl mb-8">{data.quote}</blockquote>
+      <blockquote className="text-lg md:text-xl mb-8">{data.review}</blockquote>
 
       <div>
         <h3 className="font-bold">{data.name}</h3>

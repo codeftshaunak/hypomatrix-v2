@@ -1,12 +1,19 @@
-import { contactPage } from "@/db/pages";
+import { getPage } from "@/services/apis/page";
 import ContactView from "@/views/contact";
+import { notFound } from "next/navigation";
 
-const page = () => {
+const ContactPage = async () => {
+  const pageRes = await getPage("contact");
+
+  if (!pageRes.data) {
+    notFound();
+  }
+
   return (
     <>
-      <ContactView page={contactPage} />
+      <ContactView page={pageRes.data} />
     </>
   );
 };
 
-export default page;
+export default ContactPage;

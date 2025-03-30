@@ -23,7 +23,7 @@ const CoverCard = (props: ProjectCardProps) => {
         fill
         className="rounded-2xl object-cover"
       />
-      <CardContent className="absolute left-1/2 -translate-x-1/2 flex-col items-center justify-center text-center bg-card sm:bottom-0 max-w-[80%] w-full py-5 rounded-2xl sm:opacity-0 group-hover:opacity-100 group-hover:bottom-5 duration-300">
+      <CardContent className="absolute left-1/2 -translate-x-1/2 flex-col items-center justify-center text-center bg-card bottom-5 sm:bottom-0 max-w-[80%] w-full py-5 rounded-2xl sm:opacity-0 group-hover:opacity-100 group-hover:bottom-5 duration-300">
         <Badge
           className="text-sm mb-4 px-4 py-1 border-primary"
           variant={"outline"}

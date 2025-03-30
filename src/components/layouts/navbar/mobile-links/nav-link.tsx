@@ -1,6 +1,7 @@
 "use client";
 
 import { AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { SheetClose } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { TLink } from "@/types/cms/common";
 import Link from "next/link";
@@ -17,16 +18,18 @@ export function NavLink(props: Props) {
 
   return (
     <AccordionItem value={link.href} className="px-4">
-      <Link
-        href={link.href}
-        className={cn(
-          isActive ? "text-primary" : "text-foreground hover:text-primary"
-        )}
-      >
-        <AccordionTrigger icon={null} className="py-2">
-          {link.title}
-        </AccordionTrigger>
-      </Link>
+      <SheetClose asChild>
+        <Link
+          href={link.href}
+          className={cn(
+            isActive ? "text-primary" : "text-foreground hover:text-primary"
+          )}
+        >
+          <AccordionTrigger icon={null} className="py-2">
+            {link.title}
+          </AccordionTrigger>
+        </Link>
+      </SheetClose>
     </AccordionItem>
   );
 }

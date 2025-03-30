@@ -1,8 +1,10 @@
 import BlogPostCard from "@/components/cards/blog-post-card";
 import SectionHeader from "@/components/common/section-header";
-import { blogPosts } from "@/db/blog";
+import { getFeaturedBlogPosts } from "@/services/apis/blog";
 
-const LatestBlogs = () => {
+const LatestBlogs = async () => {
+  const blogPostsRes = await getFeaturedBlogPosts(true);
+
   return (
     <section className="container pb-[130px]">
       <div className="flex flex-col lg:flex-row lg:items-center justify-between">
@@ -20,7 +22,7 @@ const LatestBlogs = () => {
       </div>
 
       <div className="grid md:grid-cols-2 gap-x-8 gap-y-16 mt-12">
-        {blogPosts.map((blog) => (
+        {blogPostsRes.data?.map((blog) => (
           <BlogPostCard variant="vertical" data={blog} key={blog.id} />
         ))}
       </div>

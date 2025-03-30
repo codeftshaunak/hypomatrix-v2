@@ -17,9 +17,10 @@ const MemberCard = (props: Props) => {
     <article className="group">
       <div className="aspect-square rounded-lg overflow-hidden relative mb-4">
         <Image
-          src={data.avatar.url || "/placeholder.svg"}
+          src={data.avatar.url}
           fill
           alt={data.name}
+          className="object-cover"
         />
 
         {/* Social Links */}
@@ -28,7 +29,7 @@ const MemberCard = (props: Props) => {
             <Plus />
           </Button>
 
-          {data.social.map((item, index) => {
+          {data.socials.map((item, index) => {
             const Icon = socialIcons?.[item.icon] ?? LucideGlobe;
             return (
               <Link href={item.href} target="_blank" passHref key={index}>

@@ -1,14 +1,21 @@
-import { aboutPage } from "@/db/pages";
+import { getPage } from "@/services/apis/page";
 import AboutView from "@/views/about";
+import { notFound } from "next/navigation";
 
 type Props = {};
 
-const about = (props: Props) => {
+const AboutPage = async (props: Props) => {
+  const pageRes = await getPage("about");
+
+  if (!pageRes.data) {
+    notFound();
+  }
+
   return (
     <>
-      <AboutView page={aboutPage} />
+      <AboutView page={pageRes.data} />
     </>
   );
 };
 
-export default about;
+export default AboutPage;

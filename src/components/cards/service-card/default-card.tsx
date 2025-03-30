@@ -1,15 +1,10 @@
 import { Card } from "@/components/ui/card";
 import paths from "@/router/paths";
-import { TService } from "@/types/cms/service";
 import Image from "next/image";
 import Link from "next/link";
+import { ServiceCardProps } from ".";
 
-interface Props {
-  data: TService;
-  className?: string;
-}
-
-function ServiceCard(props: Props & React.ComponentProps<"article">) {
+function DefaultCard(props: ServiceCardProps) {
   const { data, className, ...others } = props;
 
   return (
@@ -33,4 +28,4 @@ function ServiceCard(props: Props & React.ComponentProps<"article">) {
   );
 }
 
-export default ServiceCard;
+export default DefaultCard;
