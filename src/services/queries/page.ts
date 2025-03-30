@@ -15,6 +15,9 @@ query PageQuery($slug: String = "") {
   page(where: {slug: $slug}, stage: PUBLISHED) {
     ${commonQuery}
     description
+    content {
+      html
+    }
   }
 }
 `;
