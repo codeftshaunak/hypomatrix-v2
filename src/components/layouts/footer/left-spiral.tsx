@@ -13,7 +13,7 @@ const LeftSpiral = (props: Props) => {
       animate={{ rotate: 360 }}
       transition={{ repeat: Infinity, duration: 5, ease: "linear" }}
     >
-      <div className="w-full h-full overflow-hidden rounded-full">
+      <div className="w-full h-full overflow-hidden rounded-full hidden md:block">
         <Image
           src={img}
           width={170}
