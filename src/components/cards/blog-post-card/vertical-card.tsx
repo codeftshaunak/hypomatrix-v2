@@ -35,7 +35,7 @@ const VerticalCard = (props: Props) => {
             </h3>
           </div>
 
-          <button className="size-12 group-hover:text-primary flex items-center justify-center rounded-full bg-card shrink-0">
+          <button className="size-12 group-hover:text-primary flex items-center justify-center rounded-full bg-card shrink-0 cursor-pointer">
             <LucideArrowRight className="size-6 group-hover:-rotate-[45deg] transition-transform duration-200" />
           </button>
         </CardContent>
