@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { SheetClose } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { TLinkGroup } from "@/types/cms/common";
 import Link from "next/link";
@@ -24,19 +25,20 @@ export function NavLinkGroup(props: Props) {
       <AccordionTrigger className="py-2">{group.title}</AccordionTrigger>
       <AccordionContent className="pt-5">
         {group.links.map((item, itemIndex) => (
-          <Link
-            key={itemIndex}
-            href={item.href}
-            className={cn(
-              "block px-4 py-2 text-body transition-colors text-popover-foreground rounded-2xl font-medium",
-              pathname === item.href
-                ? "bg-accent text-accent-foreground"
-                : "hover:bg-accent hover:text-accent-foreground"
-            )}
-            role="menuitem"
-          >
-            {item.title}
-          </Link>
+          <SheetClose key={itemIndex} asChild>
+            <Link
+              href={item.href}
+              className={cn(
+                "block px-4 py-2 text-body transition-colors text-popover-foreground rounded-2xl font-medium",
+                pathname === item.href
+                  ? "bg-accent text-accent-foreground"
+                  : "hover:bg-accent hover:text-accent-foreground"
+              )}
+              role="menuitem"
+            >
+              {item.title}
+            </Link>
+          </SheetClose>
         ))}
       </AccordionContent>
     </AccordionItem>

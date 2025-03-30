@@ -3,6 +3,7 @@ import { Accordion } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -53,9 +54,11 @@ const MobileLinks = (props: Props) => {
             })}
           </Accordion>
 
-          <Button size={"xl"} asChild className="mb-16">
-            <Link href={paths.contact}>Lets Talk</Link>
-          </Button>
+          <SheetClose asChild>
+            <Button size={"xl"} asChild className="mb-16">
+              <Link href={paths.contact}>Lets Talk</Link>
+            </Button>
+          </SheetClose>
 
           <h3 className="text-heading-5 font-heading font-bold mb-4">
             Follow Us
