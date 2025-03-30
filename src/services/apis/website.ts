@@ -1,7 +1,7 @@
 import { TWebsite } from "@/types/cms/website";
-import { asyncWrapper, cmsFetch } from "../queries/common";
-import { ServiceResponseType } from "../queries/types";
+import { asyncWrapper, cmsFetch } from "../common";
 import { websiteQuery } from "../queries/website";
+import { ServiceResponseType } from "../types";
 
 export const getWebsite = asyncWrapper<TWebsite>(async () => {
   const response = await cmsFetch({
