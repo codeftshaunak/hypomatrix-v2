@@ -1,6 +1,6 @@
 import { TService } from "@/types/cms/service";
 import { asyncWrapper, cmsFetch } from "../common";
-import { servicesQuery } from "../queries/service";
+import { serviceQuery, servicesQuery } from "../queries/service";
 
 export const getServices = asyncWrapper<TService[]>(async () => {
   const response = await cmsFetch<{ services: TService[] }>({
@@ -16,7 +16,7 @@ export const getServices = asyncWrapper<TService[]>(async () => {
 export const getService = asyncWrapper<TService, [string]>(async (slug) => {
   const response = await cmsFetch<{ service: TService }>({
     body: JSON.stringify({
-      query: servicesQuery,
+      query: serviceQuery,
       variables: { slug },
     }),
     next: { tags: [`service-${slug}`] },
