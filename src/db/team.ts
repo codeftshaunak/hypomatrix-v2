@@ -16,7 +16,7 @@ export const members: TMember[] = [
         <p>With over 15 years of leadership experience, John has successfully led multiple tech companies to global success. His expertise in business strategy and team building ensures the company stays ahead in innovation.</p>
       `,
     },
-    social: [
+    socials: [
       { icon: "linkedin", href: "https://linkedin.com/in/johndoe" },
       { icon: "x", href: "https://twitter.com/johndoe" },
       { icon: "github", href: "https://github.com/johndoe" },
@@ -38,7 +38,7 @@ export const members: TMember[] = [
         <p>Jane is a technology innovator with a deep passion for software development and AI. She leads the engineering team, ensuring our products are at the forefront of technological advancements.</p>
       `,
     },
-    social: [
+    socials: [
       { icon: "linkedin", href: "https://linkedin.com/in/janesmith" },
       { icon: "github", href: "https://github.com/janesmith" },
     ],
@@ -59,7 +59,7 @@ export const members: TMember[] = [
         <p>Michael crafts exceptional user experiences with his creative vision. He is responsible for the company’s design philosophy and ensuring UI/UX excellence across all projects.</p>
       `,
     },
-    social: [
+    socials: [
       {
         icon: "linkedin",
         href: "https://linkedin.com/in/michaeljohnson",
@@ -86,7 +86,7 @@ export const members: TMember[] = [
         <p>Emily is a marketing strategist with a proven track record of driving brand growth. She specializes in digital marketing, content strategy, and social media engagement.</p>
       `,
     },
-    social: [
+    socials: [
       { icon: "facebook", href: "https://facebook.com/emilywilson" },
       {
         icon: "linkedin",
@@ -110,7 +110,7 @@ export const members: TMember[] = [
         <p>David is a full-stack developer with expertise in modern web technologies. He ensures seamless functionality and performance optimization for our applications.</p>
       `,
     },
-    social: [
+    socials: [
       { icon: "github", href: "https://github.com/davidbrown" },
       { icon: "linkedin", href: "https://linkedin.com/in/davidbrown" },
     ],
@@ -131,7 +131,7 @@ export const members: TMember[] = [
         <p>Sophia ensures project deadlines are met while maintaining quality. She specializes in agile methodologies and team coordination.</p>
       `,
     },
-    social: [
+    socials: [
       {
         icon: "linkedin",
         href: "https://linkedin.com/in/sophiamiller",
@@ -154,7 +154,7 @@ export const members: TMember[] = [
         <p>Chris specializes in network security and data protection, ensuring our digital assets remain secure and resilient.</p>
       `,
     },
-    social: [
+    socials: [
       { icon: "x", href: "https://twitter.com/chrisanderson" },
       { icon: "github", href: "https://github.com/chrisanderson" },
     ],
@@ -175,7 +175,7 @@ export const members: TMember[] = [
         <p>Olivia is passionate about storytelling and content creation. She develops engaging content strategies that connect with audiences.</p>
       `,
     },
-    social: [
+    socials: [
       {
         icon: "instagram",
         href: "https://instagram.com/oliviathomas",

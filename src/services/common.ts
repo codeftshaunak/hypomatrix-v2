@@ -1,13 +1,22 @@
 import { ServiceResponseType } from "./types";
 
-export const cmsFetch = (options: RequestInit) =>
-  fetch(process.env.CMS_ENDPOINT as string, {
+export const cmsFetch = async <T>(options: RequestInit) => {
+  const response = await fetch(process.env.CMS_ENDPOINT as string, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     ...options,
   });
+
+  const json: ServiceResponseType<T> = await response.json();
+
+  if (json.errors?.length) {
+    throw json.errors;
+  }
+
+  return json?.data;
+};
 
 export const asyncWrapper =
   <T, Args extends any[] = []>(

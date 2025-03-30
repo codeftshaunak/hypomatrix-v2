@@ -40,7 +40,7 @@ const UserProfile = (props: Props) => {
         ></div>
 
         <div className="flex items-center gap-2 flex-wrap">
-          {member.social.map((social, index) => {
+          {member.socials.map((social, index) => {
             const Icon = socialIcons?.[social.icon] || LucideGlobe;
 
             return (

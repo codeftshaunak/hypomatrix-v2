@@ -9,5 +9,5 @@ export type TMember = {
   about: {
     html: string; // rich text
   };
-  social: TSocial[];
+  socials: TSocial[];
 };

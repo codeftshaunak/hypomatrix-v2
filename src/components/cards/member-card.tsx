@@ -28,7 +28,7 @@ const MemberCard = (props: Props) => {
             <Plus />
           </Button>
 
-          {data.social.map((item, index) => {
+          {data.socials.map((item, index) => {
             const Icon = socialIcons?.[item.icon] ?? LucideGlobe;
             return (
               <Link href={item.href} target="_blank" passHref key={index}>

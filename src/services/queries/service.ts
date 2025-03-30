@@ -1,41 +1,48 @@
-export const ServiceQuery = `
-query Website($id: ID) {
-  website(stage: PUBLISHED, where: {id: $id}) {
+const commonQuery = `
     id
-    title
-    phones
-    navLinks {
-      ... on Link {
-        id
-        href
-        newTab
-        title
-      }
-      ... on LinkGroup {
-        id
-        title
-        links {
-          href
-          id
-          newTab
-          title
-        }
-      }
-    }
-    quickLinks {
-      id
-      href
-      newTab
-      title
-    }
-    socials {
-      href
-      icon
-      id
-    }
-    emails
     description
-    addresses
+    category
+    completeProjects
+    icon {
+      width
+      url
+      height
+    }
+    slug
+    steps {
+      title
+      id
+      description
+      image {
+        url
+        width
+        height
+      }
+    }
+    successRate
+    thumbnail {
+      width
+      url
+      height
+    }
+    title
+`;
+
+export const servicesQuery = `
+query ServicesQuery {
+  services(stage: PUBLISHED) {
+    ${commonQuery}
+  }
+}
+`;
+
+export const serviceQuery = `
+query ServiceQuery($slug: String = "") {
+  service(stage: PUBLISHED, where: {slug: $slug}) {
+    ${commonQuery}
+    content {
+      html
+    }
   }
 }
 `;
