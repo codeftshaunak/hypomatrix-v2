@@ -1,11 +1,16 @@
-import { website } from "@/db/website";
 import paths from "@/router/paths";
+import { TWebsite } from "@/types/cms/website";
 import Link from "next/link";
 import { Button } from "../../ui/button";
 import DesktopLinks from "./desktop-links";
 import MobileLinks from "./mobile-links";
 
-export default function Navbar() {
+type Props = {
+  website: TWebsite;
+};
+
+export default function Navbar(props: Props) {
+  const { website } = props;
   return (
     <nav className="container flex justify-between items-center z-50 absolute top-0 left-1/2 -translate-x-1/2 mt-[30px]">
       <div className="flex gap-10 items-center">
@@ -26,7 +31,7 @@ export default function Navbar() {
       {/* Right Side */}
       <div className="flex items-center space-x-4">
         <Button size={"lg"} asChild className="max-sm:hidden">
-          <Link href={"/contact"}>LETS TALK</Link>
+          <Link href={paths.contact}>LETS TALK</Link>
         </Button>
         <MobileLinks
           navLinks={website.navLinks}

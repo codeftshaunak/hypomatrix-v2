@@ -1,6 +1,6 @@
 import { Separator } from "@/components/ui/separator";
-import { website } from "@/db/website";
 import paths from "@/router/paths";
+import { TWebsite } from "@/types/cms/website";
 import { LucideMail, LucidePhone, Mail } from "lucide-react";
 import Link from "next/link";
 import FooterBackground from "./background";
@@ -8,7 +8,13 @@ import LeftSpiral from "./left-spiral";
 import LegalSection from "./legal-section";
 import RightSpiral from "./right-spiral";
 
-export function Footer() {
+type Props = {
+  website: TWebsite;
+};
+
+export function Footer(props: Props) {
+  const { website } = props;
+
   return (
     <footer className="relative bg-card overflow-hidden">
       <LeftSpiral />

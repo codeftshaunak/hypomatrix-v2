@@ -1,10 +1,10 @@
 import MainLayout from "@/components/layouts";
 import { cn } from "@/lib/utils";
+import { getWebsite } from "@/services/apis/website";
 import "@/styles/index.css";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import { bodyFont, headingFont } from "./fonts";
-import { getWebsite } from "@/services/apis/website";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,7 +17,10 @@ type Props = {
 
 const RootLayout = async (props: Props) => {
   const websiteResponse = await getWebsite();
-  console.log(websiteResponse);
+
+  if (!websiteResponse.data) {
+    throw new Error("Failed to fetch website data");
+  }
 
   const { children } = props;
 
@@ -26,7 +29,7 @@ const RootLayout = async (props: Props) => {
       <body
         className={cn(headingFont.variable, bodyFont.variable, "antialiased")}
       >
-        <MainLayout>{children}</MainLayout>
+        <MainLayout website={websiteResponse.data}>{children}</MainLayout>
       </body>
     </html>
   );

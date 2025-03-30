@@ -28,6 +28,12 @@ query Website($id: ID) {
       newTab
       title
     }
+    legalLinks {
+      id
+      href
+      newTab
+      title
+    }
     socials {
       href
       icon
