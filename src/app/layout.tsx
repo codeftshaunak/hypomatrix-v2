@@ -4,6 +4,7 @@ import "@/styles/index.css";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import { bodyFont, headingFont } from "./fonts";
+import { getWebsite } from "@/services/apis/website";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +15,10 @@ type Props = {
   children: ReactNode;
 };
 
-const RootLayout = (props: Props) => {
+const RootLayout = async (props: Props) => {
+  const websiteResponse = await getWebsite();
+  console.log(websiteResponse);
+
   const { children } = props;
 
   return (

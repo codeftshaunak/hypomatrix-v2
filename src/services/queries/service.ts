@@ -1,4 +1,4 @@
-export const websiteQuery = `
+export const ServiceQuery = `
 query Website($id: ID) {
   website(stage: PUBLISHED, where: {id: $id}) {
     id
