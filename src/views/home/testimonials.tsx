@@ -8,10 +8,12 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { reviews } from "@/db/reviews";
+import { getReviews } from "@/services/apis/review";
 import Image from "next/image";
 
-function TestimonialsSection() {
+async function TestimonialsSection() {
+  const reviewsRes = await getReviews();
+
   return (
     <section className="py-[130px] bg-card">
       <div className="container">
@@ -28,7 +30,7 @@ function TestimonialsSection() {
           />
           <Carousel className="flex-[1]">
             <CarouselContent className="mb-16">
-              {reviews.map((review) => (
+              {reviewsRes.data?.map((review) => (
                 <CarouselItem key={review.id}>
                   <ReviewCard data={review} />
                 </CarouselItem>

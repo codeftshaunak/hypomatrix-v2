@@ -42,6 +42,7 @@ author {
   name
   slug
 }
+publishDate
 `;
 
 export const blogPostsQuery = `
@@ -54,7 +55,7 @@ query BlogPostsQuery {
 
 export const blogPostsQueryWithFeatured = `
 query BlogPostsQuery($featured: Boolean = false) {
-  blogPosts(stage: PUBLISHED, where: {featured: $featured})
+  blogPosts(stage: PUBLISHED, where: {featured: $featured}) {
     ${postCommonQuery}
   }
 }

@@ -1,9 +1,12 @@
 import ProjectCard from "@/components/cards/project-card";
 import SectionHeader from "@/components/common/section-header";
-import { NeonButton } from "@/components/ui/neon-button";
-import { projects } from "@/db/projects";
+import { Button } from "@/components/ui/button";
+import paths from "@/router/paths";
+import { getFeaturedProjects } from "@/services/apis/project";
+import Link from "next/link";
 
-function ProjectsSection() {
+async function ProjectsSection() {
+  const projectsRes = await getFeaturedProjects(true);
   return (
     <section id="projects" className="container pb-[130px]">
       <SectionHeader
@@ -13,15 +16,15 @@ function ProjectsSection() {
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {projects.map((project) => (
+        {projectsRes.data?.map((project) => (
           <ProjectCard data={project} key={project.id} />
         ))}
       </div>
 
-      <div className="mt-12 text-center text-white">
-        <NeonButton className="text-black bg-lime-400 cursor-pointer">
-          View All Projects
-        </NeonButton>
+      <div className="mt-12 text-center">
+        <Button asChild size={"xl"}>
+          <Link href={paths.portfolio.root}>View All Projects</Link>
+        </Button>
       </div>
     </section>
   );

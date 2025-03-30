@@ -6,10 +6,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { members } from "@/db/team";
+import { getMembers } from "@/services/apis/member";
 import SectionHeader from "../../components/common/section-header";
 
-function TeamSection() {
+async function TeamSection() {
+  const membersRes = await getMembers();
   return (
     <section id="team" className="pb-[130px] container">
       <SectionHeader
@@ -20,7 +21,7 @@ function TeamSection() {
 
       <Carousel>
         <CarouselContent className="-ml-6 mb-16">
-          {members.map((member) => (
+          {membersRes.data?.map((member) => (
             <CarouselItem
               key={member.id}
               className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 pl-6"

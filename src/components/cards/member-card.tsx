@@ -17,9 +17,10 @@ const MemberCard = (props: Props) => {
     <article className="group">
       <div className="aspect-square rounded-lg overflow-hidden relative mb-4">
         <Image
-          src={data.avatar.url || "/placeholder.svg"}
+          src={data.avatar.url}
           fill
           alt={data.name}
+          className="object-cover"
         />
 
         {/* Social Links */}
