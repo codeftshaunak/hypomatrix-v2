@@ -32,6 +32,21 @@ export const projects: TProject[] = [
         width: 800,
         height: 600,
       },
+      {
+        url: "/assets/project/project2.jpg",
+        width: 800,
+        height: 600,
+      },
+      {
+        url: "/assets/project/project3.jpg",
+        width: 800,
+        height: 600,
+      },
+      {
+        url: "/assets/project/project1.jpg",
+        width: 800,
+        height: 600,
+      },
     ],
     startDate: "2024-01-01T00:00:00.000Z",
     endDate: "2024-06-01T00:00:00.000Z",

@@ -1,15 +1,15 @@
+import { blogPosts } from "@/db/blog";
 import { blogPage } from "@/db/pages";
 import BlogView from "@/views/blog";
-import React from "react";
 
 type Props = {};
 
-const page = (props: Props) => {
+const BlogPage = (props: Props) => {
   return (
-    <div>
-      <BlogView page={blogPage} />
-    </div>
+    <>
+      <BlogView page={blogPage} posts={blogPosts} />
+    </>
   );
 };
 
-export default page;
+export default BlogPage;
