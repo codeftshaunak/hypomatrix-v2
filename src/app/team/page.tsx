@@ -1,10 +1,17 @@
-import { teamPage } from "@/db/pages";
+import { getPage } from "@/services/apis/page";
 import TeamView from "@/views/team";
+import { notFound } from "next/navigation";
 
-const TeamPage = () => {
+const TeamPage = async () => {
+  const pageRes = await getPage("team");
+
+  if (!pageRes.data) {
+    notFound();
+  }
+
   return (
     <>
-      <TeamView page={teamPage} />
+      <TeamView page={pageRes.data} />
     </>
   );
 };

@@ -1,13 +1,19 @@
 import { blogPosts } from "@/db/blog";
-import { blogPage } from "@/db/pages";
+import { getPage } from "@/services/apis/page";
 import BlogView from "@/views/blog";
+import { notFound } from "next/navigation";
 
 type Props = {};
 
-const BlogPage = (props: Props) => {
+const BlogPage = async (props: Props) => {
+  const pageRes = await getPage("blog");
+
+  if (!pageRes.data) {
+    notFound();
+  }
   return (
     <>
-      <BlogView page={blogPage} posts={blogPosts} />
+      <BlogView page={pageRes.data} posts={blogPosts} />
     </>
   );
 };

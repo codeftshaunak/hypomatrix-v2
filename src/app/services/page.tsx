@@ -1,13 +1,17 @@
-import { servicesPage } from "@/db/pages";
-import { getServices } from "@/services/apis/service";
+import { getPage } from "@/services/apis/page";
 import ServicesView from "@/views/services";
+import { notFound } from "next/navigation";
 
 const ServicesPage = async () => {
-  const services = await getServices();
+  const pageRes = await getPage("services");
+
+  if (!pageRes.data) {
+    notFound();
+  }
 
   return (
     <>
-      <ServicesView page={servicesPage} />
+      <ServicesView page={pageRes.data} />
     </>
   );
 };
