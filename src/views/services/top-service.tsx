@@ -1,9 +1,10 @@
 import SectionHeader from "@/components/common/section-header";
 import { Card, CardContent } from "@/components/ui/card";
-import { services } from "@/db/services";
+import { getServices } from "@/services/apis/service";
 import Image from "next/image";
 
-const OurServices = () => {
+const OurServices = async () => {
+  const servicesRes = await getServices();
   return (
     <section className="container pb-[130px]">
       <SectionHeader
@@ -14,7 +15,7 @@ const OurServices = () => {
       />
 
       <div className="space-y-4">
-        {services.map((service) => (
+        {servicesRes.data?.map((service) => (
           <Card key={service.id}>
             <CardContent className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 items-center">
               <div className="lg:row-span-2 xl:row-span-1 mb-5 lg:mb-0">
