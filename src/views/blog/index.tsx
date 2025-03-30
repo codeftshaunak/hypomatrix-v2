@@ -1,14 +1,21 @@
 import PageHeader from "@/components/common/page-header";
 import paths from "@/router/paths";
+import { TBlogPost } from "@/types/cms/blog";
 import { TPage } from "@/types/cms/page";
-import BlogSection from "./blog";
+import { Suspense } from "react";
+import CategoriesSection from "./categories-section";
+import LatestPostSection from "./latest-post-section";
+import PaginationSection from "./pagination-section";
+import PostsWithPagination from "./posts-with-pagination";
+import PostsWrapper from "./posts-wrapper";
 
 type Props = {
   page: TPage;
+  posts: TBlogPost[];
 };
 
 const BlogView = (props: Props) => {
-  const { page } = props;
+  const { page, posts } = props;
   return (
     <>
       <PageHeader
@@ -21,7 +28,23 @@ const BlogView = (props: Props) => {
           },
         ]}
       />
-      <BlogSection />
+      <div className="container py-[130px]">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-y-16 gap-x-8">
+          {/* Main Content */}
+          <div className="xl:col-span-2 space-y-16 @container/feed">
+            <Suspense fallback={<PostsWrapper posts={posts} />}>
+              <PostsWithPagination limit={6} posts={posts} />
+              <PaginationSection limit={6} total={posts.length} />
+            </Suspense>
+          </div>
+
+          {/* Sidebar */}
+          <div className="space-y-8">
+            <CategoriesSection />
+            <LatestPostSection />
+          </div>
+        </div>
+      </div>
     </>
   );
 };

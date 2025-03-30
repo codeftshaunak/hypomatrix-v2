@@ -24,7 +24,7 @@ const PageHeader: React.FC<Props> = (props) => {
       </div>
 
       <div className="container relative">
-        <h1 className="text-heading-2 md:text-[70px] font-heading font-bold mb-2 md:mb-8">
+        <h1 className="text-heading-2 md:text-[70px] font-heading leading-none font-bold mb-2 md:mb-8 max-w-[900px]">
           {title}
         </h1>
 
