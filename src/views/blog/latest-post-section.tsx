@@ -18,7 +18,7 @@ const LatestPostSection = (props: Props) => {
           <div key={post.id} className="flex gap-3 items-center">
             <div className="flex-shrink-0 aspect-square w-[100px] relative">
               <Image
-                src={post.cover.url}
+                src={post.thumbnail.url}
                 alt={post.title}
                 fill
                 className="object-cover rounded-lg"

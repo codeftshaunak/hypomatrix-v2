@@ -17,7 +17,7 @@ const VerticalCard = (props: Props) => {
       <Link href={paths.blog.details(data.slug)}>
         <div className="w-full aspect-[4/3] relative mb-5">
           <Image
-            src={data.cover.url}
+            src={data.thumbnail.url}
             alt={data.title}
             className="object-cover"
             fill

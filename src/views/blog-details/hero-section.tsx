@@ -14,7 +14,7 @@ const HeroSection = (props: Props) => {
     <>
       <div className="aspect-video relative mb-5">
         <Image
-          src={post.cover.url}
+          src={post.thumbnail.url}
           alt={post.title}
           className="rounded-lg object-cover"
           fill

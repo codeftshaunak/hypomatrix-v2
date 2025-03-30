@@ -17,7 +17,7 @@ const GridCard = (props: Props) => {
       <Link href={paths.blog.details(data.slug)}>
         <div className="w-full aspect-[414/323] relative mb-5">
           <Image
-            src={data.cover.url}
+            src={data.thumbnail.url}
             alt={data.title}
             className="object-cover"
             fill

@@ -69,7 +69,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "042f7030-88d0-4060-9bba-7dbb2d400c42",
     slug: "aliqua-talis-corona",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=1",
       width: 800,
       height: 500,
@@ -89,7 +89,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "f48b0111-efcc-48c0-b40a-051ebb7bb46e",
     slug: "colo-audax-utrimque",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=2",
       width: 800,
       height: 500,
@@ -108,7 +108,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "aafcdbb9-bad1-4805-a89b-0feb436e6309",
     slug: "quas-itaque-spero",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=3",
       width: 800,
       height: 500,
@@ -128,7 +128,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "9b0c056e-8c3a-42dc-878a-296490c3fc41",
     slug: "cruentus-deporto-cum",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=4",
       width: 800,
       height: 500,
@@ -147,7 +147,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "0762e8f8-9565-4f79-96cf-48765288dc0f",
     slug: "adamo-beatae-theologus",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=5",
       width: 800,
       height: 500,
@@ -166,7 +166,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "e468b34d-e581-4c8a-9286-8c2a55bfdc9d",
     slug: "spectaculum-copiose-calcar",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=6",
       width: 800,
       height: 500,
@@ -185,7 +185,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "833c3038-3fda-46f0-bfb5-8a2ea9c7e022",
     slug: "spectaculum-ipsam-vilitas",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=7",
       width: 800,
       height: 500,
@@ -204,7 +204,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "6b6c65a6-dc65-4d8e-8a13-7e6850a0466c",
     slug: "id-maxime-minus",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=8",
       width: 800,
       height: 500,
@@ -223,7 +223,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "59ef6437-9214-4cff-8461-16520e486bb4",
     slug: "campana-validus-depraedor",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=9",
       width: 800,
       height: 500,
@@ -242,7 +242,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "b4a97073-2938-4df7-89e9-00e46efed767",
     slug: "cursim-tabesco-cunabula",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=10",
       width: 800,
       height: 500,
@@ -261,7 +261,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "79050035-c3b5-42c6-bc12-c5ef51570fbf",
     slug: "corroboro-statua-deprecator",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=11",
       width: 800,
       height: 500,
@@ -280,7 +280,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "39dce4f4-a2ff-427b-b496-9345e72b6414",
     slug: "carmen-angulus-desparatus",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=12",
       width: 800,
       height: 500,
@@ -299,7 +299,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "857319c7-4250-4757-99f5-f03ac6de841c",
     slug: "adversus-alveus-demum",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=13",
       width: 800,
       height: 500,
@@ -319,7 +319,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "e94f6d9e-a846-41b9-a7b8-e9727e285662",
     slug: "suadeo-eligendi-virga",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=14",
       width: 800,
       height: 500,
@@ -338,7 +338,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "1fb37cd7-4d88-4b64-bd4c-e8eae4b09210",
     slug: "collum-tantillus-bellicus",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=15",
       width: 800,
       height: 500,
@@ -357,7 +357,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "2f9c14e0-b6f8-41c1-bc68-1eee8f2e2365",
     slug: "tutis-creator-cogito",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=16",
       width: 800,
       height: 500,
@@ -376,7 +376,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "fe12afba-b8ee-4044-b70f-3e09e867e0e3",
     slug: "capillus-vir-advenio",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=17",
       width: 800,
       height: 500,
@@ -395,7 +395,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "68f18355-361b-4bb8-b848-11bbdd264472",
     slug: "solio-deporto-cum",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=18",
       width: 800,
       height: 500,
@@ -415,7 +415,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "497bd8d0-8513-461c-af46-00016c6f5753",
     slug: "sit-coniecto-cito",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=19",
       width: 800,
       height: 500,
@@ -434,7 +434,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "5cbc56c3-7813-4892-b144-317d3b38d7a5",
     slug: "viriliter-solus-culpa",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=20",
       width: 800,
       height: 500,
@@ -453,7 +453,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "88064c6f-56fd-4592-b744-cf69db1933bd",
     slug: "vitae-autus-adulatio",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=21",
       width: 800,
       height: 500,
@@ -472,7 +472,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "d717bb57-5843-4779-86cf-73fbbfb99a70",
     slug: "despecto-demonstro-commemoro",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=22",
       width: 800,
       height: 500,
@@ -491,7 +491,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "5cd7ec65-7ef0-4e77-9fe9-91ffb64bd790",
     slug: "virtus-appositus-cohors",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=23",
       width: 800,
       height: 500,
@@ -510,7 +510,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "dac1c583-b010-432f-abf7-f6727539fb55",
     slug: "desipio-dolore-quaerat",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=24",
       width: 800,
       height: 500,
@@ -529,7 +529,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "ddc2904b-274f-40b6-9845-81ecdf328609",
     slug: "delectus-cur-vallum",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=25",
       width: 800,
       height: 500,
@@ -549,7 +549,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "67782026-b3b5-4099-8351-35b29af77c99",
     slug: "arto-cohaero-provident",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=26",
       width: 800,
       height: 500,
@@ -568,7 +568,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "639131f4-815b-4058-942f-10a477403c6d",
     slug: "decimus-volva-amaritudo",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=27",
       width: 800,
       height: 500,
@@ -587,7 +587,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "f4b90b35-460d-475c-8304-f9a1688b2970",
     slug: "ustilo-condico-curso",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=28",
       width: 800,
       height: 500,
@@ -606,7 +606,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "e59e174b-6df9-4f7b-acee-93f8b9416219",
     slug: "textilis-possimus-ut",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=29",
       width: 800,
       height: 500,
@@ -625,7 +625,7 @@ export const blogPosts: TBlogPost[] = [
   {
     id: "ae933872-b7f7-409c-8401-0739663541da",
     slug: "cribro-volo-taedium",
-    cover: {
+    thumbnail: {
       url: "https://picsum.photos/800/500?random=30",
       width: 800,
       height: 500,

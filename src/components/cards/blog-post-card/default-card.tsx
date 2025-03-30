@@ -17,7 +17,7 @@ const DefaultCard = (props: Props) => {
       <CardContent className="flex flex-col gap-8 sm:flex-row sm:gap-4 items-center">
         <div className="w-full sm:w-[160px] xl:w-[260px] aspect-video sm:aspect-square relative shrink-0">
           <Image
-            src={data.cover.url}
+            src={data.thumbnail.url}
             alt={data.title}
             className="rounded-lg object-cover"
             fill

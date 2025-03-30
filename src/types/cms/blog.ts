@@ -4,7 +4,7 @@ import { TMember } from "./team";
 export type TBlogPost = {
   id: string;
   slug: string;
-  cover: TAsset;
+  thumbnail: TAsset;
   title: string;
   description: string;
   category: TBlogCategory | null;
