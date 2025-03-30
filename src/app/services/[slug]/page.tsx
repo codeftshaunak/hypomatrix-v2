@@ -10,8 +10,6 @@ const ServiceDetailsPage = async (props: Props) => {
   const { slug } = await props.params;
   const serviceRes = await getService(slug);
 
-  console.log(serviceRes);
-
   if (!serviceRes.data) {
     notFound();
   }
