@@ -1,12 +1,13 @@
 const commonQuery = `
 title
 slug
-
 `;
 
 export const pagesQuery = `
 query PagesQuery {
-  ${commonQuery}
+  pages(stage: PUBLISHED) {
+    ${commonQuery}
+  }
 }
 `;
 
