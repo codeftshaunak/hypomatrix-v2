@@ -5,6 +5,7 @@ import "@/styles/index.css";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import { bodyFont, headingFont } from "./fonts";
+import Providers from "./providers";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -29,7 +30,9 @@ const RootLayout = async (props: Props) => {
       <body
         className={cn(headingFont.variable, bodyFont.variable, "antialiased")}
       >
-        <MainLayout website={websiteResponse.data}>{children}</MainLayout>
+        <Providers>
+          <MainLayout website={websiteResponse.data}>{children}</MainLayout>
+        </Providers>
       </body>
     </html>
   );
