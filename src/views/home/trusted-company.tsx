@@ -1,8 +1,9 @@
 import SectionHeader from "@/components/common/section-header";
-import { companies } from "@/db/companies";
+import { getClients } from "@/services/apis/clients";
 import Image from "next/image";
 
-export default function TrustedCompanySection() {
+export default async function TrustedCompanySection() {
+  const clientsRes = await getClients();
   return (
     <section className="container pb-[130px] flex flex-col xl:flex-row xl:items-center justify-between gap-y-[60px]">
       {/* Left Side Content */}
@@ -22,13 +23,13 @@ export default function TrustedCompanySection() {
 
       {/* Right Side - Logo Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3">
-        {companies.map((item, index) => (
+        {clientsRes.data?.map((item, index) => (
           <div
             className="border flex justify-center items-center h-[100px] xl:px-10"
             key={index}
           >
             <Image
-              src={item.logo}
+              src={item.logo.url}
               alt={item.name}
               width={100}
               height={100}
