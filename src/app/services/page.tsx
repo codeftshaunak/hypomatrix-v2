@@ -1,7 +1,10 @@
 import { servicesPage } from "@/db/pages";
+import { getServices } from "@/services/apis/service";
 import ServicesView from "@/views/services";
 
-const page = () => {
+const ServicesPage = async () => {
+  const services = await getServices();
+
   return (
     <>
       <ServicesView page={servicesPage} />
@@ -9,4 +12,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ServicesPage;
