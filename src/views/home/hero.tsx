@@ -13,14 +13,13 @@ export default function Hero() {
         </h1>
 
         <div className="md:absolute left-0 bottom-0">
-          <p className="text-muted-foreground lg:mb-8 xl:mb-14 text-body">
+          <p className="text-muted-foreground lg:mb-8 xl:mb-14 text-body max-w-[350px]">
             We are a{" "}
             <span className="font-semibold text-foreground">
               Creative Agency
             </span>{" "}
-            with over 25 years of Our <br />
-            experience, specializing in delivering cutting-edge <br /> digital
-            solutions, including web design.
+            with over 25 years of Our experience, specializing in delivering
+            cutting-edge digital solutions, including web design.
           </p>
         </div>
       </div>
