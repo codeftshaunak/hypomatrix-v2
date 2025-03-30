@@ -1,5 +1,3 @@
-"use client";
-
 import SectionHeader from "@/components/common/section-header";
 import {
   Accordion,
@@ -7,11 +5,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import faqs from "@/db/faq";
-import { useState } from "react";
+import { getFaqs } from "@/services/apis/faq";
 
-export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+export default async function FAQ() {
+  const faqsRes = await getFaqs();
 
   return (
     <>
@@ -22,7 +19,7 @@ export default function FAQ() {
       />
 
       <Accordion type="single" collapsible>
-        {faqs.map((item, index) => (
+        {faqsRes.data?.map((item, index) => (
           <AccordionItem value={`item-${index}`} key={index}>
             <AccordionTrigger>{item.question}</AccordionTrigger>
             <AccordionContent>{item.answer}</AccordionContent>
