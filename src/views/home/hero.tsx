@@ -13,13 +13,13 @@ export default function Hero() {
         </h1>
 
         <div className="md:absolute left-0 bottom-0">
-          <p className="text-muted-foreground lg:mb-8 xl:mb-14 text-body max-w-[350px]">
-            We are a{" "}
+          <p className="text-muted-foreground lg:mb-8 xl:mb-14 text-body max-w-[350px] text-start">
+            Achieve unparalleled digital success with {""}
             <span className="font-semibold text-foreground">
-              Creative Agency
+              HypoMatrix{" "}
             </span>{" "}
-            with over 25 years of Our experience, specializing in delivering
-            cutting-edge digital solutions, including web design.
+            Our innovative solutions and expert team are here to elevate your
+            brand and reach new heights.
           </p>
         </div>
       </div>

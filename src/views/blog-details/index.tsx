@@ -38,10 +38,10 @@ const BlogDetailsView = (props: Props) => {
             className="prose prose-invert text-muted-foreground w-full max-w-full"
             dangerouslySetInnerHTML={{ __html: post.content.html }}
           />
-          <TestimonialSection />
-          <GridSection />
+          {/* <TestimonialSection /> */}
+          {/* <GridSection /> */}
 
-          <div className="flex flex-col xl:flex-row xl:justify-between xl:items-center py-8 px-6 border-t border-b gap-y-10">
+          <div className="flex flex-col xl:flex-row xl:justify-between xl:items-center py-8 px-6 border-t gap-y-10">
             <TagsSection tags={post.tags} />
             <SocialsSection />
           </div>

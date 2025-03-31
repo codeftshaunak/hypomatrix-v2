@@ -16,7 +16,7 @@ const Hero = () => {
             className="mb-10"
           />
           <p className="text-muted-foreground mb-10">
-            At Agenko Agency, we specialize in delivering strategic growth
+            At Hypomatrix, we specialize in delivering strategic growth
             solutions tailored to elevate your business to new heights. By
             combining innovative strategies, data-driven insights, and creative
             expertise, we help companies unlock their full potential.
