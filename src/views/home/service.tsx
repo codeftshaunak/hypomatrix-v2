@@ -17,12 +17,12 @@ export default async function Services() {
           subtitle="Our Service"
           className="flex-1"
         />
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground max-w-[350px]">
           <span className="font-semibold text-foreground">
-            We are a digital creative agency
+            Boost your business{" "}
           </span>{" "}
-          with <br /> 25 years of experience, specializing in <br /> delivering
-          cutting-edge solutions.
+          with our expert digital services, including innovative web development
+          and targeted marketing solutions that drive results.{" "}
         </p>
       </div>
 

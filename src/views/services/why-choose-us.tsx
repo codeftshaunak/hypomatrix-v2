@@ -10,7 +10,7 @@ const WhyChooseUs = () => {
         <SectionHeader
           subtitle={"Why Choose Us"}
           title={"Your Trusted Partner for Success & Innovation"}
-          description={`At Agenko Agency, we specialize in delivering strategic growth
+          description={`At Hypomatrix, we specialize in delivering strategic growth
           solutions tailored to elevate your business to new heights. By
           combining innovative strategies, data-driven insights, and creativity.`}
           className="mb-10 max-w-[600px]"

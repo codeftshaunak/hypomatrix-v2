@@ -9,13 +9,15 @@ export default async function TrustedCompanySection() {
       {/* Left Side Content */}
       <SectionHeader
         subtitle={"Company"}
-        title={"Trusted Our Company"}
+        title={"Hypomatrix"}
         description={
           <>
-            <span className="text-foreground font-semibold">HypoMatrix </span>{" "}
-            is a digital creative agency specializing in delivering cutting-edge
-            solutions that redefine innovation and elevate brands to new
-            heights. 🚀{" "}
+            <span className="text-foreground font-semibold">
+              We are a digital Creative agency
+            </span>{" "}
+            HypoMatrix is a digital creative agency specializing in delivering
+            cutting-edge solutions that redefine innovation and elevate brands
+            to new heights. 🚀{" "}
           </>
         }
         className="max-w-[500px]"
