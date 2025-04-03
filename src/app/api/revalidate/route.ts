@@ -12,17 +12,36 @@ import { TPage } from "@/types/cms/page";
 import { TProject } from "@/types/cms/project";
 import { TService } from "@/types/cms/service";
 import { TMember } from "@/types/cms/team";
+import { verifyWebhookSignature } from "@hygraph/utils";
 import { revalidateTag } from "next/cache";
 import { NextRequest } from "next/server";
 
 export async function POST(req: NextRequest) {
-  // Check for secret to confirm this is a valid request
-  // const secret = req.nextUrl.searchParams.get("secret");
-  // if (secret !== process.env.REVALIDATE_TOKEN) {
-  //   return Response.json({ message: "Invalid token" }, { status: 401 });
-  // }
+  const SECRET = process.env.CMS_REVALIDATE_SECRET as string;
+  const headers = req.headers;
+  const receivedSecret = headers.get("gcms-signature");
+
+  if (!receivedSecret) {
+    return Response.json(
+      { message: "Missing GCMS signature" },
+      { status: 400 }
+    );
+  }
 
   const body = await req.json();
+
+  const isValidRequest = verifyWebhookSignature({
+    body,
+    secret: SECRET,
+    signature: receivedSecret,
+  });
+
+  if (!isValidRequest) {
+    return Response.json(
+      { message: "Invalid GCMS signature" },
+      { status: 401 }
+    );
+  }
 
   const type = body?.data?.__typename as CmsContentType | null;
 
