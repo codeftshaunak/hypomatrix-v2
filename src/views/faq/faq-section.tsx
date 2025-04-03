@@ -12,12 +12,6 @@ export default async function FAQ() {
 
   return (
     <>
-      <SectionHeader
-        title={"Answers at Your Fingertips"}
-        subtitle={"FAQ"}
-        className="mb-16"
-      />
-
       <Accordion type="single" collapsible>
         {faqsRes.data?.map((item, index) => (
           <AccordionItem value={`item-${index}`} key={index}>

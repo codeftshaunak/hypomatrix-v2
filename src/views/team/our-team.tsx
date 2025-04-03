@@ -1,5 +1,6 @@
 import MemberCard from "@/components/cards/member-card";
 import SectionHeader from "@/components/common/section-header";
+import CommonMotionBox from "@/components/motion/common-motion";
 import { Separator } from "@/components/ui/separator";
 import { getMembers } from "@/services/apis/member";
 import { leadingZero } from "@/utils/number";
@@ -26,12 +27,13 @@ export async function TeamSection() {
           </p>
         </div>
       </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-        {membersRes.data?.map((member) => (
-          <MemberCard data={member} key={member.id} />
-        ))}
-      </div>
+      <CommonMotionBox>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          {membersRes.data?.map((member) => (
+            <MemberCard data={member} key={member.id} />
+          ))}
+        </div>
+      </CommonMotionBox>
     </section>
   );
 }
