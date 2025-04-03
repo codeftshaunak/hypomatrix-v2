@@ -10,8 +10,8 @@ type Props = {
 const LegalSection = (props: Props) => {
   const { legalLinks, title } = props;
   return (
-    <div className="py-10 flex flex-col md:flex-row  gap-4 justify-between container">
-      <p className="text-lg font-medium font-heading flex items-center gap-1">
+    <div className="py-10 flex flex-col md:flex-row gap-4 justify-between container">
+      <p className="text-lg font-medium font-heading flex flex-wrap items-center gap-1">
         <span>© {new Date().getFullYear()}</span>
         <Link href={paths.root} className="text-primary hover:underline">
           {title}

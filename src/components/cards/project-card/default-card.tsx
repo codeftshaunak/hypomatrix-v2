@@ -19,7 +19,7 @@ const DefaultCard = (props: ProjectCardProps) => {
             fill
             className="rounded-2xl object-cover"
           />
-          <div className="flex gap-1 text-sm absolute bottom-5 left-5">
+          <div className="flex flex-wrap gap-1 text-sm absolute bottom-5 left-5">
             {data.tags.map((tag, index) => (
               <Badge variant={"secondary"} className="text-sm" key={index}>
                 {tag}

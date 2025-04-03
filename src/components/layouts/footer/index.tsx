@@ -34,11 +34,12 @@ export function Footer(props: Props) {
               <Mail className="h-5 w-5 text-gray-500" />
             </div>
             <input
+              disabled
               type="email"
               placeholder="Email address"
               className="flex-1 py-4 text-sm outline-none text-black placeholder:text-black"
             />
-            <button className="bg-[#9CFE4F] text-black font-semibold px-6 py-2 rounded-full mr-1 cursor-pointer">
+            <button className="bg-[#9CFE4F] text-black font-semibold px-3 md:px-6 py-2 rounded-full mr-1 ">
               Subscribe
             </button>
           </div>
