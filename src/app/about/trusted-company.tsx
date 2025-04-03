@@ -1,5 +1,6 @@
 import SectionHeader from "@/components/common/section-header";
-import { getClients } from "@/services/apis/clients";
+import { getClients } from "@/services/apis/client";
+
 import Image from "next/image";
 
 export default async function TrustedCompanySection() {
