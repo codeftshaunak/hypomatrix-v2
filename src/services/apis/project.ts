@@ -6,12 +6,22 @@ import {
   projectsQueryWithFeatured,
 } from "../queries/project";
 
+// ----------------------------------------------------------------------
+
+export const projectServiceTags = {
+  projects: "projects",
+  projectsFeatured: "projects-featured",
+  project: (slug: string) => `project-${slug}`,
+};
+
+// ----------------------------------------------------------------------
+
 export const getProjects = asyncWrapper<TProject[]>(async () => {
   const response = await cmsFetch<{ projects: TProject[] }>({
     body: JSON.stringify({
       query: projectsQuery,
     }),
-    next: { tags: ["projects"] },
+    next: { tags: [projectServiceTags.projects] },
   });
 
   return response?.projects || [];
@@ -26,7 +36,7 @@ export const getFeaturedProjects = asyncWrapper<
       query: projectsQueryWithFeatured,
       variables: { featured: isFeatured },
     }),
-    next: { tags: ["projects-featured"] },
+    next: { tags: [projectServiceTags.projectsFeatured] },
   });
 
   return response?.projects || [];
@@ -38,7 +48,7 @@ export const getProject = asyncWrapper<TProject, [string]>(async (slug) => {
       query: projectQuery,
       variables: { slug },
     }),
-    next: { tags: [`project-${slug}`] },
+    next: { tags: [projectServiceTags.project(slug)] },
   });
 
   return response?.project || null;

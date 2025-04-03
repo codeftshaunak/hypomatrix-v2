@@ -1,6 +1,6 @@
+import { getClients } from "@/services/apis/client";
 import Image from "next/image";
 import SectionHeader from "./section-header";
-import { getClients } from "@/services/apis/clients";
 
 const OurClient = async () => {
   const clientsRes = await getClients();

@@ -8,7 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { getClients } from "@/services/apis/clients";
+import { getClients } from "@/services/apis/client";
 import Image from "next/image";
 
 async function TestimonialsSection() {
