@@ -43,7 +43,7 @@ const SectionHeader: React.FC<Props> = (props) => {
         )}
       </h3>
       <MotionBox
-        initial={{ scale: 0.2, opacity: 0 }}
+        initial={{ scale: 0.5, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.2 }}
