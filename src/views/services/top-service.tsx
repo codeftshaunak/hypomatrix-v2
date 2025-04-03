@@ -1,5 +1,6 @@
 import ServiceCard from "@/components/cards/service-card";
 import SectionHeader from "@/components/common/section-header";
+import CommonMotionBox from "@/components/motion/common-motion";
 import { getServices } from "@/services/apis/service";
 
 const OurServices = async () => {
@@ -13,11 +14,13 @@ const OurServices = async () => {
         className="mb-16"
       />
 
-      <div className="space-y-4">
-        {servicesRes.data?.map((service) => (
-          <ServiceCard data={service} key={service.id} variant="horizontal" />
-        ))}
-      </div>
+      <CommonMotionBox>
+        <div className="space-y-4">
+          {servicesRes.data?.map((service) => (
+            <ServiceCard data={service} key={service.id} variant="horizontal" />
+          ))}
+        </div>
+      </CommonMotionBox>
     </section>
   );
 };

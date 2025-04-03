@@ -1,3 +1,4 @@
+import CommonMotionBox from "@/components/motion/common-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import paths from "@/router/paths";
@@ -10,38 +11,42 @@ type Props = {};
 const LatestPostSection = async (props: Props) => {
   const blogRes = await getBlogPosts();
   return (
-    <Card>
-      <CardHeader>
-        <h3 className="text-heading-4 font-bold font-heading">Latest Posts</h3>
-      </CardHeader>
-      <CardContent className="space-y-6">
-        {[...(blogRes.data || [])].slice(0, 3).map((post) => (
-          <div key={post.id} className="flex gap-3 items-center">
-            <div className="flex-shrink-0 aspect-square w-[100px] relative">
-              <Image
-                src={post.thumbnail.url}
-                alt={post.title}
-                fill
-                className="object-cover rounded-lg"
-              />
+    <CommonMotionBox>
+      <Card>
+        <CardHeader>
+          <h3 className="text-heading-4 font-bold font-heading">
+            Latest Posts
+          </h3>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          {[...(blogRes.data || [])].slice(0, 3).map((post) => (
+            <div key={post.id} className="flex gap-3 items-center">
+              <div className="flex-shrink-0 aspect-square w-[100px] relative">
+                <Image
+                  src={post.thumbnail.url}
+                  alt={post.title}
+                  fill
+                  className="object-cover rounded-lg"
+                />
+              </div>
+              <div className="space-y-1">
+                <Badge className="mb-3 px-3 py-1" variant={"outline"}>
+                  {post.category?.title}
+                </Badge>
+                <h4 className="text-lg leading-tight font-heading font-medium line-clamp-2">
+                  <Link
+                    href={paths.blog.details(post.slug)}
+                    className="hover:text-primary"
+                  >
+                    {post.title}
+                  </Link>
+                </h4>
+              </div>
             </div>
-            <div className="space-y-1">
-              <Badge className="mb-3 px-3 py-1" variant={"outline"}>
-                {post.category?.title}
-              </Badge>
-              <h4 className="text-lg leading-tight font-heading font-medium line-clamp-2">
-                <Link
-                  href={paths.blog.details(post.slug)}
-                  className="hover:text-primary"
-                >
-                  {post.title}
-                </Link>
-              </h4>
-            </div>
-          </div>
-        ))}
-      </CardContent>
-    </Card>
+          ))}
+        </CardContent>
+      </Card>
+    </CommonMotionBox>
   );
 };
 

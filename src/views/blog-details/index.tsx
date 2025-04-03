@@ -8,6 +8,7 @@ import HeroSection from "./hero-section";
 import SocialsSection from "./socials-section";
 import TagsSection from "./tags-section";
 import TestimonialSection from "./testimonial-section";
+import CommonMotionBox from "@/components/motion/common-motion";
 
 type Props = {
   post: TBlogPost;
@@ -40,11 +41,12 @@ const BlogDetailsView = (props: Props) => {
           />
           {/* <TestimonialSection /> */}
           {/* <GridSection /> */}
-
-          <div className="flex flex-col xl:flex-row xl:justify-between xl:items-center py-8 px-6 border-t gap-y-10">
-            <TagsSection tags={post.tags} />
-            <SocialsSection />
-          </div>
+          <CommonMotionBox>
+            <div className="flex flex-col xl:flex-row xl:justify-between xl:items-center py-8 px-6 border-t gap-y-10">
+              <TagsSection tags={post.tags} />
+              <SocialsSection />
+            </div>
+          </CommonMotionBox>
         </div>
         <div className="space-y-8">
           <CategoriesSection />
