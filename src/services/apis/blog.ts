@@ -8,12 +8,24 @@ import {
   blogPostsQueryWithFeatured,
 } from "../queries/blog";
 
+// ----------------------------------------------------------------------
+
+export const blogServiceTags = {
+  blogPosts: "blog-posts",
+  blogPostsFeatured: "blog-posts-featured",
+  blogPost: (slug: string) => `blog-post-${slug}`,
+  blogCategories: "blog-categories",
+  blogCategory: (slug: string) => `blog-category-${slug}`,
+};
+
+// ----------------------------------------------------------------------
+
 export const getBlogPosts = asyncWrapper<TBlogPost[]>(async () => {
   const response = await cmsFetch<{ blogPosts: TBlogPost[] }>({
     body: JSON.stringify({
       query: blogPostsQuery,
     }),
-    next: { tags: ["blog-posts"] },
+    next: { tags: [blogServiceTags.blogPosts] },
   });
 
   return response?.blogPosts || [];
@@ -28,7 +40,7 @@ export const getFeaturedBlogPosts = asyncWrapper<
       query: blogPostsQueryWithFeatured,
       variables: { featured: isFeatured },
     }),
-    next: { tags: ["blog-posts-featured"] },
+    next: { tags: [blogServiceTags.blogPostsFeatured] },
   });
 
   return response?.blogPosts || [];
@@ -40,7 +52,7 @@ export const getBlogPost = asyncWrapper<TBlogPost, [string]>(async (slug) => {
       query: blogPostQuery,
       variables: { slug },
     }),
-    next: { tags: [`blog-post-${slug}`] },
+    next: { tags: [blogServiceTags.blogPost(slug)] },
   });
 
   return response?.blogPost || null;
@@ -53,7 +65,7 @@ export const getBlogCategories = asyncWrapper<TBlogCategory[]>(async () => {
     body: JSON.stringify({
       query: blogCategoriesQuery,
     }),
-    next: { tags: ["blog-categories"] },
+    next: { tags: [blogServiceTags.blogCategories] },
   });
 
   return response?.blogCategories || [];
@@ -66,7 +78,7 @@ export const getBlogCategory = asyncWrapper<TBlogCategory, [string]>(
         query: blogCategoryQuery,
         variables: { slug },
       }),
-      next: { tags: [`blog-category-${slug}`] },
+      next: { tags: [blogServiceTags.blogCategory(slug)] },
     });
 
     return response?.blogCategory || null;

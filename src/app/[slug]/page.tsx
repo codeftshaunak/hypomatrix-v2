@@ -31,7 +31,20 @@ export async function generateStaticParams() {
     return [];
   }
 
-  return dataRes.data.map((item) => ({
-    slug: item.slug,
-  }));
+  return dataRes.data
+    .filter(
+      (item) =>
+        ![
+          "about",
+          "blog",
+          "contact",
+          "faq",
+          "portfolio",
+          "services",
+          "team",
+        ].includes(item.slug)
+    )
+    .map((item) => ({
+      slug: item.slug,
+    }));
 }

@@ -1,6 +1,6 @@
+import { getClients } from "@/services/apis/client";
 import Image from "next/image";
 import SectionHeader from "./section-header";
-import { getClients } from "@/services/apis/clients";
 import CommonMotionBox from "../motion/common-motion";
 
 const OurClient = async () => {
