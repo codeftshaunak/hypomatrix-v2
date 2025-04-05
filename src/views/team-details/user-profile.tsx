@@ -1,6 +1,5 @@
-import socialIcons from "@/assets/icons/socials";
+import SocialIcon from "@/components/common/social-icon";
 import { TMember } from "@/types/cms/team";
-import { LucideGlobe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -36,15 +35,14 @@ const UserProfile = (props: Props) => {
 
         <div className="flex items-center gap-2 flex-wrap">
           {member.socials.map((social, index) => {
-            const Icon = socialIcons?.[social.icon] || LucideGlobe;
-
             return (
               <Link
                 href={social.href}
+                target="_blank"
                 key={index}
                 className="size-10 inline-flex items-center justify-center bg-foreground rounded-full text-background hover:bg-primary hover:text-primary-foreground duration-200"
               >
-                <Icon size={18} />
+                <SocialIcon name={social.icon} />
               </Link>
             );
           })}
