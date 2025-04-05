@@ -1,3 +1,5 @@
+import { metaTagsQuery } from "./common";
+
 export const websiteQuery = `
 query Website($id: ID) {
   website(stage: PUBLISHED, where: {id: $id}) {
@@ -42,6 +44,7 @@ query Website($id: ID) {
     emails
     description
     addresses
+    metaTags ${metaTagsQuery}
   }
 }
 `;

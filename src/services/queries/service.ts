@@ -1,30 +1,20 @@
+import { assetImageQuery, metaTagsQuery } from "./common";
+
 const commonQuery = `
     id
     description
     category
     completeProjects
-    icon {
-      width
-      url
-      height
-    }
+    icon ${assetImageQuery}
     slug
     steps {
       title
       id
       description
-      image {
-        url
-        width
-        height
-      }
+      image ${assetImageQuery}
     }
     successRate
-    thumbnail {
-      width
-      url
-      height
-    }
+    thumbnail ${assetImageQuery}
     title
 `;
 
@@ -43,6 +33,7 @@ query ServiceQuery($slug: String = "") {
     content {
       html
     }
+    metaTags ${metaTagsQuery}
   }
 }
 `;
