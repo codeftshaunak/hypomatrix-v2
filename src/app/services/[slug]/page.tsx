@@ -1,5 +1,8 @@
+import paths from "@/router/paths";
 import { getService, getServices } from "@/services/apis/service";
+import { generatePageMetadata } from "@/utils/page-metadata";
 import ServiceDetailsView from "@/views/service-details";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 type Props = {
@@ -23,6 +26,8 @@ const ServiceDetailsPage = async (props: Props) => {
 
 export default ServiceDetailsPage;
 
+// ----------------------------------------------------------------------
+
 export async function generateStaticParams() {
   const servicesRes = await getServices();
 
@@ -34,3 +39,18 @@ export async function generateStaticParams() {
     slug: service.slug,
   }));
 }
+
+// ----------------------------------------------------------------------
+
+export const generateMetadata = async (props: Props): Promise<Metadata> => {
+  const { slug } = await props.params;
+  const { data } = await getService(slug);
+
+  if (!data) {
+    return {};
+  }
+
+  return {
+    ...generatePageMetadata(data?.metaTags, paths.services.details(slug)),
+  };
+};

@@ -43,15 +43,15 @@ export const generateMetadata = async (): Promise<Metadata> => {
   const { data } = await getWebsite();
 
   if (!data) {
-    throw new Error("Failed to fetch website data");
+    return {};
   }
 
   return {
-    title: {
-      default: data.title,
-      template: `%s | ${data.title}`,
-    },
     description: data.description,
     ...generatePageMetadata(data?.metaTags, "/"),
+    title: {
+      default: data?.metaTags?.title ?? data.title,
+      template: `%s | ${data?.metaTags?.title ?? data.title}`,
+    },
   };
 };

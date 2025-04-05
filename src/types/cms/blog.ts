@@ -21,4 +21,5 @@ export type TBlogCategory = {
   slug: string;
   description: string;
   posts: Omit<TBlogPost, "category">[]; // Prevents circular reference
+  metaTags?: TMetaTag;
 };
