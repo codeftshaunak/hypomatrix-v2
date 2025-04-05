@@ -26,3 +26,11 @@ export type TLinkGroup = {
   title: string;
   links: TLink[];
 };
+
+export type TMetaTag = {
+  title?: string;
+  description?: string;
+  ogImage?: TAsset;
+  index?: boolean;
+  follow?: boolean;
+};

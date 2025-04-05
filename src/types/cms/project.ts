@@ -1,4 +1,4 @@
-import { TAsset } from "./common";
+import { TAsset, TMetaTag } from "./common";
 
 export type TProject = {
   id: string;
@@ -16,4 +16,5 @@ export type TProject = {
   endDate: string; // iso timestamp
   tags: string[];
   cardSize: "auto" | "tall" | "wide";
+  metaTags?: TMetaTag;
 };

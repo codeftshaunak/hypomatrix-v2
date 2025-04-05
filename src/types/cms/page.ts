@@ -1,3 +1,5 @@
+import { TMetaTag } from "./common";
+
 export type TPage = {
   title: string;
   description: string;
@@ -5,4 +7,5 @@ export type TPage = {
   content?: {
     html: string; // rich text
   };
+  metaTags?: TMetaTag;
 };
