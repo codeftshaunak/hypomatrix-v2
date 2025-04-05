@@ -1,3 +1,5 @@
+import { assetImageQuery, metaTagsQuery } from "./common";
+
 const categoryCommonQuery = `
 slug
 title
@@ -17,6 +19,7 @@ export const blogCategoryQuery = `
 query BlogCategoryQuery($slug: String = "") {
   blogCategory(stage: PUBLISHED, where: {slug: $slug}) {
     ${categoryCommonQuery}
+    metaTags ${metaTagsQuery}
   }
 }
 `;
@@ -32,11 +35,7 @@ category {
 description
 id
 slug
-thumbnail {
-  width
-  url
-  height
-}
+thumbnail ${assetImageQuery}
 title
 author {
   name
@@ -69,6 +68,7 @@ query BlogPostQuery($slug: String = "") {
       html
     }
     tags
+    metaTags ${metaTagsQuery}
   }
 }
 `;

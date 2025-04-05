@@ -1,4 +1,4 @@
-import { TAsset } from "./common";
+import { TAsset, TMetaTag } from "./common";
 import { TMember } from "./team";
 
 export type TBlogPost = {
@@ -12,6 +12,7 @@ export type TBlogPost = {
   author: TMember | null;
   publishDate: string; // ISO timestamp
   tags: string[];
+  metaTags?: TMetaTag;
 };
 
 export type TBlogCategory = {
@@ -20,4 +21,5 @@ export type TBlogCategory = {
   slug: string;
   description: string;
   posts: Omit<TBlogPost, "category">[]; // Prevents circular reference
+  metaTags?: TMetaTag;
 };

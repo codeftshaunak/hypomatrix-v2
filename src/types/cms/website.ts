@@ -1,4 +1,4 @@
-import { TLink, TLinkGroup, TSocial } from "./common";
+import { TLink, TLinkGroup, TMetaTag, TSocial } from "./common";
 
 export type TWebsite = {
   title: string;
@@ -10,4 +10,5 @@ export type TWebsite = {
   quickLinks: TLink[];
   navLinks: (TLink | TLinkGroup)[];
   legalLinks: TLink[];
+  metaTags?: TMetaTag;
 };

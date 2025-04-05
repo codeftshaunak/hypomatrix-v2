@@ -1,3 +1,5 @@
+import { metaTagsQuery } from "./common";
+
 const commonQuery = `
 title
 slug
@@ -19,6 +21,7 @@ query PageQuery($slug: String = "") {
     content {
       html
     }
+    metaTags ${metaTagsQuery}
   }
 }
 `;

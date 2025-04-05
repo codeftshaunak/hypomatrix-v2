@@ -1,3 +1,5 @@
+import { assetImageQuery } from "./common";
+
 export const clientQuery = `
 query ClientQuery {
   clients {
@@ -7,16 +9,8 @@ query ClientQuery {
     review
     rating
     id
-    logo {
-      height
-      width
-      url
-    }
-     avatar {
-      height
-      width
-      url
-    }
+    logo ${assetImageQuery}
+    avatar ${assetImageQuery}
   }
 }
 `;
