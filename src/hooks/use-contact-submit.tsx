@@ -3,7 +3,7 @@ import { useState } from "react";
 interface ContactPayload {
   name: string;
   email: string;
-  subject: string;
+  subject?: string;
   message: string;
 }
 
