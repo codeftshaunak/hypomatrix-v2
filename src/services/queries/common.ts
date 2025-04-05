@@ -12,6 +12,6 @@ export const metaTagsQuery = `
   index
   follow
   description
-  ogImge ${assetImageQuery}
+  ogImage ${assetImageQuery}
 }
 `;

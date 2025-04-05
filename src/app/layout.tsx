@@ -50,8 +50,9 @@ export const generateMetadata = async (): Promise<Metadata> => {
     description: data.description,
     ...generatePageMetadata(data?.metaTags, "/"),
     title: {
-      default: data?.metaTags?.title ?? data.title,
-      template: `%s | ${data?.metaTags?.title ?? data.title}`,
+      absolute: data?.metaTags?.title || data.title,
+      default: data.title,
+      template: `%s | ${data.title}`,
     },
   };
 };

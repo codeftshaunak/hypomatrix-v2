@@ -8,8 +8,8 @@ export const generatePageMetadata = (
   const url = slug ? `${process.env.NEXT_PUBLIC_APP_URL}/${slug}` : undefined;
 
   return {
-    title: meta?.title,
-    description: meta?.description,
+    ...(meta?.title ? { title: meta?.title } : {}),
+    ...(meta?.description ? { description: meta?.description } : {}),
     alternates: {
       canonical: url,
     },
