@@ -1,10 +1,10 @@
-import socialIcons from "@/assets/icons/socials";
 import { Button } from "@/components/ui/button";
 import paths from "@/router/paths";
 import type { TMember } from "@/types/cms/team";
-import { LucideGlobe, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import SocialIcon from "../common/social-icon";
 
 type Props = {
   data: TMember;
@@ -30,7 +30,6 @@ const MemberCard = (props: Props) => {
           </Button>
 
           {data.socials.map((item, index) => {
-            const Icon = socialIcons?.[item.icon] ?? LucideGlobe;
             return (
               <Link href={item.href} target="_blank" passHref key={index}>
                 <Button
@@ -38,7 +37,7 @@ const MemberCard = (props: Props) => {
                   variant="secondary"
                   className="lg:scale-0 transition-transform duration-300 ease-in-out group-hover/social:scale-100 group-hover/social:delay-[50ms] group-focus-within/social:scale-100 group-focus-within/social:delay-[50ms]"
                 >
-                  <Icon />
+                  <SocialIcon name={item.icon} />
                 </Button>
               </Link>
             );

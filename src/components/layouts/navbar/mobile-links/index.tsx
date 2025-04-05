@@ -1,4 +1,4 @@
-import socialIcons from "@/assets/icons/socials";
+import SocialIcon from "@/components/common/social-icon";
 import { Accordion } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/sheet";
 import paths from "@/router/paths";
 import { TWebsite } from "@/types/cms/website";
-import { LucideGlobe, LucideMenu } from "lucide-react";
+import { LucideMenu } from "lucide-react";
 import Link from "next/link";
 import { NavLink } from "./nav-link";
 import { NavLinkGroup } from "./nav-link-group";
@@ -65,8 +65,6 @@ const MobileLinks = (props: Props) => {
           </h3>
           <div className="flex items-center gap-2">
             {socials.map((social, index) => {
-              const Icon = socialIcons?.[social.icon] || LucideGlobe;
-
               return (
                 <Button
                   size={"icon"}
@@ -75,7 +73,7 @@ const MobileLinks = (props: Props) => {
                   key={index}
                 >
                   <Link href={social.href} target={"_blank"}>
-                    <Icon />
+                    <SocialIcon name={social.icon} />
                   </Link>
                 </Button>
               );
