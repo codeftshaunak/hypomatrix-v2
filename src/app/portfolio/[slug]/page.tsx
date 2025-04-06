@@ -1,5 +1,8 @@
+import paths from "@/router/paths";
 import { getProject, getProjects } from "@/services/apis/project";
+import { generatePageMetadata } from "@/utils/page-metadata";
 import ProjectDetailsView from "@/views/project-details";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 type Props = {
@@ -36,3 +39,18 @@ export async function generateStaticParams() {
     slug: item.slug,
   }));
 }
+
+// ----------------------------------------------------------------------
+
+export const generateMetadata = async (props: Props): Promise<Metadata> => {
+  const { slug } = await props.params;
+  const { data } = await getProject(slug);
+
+  if (!data) {
+    return {};
+  }
+
+  return {
+    ...generatePageMetadata(data?.metaTags, paths.portfolio.details(slug)),
+  };
+};

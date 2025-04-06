@@ -1,3 +1,5 @@
+import { assetImageQuery, metaTagsQuery } from "./common";
+
 const commonProjectQuery = `
     cardSize
     category
@@ -5,19 +7,11 @@ const commonProjectQuery = `
     description
     endDate
     id
-    images {
-      width
-      url
-      height
-    }
+    images ${assetImageQuery}
     slug
     startDate
     tags
-    thumbnail {
-      url
-      width
-      height
-    }
+    thumbnail ${assetImageQuery}
     title
 `;
 
@@ -44,6 +38,7 @@ query ProjectsQuery($slug: String = "") {
     content {
       html
     }
+    metaTags ${metaTagsQuery}
   }
 }
 `;

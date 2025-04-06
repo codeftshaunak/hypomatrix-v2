@@ -1,9 +1,7 @@
+import { assetImageQuery, metaTagsQuery } from "./common";
+
 const commonQuery = `
-    avatar {
-      width
-      url
-      height
-    }
+    avatar ${assetImageQuery}
     id
     name
     role
@@ -30,6 +28,7 @@ query MemberQuery($slug: String = "") {
     about {
       html
     }
+    metaTags ${metaTagsQuery}
   }
 }
 `;

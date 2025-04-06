@@ -2,15 +2,11 @@ import MainLayout from "@/components/layouts";
 import { cn } from "@/lib/utils";
 import { getWebsite } from "@/services/apis/website";
 import "@/styles/index.css";
-import type { Metadata } from "next";
+import { generatePageMetadata } from "@/utils/page-metadata";
+import { Metadata } from "next";
 import { ReactNode } from "react";
 import { bodyFont, headingFont } from "./fonts";
 import Providers from "./providers";
-
-export const metadata: Metadata = {
-  title: "HypoMatrix",
-  description: "Solve Business Challenges With HypoMatrix",
-};
 
 type Props = {
   children: ReactNode;
@@ -40,3 +36,23 @@ const RootLayout = async (props: Props) => {
 };
 
 export default RootLayout;
+
+// ----------------------------------------------------------------------
+
+export const generateMetadata = async (): Promise<Metadata> => {
+  const { data } = await getWebsite();
+
+  if (!data) {
+    return {};
+  }
+
+  return {
+    description: data.description,
+    ...generatePageMetadata(data?.metaTags, "/"),
+    title: {
+      absolute: data?.metaTags?.title || data.title,
+      default: data.title,
+      template: `%s | ${data.title}`,
+    },
+  };
+};

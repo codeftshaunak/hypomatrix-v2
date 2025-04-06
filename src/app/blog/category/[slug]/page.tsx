@@ -1,9 +1,12 @@
+import paths from "@/router/paths";
 import {
   getBlogCategories,
   getBlogCategory,
   getBlogPosts,
 } from "@/services/apis/blog";
+import { generatePageMetadata } from "@/utils/page-metadata";
 import BlogCategoryView from "@/views/blog-category";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 type Props = {
   params: Promise<{ slug: string }>;
@@ -45,3 +48,18 @@ export async function generateStaticParams() {
     slug: item.slug,
   }));
 }
+
+// ----------------------------------------------------------------------
+
+export const generateMetadata = async (props: Props): Promise<Metadata> => {
+  const { slug } = await props.params;
+  const { data } = await getBlogCategory(slug);
+
+  if (!data) {
+    return {};
+  }
+
+  return {
+    ...generatePageMetadata(data?.metaTags, paths.blog.category(slug)),
+  };
+};

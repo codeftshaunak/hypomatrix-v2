@@ -1,4 +1,4 @@
-import { TAsset, TSocial } from "./common";
+import { TAsset, TMetaTag, TSocial } from "./common";
 
 export type TMember = {
   id: string;
@@ -10,4 +10,5 @@ export type TMember = {
     html: string; // rich text
   };
   socials: TSocial[];
+  metaTags?: TMetaTag;
 };

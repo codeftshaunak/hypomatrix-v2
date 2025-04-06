@@ -1,4 +1,4 @@
-import { TAsset } from "./common";
+import { TAsset, TMetaTag } from "./common";
 
 export type TServiceStep = {
   id: string;
@@ -19,4 +19,5 @@ export type TService = {
   successRate: number; // 0-100
   content: { html: string }; // richtext
   steps: TServiceStep[];
+  metaTags?: TMetaTag;
 };

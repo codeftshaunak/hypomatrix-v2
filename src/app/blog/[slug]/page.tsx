@@ -1,5 +1,8 @@
+import paths from "@/router/paths";
 import { getBlogPost, getBlogPosts } from "@/services/apis/blog";
+import { generatePageMetadata } from "@/utils/page-metadata";
 import BlogDetailsView from "@/views/blog-details";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 type Props = {
   params: Promise<{ slug: string }>;
@@ -35,3 +38,18 @@ export async function generateStaticParams() {
     slug: item.slug,
   }));
 }
+
+// ----------------------------------------------------------------------
+
+export const generateMetadata = async (props: Props): Promise<Metadata> => {
+  const { slug } = await props.params;
+  const { data } = await getBlogPost(slug);
+
+  if (!data) {
+    return {};
+  }
+
+  return {
+    ...generatePageMetadata(data?.metaTags, paths.blog.details(slug)),
+  };
+};
