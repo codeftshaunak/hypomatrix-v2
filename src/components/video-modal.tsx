@@ -11,7 +11,7 @@ export default function VideoPlaceholder() {
   return (
     <div className="w-full relative">
       <Dialog>
-        <div className="w-full aspect-[2.58] flex items-center justify-center rounded-lg relative">
+        <div className="w-full aspect-video md:aspect-[2.58] flex items-center justify-center rounded-lg relative">
           <Image
             src={thumbnailUrl}
             alt="Video Thumbnail"
@@ -19,7 +19,7 @@ export default function VideoPlaceholder() {
             fill
           />
           <DialogTrigger asChild>
-            <Button className="size-24 [&_svg]:!size-6">
+            <Button className="size-24 [&_svg]:!size-6 bg-primary/60 hover:bg-primary/70">
               <Play />
             </Button>
           </DialogTrigger>
