@@ -1,3 +1,5 @@
+import SocialIcon from "@/components/common/social-icon";
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { MotionBox } from "@/lib/motion/box";
 import paths from "@/router/paths";
@@ -34,7 +36,23 @@ export function Footer(props: Props) {
             <h2 className="text-heading-3 font-heading font-bold mb-6">
               <Link href={paths.root}>{website.title}</Link>
             </h2>
-            <p className="mb-6 max-w-[350px]">{website.description}</p>
+            <p className="mb-10 max-w-[350px]">{website.description}</p>
+            <div className="flex flex-row items-center gap-2 flex-wrap">
+              {website?.socials.map((social, index) => {
+                return (
+                  <Button
+                    key={index}
+                    asChild
+                    size={"icon"}
+                    variant={"foreground"}
+                  >
+                    <Link href={social.href} target={"_blank"}>
+                      <SocialIcon name={social.icon} />
+                    </Link>
+                  </Button>
+                );
+              })}
+            </div>
           </div>
 
           <div className="xl:col-span-4 flex flex-col md:flex-row md:items-start md:justify-between gap-y-16">
