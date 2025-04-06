@@ -65,7 +65,7 @@ const DetailsSection = (props: Props) => {
         dangerouslySetInnerHTML={{ __html: project.content.html }}
       />
 
-      <CarouselSection images={project.images} />
+      {!!project?.images?.length && <CarouselSection images={project.images} />}
     </section>
   );
 };
