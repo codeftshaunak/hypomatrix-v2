@@ -34,3 +34,10 @@ export type TMetaTag = {
   index?: boolean;
   follow?: boolean;
 };
+
+export type TWorkStep = {
+  id: string;
+  title: string;
+  description: string;
+  image: TAsset;
+};
