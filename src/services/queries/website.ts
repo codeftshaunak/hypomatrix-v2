@@ -42,6 +42,15 @@ query Website($id: ID) {
     emails
     description
     addresses
+    workStep {
+      title
+      description
+      image {
+        url
+        width
+        height
+      }
+    }
   }
 }
 `;

@@ -1,7 +1,8 @@
 import { TWebsite } from "@/types/cms/website";
-import React from "react";
+import React, { Suspense } from "react";
 import { Footer } from "./footer";
 import Navbar from "./navbar";
+import MeetingModal from "../meeting";
 
 type Props = {
   children: React.ReactNode;
@@ -15,6 +16,9 @@ const MainLayout = (props: Props) => {
       <Navbar website={website} />
       {children}
       <Footer website={website} />
+      <Suspense>
+        <MeetingModal />
+      </Suspense>
     </>
   );
 };

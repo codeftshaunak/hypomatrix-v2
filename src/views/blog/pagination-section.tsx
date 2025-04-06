@@ -40,40 +40,46 @@ const PaginationSection: FC<PaginationSectionProps> = (props) => {
 
   return (
     <Pagination>
-      <PaginationContent>
-        <PaginationItem>
-          <Link href={`?page=${Math.max(1, page - 1)}`} legacyBehavior passHref>
-            <PaginationPrevious aria-disabled={page === 1} />
-          </Link>
-        </PaginationItem>
-
-        {pages.map((p, i) => (
-          <PaginationItem key={i}>
-            {p === "..." ? (
-              <PaginationEllipsis />
-            ) : (
-              <Link href={`?page=${p}`} legacyBehavior passHref>
-                <PaginationLink
-                  aria-current={p === page ? "page" : undefined}
-                  isActive={p === page}
-                >
-                  {p}
-                </PaginationLink>
-              </Link>
-            )}
+      {totalPages > 5 && (
+        <PaginationContent>
+          <PaginationItem>
+            <Link
+              href={`?page=${Math.max(1, page - 1)}`}
+              legacyBehavior
+              passHref
+            >
+              <PaginationPrevious aria-disabled={page === 1} />
+            </Link>
           </PaginationItem>
-        ))}
 
-        <PaginationItem>
-          <Link
-            href={`?page=${Math.min(totalPages, page + 1)}`}
-            legacyBehavior
-            passHref
-          >
-            <PaginationNext aria-disabled={page === totalPages} />
-          </Link>
-        </PaginationItem>
-      </PaginationContent>
+          {pages.map((p, i) => (
+            <PaginationItem key={i}>
+              {p === "..." ? (
+                <PaginationEllipsis />
+              ) : (
+                <Link href={`?page=${p}`} legacyBehavior passHref>
+                  <PaginationLink
+                    aria-current={p === page ? "page" : undefined}
+                    isActive={p === page}
+                  >
+                    {p}
+                  </PaginationLink>
+                </Link>
+              )}
+            </PaginationItem>
+          ))}
+
+          <PaginationItem>
+            <Link
+              href={`?page=${Math.min(totalPages, page + 1)}`}
+              legacyBehavior
+              passHref
+            >
+              <PaginationNext aria-disabled={page === totalPages} />
+            </Link>
+          </PaginationItem>
+        </PaginationContent>
+      )}
     </Pagination>
   );
 };

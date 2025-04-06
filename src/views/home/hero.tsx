@@ -1,6 +1,9 @@
 import { MotionBox } from "@/components/motion/box";
 import { Button } from "@/components/ui/button";
 import VideoPlaceholder from "@/components/video-modal";
+import { MEETING_MODAL_KEY } from "@/config/keys";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -36,10 +39,12 @@ export default function Hero() {
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <Button size={"xl"} className="mt-8 lg:mt-0 mb-[130px]">
-          Learn More
+          <Link href={`?${MEETING_MODAL_KEY}=true`}>
+            Book A Free Consultant
+          </Link>
+          <ArrowRight size={20} />
         </Button>
       </MotionBox>
-
       {/* Video Placeholder */}
       <VideoPlaceholder />
     </header>
