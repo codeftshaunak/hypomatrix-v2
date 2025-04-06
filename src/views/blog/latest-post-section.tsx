@@ -1,6 +1,6 @@
-import CommonMotionBox from "@/components/motion/common-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import paths from "@/router/paths";
 import { getBlogPosts } from "@/services/apis/blog";
 import Image from "next/image";

@@ -1,6 +1,6 @@
 import ServiceCard from "@/components/cards/service-card";
 import SectionHeader from "@/components/common/section-header";
-import { MotionBox } from "@/components/motion/box";
+import { MotionBox } from "@/lib/motion/box";
 import { getServices } from "@/services/apis/service";
 import { Variants } from "framer-motion";
 

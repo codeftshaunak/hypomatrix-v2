@@ -1,6 +1,6 @@
 import WorkStepCard from "@/components/cards/work-step-card";
 import SectionHeader from "@/components/common/section-header";
-import { MotionBox } from "@/components/motion/box";
+import { MotionBox } from "@/lib/motion/box";
 import { getWebsite } from "@/services/apis/website";
 
 async function ProcessSection() {

@@ -1,10 +1,10 @@
 "use client";
 
-import { RHFInputField, RHFTextareaField } from "@/components/rhf";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Form } from "@/components/ui/form";
 import useContactForm from "@/hooks/use-contact-form";
+import { RHFInputField, RHFTextareaField } from "@/lib/rhf";
 
 type Props = {};
 

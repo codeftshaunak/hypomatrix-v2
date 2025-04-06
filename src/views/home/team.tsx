@@ -6,9 +6,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { MotionBox } from "@/lib/motion/box";
 import { getMembers } from "@/services/apis/member";
 import SectionHeader from "../../components/common/section-header";
-import { MotionBox } from "@/components/motion/box";
 
 async function TeamSection() {
   const membersRes = await getMembers();

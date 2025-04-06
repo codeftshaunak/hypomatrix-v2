@@ -19,8 +19,10 @@ export function NavLink(props: Props) {
       <Link
         href={link.href}
         className={cn(
-          "block px-3 py-2 text-body font-heading font-medium transition-colors",
-          isActive ? "text-primary" : "text-foreground hover:text-primary"
+          "block px-5 rounded-full py-2 text-body font-heading font-medium transition-colors",
+          isActive
+            ? "text-foreground bg-card"
+            : "text-foreground/80 hover:text-foreground"
         )}
       >
         {link.title}

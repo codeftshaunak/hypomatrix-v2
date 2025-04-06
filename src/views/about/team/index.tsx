@@ -1,9 +1,9 @@
 import MemberCard from "@/components/cards/member-card";
 import SectionHeader from "@/components/common/section-header";
 import { CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import { getMembers } from "@/services/apis/member";
 import CarouselContainer from "./carousel-container";
-import CommonMotionBox from "@/components/motion/common-motion";
 
 async function TeamSection() {
   const membersRes = await getMembers();

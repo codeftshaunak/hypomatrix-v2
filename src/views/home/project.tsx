@@ -1,7 +1,7 @@
 import ProjectCard from "@/components/cards/project-card";
 import SectionHeader from "@/components/common/section-header";
-import { MotionBox } from "@/components/motion/box";
 import { Button } from "@/components/ui/button";
+import { MotionBox } from "@/lib/motion/box";
 import paths from "@/router/paths";
 import { getFeaturedProjects } from "@/services/apis/project";
 import Link from "next/link";

@@ -1,11 +1,11 @@
 import PageHeader from "@/components/common/page-header";
+import SectionHeader from "@/components/common/section-header";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import paths from "@/router/paths";
 import { TPage } from "@/types/cms/page";
 import BannerSection from "./banner-section";
 import ContactSection from "./contact-section";
 import FAQ from "./faq-section";
-import SectionHeader from "@/components/common/section-header";
-import CommonMotionBox from "@/components/motion/common-motion";
 
 type Props = {
   page: TPage;

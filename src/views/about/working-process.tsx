@@ -1,7 +1,7 @@
 import WorkStepCard from "@/components/cards/work-step-card";
 import SectionHeader from "@/components/common/section-header";
-import CommonMotionBox from "@/components/motion/common-motion";
 import { workSteps } from "@/db/work-steps";
+import CommonMotionBox from "@/lib/motion/common-motion";
 
 const WorkingProcess = () => {
   return (

@@ -1,5 +1,5 @@
 import SectionHeader from "@/components/common/section-header";
-import { MotionBox } from "@/components/motion/box";
+import { MotionBox } from "@/lib/motion/box";
 import { getClients } from "@/services/apis/client";
 import Image from "next/image";
 
