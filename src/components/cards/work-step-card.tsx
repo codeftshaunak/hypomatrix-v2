@@ -21,8 +21,8 @@ const WorkStepCard = (props: Props) => {
           <div className="size-12 rounded-full border inline-flex items-center justify-center mb-6 text-primary">
             <Image
               src={data.image.url}
-              height={16}
-              width={16}
+              height={20}
+              width={20}
               alt={data.title}
             />
           </div>
