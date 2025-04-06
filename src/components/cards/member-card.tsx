@@ -15,7 +15,7 @@ const MemberCard = (props: Props) => {
 
   return (
     <article className="group">
-      <div className="aspect-square rounded-lg overflow-hidden relative mb-4">
+      <div className="aspect-[3/4] rounded-lg overflow-hidden relative mb-4">
         <Image
           src={data.avatar.url}
           fill
