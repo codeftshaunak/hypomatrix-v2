@@ -16,6 +16,7 @@ import { LucideMenu } from "lucide-react";
 import Link from "next/link";
 import { NavLink } from "./nav-link";
 import { NavLinkGroup } from "./nav-link-group";
+import { MEETING_MODAL_KEY } from "@/config/keys";
 
 type Props = {
   navLinks: TWebsite["navLinks"];
@@ -56,7 +57,7 @@ const MobileLinks = (props: Props) => {
 
           <SheetClose asChild>
             <Button size={"xl"} asChild className="mb-16">
-              <Link href={paths.contact}>Lets Talk</Link>
+              <Link href={`?${MEETING_MODAL_KEY}=true`}>LETS TALK</Link>
             </Button>
           </SheetClose>
 

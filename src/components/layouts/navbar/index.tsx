@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Button } from "../../ui/button";
 import DesktopLinks from "./desktop-links";
 import MobileLinks from "./mobile-links";
+import { MEETING_MODAL_KEY } from "@/config/keys";
 
 type Props = {
   website: TWebsite;
@@ -31,7 +32,7 @@ export default function Navbar(props: Props) {
       {/* Right Side */}
       <div className="flex items-center space-x-4">
         <Button size={"lg"} asChild className="max-sm:hidden">
-          <Link href={paths.contact}>LETS TALK</Link>
+          <Link href={`?${MEETING_MODAL_KEY}=true`}>LETS TALK</Link>
         </Button>
         <MobileLinks
           navLinks={website.navLinks}

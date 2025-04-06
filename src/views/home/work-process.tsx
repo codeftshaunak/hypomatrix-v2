@@ -2,8 +2,10 @@ import WorkStepCard from "@/components/cards/work-step-card";
 import SectionHeader from "@/components/common/section-header";
 import { MotionBox } from "@/components/motion/box";
 import { workSteps } from "@/db/work-steps";
+import { getWebsite } from "@/services/apis/website";
 
 function ProcessSection() {
+  const WorkStep = getWebsite();
   return (
     <section className="container pb-[130px]">
       <MotionBox

@@ -28,7 +28,7 @@ async function TestimonialsSection() {
             subtitle={"Testimonial"}
             className="max-w-[500px] mb-16"
           />
-          <div className="relative overflow-hidden flex flex-col lg:flex-row lg:items-center lg:justify-center gap-12 md:gap-20">
+          {/* <div className="relative overflow-hidden flex flex-col lg:flex-row lg:items-center lg:justify-center gap-12 md:gap-20">
             <Image
               src={img1}
               alt="Image not found"
@@ -46,7 +46,27 @@ async function TestimonialsSection() {
               <CarouselPrevious className="static" />
               <CarouselNext className="static ml-3" />
             </Carousel>
-          </div>
+          </div> */}
+          <Carousel className="w-full">
+            <CarouselContent className="mb-16">
+              {clientRes.data?.map((review) => (
+                <CarouselItem key={review.id}>
+                  <div className="relative overflow-hidden flex flex-col lg:flex-row lg:items-center lg:justify-center gap-12 md:gap-20">
+                    <Image
+                      src={review.avatar.url}
+                      alt="Image not found"
+                      className="aspect-square rounded-2xl max-w-[410px] w-full"
+                      height={100}
+                      width={100}
+                    />
+                    <ReviewCard data={review} />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="static" />
+            <CarouselNext className="static ml-3" />
+          </Carousel>
         </div>
       </MotionBox>
     </section>
