@@ -18,9 +18,9 @@ export function NavLinkGroup(props: Props) {
     <li className="relative group font-heading">
       <button
         className={cn(
-          "flex items-center px-4 py-2 text-body font-medium rounded-md transition-colors cursor-pointer",
-          "text-foreground hover:text-primary",
-          "group-hover:text-primary"
+          "flex items-center px-5 py-2 text-body font-medium rounded-full transition-colors cursor-pointer",
+          "text-foreground/80 hover:text-foreground",
+          "group-hover:text-foreground"
         )}
         aria-haspopup="true"
       >
