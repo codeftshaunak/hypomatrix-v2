@@ -27,7 +27,7 @@ const DefaultCard = (props: ProjectCardProps) => {
             ))}
           </div>
         </div>
-        <h4 className="text-sm mb-4 text-primary font-semibold">
+        <h4 className="text-sm mb-4 text-muted-foreground font-semibold">
           {data.category}
         </h4>
         <h3 className="text-heading-4 font-bold mb-1">
