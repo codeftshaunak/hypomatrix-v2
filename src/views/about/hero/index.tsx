@@ -1,7 +1,7 @@
 import img from "@/assets/about1.jpg";
 import SectionHeader from "@/components/common/section-header";
-import CommonMotionBox from "@/components/motion/common-motion";
 import { Button } from "@/components/ui/button";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import { PlayIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

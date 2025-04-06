@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator";
+import { MotionBox } from "@/lib/motion/box";
 import paths from "@/router/paths";
 import { TWebsite } from "@/types/cms/website";
 import { LucideMail, LucidePhone, Mail } from "lucide-react";
@@ -7,7 +8,6 @@ import FooterBackground from "./background";
 import LeftSpiral from "./left-spiral";
 import LegalSection from "./legal-section";
 import RightSpiral from "./right-spiral";
-import { MotionBox } from "@/components/motion/box";
 
 type Props = {
   website: TWebsite;

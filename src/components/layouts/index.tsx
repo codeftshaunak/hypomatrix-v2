@@ -1,8 +1,8 @@
 import { TWebsite } from "@/types/cms/website";
 import React, { Suspense } from "react";
+import MeetingModal from "../../lib/meeting";
 import { Footer } from "./footer";
 import Navbar from "./navbar";
-import MeetingModal from "../meeting";
 
 type Props = {
   children: React.ReactNode;

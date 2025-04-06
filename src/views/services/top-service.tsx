@@ -1,6 +1,6 @@
 import ServiceCard from "@/components/cards/service-card";
 import SectionHeader from "@/components/common/section-header";
-import CommonMotionBox from "@/components/motion/common-motion";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import { getServices } from "@/services/apis/service";
 
 const OurServices = async () => {

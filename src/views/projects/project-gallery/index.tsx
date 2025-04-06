@@ -1,8 +1,8 @@
 import ProjectCard from "@/components/cards/project-card";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import { cn } from "@/lib/utils";
 import { getProjects } from "@/services/apis/project";
 import Container from "./container";
-import CommonMotionBox from "@/components/motion/common-motion";
 
 export default async function ProjectsGallery() {
   const projectsRes = await getProjects();

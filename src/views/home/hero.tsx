@@ -1,7 +1,7 @@
-import { MotionBox } from "@/components/motion/box";
 import { Button } from "@/components/ui/button";
 import VideoPlaceholder from "@/components/video-modal";
 import { MEETING_MODAL_KEY } from "@/config/keys";
+import { MotionBox } from "@/lib/motion/box";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 

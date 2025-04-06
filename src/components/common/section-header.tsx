@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import React, { ReactNode } from "react";
-import { MotionBox } from "../motion/box";
+import { MotionBox } from "../../lib/motion/box";
 
 type Props = {
   subtitle: ReactNode;

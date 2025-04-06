@@ -1,6 +1,6 @@
 import img from "@/assets/about1.jpg";
 import SectionHeader from "@/components/common/section-header";
-import CommonMotionBox from "@/components/motion/common-motion";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import Image from "next/image";
 import StatsSection from "../about/hero/stats";
 

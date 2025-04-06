@@ -1,7 +1,7 @@
 import WorkStepCard from "@/components/cards/work-step-card";
 import SectionHeader from "@/components/common/section-header";
-import { MotionBox } from "@/components/motion/box";
 import { workSteps } from "@/db/work-steps";
+import { MotionBox } from "@/lib/motion/box";
 import { getWebsite } from "@/services/apis/website";
 
 function ProcessSection() {

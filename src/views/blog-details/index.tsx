@@ -1,5 +1,5 @@
 import PageHeader from "@/components/common/page-header";
-import CommonMotionBox from "@/components/motion/common-motion";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import paths from "@/router/paths";
 import { TBlogPost } from "@/types/cms/blog";
 import CategoriesSection from "../blog/categories-section";

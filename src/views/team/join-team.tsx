@@ -1,6 +1,6 @@
 import img from "@/assets/Join Cercle.png";
 import img1 from "@/assets/team-thumb1.jpg";
-import CommonMotionBox from "@/components/motion/common-motion";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import Image from "next/image";
 
 const JoinTeamSection: React.FC = () => {

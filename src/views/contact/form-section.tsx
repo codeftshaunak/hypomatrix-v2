@@ -1,10 +1,10 @@
 "use client";
 
 import SectionHeader from "@/components/common/section-header";
-import { RHFInputField, RHFTextareaField } from "@/components/rhf";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import useContactForm from "@/hooks/use-contact-form";
+import { RHFInputField, RHFTextareaField } from "@/lib/rhf";
 
 export default function FormSection() {
   const { handleSubmit, isError, isSuccess, isLoading, options } =
