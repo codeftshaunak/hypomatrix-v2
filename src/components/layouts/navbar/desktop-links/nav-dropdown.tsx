@@ -33,7 +33,7 @@ export function NavLinkGroup(props: Props) {
         role="menu"
         aria-orientation="vertical"
       >
-        <div className="py-2 px-2">
+        <div className="py-2 px-2 space-y-1">
           {group.links.map((item, itemIndex) => (
             <Link
               key={itemIndex}
