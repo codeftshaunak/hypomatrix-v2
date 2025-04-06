@@ -2,7 +2,7 @@ import { Separator } from "@/components/ui/separator";
 import { MotionBox } from "@/lib/motion/box";
 import paths from "@/router/paths";
 import { TWebsite } from "@/types/cms/website";
-import { LucideMail, LucidePhone, Mail } from "lucide-react";
+import { LucideMail, LucidePhone } from "lucide-react";
 import Link from "next/link";
 import FooterBackground from "./background";
 import LeftSpiral from "./left-spiral";
@@ -35,21 +35,6 @@ export function Footer(props: Props) {
               <Link href={paths.root}>{website.title}</Link>
             </h2>
             <p className="mb-6 max-w-[350px]">{website.description}</p>
-
-            <div className="flex items-center border border-gray-300 bg-white rounded-full overflow-hidden max-w-xs md:mb-0 mb-4">
-              <div className="flex items-center px-3">
-                <Mail className="h-5 w-5 text-gray-500" />
-              </div>
-              <input
-                disabled
-                type="email"
-                placeholder="Email address"
-                className="flex-1 py-4 text-sm outline-none text-black placeholder:text-black"
-              />
-              <button className="bg-[#9CFE4F] text-black font-semibold px-3 md:px-6 py-2 rounded-full mr-1 ">
-                Subscribe
-              </button>
-            </div>
           </div>
 
           <div className="xl:col-span-4 flex flex-col md:flex-row md:items-start md:justify-between gap-y-16">
