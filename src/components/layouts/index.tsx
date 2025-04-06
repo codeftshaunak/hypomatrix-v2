@@ -1,3 +1,4 @@
+import TawkChat from "@/lib/tawk";
 import { TWebsite } from "@/types/cms/website";
 import React, { Suspense } from "react";
 import MeetingModal from "../../lib/meeting";
@@ -18,6 +19,7 @@ const MainLayout = (props: Props) => {
       <Footer website={website} />
       <Suspense>
         <MeetingModal />
+        <TawkChat />
       </Suspense>
     </>
   );
