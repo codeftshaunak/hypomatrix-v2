@@ -1,6 +1,6 @@
 import BlogPostCard from "@/components/cards/blog-post-card";
 import SectionHeader from "@/components/common/section-header";
-import CommonMotionBox from "@/components/motion/common-motion";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import { getFeaturedBlogPosts } from "@/services/apis/blog";
 
 const LatestBlogs = async () => {

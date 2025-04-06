@@ -1,10 +1,11 @@
 import img from "@/assets/about1.jpg";
 import SectionHeader from "@/components/common/section-header";
 import { Button } from "@/components/ui/button";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import { PlayIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import StatsSection from "./stats";
-import CommonMotionBox from "@/components/motion/common-motion";
 
 const Hero = () => {
   return (
@@ -37,13 +38,22 @@ const Hero = () => {
         </div>
 
         <div className="col-span-1 xl:col-span-1">
-          <div className="relative aspect-video lg:aspect-[3/4] ">
-            <Image className="rounded-lg" src={img} alt="" fill />
+          <div className="relative aspect-square">
+            <Image
+              className="object-cover rounded-xl rounded-br-none"
+              src={img}
+              alt="Strategic growth powered by HypoMatrix!"
+              fill
+            />
             <div className="hidden sm:block absolute top-5 left-5 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 bg-primary text-primary-foreground px-4 py-6 rounded-lg">
               <h3 className="text-4xl font-semibold text-center">240+</h3>
               <p className="text-sm text-center">Years on the market</p>
             </div>
-            <div className="absolute bottom-0 right-0 flex items-center gap-2 bg-background px-6 py-4 rounded-br-lg">
+            <Link
+              href={"https://youtu.be/dTo6Prv2asc?si=SFjj3JJYZ9gwb7kw"}
+              target="_blank"
+              className="absolute bottom-0 right-0 flex items-center gap-2 bg-background px-6 py-4 rounded-tl-2xl before:border-b-16 before:rounded-3xl before:border-red-500 before:absolute before:left-0 before:bottom-0 before:-translate-x-full"
+            >
               <span className="bg-primary text-primary-foreground p-2 rounded-full">
                 <PlayIcon />
               </span>
@@ -51,7 +61,7 @@ const Hero = () => {
                 <p>Let&apos;s see</p>
                 <p>how we did it</p>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>

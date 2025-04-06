@@ -44,7 +44,7 @@ query Website($id: ID) {
     emails
     description
     addresses
-    workStep {
+    workSteps {
       title
       description
       image {

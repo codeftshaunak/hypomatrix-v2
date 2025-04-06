@@ -1,8 +1,8 @@
 import img from "@/assets/about1.jpg";
 import SectionHeader from "@/components/common/section-header";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import Image from "next/image";
 import StatsSection from "../about/hero/stats";
-import CommonMotionBox from "@/components/motion/common-motion";
 
 const WhyChooseUs = () => {
   return (
@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
               src={img}
               alt="Carousel Image"
               fill
-              className="rounded-2xl"
+              className="rounded-2xl object-cover"
             />
           </div>
         </div>

@@ -1,7 +1,7 @@
 import MemberCard from "@/components/cards/member-card";
 import SectionHeader from "@/components/common/section-header";
-import CommonMotionBox from "@/components/motion/common-motion";
 import { Separator } from "@/components/ui/separator";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import { getMembers } from "@/services/apis/member";
 import { leadingZero } from "@/utils/number";
 
