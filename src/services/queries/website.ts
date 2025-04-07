@@ -53,6 +53,7 @@ query Website($id: ID) {
         height
       }
     }
+      mapLink
     metaTags ${metaTagsQuery}
   }
 }

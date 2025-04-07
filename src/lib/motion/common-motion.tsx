@@ -10,7 +10,7 @@ const CommonMotionBox = (props: Props) => {
   return (
     <div>
       <MotionBox
-        initial={{ y: "10vw", opacity: 0 }}
+        initial={{ y: "5vw", opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.2 }}
