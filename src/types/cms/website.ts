@@ -18,4 +18,5 @@ export type TWebsite = {
   legalLinks: TLink[];
   metaTags?: TMetaTag;
   workSteps: TWorkSteps[];
+  mapLink: string;
 };

@@ -6,8 +6,6 @@ import { getWebsite } from "@/services/apis/website";
 async function ProcessSection() {
   const websiteRes = await getWebsite();
 
-  console.log(websiteRes.data);
-
   return (
     <section className="container pb-[130px]">
       <MotionBox

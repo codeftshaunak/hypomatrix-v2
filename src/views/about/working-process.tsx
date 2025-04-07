@@ -1,9 +1,11 @@
 import WorkStepCard from "@/components/cards/work-step-card";
 import SectionHeader from "@/components/common/section-header";
-import { workSteps } from "@/db/work-steps";
 import CommonMotionBox from "@/lib/motion/common-motion";
+import { getWebsite } from "@/services/apis/website";
 
-const WorkingProcess = () => {
+const WorkingProcess = async () => {
+  const websiteRes = await getWebsite();
+
   return (
     <section className="py-[130px] bg-card">
       <CommonMotionBox>
@@ -25,7 +27,7 @@ const WorkingProcess = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-12">
-            {workSteps.map((step, index) => (
+            {websiteRes.data?.workSteps?.map((step, index) => (
               <WorkStepCard data={step} index={index + 1} key={index} />
             ))}
           </div>

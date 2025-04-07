@@ -1,6 +1,12 @@
+import { getWebsite } from "@/services/apis/website";
+
 type Props = {};
 
-const MapSection = (props: Props) => {
+const MapSection = async (props: Props) => {
+  const webRes = await getWebsite();
+  const link = webRes?.data?.mapLink;
+  console.log(link);
+
   return (
     <div>
       <iframe
