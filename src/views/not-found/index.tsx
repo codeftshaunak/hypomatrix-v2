@@ -1,25 +1,17 @@
-import React from "react";
 import PageHeader from "@/components/common/page-header";
-import { TPage } from "@/types/cms/page";
-import paths from "@/router/paths";
 import NotFound from "./not-found";
-type Props = {
-  page: TPage;
-};
+
+type Props = {};
 
 const NotFoundView = (props: Props) => {
-  const { page } = props;
   return (
     <div>
       <PageHeader
-        title={page.title}
-        links={[
-          {
-            title: "404 Page",
-            href: paths.contact,
-          },
-        ]}
-        description={page.description}
+        title={"404 Page"}
+        links={[]}
+        description={
+          "At Hypomatrix, we specialize in delivering strategic growth solutions tailored to elevate your business to new heights."
+        }
       />
       <NotFound />
     </div>
