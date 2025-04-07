@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Button } from "./ui/button";
 
 export default function VideoPlaceholder() {
-  const videoId = "qzGxK6Uiu04";
+  const videoId = "dTo6Prv2asc";
   const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
   const videoUrl = `https://www.youtube.com/embed/${videoId}`;
 
