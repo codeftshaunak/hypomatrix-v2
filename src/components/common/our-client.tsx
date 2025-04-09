@@ -17,34 +17,23 @@ const OurClient = async () => {
         />
 
         <div className="flex justify-center gap-6 flex-wrap">
-          {/* {clientsRes.data?.map((client, index) => (
-            <div
-              key={index}
-              className="size-36 sm:size-52 bg-card rounded-full flex items-center justify-center"
-            >
-              <Image
-                src={client.logo.url}
-                alt={client.name}
-                width={100}
-                height={100}
-              />
-            </div>
-          ))} */}
-          {clientsRes.data
-            ?.filter((item) => item.logo?.url) // only keep items with a valid image
-            .map((client, index) => (
+          {clientsRes.data?.map((item, index) => {
+            if (!item?.logo?.url) return null;
+
+            return (
               <div
                 key={index}
                 className="size-36 sm:size-52 bg-card rounded-full flex items-center justify-center"
               >
                 <Image
-                  src={client.logo.url}
-                  alt={client.name}
-                  width={200}
-                  height={200}
+                  src={item.logo.url}
+                  alt={item.name}
+                  width={100}
+                  height={100}
                 />
               </div>
-            ))}
+            );
+          })}
         </div>
       </CommonMotionBox>
     </section>

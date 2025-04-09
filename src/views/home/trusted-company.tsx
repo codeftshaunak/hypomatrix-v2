@@ -29,36 +29,24 @@ export default async function TrustedCompanySection() {
 
           {/* Right Side - Logo Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3">
-            {/* {clientsRes.data?.map((item, index) => (
-            <div
-              className="border flex justify-center items-center h-[100px] xl:px-10"
-              key={index}
-            >
-              <Image
-                src={item.logo.url}
-                alt={item.name}
-                width={100}
-                height={100}
-                className="!max-w-[100px] !w-full !h-auto"
-              />
-            </div>
-          ))} */}
-            {clientsRes.data
-              ?.filter((item) => item.logo?.url) // only keep items with a valid image
-              .map((item, index) => (
+            {clientsRes.data?.map((item, index) => {
+              if (!item?.logo?.url) return null;
+
+              return (
                 <div
-                  className="border flex justify-center items-center h-[100px]"
+                  className="border flex justify-center items-center h-[100px] xl:px-10"
                   key={index}
                 >
                   <Image
                     src={item.logo.url}
                     alt={item.name}
-                    width={200}
-                    height={200}
-                    className="!w-full !h-auto"
+                    width={100}
+                    height={100}
+                    className="!max-w-[100px] !w-full !h-auto"
                   />
                 </div>
-              ))}
+              );
+            })}
           </div>
         </div>
       </CommonMotionBox>
