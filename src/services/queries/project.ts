@@ -4,6 +4,7 @@ const commonProjectQuery = `
     cardSize
     category
     client
+    previewLink
     description
     endDate
     id

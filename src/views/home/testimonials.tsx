@@ -8,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { MotionBox } from "@/lib/motion/box";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import { getClients } from "@/services/apis/client";
 import Image from "next/image";
 
@@ -15,12 +16,7 @@ async function TestimonialsSection() {
   const clientRes = await getClients();
   return (
     <section className="py-[130px] bg-card">
-      <MotionBox
-        initial={{ y: "10vw", opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.2 }}
-      >
+      <CommonMotionBox>
         <div className="container">
           <SectionHeader
             title="Success Stories From Around the Globe"
@@ -67,7 +63,7 @@ async function TestimonialsSection() {
             <CarouselNext className="static ml-3" />
           </Carousel>
         </div>
-      </MotionBox>
+      </CommonMotionBox>
     </section>
   );
 }

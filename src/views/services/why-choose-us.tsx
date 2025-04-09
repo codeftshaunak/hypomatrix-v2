@@ -5,6 +5,8 @@ import Image from "next/image";
 import StatsSection from "../about/hero/stats";
 
 const WhyChooseUs = () => {
+  const videoId = "dTo6Prv2asc";
+  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
   return (
     <CommonMotionBox>
       <section className="container py-[130px] grid grid-cols-1 lg:grid-cols-3 gap-y-12 max-xl:gap-x-32">

@@ -7,6 +7,7 @@ export type TProject = {
   title: string;
   category: string;
   client: string;
+  previewLink: string;
   content: {
     html: string; // rich text
   };

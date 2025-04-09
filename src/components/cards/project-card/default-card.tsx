@@ -12,12 +12,12 @@ const DefaultCard = (props: ProjectCardProps) => {
   return (
     <Card key={data.id} className={cn("group rounded-2xl", className)}>
       <CardContent>
-        <div className="aspect-[1.3/1] w-full relative mb-[30px]">
+        <div className="aspect-video w-full relative mb-[30px]">
           <Image
             src={data.thumbnail.url}
             alt={data.title}
             fill
-            className="rounded-2xl object-cover"
+            className="rounded-2xl object-cover "
           />
           <div className="flex flex-wrap gap-1 text-sm absolute bottom-5 left-5">
             {data.tags.map((tag, index) => (

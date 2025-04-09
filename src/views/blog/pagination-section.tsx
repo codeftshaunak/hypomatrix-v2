@@ -40,7 +40,7 @@ const PaginationSection: FC<PaginationSectionProps> = (props) => {
 
   return (
     <Pagination>
-      {totalPages > 5 && (
+      {totalPages > 1 && (
         <PaginationContent>
           <PaginationItem>
             <Link

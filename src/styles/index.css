@@ -107,8 +107,10 @@
   --card-foreground: hsl(0 0 100%);
   --popover: hsl(220 6% 10%);
   --popover-foreground: hsl(0 0 100%);
-  --primary: hsl(256, 100%, 65%);
-  --primary-foreground: hsl(0 0 100%);
+  /* --primary: hsl(256, 100%, 65%); */
+  --primary: #9cfe4f;
+  /* --primary-foreground: hsl(0 0 100%); */
+  --primary-foreground: hsl(0, 0%, 0%);
   --secondary: hsl(0 0 10%);
   --secondary-foreground: hsl(0 0 100%);
   --muted: oklch(0.97 0 0);

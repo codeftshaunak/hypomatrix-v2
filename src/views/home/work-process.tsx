@@ -1,6 +1,7 @@
 import WorkStepCard from "@/components/cards/work-step-card";
 import SectionHeader from "@/components/common/section-header";
 import { MotionBox } from "@/lib/motion/box";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import { getWebsite } from "@/services/apis/website";
 
 async function ProcessSection() {
@@ -8,12 +9,7 @@ async function ProcessSection() {
 
   return (
     <section className="container pb-[130px]">
-      <MotionBox
-        initial={{ y: "10vw", opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.2 }}
-      >
+      <CommonMotionBox>
         <SectionHeader
           subtitle="Working Proses"
           title="The Process Behind the Magic Step by Step"
@@ -25,7 +21,7 @@ async function ProcessSection() {
             <WorkStepCard data={step} index={index + 1} key={index} />
           ))}
         </div>
-      </MotionBox>
+      </CommonMotionBox>
     </section>
   );
 }

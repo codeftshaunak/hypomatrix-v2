@@ -6,18 +6,14 @@ import { getFeaturedBlogPosts } from "@/services/apis/blog";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import SectionHeader from "../../components/common/section-header";
+import CommonMotionBox from "@/lib/motion/common-motion";
 
 export default async function LatestArticles() {
   const articlesRes = await getFeaturedBlogPosts(true);
 
   return (
     <section className="py-[130px] container">
-      <MotionBox
-        initial={{ y: "10vw", opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.2 }}
-      >
+      <CommonMotionBox>
         <div className="flex flex-col gap-5 md:flex-row md:justify-between md:items-center mb-16">
           <SectionHeader
             subtitle="Latest Articles"
@@ -36,7 +32,7 @@ export default async function LatestArticles() {
             <BlogPostCard data={item} key={item.id} />
           ))}
         </div>
-      </MotionBox>
+      </CommonMotionBox>
     </section>
   );
 }
