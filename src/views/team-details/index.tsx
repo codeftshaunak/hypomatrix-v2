@@ -15,6 +15,7 @@ const TeamDetailsView = (props: Props) => {
       <PageHeader
         title={"Team Details"}
         description={
+          member.title ||
           "Meet the passionate minds behind HypoMatrix — a team of innovators, developers, and strategists dedicated to turning bold ideas into impactful solutions."
         }
         links={[

@@ -28,8 +28,8 @@ const OurClient = async () => {
                 <Image
                   src={item.logo.url}
                   alt={item.name}
-                  width={100}
-                  height={100}
+                  width={200}
+                  height={200}
                 />
               </div>
             );

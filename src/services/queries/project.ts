@@ -14,6 +14,7 @@ const commonProjectQuery = `
     tags
     thumbnail ${assetImageQuery}
     title
+    pageTitle
 `;
 
 export const projectsQueryWithFeatured = `

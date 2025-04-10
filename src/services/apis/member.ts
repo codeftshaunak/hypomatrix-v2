@@ -10,17 +10,21 @@ export const memberServiceTags = {
 };
 
 // ----------------------------------------------------------------------
+type orderBy = "order_ASC" | "order_DESC" | "name_ASC" | "name_DESC";
 
-export const getMembers = asyncWrapper<TMember[]>(async () => {
-  const response = await cmsFetch<{ members: TMember[] }>({
-    body: JSON.stringify({
-      query: membersQuery,
-    }),
-    next: { tags: [memberServiceTags.members] },
-  });
+export const getMembers = asyncWrapper<TMember[], [orderBy | null]>(
+  async (orderBy = null) => {
+    const response = await cmsFetch<{ members: TMember[] }>({
+      body: JSON.stringify({
+        query: membersQuery,
+        variables: { orderBy },
+      }),
+      next: { tags: [memberServiceTags.members] },
+    });
 
-  return response?.members || [];
-});
+    return response?.members || [];
+  }
+);
 
 export const getMember = asyncWrapper<TMember, [string]>(async (slug) => {
   const response = await cmsFetch<{ member: TMember }>({

@@ -6,6 +6,7 @@ export type TProject = {
   thumbnail: TAsset;
   title: string;
   category: string;
+  pageTitle: string;
   client: string;
   previewLink: string;
   content: {

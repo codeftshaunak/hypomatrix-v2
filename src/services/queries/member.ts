@@ -3,6 +3,7 @@ import { assetImageQuery, metaTagsQuery } from "./common";
 const commonQuery = `
     avatar ${assetImageQuery}
     id
+    title
     name
     role
     slug
@@ -14,8 +15,8 @@ const commonQuery = `
 `;
 
 export const membersQuery = `
-query MembersQuery {
-  members(stage: PUBLISHED) {
+query MembersQuery($orderBy: MemberOrderByInput) {
+  members(stage: PUBLISHED, orderBy: $orderBy) {
     ${commonQuery}
   }
 }
