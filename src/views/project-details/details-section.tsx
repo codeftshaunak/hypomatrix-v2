@@ -4,6 +4,7 @@ import Image from "next/image";
 import CarouselSection from "./carousel-section";
 import Link from "next/link";
 import { Link2, Link2Icon, LinkIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 type Props = {
   project: TProject;
@@ -43,18 +44,18 @@ const DetailsSection = (props: Props) => {
           </div>
 
           {project.previewLink && (
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-[3px]">
               <span className="text-muted-foreground">Preview</span>
-
-              <Link
-                href={project.previewLink}
-                className="font-heading text-heading-5 font-bold "
-              >
-                <LinkIcon />
-              </Link>
+              <Button variant="outline" size={"lg"} asChild className="w-fit">
+                <Link href={project.previewLink} target="_blank">
+                  <span className="font-heading text-[18px] font-bold">
+                    Visit Project
+                  </span>
+                  <LinkIcon size={18} />
+                </Link>
+              </Button>
             </div>
           )}
-
           <div>
             <span className="text-muted-foreground">Start Date</span>
             <p className="font-heading text-heading-5 font-bold">

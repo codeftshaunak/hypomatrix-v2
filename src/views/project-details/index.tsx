@@ -14,6 +14,7 @@ const ProjectDetailsView = (props: Props) => {
       <PageHeader
         title={"Project Details"}
         description={
+          project.pageTitle ||
           "We build powerful, scalable platforms tailored to real-world business needs. "
         }
         links={[

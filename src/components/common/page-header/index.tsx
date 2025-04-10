@@ -1,4 +1,4 @@
-import img1 from "@/assets/Join Cercle.png";
+import img1 from "@/assets/circle.png";
 import pattan from "@/assets/Pattan.png";
 import Image from "next/image";
 import React from "react";

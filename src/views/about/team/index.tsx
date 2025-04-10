@@ -6,7 +6,7 @@ import { getMembers } from "@/services/apis/member";
 import CarouselContainer from "./carousel-container";
 
 async function TeamSection() {
-  const membersRes = await getMembers();
+  const membersRes = await getMembers(null);
   return (
     <section id="team" className="py-[130px]">
       <CommonMotionBox>

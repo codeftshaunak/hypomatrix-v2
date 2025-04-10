@@ -34,15 +34,15 @@ export default async function TrustedCompanySection() {
 
               return (
                 <div
-                  className="border flex justify-center items-center h-[100px] xl:px-10"
+                  className="border flex justify-center items-center h-[100px]"
                   key={index}
                 >
                   <Image
                     src={item.logo.url}
                     alt={item.name}
-                    width={100}
-                    height={100}
-                    className="!max-w-[100px] !w-full !h-auto"
+                    width={200}
+                    height={200}
+                    className="!w-full !h-auto"
                   />
                 </div>
               );
