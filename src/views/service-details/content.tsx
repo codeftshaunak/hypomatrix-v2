@@ -37,7 +37,7 @@ const ContentSection = (props: Props) => {
               />
               <Separator orientation="vertical" className="!h-[80px]" />
               <StatCard
-                count={`${service.successRate}+`}
+                count={`${service.successRate}%`}
                 title={"Satisfaction Clients"}
               />
             </div>

@@ -1,6 +1,7 @@
 import ServiceCard from "@/components/cards/service-card";
 import SectionHeader from "@/components/common/section-header";
 import { MotionBox } from "@/lib/motion/box";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import { getServices } from "@/services/apis/service";
 import { Variants } from "framer-motion";
 
@@ -24,12 +25,7 @@ export default async function Services() {
 
   return (
     <section className="container pb-[130px]">
-      <MotionBox
-        initial={{ y: "5vw", opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.2 }}
-      >
+      <CommonMotionBox>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between mb-16">
           <SectionHeader
             title={
@@ -60,7 +56,7 @@ export default async function Services() {
             </MotionBox>
           ))}
         </div>
-      </MotionBox>
+      </CommonMotionBox>
     </section>
   );
 }

@@ -9,17 +9,13 @@ import {
 import { MotionBox } from "@/lib/motion/box";
 import { getMembers } from "@/services/apis/member";
 import SectionHeader from "../../components/common/section-header";
+import CommonMotionBox from "@/lib/motion/common-motion";
 
 async function TeamSection() {
   const membersRes = await getMembers();
   return (
     <section id="team" className="pb-[130px] container">
-      <MotionBox
-        initial={{ y: "10vw", opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.2 }}
-      >
+      <CommonMotionBox>
         <SectionHeader
           subtitle="Our Team"
           title="Meet Our Talented Skillful Team!"
@@ -40,7 +36,7 @@ async function TeamSection() {
           <CarouselPrevious className="static" />
           <CarouselNext className="static ml-2" />
         </Carousel>
-      </MotionBox>
+      </CommonMotionBox>
     </section>
   );
 }

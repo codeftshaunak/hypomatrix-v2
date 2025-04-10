@@ -31,7 +31,7 @@ const Hero = () => {
             </p>
 
             <Button size={"xl"} className="mb-10">
-              Learn More
+              <Link href={"/services"}>Learn More</Link>
             </Button>
             <StatsSection />
           </div>
@@ -50,7 +50,7 @@ const Hero = () => {
               <p className="text-sm text-center">Years on the market</p>
             </div>
             <Link
-              href={"https://youtu.be/dTo6Prv2asc?si=SFjj3JJYZ9gwb7kw"}
+              href={"https://youtu.be/j1WRT7gBeCk?si=mHOP4upOx4ZHwh-_"}
               target="_blank"
               className="absolute bottom-0 right-0 flex items-center gap-2 bg-background px-6 py-4 rounded-tl-2xl before:border-b-16 before:rounded-3xl before:border-red-500 before:absolute before:left-0 before:bottom-0 before:-translate-x-full"
             >

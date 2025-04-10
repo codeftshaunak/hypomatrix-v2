@@ -1,7 +1,9 @@
 import img from "@/assets/Join Cercle.png";
-import img1 from "@/assets/team-thumb1.jpg";
 import CommonMotionBox from "@/lib/motion/common-motion";
 import Image from "next/image";
+import img1 from "@/assets/telented-team/WhatsApp Image 2025-02-06 at 12.16.19.jpeg";
+import img2 from "@/assets/telented-team/Tonmoy-Deb.webp";
+import img3 from "@/assets/telented-team/saikat.jpg";
 
 const JoinTeamSection: React.FC = () => {
   return (
@@ -25,10 +27,10 @@ const JoinTeamSection: React.FC = () => {
 
         <div className="flex items-center gap-6 relative">
           <Image
-            src={img1}
+            src={img3}
             alt="image not found"
-            width={140}
-            className="rounded-tl-xl rounded-br-xl aspect-square xl:w-[200px]"
+            width={150}
+            className="rounded-tl-xl rounded-br-xl aspect-square w-full"
           />
 
           <div className="flex flex-col gap-6 shrink-0">
@@ -36,14 +38,14 @@ const JoinTeamSection: React.FC = () => {
               src={img1}
               alt="image not found"
               width={140}
-              className="rounded-b-full aspect-square xl:w-[180px]"
+              className="rounded-b-full aspect-square w-fit"
             />
 
             <Image
-              src={img1}
+              src={img2}
               alt="image not found"
               width={140}
-              className="rounded-tl-xl rounded-br-xl aspect-square xl:w-[200px]"
+              className="rounded-tl-xl rounded-br-xl aspect-square w-fit"
             />
           </div>
         </div>

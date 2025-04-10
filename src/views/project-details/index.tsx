@@ -14,7 +14,7 @@ const ProjectDetailsView = (props: Props) => {
       <PageHeader
         title={"Project Details"}
         description={
-          "Agenko empowers businesses with innovative strategies & creative agency solutions"
+          "We build powerful, scalable platforms tailored to real-world business needs. "
         }
         links={[
           { title: "Portfolio", href: paths.portfolio.root },

@@ -64,6 +64,7 @@ export function Footer(props: Props) {
                     Main Address
                   </h3>
                   <p>{website.addresses[0]}</p>
+                  <p>Bangladesh</p>
                 </div>
               )}
 
