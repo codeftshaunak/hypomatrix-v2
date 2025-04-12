@@ -10,7 +10,7 @@ import StatsSection from "./stats";
 const Hero = () => {
   return (
     <CommonMotionBox>
-      <section className="container py-[130px] grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-y-12 max-xl:gap-x-32">
+      <section className="container md:py-[130px] py-[40px] grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-y-12 max-xl:gap-x-32">
         <div className="col-span-1 xl:col-span-2">
           <div className="max-w-[600px]">
             <SectionHeader

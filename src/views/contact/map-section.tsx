@@ -5,13 +5,11 @@ type Props = {};
 const MapSection = async (props: Props) => {
   const webRes = await getWebsite();
   const link = webRes?.data?.mapLink;
-  console.log(link);
 
   return (
-    <div>
+    <div className="pb-[50px]">
       <iframe
-        className="w-full"
-        height={600}
+        className="w-full md:h-[600px] h-[300px] rounded-md"
         src={link}
         loading="lazy"
         allowFullScreen

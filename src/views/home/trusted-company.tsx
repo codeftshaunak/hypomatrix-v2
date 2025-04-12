@@ -7,9 +7,9 @@ import Image from "next/image";
 export default async function TrustedCompanySection() {
   const clientsRes = await getClients();
   return (
-    <section className="container pb-[130px] flex flex-col xl:flex-row xl:items-center justify-between gap-y-[60px]">
+    <section className="container md:pb-[150px] pb-[50px] flex flex-col xl:flex-row xl:items-center justify-between gap-y-[60px]">
       <CommonMotionBox>
-        <div className="container pb-[130px] flex flex-col xl:flex-row xl:items-center justify-between gap-y-[60px] md:gap-x-40">
+        <div className="container flex flex-col xl:flex-row xl:items-center justify-between gap-y-[60px] md:gap-x-40">
           {/* Left Side Content */}
           <SectionHeader
             subtitle={"Company"}

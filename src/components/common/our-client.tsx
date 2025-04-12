@@ -7,12 +7,12 @@ const OurClient = async () => {
   const clientsRes = await getClients();
 
   return (
-    <section className="pb-[130px] px-6 text-center">
+    <section className="md:pb-[130px] pb-[60px] px-6 text-center">
       <CommonMotionBox>
         <SectionHeader
           title={"Trusted Industry Leader"}
           subtitle={"Our Client"}
-          className="mb-[100px] max-w-2xl mx-auto"
+          className="md:mb-[100px] mb-[50px] max-w-2xl mx-auto"
           align="center"
         />
 

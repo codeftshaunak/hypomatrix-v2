@@ -28,8 +28,8 @@ const BlogView = (props: Props) => {
           },
         ]}
       />
-      <div className="container py-[130px]">
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-y-16 gap-x-8">
+      <div className="container md:py-[130px] py-[50px]">
+        <div className="grid grid-cols-1 xl:grid-cols-3 md:gap-y-16 gap-x-8">
           {/* Main Content */}
           <div className="xl:col-span-2 space-y-16 @container/feed">
             <Suspense fallback={<PostsWrapper posts={posts} />}>

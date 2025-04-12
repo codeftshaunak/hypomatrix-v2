@@ -6,12 +6,12 @@ import { getServices } from "@/services/apis/service";
 const OurServices = async () => {
   const servicesRes = await getServices();
   return (
-    <section className="container pb-[130px]">
+    <section className="container md:pb-[130px] pb-[50px]">
       <SectionHeader
         subtitle={"Our Services"}
         title={"Top Services We Offer"}
         align="center"
-        className="mb-16"
+        className="md:mb-16 mb-10"
       />
 
       <CommonMotionBox>

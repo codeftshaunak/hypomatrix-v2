@@ -53,6 +53,12 @@ query Website($id: ID) {
         height
       }
     }
+      thumbnail {
+      height
+      width
+      url
+    }
+     youtubeUrl
       mapLink
     metaTags ${metaTagsQuery}
   }

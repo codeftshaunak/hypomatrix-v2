@@ -7,7 +7,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { MotionBox } from "@/lib/motion/box";
 import CommonMotionBox from "@/lib/motion/common-motion";
 import { getClients } from "@/services/apis/client";
 import Image from "next/image";
@@ -15,7 +14,7 @@ import Image from "next/image";
 async function TestimonialsSection() {
   const clientRes = await getClients();
   return (
-    <section className="py-[130px] bg-card">
+    <section className="py-[50px] md:py-[130px] bg-card">
       <CommonMotionBox>
         <div className="container">
           <SectionHeader
@@ -23,27 +22,9 @@ async function TestimonialsSection() {
             subtitle={"Testimonial"}
             className="max-w-[500px] mb-16"
           />
-          {/* <div className="relative overflow-hidden flex flex-col lg:flex-row lg:items-center lg:justify-center gap-12 md:gap-20">
-            <Image
-              src={img1}
-              alt="Image not found"
-              className="aspect-square rounded-2xl max-w-[410px] w-full"
-            />
 
-            <Carousel className="flex-[1]">
-              <CarouselContent className="mb-16">
-                {clientRes.data?.map((review) => (
-                  <CarouselItem key={review.id}>
-                    <ReviewCard data={review} />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="static" />
-              <CarouselNext className="static ml-3" />
-            </Carousel>
-          </div> */}
           <Carousel className="w-full">
-            <CarouselContent className="mb-16">
+            <CarouselContent className="md:mb-16 mb-10">
               {clientRes.data?.map((review) => (
                 <CarouselItem key={review.id}>
                   <div className="relative overflow-hidden flex flex-col lg:flex-row lg:items-center lg:justify-center gap-12 md:gap-20">

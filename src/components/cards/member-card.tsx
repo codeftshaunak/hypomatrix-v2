@@ -35,7 +35,7 @@ const MemberCard = (props: Props) => {
                 <Button
                   size="icon"
                   variant="secondary"
-                  className="lg:scale-0 transition-transform duration-300 ease-in-out group-hover/social:scale-100 group-hover/social:delay-[50ms] group-focus-within/social:scale-100 group-focus-within/social:delay-[50ms]"
+                  className="scale-0 transition-transform duration-300 ease-in-out group-hover/social:scale-100 group-hover/social:delay-[50ms] group-focus-within/social:scale-100 group-focus-within/social:delay-[50ms]"
                 >
                   <SocialIcon name={item.icon} />
                 </Button>
@@ -57,18 +57,6 @@ const MemberCard = (props: Props) => {
           {data.role}
         </p>
       </div>
-      {/* 
-      <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center text-center py-28 md:py-10 px-10 sm:opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 group-hover:bottom-0 group-focus-within:bottom-0 duration-300  bg-[#EBFFDC] text-black">
-        <h3 className="font-bold">
-          <Link
-            href={paths.team.details(data.slug)}
-            className="hover:text-green-500 duration-200"
-          >
-            {data.name}
-          </Link>
-        </h3>
-        <p className="text-sm text-gray-600">{data.role}</p>
-      </div> */}
     </article>
   );
 };

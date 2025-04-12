@@ -7,7 +7,7 @@ const WorkingProcess = async () => {
   const websiteRes = await getWebsite();
 
   return (
-    <section className="py-[130px] bg-card">
+    <section className="md:py-[130px] py-[50px] bg-card">
       <CommonMotionBox>
         <div className="container">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center mb-[100px]">

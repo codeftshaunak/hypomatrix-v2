@@ -23,7 +23,7 @@ const ContactView = (props: Props) => {
         ]}
         description={page.description}
       />
-      <div className="container py-[130px]">
+      <div className="container md:py-[130px] py-[50px]">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-y-16 gap-x-16 xl:gap-x-32">
           <div className="lg:col-span-2">
             <InfoSection />

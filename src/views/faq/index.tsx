@@ -25,14 +25,14 @@ const FaqView = (props: Props) => {
         ]}
         description={page.description}
       />
-      <div className="container py-[130px]">
+      <div className="container md:py-[130px] py-[50px]">
         <SectionHeader
           title={"Answers at Your Fingertips"}
           subtitle={"FAQ"}
           className="mb-16"
         />
         <CommonMotionBox>
-          <div className="grid lg:grid-cols-3 gap-y-20 gap-x-8 ">
+          <div className="grid lg:grid-cols-3 md:gap-y-20 gap-y-8 gap-x-8 ">
             <div className="lg:col-span-2">
               <FAQ />
             </div>
