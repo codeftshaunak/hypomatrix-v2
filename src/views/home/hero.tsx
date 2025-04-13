@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <header className="container pt-[210px] md:pb-[130px] pb-[50px] w-full">
+    <header className="container pt-[210px] md:pb-[130px] pb-[100px] w-full">
       {/* Content */}
       <div className="relative w-full">
         <MotionBox
@@ -17,28 +17,23 @@ export default function Hero() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <div className="text-[70px] leading-[70px] min-[375px]:text-heading-1 min-[375px]:leading-[80px] pb-6 lg:pb-0 lg:text-[140px] lg:leading-[140px] xl:text-[180px] xl:leading-[200px] font-extrabold font-heading uppercase">
-            <span className="text-center md:text-left w-full inline-block text-[50px] lg:text-[90px] lg:leading-[140px] xl:text-[200px] xl:leading-[100px] font-extrabold">
+          <div className="uppercase mb-10 md:mb-3">
+            <span className="text-center md:text-left w-full inline-block text-[40px] md:text-[80px]  lg:text-[110px] lg:leading-[140px] xl:text-[150px] xl:leading-[100px] font-extrabold">
               HypoMatrix
             </span>
-            <span className="text-center w-full inline-block text-[50px] lg:text-[90px] lg:leading-[140px] xl:text-[160px] xl:leading-[100px] font-extrabold md:text-right">
+            <span className="text-center w-full inline-block text-[40px] md:text-[80px]  lg:text-[110px] lg:leading-[140px] xl:text-[150px] xl:leading-[100px] font-extrabold md:text-right xl:mt-[30px] md:mt-[20px] mt-[10px]">
               Solutions
             </span>
           </div>
-          {/* <h1 className="text-[70px] leading-[70px] min-[375px]:text-heading-1 min-[375px]:leading-[80px] pb-6 lg:pb-0 lg:text-[140px] lg:leading-[140px] xl:text-[200px] xl:leading-[200px] font-extrabold font-heading uppercase md:text-right">
-            <span className="text-left w-full inline-block">Creative</span>
-            <br />
-            <span>Agency</span>
-          </h1> */}
         </MotionBox>
         <Image
           src={img2}
-          width={400}
+          width={100}
           height={200}
           alt="Profile picture"
-          className="h-auto object-cover absolute right-0 -top-20  spinner-border spin-in animate-spin duration-9000"
+          className="h-auto w-[150px] md:w-[200px] lg:w-[300px] object-cover absolute right-0 -top-20 spinner-border spin-in animate-spin duration-9000"
         />
-        <div className="md:absolute left-0 bottom-0">
+        <div className="">
           <p className="text-muted-foreground lg:mb-8 xl:mb-14 text-body max-w-[350px] text-start">
             Achieve unparalleled digital success with {""}
             <span className="font-semibold text-foreground">
@@ -54,7 +49,7 @@ export default function Hero() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <Button size={"xl"} className="mt-8 lg:mt-0 mb-[130px]">
+        <Button size={"xl"} className="mt-8 lg:mt-0 md:mb-[130px] mb-[50px]">
           <Link href={`?${MEETING_MODAL_KEY}=true`}>
             Book A Free Consultant
           </Link>

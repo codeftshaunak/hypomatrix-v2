@@ -13,7 +13,7 @@ export default async function VideoPlaceholder() {
   return (
     <div className="w-full relative">
       <Dialog>
-        <div className="w-full aspect-video md:aspect-[2.58] flex items-center justify-center rounded-lg relative">
+        <div className="w-full aspect-video md:aspect-[2.58] flex items-center justify-center rounded-lg">
           <Image
             src={thumbnail}
             alt="Video Thumbnail"

@@ -108,8 +108,7 @@
   --popover: hsl(220 6% 10%);
   --popover-foreground: hsl(0 0 100%);
   --primary: #9cfe4f;
-  /* --primary-secondary: #8778f5; */
-  /* --primary-foreground: hsl(0 0 100%); */
+  --primary-s: #8778f5;
   --primary-foreground: hsl(0, 0%, 0%);
   --secondary: hsl(0 0 10%);
   --secondary-foreground: hsl(0 0 100%);
