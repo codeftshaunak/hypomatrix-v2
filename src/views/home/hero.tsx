@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <header className="container pt-[210px] md:pb-[130px] pb-[100px] w-full">
+    <header className="container pt-[150px] md:pt-[210px] md:pb-[130px] pb-[50px] w-full">
       {/* Content */}
       <div className="relative w-full">
         <MotionBox
@@ -17,11 +17,11 @@ export default function Hero() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
         >
-          <div className="uppercase mb-10 md:mb-3">
-            <span className="text-center md:text-left w-full inline-block text-[35px] sm:text-[40px] md:text-[80px]  lg:text-[110px] lg:leading-[95px] xl:text-[150px] xl:leading-[100px] font-extrabold">
+          <div className="uppercase mb-10 md:mb-4 lg:mb-0">
+            <span className="text-left w-full inline-block text-[47px]  sm:text-[60px] md:text-[80px]  lg:text-[110px] lg:leading-[95px] xl:text-[150px] xl:leading-[100px] font-extrabold">
               HypoMatrix
             </span>
-            <span className="text-center w-full inline-block text-[30px] sm:text-[40px] md:text-[80px]  lg:text-[110px] lg:leading-[95px] xl:text-[150px] xl:leading-[100px] font-extrabold md:text-right xl:mt-[30px] md:mt-[20px] mt-[10px]">
+            <span className="text-right w-full inline-block text-[47px] sm:text-[60px] md:text-[80px]  lg:text-[110px] lg:leading-[95px] xl:text-[150px] xl:leading-[100px] font-extrabold xl:mt-[30px] md:mt-[20px] mt-[10px]">
               Solutions
             </span>
           </div>
@@ -31,10 +31,10 @@ export default function Hero() {
           width={100}
           height={200}
           alt="Profile picture"
-          className="h-auto w-[150px] md:w-[200px] lg:w-[300px] object-cover absolute right-0 -top-20 spinner-border spin-in animate-spin duration-9000"
+          className="h-auto w-[150px] md:w-[200px] lg:w-[300px] object-cover absolute right-10 -top-16 md:-top-20 animate-spin duration-8000"
         />
         <div className="">
-          <p className="text-muted-foreground lg:mb-8 xl:mb-14 text-body max-w-[350px] text-start">
+          <p className="text-muted-foreground lg:mb-6 xl:mb-8 text-body max-w-[350px] text-start">
             Achieve unparalleled digital success with {""}
             <span className="font-semibold text-foreground">
               HypoMatrix{" "}
@@ -49,7 +49,7 @@ export default function Hero() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <Button size={"xl"} className="mt-8 lg:mt-0 md:mb-[130px] mb-[50px]">
+        <Button size={"xl"} className="mt-6 md:mt-3  md:mb-[90px] mb-[50px]">
           <Link href={`?${MEETING_MODAL_KEY}=true`}>
             Book A Free Consultant
           </Link>

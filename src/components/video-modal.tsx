@@ -17,7 +17,7 @@ export default async function VideoPlaceholder() {
           <Image
             src={thumbnail}
             alt="Video Thumbnail"
-            className="w-full h-full object-cover rounded-lg absolute left-0 top-0 -z-[1]"
+            className="w-full h-full object-cover rounded-lg absolute left-0 -top-0 -z-[1]"
             fill
           />
           <DialogTrigger asChild>
@@ -26,12 +26,12 @@ export default async function VideoPlaceholder() {
             </Button>
           </DialogTrigger>
         </div>
-        <DialogContent className="sm:max-w-4xl w-full p-0 overflow-hidden">
+        <DialogContent className="sm:max-w-4xl w-full p-0 ">
           <iframe
             width="100%"
             height="100%"
             className="aspect-video"
-            src={webRes.data?.videoUrl}
+            src={webRes?.data?.videoUrl}
             title="YouTube video player"
             allow="autoplay; encrypted-media"
             allowFullScreen
