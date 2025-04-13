@@ -20,6 +20,6 @@ export type TWebsite = {
   metaTags?: TMetaTag;
   workSteps: TWorkSteps[];
   mapLink: string;
-  youtubeUrl: string;
-  thumbnail: TAsset;
+  videoUrl: string;
+  videoThumbnail: TAsset;
 };

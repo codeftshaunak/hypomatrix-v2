@@ -1,14 +1,14 @@
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { getWebsite } from "@/services/apis/website";
 import { Play } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { getWebsite } from "@/services/apis/website";
 
 export default async function VideoPlaceholder() {
   const webRes = await getWebsite();
-  const youtubeUrl =
-    webRes?.data?.youtubeUrl || "https://www.youtube.com/embed/0B7v2g1j4xE";
-  const thumbnail = webRes?.data?.thumbnail.url;
+  const thumbnail = webRes?.data?.videoThumbnail.url;
+
+  if (!thumbnail) return null;
 
   return (
     <div className="w-full relative">
@@ -31,7 +31,7 @@ export default async function VideoPlaceholder() {
             width="100%"
             height="100%"
             className="aspect-video"
-            src={youtubeUrl}
+            src={webRes.data?.videoUrl}
             title="YouTube video player"
             allow="autoplay; encrypted-media"
             allowFullScreen

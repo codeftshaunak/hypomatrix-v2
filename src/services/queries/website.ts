@@ -1,4 +1,4 @@
-import { metaTagsQuery } from "./common";
+import { assetImageQuery, metaTagsQuery } from "./common";
 
 export const websiteQuery = `
 query Website($id: ID) {
@@ -53,14 +53,10 @@ query Website($id: ID) {
         height
       }
     }
-      thumbnail {
-      height
-      width
-      url
-    }
-     youtubeUrl
-      mapLink
+    mapLink
     metaTags ${metaTagsQuery}
+    videoUrl
+    videoThumbnail ${assetImageQuery}
   }
 }
 `;
