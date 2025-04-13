@@ -18,10 +18,10 @@ export default function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
         >
           <div className="uppercase mb-10 md:mb-3">
-            <span className="text-center md:text-left w-full inline-block text-[40px] md:text-[80px]  lg:text-[110px] lg:leading-[140px] xl:text-[150px] xl:leading-[100px] font-extrabold">
+            <span className="text-center md:text-left w-full inline-block text-[35px] sm:text-[40px] md:text-[80px]  lg:text-[110px] lg:leading-[95px] xl:text-[150px] xl:leading-[100px] font-extrabold">
               HypoMatrix
             </span>
-            <span className="text-center w-full inline-block text-[40px] md:text-[80px]  lg:text-[110px] lg:leading-[140px] xl:text-[150px] xl:leading-[100px] font-extrabold md:text-right xl:mt-[30px] md:mt-[20px] mt-[10px]">
+            <span className="text-center w-full inline-block text-[30px] sm:text-[40px] md:text-[80px]  lg:text-[110px] lg:leading-[95px] xl:text-[150px] xl:leading-[100px] font-extrabold md:text-right xl:mt-[30px] md:mt-[20px] mt-[10px]">
               Solutions
             </span>
           </div>
