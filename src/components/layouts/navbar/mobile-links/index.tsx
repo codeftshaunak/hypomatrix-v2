@@ -34,10 +34,18 @@ const MobileLinks = (props: Props) => {
           <LucideMenu />
         </Button>
       </SheetTrigger>
-      <SheetContent className="w-full max-w-[330px]" side="left">
-        <SheetHeader>
-          <SheetTitle className="text-heading-4 font-heading font-bold">
-            {title}
+      <SheetContent
+        className="w-full max-w-[330px] overflow-scroll"
+        side="left"
+      >
+        <SheetHeader className="mt-8">
+          <SheetTitle className="text-heading-4 font-heading font-bold mb-2">
+            <Link
+              href={paths.root}
+              className="h-10 px-5 border border-primary text-card-foreground inline-flex items-center justify-center rounded-full text-heading-4 font-heading font-semibold"
+            >
+              {title}
+            </Link>
           </SheetTitle>
           <SheetDescription className="mb-10">{description}</SheetDescription>
 

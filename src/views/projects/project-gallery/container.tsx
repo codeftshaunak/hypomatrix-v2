@@ -9,7 +9,7 @@ type Props = {
 
 const Container = (props: Props) => {
   return (
-    <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 992: 3 }}>
+    <ResponsiveMasonry columnsCountBreakPoints={{ 340: 1, 740: 2, 992: 3 }}>
       <Masonry>{props.children}</Masonry>
     </ResponsiveMasonry>
   );

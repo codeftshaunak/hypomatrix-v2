@@ -10,7 +10,7 @@ const InfoSection = async (props: Props) => {
 
   return (
     <Card>
-      <CardContent className="py-10">
+      <CardContent className="py-18">
         <h3 className="text-4xl font-bold text-primary font-heading mb-8">
           <Link href={`tel:${data?.phones[0]}`} target="_blank">
             {data?.phones[0]}

@@ -8,7 +8,7 @@ async function ProcessSection() {
   const websiteRes = await getWebsite();
 
   return (
-    <section className="container pb-[130px]">
+    <section className="container pb-[50px] md:pb-[130px]">
       <CommonMotionBox>
         <SectionHeader
           subtitle="Working Proses"

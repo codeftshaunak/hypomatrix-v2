@@ -8,12 +8,12 @@ import CarouselContainer from "./carousel-container";
 async function TeamSection() {
   const membersRes = await getMembers(null);
   return (
-    <section id="team" className="py-[130px]">
+    <section id="team" className="md:py-[130px] py-[50px]">
       <CommonMotionBox>
         <SectionHeader
           title={"Success Stories From Around the Globe"}
           subtitle={"Our Experts"}
-          className="mb-[100px] max-w-2xl mx-auto"
+          className="md:mb-[100px] mb-[50px] max-w-2xl mx-auto"
           align="center"
         />
 

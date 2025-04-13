@@ -30,7 +30,7 @@ export function Footer(props: Props) {
         <RightSpiral />
         <FooterBackground />
 
-        <div className="grid gap-y-16 xl:grid-cols-6 pt-[130px] mb-20 container">
+        <div className="grid gap-y-16 xl:grid-cols-6 md:pt-[130px] pt-[50px] mb-20 container">
           {/* Column 1: Logo and subscribe */}
           <div className="xl:col-span-2">
             <h2 className="text-heading-3 font-heading font-bold mb-6">

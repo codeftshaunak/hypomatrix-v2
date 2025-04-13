@@ -2,24 +2,26 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Play } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./ui/button";
+import { getWebsite } from "@/services/apis/website";
 
-export default function VideoPlaceholder() {
-  const videoId = "dTo6Prv2asc";
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-  const videoUrl = `https://www.youtube.com/embed/${videoId}`;
+export default async function VideoPlaceholder() {
+  const webRes = await getWebsite();
+  const youtubeUrl =
+    webRes?.data?.youtubeUrl || "https://www.youtube.com/embed/0B7v2g1j4xE";
+  const thumbnail = webRes?.data?.thumbnail.url;
 
   return (
     <div className="w-full relative">
       <Dialog>
         <div className="w-full aspect-video md:aspect-[2.58] flex items-center justify-center rounded-lg relative">
           <Image
-            src={thumbnailUrl}
+            src={thumbnail}
             alt="Video Thumbnail"
             className="w-full h-full object-cover rounded-lg absolute left-0 top-0 -z-[1]"
             fill
           />
           <DialogTrigger asChild>
-            <Button className="size-24 [&_svg]:!size-6 bg-primary/60 hover:bg-primary/70">
+            <Button className="md:size-24 size-16 [&_svg]:!size-6 bg-primary/60 hover:bg-primary/70">
               <Play />
             </Button>
           </DialogTrigger>
@@ -29,7 +31,7 @@ export default function VideoPlaceholder() {
             width="100%"
             height="100%"
             className="aspect-video"
-            src={videoUrl}
+            src={youtubeUrl}
             title="YouTube video player"
             allow="autoplay; encrypted-media"
             allowFullScreen

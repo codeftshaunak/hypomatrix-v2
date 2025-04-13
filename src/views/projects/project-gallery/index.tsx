@@ -8,7 +8,7 @@ export default async function ProjectsGallery() {
   const projectsRes = await getProjects();
 
   return (
-    <section className="py-[130px] container">
+    <section className="md:py-[130px] pb-[50px] pt-[25px] container">
       <CommonMotionBox>
         <Container>
           {projectsRes.data?.map((project, index) => (

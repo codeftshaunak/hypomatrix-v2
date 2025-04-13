@@ -39,25 +39,49 @@ const TeamCarousel = (props: Props) => {
       api.off("reInit", onSelect);
     };
   }, [api]);
+
   return (
-    <section id="team" className="pb-[130px] container">
+    <section id="team" className="md:pb-[130px] pb-[50px] container">
       <CommonMotionBox>
         <SectionHeader
           subtitle="Our Team"
           title="Meet Our Talented Skillful Team!"
           className="max-w-[500px] mb-[60px]"
         />
-        <Carousel opts={{ loop: true, align: "center" }} setApi={setApi}>
-          <CarouselContent className="-ml-6 mb-16 mt-5">
+        {/* <Carousel opts={{ loop: true, align: "center" }} setApi={setApi}>
+          <CarouselContent className="-ml-6 mb-16 mt-5 items-center">
             {members.map((member, index) => (
               <CarouselItem
                 key={member.id}
-                className="md:basis-1/2 lg:basis-1/3 xl:basis-1/5 pl-6"
+                className={`md:basis-1/2 lg:basis-1/3 ${
+                  current === index ? "xl:basis-1/4" : "xl:basis-1/5"
+                }`}
+              >
+                <div>
+                  <MemberCard data={member} />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+
+          <CarouselPrevious className="static" />
+          <CarouselNext className="static ml-2" />
+        </Carousel> */}
+
+        <Carousel opts={{ loop: true, align: "center" }} setApi={setApi}>
+          <CarouselContent className="mb-16 mt-5 items-center">
+            {members.map((member, index) => (
+              <CarouselItem
+                key={member.id}
+                className={`md:flex-none  w-[220px] ${
+                  current === index ? "w-[330px]" : "w-[240px]"
+                }`}
               >
                 <div
-                  className={`transition-all duration-300 ${
-                    current === index ? "scale-110 shadow-lg z-10" : "scale-100"
-                  }`}
+                  className={`transform transition duration-300 ${
+                    current === index ? "scale-104 px-2" : "scale-100"
+                  }
+                  `}
                 >
                   <MemberCard data={member} />
                 </div>

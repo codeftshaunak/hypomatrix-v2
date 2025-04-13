@@ -12,15 +12,15 @@ export default async function LatestArticles() {
   const articlesRes = await getFeaturedBlogPosts(true);
 
   return (
-    <section className="py-[130px] container">
+    <section className="py-[50px] md:py-[130px] container">
       <CommonMotionBox>
-        <div className="flex flex-col gap-5 md:flex-row md:justify-between md:items-center mb-16">
+        <div className="flex flex-col gap-5 md:flex-row md:justify-between md:items-center md:mb-16 mb-6">
           <SectionHeader
             subtitle="Latest Articles"
             title="Stay Updated with Our Recent Articles"
             className="max-w-[700px]"
           />
-          <Button variant="outline" size={"lg"} asChild>
+          <Button variant="outline" size={"lg"} asChild className="mt-2">
             <Link href={paths.blog.root}>
               View all Blogs <ArrowUpRight size={18} />
             </Link>

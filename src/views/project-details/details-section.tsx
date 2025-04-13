@@ -14,7 +14,7 @@ const DetailsSection = (props: Props) => {
   const { project } = props;
 
   return (
-    <section className="py-[130px] container">
+    <section className="md:py-[130px] py-[50px] container">
       {/* Banner Image */}
       <div className="relative w-full aspect-[2.58] mb-16">
         <Image

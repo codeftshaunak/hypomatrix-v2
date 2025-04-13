@@ -17,11 +17,11 @@ export default function FormSection() {
           subtitle="Get In Touch"
           title={"Get started and grow your business now."}
           description="Start today to unlock opportunities and drive your business toward success."
-          className="mb-16 max-w-[600px]"
+          className="md:mb-16 max-w-[600px] mb-10"
         />
 
-        <div className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="space-y-3 md:space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6">
             <RHFInputField
               placeholder="Name"
               className="font-heading py-4 h-14 px-4 text-base md:text-lg rounded-xl bg-card"
@@ -44,7 +44,7 @@ export default function FormSection() {
             name={"message"}
           />
           <Button
-            className="w-full rounded-lg text-lg py-4 mt-5"
+            className="w-full rounded-lg text-lg py-4 mt-8 md:mt-6"
             size={"xl"}
             type="submit"
             disabled={isLoading}

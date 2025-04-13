@@ -10,7 +10,7 @@ import Link from "next/link";
 async function ProjectsSection() {
   const projectsRes = await getFeaturedProjects(true);
   return (
-    <section id="projects" className="container pb-[130px]">
+    <section id="projects" className="container md:pb-[130px] pb-[50px]">
       <CommonMotionBox>
         <SectionHeader
           subtitle="Complete Work"

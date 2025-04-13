@@ -24,7 +24,7 @@ export default async function Services() {
   const servicesRes = await getServices();
 
   return (
-    <section className="container pb-[130px]">
+    <section className="container md:pb-[130px] pb-[50px]">
       <CommonMotionBox>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between mb-16">
           <SectionHeader

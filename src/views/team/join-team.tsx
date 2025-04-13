@@ -1,16 +1,16 @@
-import img from "@/assets/Join Cercle.png";
+import img from "@/assets/icons/Join Cercle copy.png";
 import CommonMotionBox from "@/lib/motion/common-motion";
 import Image from "next/image";
-import img1 from "@/assets/telented-team/WhatsApp Image 2025-02-06 at 12.16.19.jpeg";
-import img2 from "@/assets/telented-team/Tonmoy-Deb.webp";
-import img3 from "@/assets/telented-team/saikat.jpg";
+import img1 from "@/assets/telented-team/team_01.jpg";
+import img2 from "@/assets/telented-team/team_02.jpg";
+import img3 from "@/assets/telented-team/team_03.png";
 
 const JoinTeamSection: React.FC = () => {
   return (
     <CommonMotionBox>
-      <section className="flex flex-col container lg:flex-row lg:items-center justify-between pb-[130px] gap-y-16">
+      <section className="flex flex-col container lg:flex-row lg:items-center justify-between md:pb-[130px] pb-[50px] gap-y-10 md:gap-y-10">
         <div className="relative">
-          <h2 className="text-heading-1 leading-none font-bold font-heading md:max-w-[500px] md:text-[100px] xl:text-[120px]">
+          <h2 className="text-heading-1 leading-none font-bold font-heading md:max-w-[500px] md:text-[100px] xl:text-[120px] text-center lg:text-left">
             <span className="text-stroke text-stroke-muted-foreground text-transparent">
               Join Our
             </span>{" "}
@@ -25,27 +25,23 @@ const JoinTeamSection: React.FC = () => {
           />
         </div>
 
-        <div className="flex items-center gap-6 relative">
+        <div className="flex items-center gap-8 relative justify-center">
           <Image
-            src={img3}
+            src={img1}
             alt="image not found"
-            width={150}
-            className="rounded-tl-xl rounded-br-xl aspect-square w-full"
+            className="rounded-tl-4xl rounded-br-4xl aspect-square max-w-[220px] w-[170px] md:w-[200px] lg:w-[280px] xl:w-[320px] 2xl:w-[370px]"
           />
 
           <div className="flex flex-col gap-6 shrink-0">
             <Image
-              src={img1}
-              alt="image not found"
-              width={140}
-              className="rounded-b-full aspect-square w-fit"
-            />
-
-            <Image
               src={img2}
               alt="image not found"
-              width={140}
-              className="rounded-tl-xl rounded-br-xl aspect-square w-fit"
+              className="rounded-b-full aspect-square max-w-[200px] w-[140px] md:w-[200px] lg:w-[250px] xl:w-[300px] 2xl:w-[350px]"
+            />
+            <Image
+              src={img3}
+              alt="image not found"
+              className="rounded-tr-4xl rounded-bl-3xl aspect-square max-w-[200px] w-[140px] md:w-[200px] lg:w-[250px] xl:w-[300px] 2xl:w-[350px]"
             />
           </div>
         </div>

@@ -13,7 +13,7 @@ const CoverCard = (props: ProjectCardProps) => {
     <Card
       key={data.id}
       className={cn(
-        "group rounded-2xl relative w-full h-full overflow-hidden",
+        "group rounded-2xl relative w-full h-full overflow-hidden mt-5 sm:mt-0",
         className
       )}
     >
@@ -21,7 +21,7 @@ const CoverCard = (props: ProjectCardProps) => {
         src={data.thumbnail.url}
         alt={data.title}
         fill
-        className="rounded-2xl hover:scale-125 duration-20 object-center"
+        className="rounded-2xl hover:scale-125 duration-400 object-center cursor-pointer"
       />
       <CardContent className="absolute left-1/2 -translate-x-1/2 flex-col items-center justify-center text-center bg-card bottom-5 sm:bottom-0 max-w-[80%] w-full py-5 rounded-2xl sm:opacity-0 group-hover:opacity-100 group-hover:bottom-5 duration-300">
         <Badge

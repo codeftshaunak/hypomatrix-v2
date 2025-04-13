@@ -1,4 +1,5 @@
 import {
+  TAsset,
   TLink,
   TLinkGroup,
   TMetaTag,
@@ -19,4 +20,6 @@ export type TWebsite = {
   metaTags?: TMetaTag;
   workSteps: TWorkSteps[];
   mapLink: string;
+  youtubeUrl: string;
+  thumbnail: TAsset;
 };
