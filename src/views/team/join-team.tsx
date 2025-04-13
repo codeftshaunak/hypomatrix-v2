@@ -8,20 +8,20 @@ import img3 from "@/assets/telented-team/team_03.png";
 const JoinTeamSection: React.FC = () => {
   return (
     <CommonMotionBox>
-      <section className="flex flex-col container lg:flex-row lg:items-center justify-between md:pb-[130px] pb-[50px] gap-y-10 md:gap-y-10">
-        <div className="relative">
-          <h2 className="text-heading-1 leading-none font-bold font-heading md:max-w-[500px] md:text-[100px] xl:text-[120px] text-center lg:text-left">
+      <section className="flex flex-col container lg:flex-row lg:items-center justify-between md:pb-[130px] pb-[50px] gap-y-10">
+        <div className="relative flex flex-col items-center lg:items-start gap-6 lg:gap-0">
+          <h2 className="flex items-center flex-col lg:items-start lg:flex-none text-heading-1 leading-none font-bold font-heading md:max-w-[500px] md:text-[100px] xl:text-[120px] text-center lg:text-left">
             <span className="text-stroke text-stroke-muted-foreground text-transparent">
               Join Our
             </span>{" "}
-            <span className="sm:ml-24 md:ml-28 xl:ml-36">Talented </span>
-            Team
+            <span className="lg:ml-28 xl:ml-36">Talented </span>
+            <span className="text-left"> Team</span>
           </h2>
           <Image
             src={img}
             alt="image not found"
             width={80}
-            className="spin-in animate-spin duration-7000 absolute top-1/2 left-0 -translate-y-1/2 md:w-[100px] xl:w-[130px] hidden sm:inline-block"
+            className="spin-in animate-spin duration-7000 absolute top-1/2 left-0 -translate-y-1/2 md:w-[100px] xl:w-[130px] hidden lg:inline-block"
           />
         </div>
 

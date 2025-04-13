@@ -3,6 +3,7 @@ import paths from "@/router/paths";
 import { TMember } from "@/types/cms/team";
 import WhyChooseUs from "../services/why-choose-us";
 import UserProfile from "./user-profile";
+import JoinTeamSection from "../team/join-team";
 
 type Props = {
   member: TMember;
@@ -23,8 +24,11 @@ const TeamDetailsView = (props: Props) => {
           { title: "Details", href: paths.team.details(member.slug) },
         ]}
       />
-      <UserProfile member={member} />
-      <WhyChooseUs />
+      <div className="flex flex-col gap-y-[80px] md:gap-y-[180px]">
+        <UserProfile member={member} />
+        {/* <WhyChooseUs /> */}
+        <JoinTeamSection />
+      </div>
     </>
   );
 };
