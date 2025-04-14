@@ -1,14 +1,12 @@
 import PageHeader from "@/components/common/page-header";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import paths from "@/router/paths";
 import { TBlogPost } from "@/types/cms/blog";
 import CategoriesSection from "../blog/categories-section";
 import LatestPostSection from "../blog/latest-post-section";
-import GridSection from "./grid-section";
 import HeroSection from "./hero-section";
 import SocialsSection from "./socials-section";
 import TagsSection from "./tags-section";
-import TestimonialSection from "./testimonial-section";
-import CommonMotionBox from "@/components/motion/common-motion";
 
 type Props = {
   post: TBlogPost;
@@ -32,7 +30,7 @@ const BlogDetailsView = (props: Props) => {
           },
         ]}
       />
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-16 gap-x-12 container py-[130px]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-16 gap-x-12 container md:py-[130px] py-[50px]">
         <div className="lg:col-span-2 space-y-12">
           <HeroSection post={post} />
           <div
@@ -44,7 +42,12 @@ const BlogDetailsView = (props: Props) => {
           <CommonMotionBox>
             <div className="flex flex-col xl:flex-row xl:justify-between xl:items-center py-8 px-6 border-t gap-y-10">
               <TagsSection tags={post.tags} />
-              <SocialsSection />
+              <SocialsSection
+                url={
+                  process.env.NEXT_PUBLIC_APP_URL +
+                  paths.blog.details(post.slug)
+                }
+              />
             </div>
           </CommonMotionBox>
         </div>

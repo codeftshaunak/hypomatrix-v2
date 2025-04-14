@@ -14,8 +14,8 @@ const MemberCard = (props: Props) => {
   const { data } = props;
 
   return (
-    <article className="group">
-      <div className="aspect-square rounded-lg overflow-hidden relative mb-4">
+    <article className="group cursor-pointer relative">
+      <div className="aspect-[3/4] rounded-lg overflow-hidden relative mb-4 ">
         <Image
           src={data.avatar.url}
           fill
@@ -35,7 +35,7 @@ const MemberCard = (props: Props) => {
                 <Button
                   size="icon"
                   variant="secondary"
-                  className="lg:scale-0 transition-transform duration-300 ease-in-out group-hover/social:scale-100 group-hover/social:delay-[50ms] group-focus-within/social:scale-100 group-focus-within/social:delay-[50ms]"
+                  className="scale-0 transition-transform duration-300 ease-in-out group-hover/social:scale-100 group-hover/social:delay-[50ms] group-focus-within/social:scale-100 group-focus-within/social:delay-[50ms]"
                 >
                   <SocialIcon name={item.icon} />
                 </Button>
@@ -44,8 +44,7 @@ const MemberCard = (props: Props) => {
           })}
         </div>
       </div>
-
-      <div>
+      <div className="absolute left-1/2 -translate-x-1/2 flex-col items-center justify-center text-center bg-card bottom-5 sm:bottom-0 max-w-[80%] w-full py-5 rounded-2xl sm:opacity-0 group-hover:opacity-100 group-hover:bottom-5 duration-300">
         <h3 className="font-bold">
           <Link
             href={paths.team.details(data.slug)}
@@ -54,7 +53,9 @@ const MemberCard = (props: Props) => {
             {data.name}
           </Link>
         </h3>
-        <p className="text-sm text-muted-foreground">{data.role}</p>
+        <p className="text-sm text-muted-foreground line-clamp-1">
+          {data.role}
+        </p>
       </div>
     </article>
   );

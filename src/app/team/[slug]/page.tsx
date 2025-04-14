@@ -28,7 +28,7 @@ export default TeamDetailsPage;
 // ----------------------------------------------------------------------
 
 export async function generateStaticParams() {
-  const dataRes = await getMembers();
+  const dataRes = await getMembers(null);
 
   if (!dataRes.data) {
     return [];

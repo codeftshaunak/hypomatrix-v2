@@ -4,6 +4,7 @@ const commonProjectQuery = `
     cardSize
     category
     client
+    previewLink
     description
     endDate
     id
@@ -13,6 +14,7 @@ const commonProjectQuery = `
     tags
     thumbnail ${assetImageQuery}
     title
+    pageTitle
 `;
 
 export const projectsQueryWithFeatured = `

@@ -46,7 +46,7 @@ publishDate
 
 export const blogPostsQuery = `
 query BlogPostsQuery {
-  blogPosts(stage: PUBLISHED) {
+  blogPosts(orderBy: publishDate_DESC, stage: PUBLISHED) {
     ${postCommonQuery}
   }
 }
@@ -54,7 +54,7 @@ query BlogPostsQuery {
 
 export const blogPostsQueryWithFeatured = `
 query BlogPostsQuery($featured: Boolean = false) {
-  blogPosts(stage: PUBLISHED, where: {featured: $featured}) {
+  blogPosts(orderBy: publishDate_DESC, stage: PUBLISHED, where: {featured: $featured}) {
     ${postCommonQuery}
   }
 }
@@ -63,6 +63,7 @@ query BlogPostsQuery($featured: Boolean = false) {
 export const blogPostQuery = `
 query BlogPostQuery($slug: String = "") {
   blogPost(stage: PUBLISHED, where: {slug: $slug}) {
+
     ${postCommonQuery}
     content {
       html

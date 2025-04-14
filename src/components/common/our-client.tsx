@@ -1,35 +1,39 @@
 import { getClients } from "@/services/apis/client";
 import Image from "next/image";
+import CommonMotionBox from "../../lib/motion/common-motion";
 import SectionHeader from "./section-header";
-import CommonMotionBox from "../motion/common-motion";
 
 const OurClient = async () => {
   const clientsRes = await getClients();
 
   return (
-    <section className="pb-[130px] px-6 text-center">
+    <section className="md:pb-[130px] pb-[60px] px-6 text-center">
       <CommonMotionBox>
         <SectionHeader
           title={"Trusted Industry Leader"}
           subtitle={"Our Client"}
-          className="mb-[100px] max-w-2xl mx-auto"
+          className="md:mb-[100px] mb-[50px] max-w-2xl mx-auto"
           align="center"
         />
 
         <div className="flex justify-center gap-6 flex-wrap">
-          {clientsRes.data?.map((client, index) => (
-            <div
-              key={index}
-              className="size-36 sm:size-52 bg-card rounded-full flex items-center justify-center"
-            >
-              <Image
-                src={client.logo.url}
-                alt={client.name}
-                width={100}
-                height={100}
-              />
-            </div>
-          ))}
+          {clientsRes.data?.map((item, index) => {
+            if (!item?.logo?.url) return null;
+
+            return (
+              <div
+                key={index}
+                className="size-36 sm:size-52 bg-card rounded-full flex items-center justify-center"
+              >
+                <Image
+                  src={item.logo.url}
+                  alt={item.name}
+                  width={200}
+                  height={200}
+                />
+              </div>
+            );
+          })}
         </div>
       </CommonMotionBox>
     </section>

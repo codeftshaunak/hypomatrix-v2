@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import React, { ReactNode } from "react";
-import { MotionBox } from "../motion/box";
 
 type Props = {
   subtitle: ReactNode;
@@ -42,16 +41,10 @@ const SectionHeader: React.FC<Props> = (props) => {
           </div>
         )}
       </h3>
-      <MotionBox
-        initial={{ scale: 0.5, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        <h2 className="text-4xl sm:text-heading-2 font-heading font-bold">
-          {title}
-        </h2>
-      </MotionBox>
+
+      <h2 className="text-4xl sm:text-heading-2 font-heading font-bold">
+        {title}
+      </h2>
 
       {description && (
         <p className="text-muted-foreground mt-1">{description}</p>

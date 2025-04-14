@@ -1,13 +1,13 @@
 import BlogPostCard from "@/components/cards/blog-post-card";
 import SectionHeader from "@/components/common/section-header";
-import CommonMotionBox from "@/components/motion/common-motion";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import { getFeaturedBlogPosts } from "@/services/apis/blog";
 
 const LatestBlogs = async () => {
   const blogPostsRes = await getFeaturedBlogPosts(true);
 
   return (
-    <section className="container pb-[130px]">
+    <section className="container md:pb-[130px] pb-[50px]">
       <CommonMotionBox>
         <div className="flex flex-col lg:flex-row lg:items-center justify-between">
           <SectionHeader

@@ -11,8 +11,8 @@ const UserProfile = (props: Props) => {
   const { member } = props;
 
   return (
-    <section className="container flex flex-col md:flex-row items-start pt-[130px] gap-y-16 gap-x-10 lg:gap-x-16 xl:gap-x-32 rounded-lg shadow-lg">
-      <div className="max-w-[400px] lg:w-[400px] shrink-0 relative aspect-square">
+    <section className="container flex flex-col md:flex-row items-start md:pt-[130px] gap-y-16 gap-x-10 lg:gap-x-16 xl:gap-x-32 rounded-lg shadow-lg">
+      <div className="max-w-[400px] lg:w-[400px] shrink-0 relative aspect-[3/4]">
         <Image
           src={member.avatar.url}
           alt={member.name}

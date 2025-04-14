@@ -2,6 +2,9 @@ import { TProject } from "@/types/cms/project";
 import { format } from "date-fns";
 import Image from "next/image";
 import CarouselSection from "./carousel-section";
+import Link from "next/link";
+import { Link2, Link2Icon, LinkIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 type Props = {
   project: TProject;
@@ -11,7 +14,7 @@ const DetailsSection = (props: Props) => {
   const { project } = props;
 
   return (
-    <section className="py-[130px] container">
+    <section className="md:py-[130px] py-[50px] container">
       {/* Banner Image */}
       <div className="relative w-full aspect-[2.58] mb-16">
         <Image
@@ -34,17 +37,25 @@ const DetailsSection = (props: Props) => {
         {/* Details */}
         <div className="grid grid-cols-2 gap-y-10 gap-x-16 max-w-[500px]">
           <div>
-            <span className="text-muted-foreground">Client</span>
-            <p className="font-heading text-heading-5 font-bold">
-              {project.client}
-            </p>
-          </div>
-          <div>
             <span className="text-muted-foreground">Category</span>
             <p className="font-heading text-heading-5 font-bold">
               {project.category}
             </p>
           </div>
+
+          {project.previewLink && (
+            <div className="flex flex-col gap-[3px]">
+              <span className="text-muted-foreground">Preview</span>
+              <Button variant="outline" size={"lg"} asChild className="w-fit">
+                <Link href={project.previewLink} target="_blank">
+                  <span className="font-heading text-[18px] font-bold">
+                    Visit Project
+                  </span>
+                  <LinkIcon size={18} />
+                </Link>
+              </Button>
+            </div>
+          )}
           <div>
             <span className="text-muted-foreground">Start Date</span>
             <p className="font-heading text-heading-5 font-bold">
@@ -65,7 +76,7 @@ const DetailsSection = (props: Props) => {
         dangerouslySetInnerHTML={{ __html: project.content.html }}
       />
 
-      <CarouselSection images={project.images} />
+      {!!project?.images?.length && <CarouselSection images={project.images} />}
     </section>
   );
 };

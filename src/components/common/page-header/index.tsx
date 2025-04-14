@@ -1,4 +1,4 @@
-import img1 from "@/assets/Join Cercle.png";
+import img1 from "@/assets/icons/Join Cercle copy.png";
 import pattan from "@/assets/Pattan.png";
 import Image from "next/image";
 import React from "react";
@@ -13,10 +13,10 @@ type Props = {
 const PageHeader: React.FC<Props> = (props) => {
   const { title, description, links = [] } = props;
   return (
-    <header className="bg-card text-card-foreground overflow-hidden relative w-full pt-[210px] pb-[130px]">
+    <header className="bg-card text-card-foreground overflow-hidden relative w-full pt-[130px] md:pt-[210px] md:pb-[130px] pb-[40px]">
       {/* Background elements */}
       <div className="absolute -left-[5%] -top-[45%] pointer-events-none">
-        <div className="border border-foreground/20 size-[979px] rounded-full" />
+        <div className="lg:border border-foreground/20 size-[979px] rounded-full" />
       </div>
 
       <div className="absolute right-0 -top-[130%] pointer-events-none">
@@ -55,7 +55,7 @@ const PageHeader: React.FC<Props> = (props) => {
             alt="Join Our Team"
             priority
             width={100}
-            className="md:w-[130px] spin-in animate-spin duration-7000"
+            className="md:w-[130px] spin-in animate-spin duration-7000 hidden lg:block"
           />
         </div>
       </div>

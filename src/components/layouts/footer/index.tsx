@@ -1,13 +1,15 @@
+import SocialIcon from "@/components/common/social-icon";
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { MotionBox } from "@/lib/motion/box";
 import paths from "@/router/paths";
 import { TWebsite } from "@/types/cms/website";
-import { LucideMail, LucidePhone, Mail } from "lucide-react";
+import { LucideMail, LucidePhone } from "lucide-react";
 import Link from "next/link";
 import FooterBackground from "./background";
 import LeftSpiral from "./left-spiral";
 import LegalSection from "./legal-section";
 import RightSpiral from "./right-spiral";
-import { MotionBox } from "@/components/motion/box";
 
 type Props = {
   website: TWebsite;
@@ -28,27 +30,28 @@ export function Footer(props: Props) {
         <RightSpiral />
         <FooterBackground />
 
-        <div className="grid gap-y-16 xl:grid-cols-6 pt-[130px] mb-20 container">
+        <div className="grid gap-y-16 xl:grid-cols-6 md:pt-[130px] pt-[50px] mb-20 container">
           {/* Column 1: Logo and subscribe */}
           <div className="xl:col-span-2">
             <h2 className="text-heading-3 font-heading font-bold mb-6">
               <Link href={paths.root}>{website.title}</Link>
             </h2>
-            <p className="mb-6 max-w-[350px]">{website.description}</p>
-
-            <div className="flex items-center border border-gray-300 bg-white rounded-full overflow-hidden max-w-xs md:mb-0 mb-4">
-              <div className="flex items-center px-3">
-                <Mail className="h-5 w-5 text-gray-500" />
-              </div>
-              <input
-                disabled
-                type="email"
-                placeholder="Email address"
-                className="flex-1 py-4 text-sm outline-none text-black placeholder:text-black"
-              />
-              <button className="bg-[#9CFE4F] text-black font-semibold px-3 md:px-6 py-2 rounded-full mr-1 ">
-                Subscribe
-              </button>
+            <p className="mb-10 max-w-[350px]">{website.description}</p>
+            <div className="flex flex-row items-center gap-2 flex-wrap">
+              {website?.socials.map((social, index) => {
+                return (
+                  <Button
+                    key={index}
+                    asChild
+                    size={"icon"}
+                    variant={"foreground"}
+                  >
+                    <Link href={social.href} target={"_blank"}>
+                      <SocialIcon name={social.icon} />
+                    </Link>
+                  </Button>
+                );
+              })}
             </div>
           </div>
 
@@ -61,6 +64,7 @@ export function Footer(props: Props) {
                     Main Address
                   </h3>
                   <p>{website.addresses[0]}</p>
+                  <p>Bangladesh</p>
                 </div>
               )}
 

@@ -1,4 +1,11 @@
-import { TLink, TLinkGroup, TMetaTag, TSocial } from "./common";
+import {
+  TAsset,
+  TLink,
+  TLinkGroup,
+  TMetaTag,
+  TSocial,
+  TWorkStep as TWorkSteps,
+} from "./common";
 
 export type TWebsite = {
   title: string;
@@ -11,4 +18,8 @@ export type TWebsite = {
   navLinks: (TLink | TLinkGroup)[];
   legalLinks: TLink[];
   metaTags?: TMetaTag;
+  workSteps: TWorkSteps[];
+  mapLink: string;
+  videoUrl: string;
+  videoThumbnail: TAsset;
 };

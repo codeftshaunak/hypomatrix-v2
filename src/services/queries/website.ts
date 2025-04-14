@@ -1,4 +1,4 @@
-import { metaTagsQuery } from "./common";
+import { assetImageQuery, metaTagsQuery } from "./common";
 
 export const websiteQuery = `
 query Website($id: ID) {
@@ -44,7 +44,7 @@ query Website($id: ID) {
     emails
     description
     addresses
-    workStep {
+    workSteps {
       title
       description
       image {
@@ -53,7 +53,10 @@ query Website($id: ID) {
         height
       }
     }
+    mapLink
     metaTags ${metaTagsQuery}
+    videoUrl
+    videoThumbnail ${assetImageQuery}
   }
 }
 `;

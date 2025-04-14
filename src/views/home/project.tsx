@@ -1,7 +1,8 @@
 import ProjectCard from "@/components/cards/project-card";
 import SectionHeader from "@/components/common/section-header";
-import { MotionBox } from "@/components/motion/box";
 import { Button } from "@/components/ui/button";
+import { MotionBox } from "@/lib/motion/box";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import paths from "@/router/paths";
 import { getFeaturedProjects } from "@/services/apis/project";
 import Link from "next/link";
@@ -9,13 +10,8 @@ import Link from "next/link";
 async function ProjectsSection() {
   const projectsRes = await getFeaturedProjects(true);
   return (
-    <section id="projects" className="container pb-[130px]">
-      <MotionBox
-        initial={{ y: "10vw", opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.2 }}
-      >
+    <section id="projects" className="container md:pb-[130px] pb-[50px]">
+      <CommonMotionBox>
         <SectionHeader
           subtitle="Complete Work"
           title="Creative Projects We've Delivered To Client"
@@ -33,7 +29,7 @@ async function ProjectsSection() {
             <Link href={paths.portfolio.root}>View All Projects</Link>
           </Button>
         </div>
-      </MotionBox>
+      </CommonMotionBox>
     </section>
   );
 }
