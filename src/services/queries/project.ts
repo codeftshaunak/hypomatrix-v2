@@ -13,6 +13,7 @@ const commonProjectQuery = `
     startDate
     tags
     thumbnail ${assetImageQuery}
+    cover ${assetImageQuery}
     title
     pageTitle
 `;

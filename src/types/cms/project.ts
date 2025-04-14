@@ -4,6 +4,7 @@ export type TProject = {
   id: string;
   slug: string;
   thumbnail: TAsset;
+  cover?: TAsset;
   title: string;
   category: string;
   pageTitle: string;

@@ -47,6 +47,7 @@ export const desktopLinks: Link[] = [
   },
   {
     title: "Blogs",
+    href: "/",
     items: [
       { title: "Latest News", href: "/blog" },
       { title: "Blogs Card", href: "/blog-card" },

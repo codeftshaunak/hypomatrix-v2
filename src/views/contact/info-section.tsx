@@ -10,14 +10,23 @@ const InfoSection = async (props: Props) => {
 
   return (
     <Card>
-      <CardContent className="py-18">
-        <h3 className="text-4xl font-bold text-primary font-heading mb-8">
-          <Link href={`tel:${data?.phones[0]}`} target="_blank">
-            {data?.phones[0]}
-          </Link>
+      <CardContent className="md:py-18 py-8">
+        <h3 className="md:text-2xl lg:text-xl xl:text-2xl font-bold text-primary font-heading mb-8 lg:pr-16">
+          <div className="md:max-w-[250px] flex flex-col gap-y-2">
+            {data?.emails.map((email, index) => (
+              <Link
+                href={`mailto:${email}`}
+                target="_blank"
+                className="hover:underline"
+                key={index}
+              >
+                {email}
+              </Link>
+            ))}
+          </div>
         </h3>
         <div className=" mb-8">
-          <h4 className="font-bold text-heading-3 font-heading mb-5">
+          <h4 className="font-bold text-heading-3 font-heading mb-3">
             Address
           </h4>
           <div className="max-w-[250px] flex flex-col gap-y-2">
@@ -29,19 +38,10 @@ const InfoSection = async (props: Props) => {
           </div>
         </div>
         <div className="mb-8">
-          <h4 className="font-bold font-heading text-heading-3 mb-5">Email</h4>
-          <div className="max-w-[250px] flex flex-col gap-y-2">
-            {data?.emails.map((email, index) => (
-              <Link
-                href={`mailto:${email}`}
-                target="_blank"
-                className="text-muted-foreground hover:underline"
-                key={index}
-              >
-                {email}
-              </Link>
-            ))}
-          </div>
+          <h4 className="font-bold font-heading text-heading-3 mb-3">Phone</h4>
+          <Link href={`tel:${data?.phones[0]}`} target="_blank">
+            {data?.phones[0]}
+          </Link>
         </div>
         <div>
           <h4 className="font-bold font-heading text-heading-3 mb-5">Follow</h4>
