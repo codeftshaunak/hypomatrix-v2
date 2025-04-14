@@ -30,7 +30,11 @@ const MobileLinks = (props: Props) => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button size={"icon-lg"} variant={"secondary"} className="lg:hidden">
+        <Button
+          size={"icon-lg"}
+          variant={"secondary"}
+          className="lg:hidden -mt-2 md:-mt-0"
+        >
           <LucideMenu />
         </Button>
       </SheetTrigger>

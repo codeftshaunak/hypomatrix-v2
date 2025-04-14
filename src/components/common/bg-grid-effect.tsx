@@ -11,7 +11,7 @@ const BgGridEffect = (props: Props) => {
       {/* Responsive grid - matching the original column/row configuration */}
       <div className="absolute inset-1 -z-[1] grid grid-cols-6 sm:grid-cols-10 md:grid-cols-14 lg:grid-cols-18 grid-rows-4 sm:grid-rows-6 md:grid-rows-8 gap-0 opacity-10">
         {Array.from({ length: 144 }).map((_, i) => (
-          <div key={i} className="border md:border-white"></div>
+          <div key={i} className="md:border-white"></div>
         ))}
       </div>
     </div>
