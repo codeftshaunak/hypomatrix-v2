@@ -74,12 +74,12 @@ const TeamCarousel = (props: Props) => {
               <CarouselItem
                 key={member.id}
                 className={`md:flex-none  w-[220px] ${
-                  current === index ? "w-[330px]" : "w-[240px]"
+                  current === index ? "w-[340px]" : "w-[240px]"
                 }`}
               >
                 <div
-                  className={`transform transition duration-300 ${
-                    current === index ? "scale-104 px-2" : "scale-100"
+                  className={`transform transition-all duration-300 ease-in-out${
+                    current === index ? "scale-100" : "scale-100"
                   }
                   `}
                 >

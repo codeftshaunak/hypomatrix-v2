@@ -44,7 +44,7 @@ const MobileLinks = (props: Props) => {
               href={paths.root}
               className="h-10 px-5 border border-primary text-card-foreground inline-flex items-center justify-center rounded-full text-heading-4 font-heading font-semibold"
             >
-              {title}
+              <SheetClose> {title}</SheetClose>
             </Link>
           </SheetTitle>
           <SheetDescription className="mb-10">{description}</SheetDescription>
