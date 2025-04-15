@@ -49,12 +49,12 @@ export default function Hero() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <Button size={"xl"} className="mt-6 md:mt-3  md:mb-[90px] mb-[50px]">
-          <Link href={`?${MEETING_MODAL_KEY}=true`}>
+        <Link href={`?${MEETING_MODAL_KEY}=true`}>
+          <Button size={"xl"} className="mt-6 md:mt-3  md:mb-[90px] mb-[50px]">
             Book A Free Consultant
-          </Link>
-          <ArrowRight size={20} />
-        </Button>
+            <ArrowRight size={20} />
+          </Button>
+        </Link>
       </MotionBox>
       {/* Video Placeholder */}
       <VideoPlaceholder />

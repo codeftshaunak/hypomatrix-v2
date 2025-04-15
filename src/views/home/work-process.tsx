@@ -13,7 +13,7 @@ async function ProcessSection() {
         <SectionHeader
           subtitle="Working Proses"
           title="The Process Behind the Magic Step by Step"
-          className="mb-[100px] max-w-[700px]"
+          className="mb-[100px] max-w-[700px] flex-1 lg:flex-none"
         />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-12">
