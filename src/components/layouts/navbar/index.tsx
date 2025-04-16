@@ -5,6 +5,9 @@ import { Button } from "../../ui/button";
 import DesktopLinks from "./desktop-links";
 import MobileLinks from "./mobile-links";
 import { MEETING_MODAL_KEY } from "@/config/keys";
+import Image from "next/image";
+import logo from "@/assets/icons/logo-white.svg";
+import logo1 from "@/assets/icons/Clip path group.svg";
 
 type Props = {
   website: TWebsite;
@@ -19,8 +22,14 @@ export default function Navbar(props: Props) {
         <h2 className="p-[3px] border rounded-full">
           <Link
             href={paths.root}
-            className="h-10 px-5 bg-card text-card-foreground inline-flex items-center justify-center rounded-full text-heading-4 font-heading font-bold"
+            className="h-11 px-5 bg-card text-card-foreground inline-flex items-center justify-center rounded-full text-heading-5 font-heading font-bold"
           >
+            <Image
+              src={logo1}
+              alt={website.title}
+              priority
+              className="rounded-full mr-2 w-[30px]"
+            />
             {website.title}
           </Link>
         </h2>

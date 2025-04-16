@@ -12,6 +12,7 @@ import {
 import SectionHeader from "../../components/common/section-header";
 import CommonMotionBox from "@/lib/motion/common-motion";
 import { TMember } from "@/types/cms/team";
+import CarouselCard from "@/components/carousel";
 
 type Props = {
   members: TMember[];
@@ -48,25 +49,6 @@ const TeamCarousel = (props: Props) => {
           title="Meet Our Talented Skillful Team!"
           className="max-w-[500px] mb-[60px]"
         />
-        {/* <Carousel opts={{ loop: true, align: "center" }} setApi={setApi}>
-          <CarouselContent className="-ml-6 mb-16 mt-5 items-center">
-            {members.map((member, index) => (
-              <CarouselItem
-                key={member.id}
-                className={`md:basis-1/2 lg:basis-1/3 ${
-                  current === index ? "xl:basis-1/4" : "xl:basis-1/5"
-                }`}
-              >
-                <div>
-                  <MemberCard data={member} />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-
-          <CarouselPrevious className="static" />
-          <CarouselNext className="static ml-2" />
-        </Carousel> */}
 
         <Carousel opts={{ loop: true, align: "center" }} setApi={setApi}>
           <CarouselContent className="mb-16 mt-5 items-center">
@@ -78,12 +60,16 @@ const TeamCarousel = (props: Props) => {
                 }`}
               >
                 <div
+                  onClick={() => {
+                    setCurrent(index);
+                    api?.scrollTo(index);
+                  }}
                   className={`transform transition-all duration-300 ease-in-out${
                     current === index ? "scale-100" : "scale-100"
                   }
                   `}
                 >
-                  <MemberCard data={member} />
+                  <CarouselCard data={member} current={current} index={index} />
                 </div>
               </CarouselItem>
             ))}

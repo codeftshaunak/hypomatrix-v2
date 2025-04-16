@@ -15,7 +15,7 @@ async function ProjectsSection() {
         <SectionHeader
           subtitle="Complete Work"
           title="Creative Projects We've Delivered To Client"
-          className="max-w-[700px] mb-16"
+          className="flex-1 lg:flex-none lg:w-[600px] mb-16"
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

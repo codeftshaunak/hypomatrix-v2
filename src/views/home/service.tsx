@@ -26,15 +26,11 @@ export default async function Services() {
   return (
     <section className="container md:pb-[130px] pb-[50px]">
       <CommonMotionBox>
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between mb-16">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between mb-16 ">
           <SectionHeader
-            title={
-              <>
-                Innovative Services That <br /> Elevate Your Brand
-              </>
-            }
+            title={<>Innovative Services That Elevate Your Brand</>}
             subtitle="Our Service"
-            className="flex-1"
+            className="max-w-[700px] flex-1 lg:flex-none"
           />
           <p className="text-muted-foreground max-w-[350px]">
             <span className="font-semibold text-foreground">
