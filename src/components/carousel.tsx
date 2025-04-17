@@ -47,9 +47,9 @@ const CarouselCard = (props: Props) => {
         </div>
       </div>
       <div
-        className={`absolute left-1/2 -translate-x-1/2 flex-col items-center justify-center text-center bg-black/40  backdrop-blur-xl bottom-5 sm:bottom-5  w-full py-5 rounded-2xl hidden ${
+        className={`absolute left-1/2 -translate-x-1/2 flex-col items-center justify-center text-center bg-black/50  backdrop-blur-xl bottom-5 sm:bottom-5  w-full py-5 rounded-2xl hidden ${
           current === index
-            ? "opacity-100 inline-block py-[40px] bg-black/40  backdrop-blur-xl max-w-[70%]"
+            ? "opacity-100 inline-block py-[40px] bg-black/50  backdrop-blur-xl max-w-[70%]"
             : "group-hover:opacity-100 group-hover:inline-block max-w-[80%]"
         } duration-300 px-[10px]`}
       >

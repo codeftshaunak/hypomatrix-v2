@@ -8,6 +8,7 @@ import {
 } from "./common";
 
 export type TWebsite = {
+  logo: TAsset;
   title: string;
   description: string;
   phones: string[];

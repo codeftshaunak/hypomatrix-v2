@@ -4,6 +4,7 @@ export const websiteQuery = `
 query Website($id: ID) {
   website(stage: PUBLISHED, where: {id: $id}) {
     id
+    logo ${assetImageQuery}
     title
     phones
     navLinks {

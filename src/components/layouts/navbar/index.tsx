@@ -6,7 +6,6 @@ import DesktopLinks from "./desktop-links";
 import MobileLinks from "./mobile-links";
 import { MEETING_MODAL_KEY } from "@/config/keys";
 import Image from "next/image";
-import logo1 from "@/assets/icons/Clip path group.svg";
 
 type Props = {
   website: TWebsite;
@@ -14,6 +13,7 @@ type Props = {
 
 export default function Navbar(props: Props) {
   const { website } = props;
+
   return (
     <nav className="container flex justify-between items-center z-50 absolute top-0 left-1/2 -translate-x-1/2 mt-[30px]">
       <div className="flex gap-10 items-center">
@@ -24,8 +24,10 @@ export default function Navbar(props: Props) {
             className="h-11 px-5 bg-card text-card-foreground inline-flex items-center justify-center rounded-full text-heading-5 font-heading font-bold"
           >
             <Image
-              src={logo1}
+              src={website.logo.url}
               alt={website.title}
+              width={100}
+              height={100}
               priority
               className="rounded-full mr-2 w-[30px]"
             />
