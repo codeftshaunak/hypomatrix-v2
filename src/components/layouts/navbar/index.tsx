@@ -6,7 +6,6 @@ import DesktopLinks from "./desktop-links";
 import MobileLinks from "./mobile-links";
 import { MEETING_MODAL_KEY } from "@/config/keys";
 import Image from "next/image";
-import logo from "@/assets/icons/logo-white.svg";
 import logo1 from "@/assets/icons/Clip path group.svg";
 
 type Props = {

@@ -23,7 +23,7 @@ async function TestimonialsSection() {
             className="max-w-[500px] mb-16"
           />
 
-          <Carousel className="w-full">
+          <Carousel className="w-full" opts={{ loop: true }}>
             <CarouselContent className="md:mb-16 mb-10">
               {clientRes.data?.map((review) => (
                 <CarouselItem key={review.id}>

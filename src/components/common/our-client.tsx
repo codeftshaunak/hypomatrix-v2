@@ -1,10 +1,10 @@
-import { getClients } from "@/services/apis/client";
 import Image from "next/image";
 import CommonMotionBox from "../../lib/motion/common-motion";
 import SectionHeader from "./section-header";
+import { getCompany } from "@/services/apis/company";
 
 const OurClient = async () => {
-  const clientsRes = await getClients();
+  const companyRes = await getCompany();
 
   return (
     <section className="md:pb-[130px] pb-[60px] px-6 text-center">
@@ -17,7 +17,7 @@ const OurClient = async () => {
         />
 
         <div className="flex justify-center gap-6 flex-wrap">
-          {clientsRes.data?.map((item, index) => {
+          {companyRes.data?.map((item, index) => {
             if (!item?.logo?.url) return null;
 
             return (
@@ -27,9 +27,10 @@ const OurClient = async () => {
               >
                 <Image
                   src={item.logo.url}
-                  alt={item.name}
-                  width={200}
-                  height={200}
+                  alt={item.title}
+                  width={100}
+                  height={100}
+                  className="grayscale w-[160px] !h-auto"
                 />
               </div>
             );

@@ -17,7 +17,7 @@ const DefaultCard = (props: ProjectCardProps) => {
             src={data.thumbnail.url}
             alt={data.title}
             fill
-            className="rounded-2xl object-cover "
+            className="rounded-2xl object-cover"
           />
           {/* <div className="flex flex-wrap gap-1 text-sm absolute bottom-5 left-5">
             {data.tags.map((tag, index) => (
