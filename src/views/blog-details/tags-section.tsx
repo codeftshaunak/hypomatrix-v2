@@ -8,7 +8,7 @@ type Props = {
 const TagsSection = (props: Props) => {
   const { tags } = props;
   return (
-    <div className="flex flex-col gap-2 xl:flex-row xl:items-center xl:max-w-[400px]">
+    <div className="flex flex-col gap-2 xl:flex-row xl:items-center xl:max-w-[500px]">
       <span className="text-lg uppercase font-semibold font-heading text-muted-foreground">
         Tags:
       </span>
