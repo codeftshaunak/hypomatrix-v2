@@ -10,7 +10,7 @@ const JoinTeamSection: React.FC = () => {
     <CommonMotionBox>
       <section className="flex flex-col container lg:flex-row lg:items-center justify-between md:pb-[130px] pb-[50px] gap-y-10">
         <div className="relative flex flex-col items-center lg:items-start gap-6 lg:gap-0">
-          <h2 className="flex items-center flex-col lg:items-start lg:flex-none text-heading-1 leading-none font-bold font-heading md:max-w-[500px] md:text-[100px] xl:text-[120px] text-center lg:text-left">
+          <h2 className="flex items-center flex-col lg:items-start lg:flex-none text-heading-1 leading-none font-bold font-heading md:max-w-[500px] md:text-[90px] xl:text-[120px] text-center lg:text-left">
             <span className="text-stroke text-stroke-muted-foreground text-transparent">
               Join Our
             </span>{" "}

@@ -16,7 +16,7 @@ const GridCard = (props: Props) => {
     <Card className="p-0 rounded-none bg-transparent border-none group">
       <Link
         href={paths.blog.details(data.slug)}
-        className="w-full aspect-[414/323] relative mb-5"
+        className="w-full aspect-square relative mb-5"
       >
         <Image
           src={data.thumbnail.url}
