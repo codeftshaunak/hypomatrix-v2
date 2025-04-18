@@ -4,8 +4,8 @@ const paths = {
   contact: "/contact",
   faq: "/faq",
   portfolio: {
-    root: "/portfolio",
-    details: (slug: string) => `/portfolio/${slug}`,
+    root: "/works",
+    details: (slug: string) => `/works/${slug}`,
   },
   services: {
     root: "/services",
