@@ -10,17 +10,17 @@ const InfoSection = async (props: Props) => {
 
   return (
     <Card>
-      <CardContent className="md:py-18 py-8">
-        <div className="mb-8">
+      <CardContent className="md:pb-18 py-8 flex flex-col gap-y-14">
+        <div>
           <h4 className="font-bold text-heading-4 md:text-heading-3 font-heading mb-3">
             Email
           </h4>
-          <div className="md:text-2xl lg:text-xl xl:text-2xl text-[17px] font-bold font-heading mb-8">
+          <div className="md:text-2xl text-xl xl:text-2xl sm:font-bold font-heading ">
             {data?.emails.map((email, index) => (
               <Link
                 href={`mailto:${email}`}
                 target="_blank"
-                className="hover:underline decoration-primary text-white"
+                className="hover:underline decoration-primary text-white break-words"
                 key={index}
               >
                 {email}
@@ -28,23 +28,27 @@ const InfoSection = async (props: Props) => {
             ))}
           </div>
         </div>
-        <div className=" mb-8">
+        <div>
           <h4 className="font-bold text-heading-4 md:text-heading-3 font-heading mb-3">
             Address
           </h4>
           <div className="max-w-[250px] flex flex-col gap-y-2">
             {data?.addresses.map((address, index) => (
-              <p className="text-white" key={index}>
+              <p className="text-white text-xl break-words" key={index}>
                 {address}
               </p>
             ))}
           </div>
         </div>
-        <div className="mb-8">
+        <div>
           <h4 className="font-bold font-heading text-heading-4 md:text-heading-3 mb-3">
             Phone
           </h4>
-          <Link href={`tel:${data?.phones[0]}`} target="_blank">
+          <Link
+            href={`tel:${data?.phones[0]}`}
+            target="_blank"
+            className="text-white text-xl"
+          >
             {data?.phones[0]}
           </Link>
         </div>
