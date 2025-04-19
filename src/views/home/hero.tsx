@@ -51,8 +51,7 @@ export default function Hero() {
       >
         <Link href={`?${MEETING_MODAL_KEY}=true`}>
           <Button size={"xl"} className="mt-6 md:mt-3  md:mb-[90px] mb-[50px]">
-            Book A Free Consultant
-            <ArrowRight size={20} />
+            Book A Free Consultation <ArrowRight size={20} />
           </Button>
         </Link>
       </MotionBox>

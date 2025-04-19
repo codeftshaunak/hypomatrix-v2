@@ -44,7 +44,7 @@ export default async function TrustedCompanySection() {
                     alt={item.title}
                     width={200}
                     height={200}
-                    className="grayscale px-4"
+                    className="brightness-0 invert-100 px-4"
                   />
                 </div>
               );
