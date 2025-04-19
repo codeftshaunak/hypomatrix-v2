@@ -15,7 +15,7 @@ type Props = {
 const BlogDetailsView = (props: Props) => {
   const { post } = props;
   return (
-    <div>
+    <div className="px-3">
       <PageHeader
         title={post.title}
         description={post.description}

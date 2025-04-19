@@ -12,7 +12,7 @@ const TeamView = (props: Props) => {
   const { page } = props;
 
   return (
-    <>
+    <div className="px-3">
       <PageHeader
         title={page.title}
         description={page.description}
@@ -25,7 +25,7 @@ const TeamView = (props: Props) => {
       />
       <TeamSection />
       <JoinTeamSection />
-    </>
+    </div>
   );
 };
 

@@ -24,12 +24,7 @@ const RootLayout = async (props: Props) => {
   return (
     <html lang="en">
       <body
-        className={cn(
-          headingFont.variable,
-          bodyFont.variable,
-          "antialiased",
-          "px-3"
-        )}
+        className={cn(headingFont.variable, bodyFont.variable, "antialiased")}
       >
         <link rel="icon" href="/favicon.png" type="image/png" />
         <Providers>

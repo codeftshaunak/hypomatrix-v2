@@ -10,7 +10,7 @@ const PageDetailsView = (props: Props) => {
   const { page } = props;
 
   return (
-    <>
+    <div className="px-3">
       <PageHeader
         title={page.title}
         links={[{ title: page.title, href: paths.about }]}
@@ -24,7 +24,7 @@ const PageDetailsView = (props: Props) => {
           />
         </div>
       )}
-    </>
+    </div>
   );
 };
 

@@ -10,7 +10,7 @@ type Props = {
 const ProjectDetailsView = (props: Props) => {
   const { project } = props;
   return (
-    <>
+    <div className="px-3">
       <PageHeader
         title={"Project Details"}
         description={
@@ -23,7 +23,7 @@ const ProjectDetailsView = (props: Props) => {
         ]}
       />
       <DetailsSection project={project} />
-    </>
+    </div>
   );
 };
 

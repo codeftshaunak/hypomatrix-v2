@@ -14,7 +14,7 @@ const ServicesView = (props: Props) => {
   const { page } = props;
 
   return (
-    <>
+    <div className="px-3">
       <PageHeader
         title={page.title}
         links={[
@@ -29,7 +29,7 @@ const ServicesView = (props: Props) => {
       <OurServices />
       <OurClient />
       <LatestBlogs />
-    </>
+    </div>
   );
 };
 

@@ -12,7 +12,7 @@ type Props = {
 const ServiceDetailsView = (props: Props) => {
   const { service } = props;
   return (
-    <>
+    <div className="px-3">
       <PageHeader
         title={service.title}
         description={service.description}
@@ -24,7 +24,7 @@ const ServiceDetailsView = (props: Props) => {
       <ContentSection service={service} />
       <StepsSection steps={service.steps} />
       <OurClient />
-    </>
+    </div>
   );
 };
 

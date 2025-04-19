@@ -5,7 +5,7 @@ type Props = {};
 
 const NotFoundView = (props: Props) => {
   return (
-    <div>
+    <div className="px-3">
       <PageHeader
         title={"404 Page"}
         links={[]}

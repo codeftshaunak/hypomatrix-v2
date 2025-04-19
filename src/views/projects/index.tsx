@@ -10,7 +10,7 @@ type Props = {
 const ProjectsView = (props: Props) => {
   const { page } = props;
   return (
-    <>
+    <div className="px-3">
       <PageHeader
         title={page.title}
         description={page.description}
@@ -22,7 +22,7 @@ const ProjectsView = (props: Props) => {
         ]}
       />
       <ProjectsGallery />
-    </>
+    </div>
   );
 };
 
