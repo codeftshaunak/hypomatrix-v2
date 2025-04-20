@@ -19,7 +19,7 @@ export function Footer(props: Props) {
   const { website } = props;
 
   return (
-    <footer className="relative bg-card overflow-hidden">
+    <footer className="relative bg-card overflow-hidden px-2 md:px-0">
       <MotionBox
         initial={{ y: "5vw", opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

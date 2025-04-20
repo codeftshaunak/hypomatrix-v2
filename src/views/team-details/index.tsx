@@ -12,7 +12,7 @@ type Props = {
 const TeamDetailsView = (props: Props) => {
   const { member } = props;
   return (
-    <div className="px-3">
+    <>
       <PageHeader
         title={"Team Details"}
         description={
@@ -29,7 +29,7 @@ const TeamDetailsView = (props: Props) => {
         {/* <WhyChooseUs /> */}
         <JoinTeamSection />
       </div>
-    </div>
+    </>
   );
 };
 

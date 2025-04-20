@@ -12,7 +12,7 @@ type Props = {
 const ContactView = (props: Props) => {
   const { page } = props;
   return (
-    <div className="px-3">
+    <>
       <PageHeader
         title={page.title}
         links={[
@@ -34,7 +34,7 @@ const ContactView = (props: Props) => {
         </div>
       </div>
       <MapSection />
-    </div>
+    </>
   );
 };
 

@@ -16,7 +16,7 @@ type Props = {
 const BlogCategoryView = (props: Props) => {
   const { category, posts } = props;
   return (
-    <div className="px-3">
+    <>
       <PageHeader
         title={category.title}
         description={category.description}
@@ -48,7 +48,7 @@ const BlogCategoryView = (props: Props) => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

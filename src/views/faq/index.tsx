@@ -14,7 +14,7 @@ type Props = {
 const FaqView = (props: Props) => {
   const { page } = props;
   return (
-    <div className="px-3">
+    <>
       <PageHeader
         title={page.title}
         links={[
@@ -43,7 +43,7 @@ const FaqView = (props: Props) => {
           </div>
         </CommonMotionBox>
       </div>
-    </div>
+    </>
   );
 };
 
