@@ -51,6 +51,6 @@ export const generateMetadata = async (props: Props): Promise<Metadata> => {
   }
 
   return {
-    ...generatePageMetadata(data?.metaTags, paths.portfolio.details(slug)),
+    ...generatePageMetadata(data?.metaTags, paths.works.details(slug)),
   };
 };

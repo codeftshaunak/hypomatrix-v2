@@ -18,8 +18,8 @@ const ProjectDetailsView = (props: Props) => {
           "We build powerful, scalable platforms tailored to real-world business needs. "
         }
         links={[
-          { title: "Portfolio", href: paths.portfolio.root },
-          { title: "Details", href: paths.portfolio.details(project.slug) },
+          { title: "Works", href: paths.works.root },
+          { title: "Details", href: paths.works.details(project.slug) },
         ]}
       />
       <DetailsSection project={project} />

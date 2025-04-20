@@ -3,7 +3,7 @@ const paths = {
   about: "/about",
   contact: "/contact",
   faq: "/faq",
-  portfolio: {
+  works: {
     root: "/works",
     details: (slug: string) => `/works/${slug}`,
   },

@@ -7,8 +7,8 @@ import { notFound } from "next/navigation";
 
 type Props = {};
 
-const PortfolioPage = async (props: Props) => {
-  const pageRes = await getPage("portfolio");
+const WorksPage = async (props: Props) => {
+  const pageRes = await getPage("works");
 
   if (!pageRes.data) {
     notFound();
@@ -21,18 +21,18 @@ const PortfolioPage = async (props: Props) => {
   );
 };
 
-export default PortfolioPage;
+export default WorksPage;
 
 // ----------------------------------------------------------------------
 
 export const generateMetadata = async (): Promise<Metadata> => {
-  const { data } = await getPage("portfolio");
+  const { data } = await getPage("works");
 
   if (!data) {
     return {};
   }
 
   return {
-    ...generatePageMetadata(data?.metaTags, paths.portfolio.root),
+    ...generatePageMetadata(data?.metaTags, paths.works.root),
   };
 };

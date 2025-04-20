@@ -26,7 +26,7 @@ async function ProjectsSection() {
 
         <div className="mt-12 text-center">
           <Button asChild size={"xl"}>
-            <Link href={paths.portfolio.root}>View All Projects</Link>
+            <Link href={paths.works.root}>View All Projects</Link>
           </Button>
         </div>
       </CommonMotionBox>

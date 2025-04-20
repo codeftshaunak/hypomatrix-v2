@@ -33,7 +33,7 @@ const CoverCard = (props: ProjectCardProps) => {
         <h3 className="text-heading-5 font-bold mb-1">
           <Link
             className="hover:underline"
-            href={paths.portfolio.details(data.slug)}
+            href={paths.works.details(data.slug)}
           >
             {data.title}
           </Link>
