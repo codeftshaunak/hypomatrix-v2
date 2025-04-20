@@ -35,7 +35,7 @@ export const desktopLinks: Link[] = [
     ],
   },
   {
-    title: "Portfolio",
+    title: "works",
     items: [
       { title: "Projects", href: "/works" },
       { title: "Project Details", href: paths.works.details("slug") },

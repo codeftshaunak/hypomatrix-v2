@@ -3,7 +3,6 @@ import { assetImageQuery, metaTagsQuery } from "./common";
 const commonProjectQuery = `
     cardSize
     category
-    client
     previewLink
     description
     endDate
