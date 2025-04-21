@@ -30,7 +30,7 @@ const OurClient = async () => {
                   alt={item.title}
                   width={100}
                   height={100}
-                  className="grayscale w-[160px] !h-auto"
+                  className="w-[100px] sm:w-[160px] !h-auto brightness-0 invert-100"
                 />
               </div>
             );

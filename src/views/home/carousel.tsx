@@ -2,6 +2,8 @@
 import { CarouselApi } from "@/components/ui/carousel";
 import React, { useEffect, useState } from "react";
 import MemberCard from "@/components/cards/member-card";
+import { motion } from "framer-motion";
+
 import {
   Carousel,
   CarouselContent,
@@ -53,24 +55,48 @@ const TeamCarousel = (props: Props) => {
         <Carousel opts={{ loop: true, align: "center" }} setApi={setApi}>
           <CarouselContent className="mb-16 mt-5 items-center">
             {members.map((member, index) => (
+              // <CarouselItem
+              //   key={member.id}
+              //   className={`md:flex-none  w-[220px] ${
+              //     current === index ? "w-[340px]" : "w-[240px]"
+              //   }`}
+              // >
+              //   <div
+              //     onClick={() => {
+              //       setCurrent(index);
+              //       api?.scrollTo(index);
+              //     }}
+              //     className={`transform transition-all duration-300 ease-in-out${
+              //       current === index ? "scale-100" : "scale-100"
+              //     }
+              //     `}
+              //   >
+              //     <CarouselCard data={member} current={current} index={index} />
+              //   </div>
+              // </CarouselItem>
               <CarouselItem
                 key={member.id}
-                className={`md:flex-none  w-[220px] ${
+                className={`md:flex-none w-[220px] ${
                   current === index ? "w-[340px]" : "w-[240px]"
                 }`}
               >
-                <div
+                <motion.div
                   onClick={() => {
                     setCurrent(index);
                     api?.scrollTo(index);
                   }}
-                  className={`transform transition-all duration-300 ease-in-out${
-                    current === index ? "scale-100" : "scale-100"
-                  }
-                  `}
+                  layout
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 10,
+                  }}
+                  className="transform transition-all duration-20"
                 >
                   <CarouselCard data={member} current={current} index={index} />
-                </div>
+                </motion.div>
               </CarouselItem>
             ))}
           </CarouselContent>
