@@ -11,7 +11,7 @@ async function ProcessSection() {
     <section className="container pb-[50px] md:pb-[130px]">
       <CommonMotionBox>
         <SectionHeader
-          subtitle="Working Proses"
+          subtitle="Working Process"
           title="The Process Behind the Magic Step by Step"
           className="mb-[100px] max-w-[700px] flex-1 lg:flex-none"
         />

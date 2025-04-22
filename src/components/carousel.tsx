@@ -47,21 +47,27 @@ const CarouselCard = (props: Props) => {
         </div>
       </div>
       <div
-        className={`absolute left-1/2 -translate-x-1/2 flex-col items-center justify-center text-center bg-black/55 bottom-5 sm:bottom-5 max-w-[80%] w-full py-5 rounded-2xl hidden ${
+        className={`absolute left-1/2 -translate-x-1/2 flex-col items-center justify-center text-center bg-black/50  backdrop-blur-xl bottom-5 sm:bottom-5  w-full py-5 rounded-2xl hidden ${
           current === index
-            ? "opacity-100 inline-block  bg-black/65 py-[40px]"
-            : "group-hover:opacity-100 group-hover:inline-block"
+            ? "opacity-100 inline-block bg-black/50 backdrop-blur-xl max-w-[70%] py-[40px] duration-550"
+            : "group-hover:opacity-100 group-hover:inline-block max-w-[80%]"
         } duration-300 px-[10px]`}
       >
         <h3 className="font-bold">
           <Link
             href={paths.team.details(data.slug)}
-            className="hover:text-primary duration-200 line-clamp-1"
+            className={`hover:text-primary duration-200 line-clamp-1 ${
+              current === index ? "text-xl" : ""
+            }`}
           >
             {data.name}
           </Link>
         </h3>
-        <p className="text-sm text-muted-foreground line-clamp-1">
+        <p
+          className={`text-sm text-muted-foreground line-clamp-1${
+            current === index ? "text-lg" : ""
+          }`}
+        >
           {data.role}
         </p>
       </div>

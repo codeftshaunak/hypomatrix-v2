@@ -15,7 +15,7 @@ type Props = {
 const BlogDetailsView = (props: Props) => {
   const { post } = props;
   return (
-    <div>
+    <>
       <PageHeader
         title={post.title}
         description={post.description}
@@ -56,7 +56,7 @@ const BlogDetailsView = (props: Props) => {
           <LatestPostSection />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

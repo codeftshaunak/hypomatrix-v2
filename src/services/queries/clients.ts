@@ -9,7 +9,6 @@ query ClientQuery {
     review
     rating
     id
-    logo ${assetImageQuery}
     avatar ${assetImageQuery}
   }
 }

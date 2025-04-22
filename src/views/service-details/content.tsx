@@ -11,19 +11,19 @@ type Props = {
 const ContentSection = (props: Props) => {
   const { service } = props;
   return (
-    <section className="md:py-[130px] py-[50px] relative overflow-hidden">
-      <div className="absolute left-0 -bottom-[200px] md:-bottom-[300px] w-full h-full bg-card -z-[1] " />
+    <section className="md:py-[100px] lg:py-[130px] py-[50px] relative overflow-hidden">
+      <div className="absolute left-0 md:-bottom-[230px] lg:-bottom-[300px] w-full h-full md:bg-card -z-[1] " />
       <div className="container">
-        <div className="relative w-full aspect-[2.58]">
+        <div className="relative w-full md:aspect-[2.58]">
           <Image
             src={service.thumbnail.url}
             alt={service.title}
             fill
-            className="object-cover"
+            className="object-cover hidden md:block rounded-xl"
           />
         </div>
         {/* Content Section */}
-        <div className="flex flex-col gap-10 lg:flex-row justify-between w-full mt-16">
+        <div className="flex flex-col gap-10 lg:flex-row justify-between w-full md:mt-16 mt-0">
           <div>
             <SectionHeader
               subtitle={"Description"}
@@ -37,7 +37,7 @@ const ContentSection = (props: Props) => {
               />
               <Separator orientation="vertical" className="!h-[80px]" />
               <StatCard
-                count={`${service.successRate}+`}
+                count={`${service.successRate}%`}
                 title={"Satisfaction Clients"}
               />
             </div>

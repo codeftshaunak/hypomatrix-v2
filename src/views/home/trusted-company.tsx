@@ -1,11 +1,13 @@
 import SectionHeader from "@/components/common/section-header";
-import { MotionBox } from "@/lib/motion/box";
 import CommonMotionBox from "@/lib/motion/common-motion";
 import { getClients } from "@/services/apis/client";
+import { getCompany } from "@/services/apis/company";
 import Image from "next/image";
 
 export default async function TrustedCompanySection() {
   const clientsRes = await getClients();
+  const companyRes = await getCompany();
+
   return (
     <section className="container md:pb-[150px] pb-[50px] flex flex-col xl:flex-row xl:items-center justify-between gap-y-[60px]">
       <CommonMotionBox>
@@ -29,7 +31,7 @@ export default async function TrustedCompanySection() {
 
           {/* Right Side - Logo Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3">
-            {clientsRes.data?.map((item, index) => {
+            {companyRes.data?.map((item, index) => {
               if (!item?.logo?.url) return null;
 
               return (
@@ -39,10 +41,10 @@ export default async function TrustedCompanySection() {
                 >
                   <Image
                     src={item.logo.url}
-                    alt={item.name}
+                    alt={item.title}
                     width={200}
                     height={200}
-                    className="!w-full !h-auto"
+                    className="brightness-0 invert-100 px-4"
                   />
                 </div>
               );

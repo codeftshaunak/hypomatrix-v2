@@ -10,7 +10,7 @@ import ProcessSection from "./work-process";
 
 const HomeView = () => {
   return (
-    <>
+    <div className="px-3">
       <BgGridEffect />
       <Hero />
       <Services />
@@ -20,7 +20,7 @@ const HomeView = () => {
       <TeamSection />
       <TestimonialsSection />
       <LatestArticles />
-    </>
+    </div>
   );
 };
 

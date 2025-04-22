@@ -17,7 +17,7 @@ const ProjectsView = (props: Props) => {
         links={[
           {
             title: "Projects",
-            href: paths.portfolio.root,
+            href: paths.works.root,
           },
         ]}
       />
