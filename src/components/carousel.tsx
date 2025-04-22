@@ -64,7 +64,7 @@ const CarouselCard = (props: Props) => {
           </Link>
         </h3>
         <p
-          className={`text-sm text-muted-foreground line-clamp-1${
+          className={`text-sm text-gray-300 line-clamp-1${
             current === index ? "text-lg" : ""
           }`}
         >
