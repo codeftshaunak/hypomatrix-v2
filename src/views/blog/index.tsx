@@ -16,6 +16,7 @@ type Props = {
 
 const BlogView = (props: Props) => {
   const { page, posts } = props;
+
   return (
     <>
       <PageHeader

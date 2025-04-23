@@ -5,6 +5,7 @@ import { LucideCalendarDays, LucideUser2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent } from "../../ui/card";
+import img from "@/assets/404.png";
 
 type Props = {
   data: TBlogPost;
