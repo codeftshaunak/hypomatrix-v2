@@ -20,10 +20,7 @@ const LatestPostSection = async (props: Props) => {
         </CardHeader>
         <CardContent className="space-y-6">
           {[...(blogRes.data || [])].slice(0, 3).map((post) => (
-            <div
-              key={post.id}
-              className="flex gap-3 items-center justify-center"
-            >
+            <div key={post.id} className="flex gap-3 items-center">
               <div className="flex-shrink-0 aspect-video w-[120px] relative">
                 <Image
                   src={post.thumbnail.url}
