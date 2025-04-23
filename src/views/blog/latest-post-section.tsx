@@ -20,8 +20,11 @@ const LatestPostSection = async (props: Props) => {
         </CardHeader>
         <CardContent className="space-y-6">
           {[...(blogRes.data || [])].slice(0, 3).map((post) => (
-            <div key={post.id} className="flex gap-3 items-center">
-              <div className="flex-shrink-0 aspect-square w-[100px] relative">
+            <div
+              key={post.id}
+              className="flex gap-3 items-center justify-center"
+            >
+              <div className="flex-shrink-0 aspect-video w-[120px] relative">
                 <Image
                   src={post.thumbnail.url}
                   alt={post.title}
@@ -30,9 +33,9 @@ const LatestPostSection = async (props: Props) => {
                 />
               </div>
               <div className="space-y-1">
-                <Badge className="mb-3 px-3 py-1" variant={"outline"}>
+                {/* <Badge className="mb-3 px-3 py-1" variant={"outline"}>
                   {post.category?.title}
-                </Badge>
+                </Badge> */}
                 <h4 className="text-lg leading-tight font-heading font-medium line-clamp-2">
                   <Link
                     href={paths.blog.details(post.slug)}
