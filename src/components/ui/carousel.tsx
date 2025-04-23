@@ -173,7 +173,7 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
 function CarouselElement({
   className,
   ...props
-}: MotionProps & { className?: string }) {
+}: MotionProps & { className?: string; onClick: () => void }) {
   const MotionDiv = motion.div;
 
   const { orientation } = useCarousel();

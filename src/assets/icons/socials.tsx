@@ -5,7 +5,9 @@ import {
   SiGithub,
   SiInstagram,
   SiLinkedin,
+  SiTorbrowser,
   SiX,
+  SiYoutube,
 } from "react-icons/si";
 
 const socialIcons: Record<SocialIconsType, IconType> = {
@@ -14,6 +16,8 @@ const socialIcons: Record<SocialIconsType, IconType> = {
   linkedin: SiLinkedin,
   github: SiGithub,
   instagram: SiInstagram,
+  youtube: SiYoutube,
+  portfolio: SiTorbrowser,
 };
 
 export default socialIcons;
