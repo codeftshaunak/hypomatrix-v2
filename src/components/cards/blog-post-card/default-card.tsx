@@ -27,7 +27,7 @@ const DefaultCard = (props: Props) => {
           <Badge className="md:hidden xl:inline-block">
             {data.category?.title}
           </Badge>
-          <h3 className="text-heading-4 font-heading font-bold mt-3 line-clamp-2">
+          <h3 className="text-heading-4 font-heading font-bold mt-2 line-clamp-2">
             <Link
               href={paths.blog.details(data.slug)}
               className="hover:underline decoration-primary"

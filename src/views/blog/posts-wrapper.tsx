@@ -3,6 +3,7 @@ import { TBlogPost } from "@/types/cms/blog";
 import img from "@/assets/404.png";
 import Image from "next/image";
 import Link from "next/link";
+import CommonMotionBox from "@/lib/motion/common-motion";
 
 type Props = {
   posts: TBlogPost[];
