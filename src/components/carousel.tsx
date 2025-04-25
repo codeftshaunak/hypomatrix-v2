@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import paths from "@/router/paths";
 import type { TMember } from "@/types/cms/team";
 import { Plus } from "lucide-react";
@@ -8,15 +9,19 @@ import SocialIcon from "./common/social-icon";
 
 type Props = {
   data: TMember;
-  current?: number;
-  index?: number;
+  isActive: boolean;
 };
 
 const CarouselCard = (props: Props) => {
-  const { data, current, index } = props;
+  const { data, isActive } = props;
 
   return (
-    <article className="group cursor-pointer relative">
+    <article
+      className={cn(
+        `group cursor-pointer relative duration-300`,
+        isActive ? "sm:scale-125" : "opacity-30"
+      )}
+    >
       <div className="aspect-[3/4] rounded-lg overflow-hidden relative mb-4 ">
         <Image
           src={data.avatar.url}
@@ -47,27 +52,21 @@ const CarouselCard = (props: Props) => {
         </div>
       </div>
       <div
-        className={`absolute left-1/2 -translate-x-1/2 flex-col items-center justify-center text-center bg-black/50  backdrop-blur-xl bottom-5 sm:bottom-5  w-full py-5 rounded-2xl hidden ${
-          current === index
-            ? "opacity-100 inline-block bg-black/50 backdrop-blur-xl max-w-[70%] py-[40px] duration-550"
+        className={`absolute left-1/2 -translate-x-1/2 flex-col items-center justify-center text-center bg-black/50  backdrop-blur-xl bottom-5 sm:bottom-5  w-full py-4 rounded-2xl hidden ${
+          isActive
+            ? "opacity-100 inline-block bg-black/50 backdrop-blur-xl max-w-[70%] duration-550"
             : "group-hover:opacity-100 group-hover:inline-block max-w-[80%]"
         } duration-300 px-[10px]`}
       >
         <h3 className="font-bold">
           <Link
             href={paths.team.details(data.slug)}
-            className={`hover:text-primary duration-200 line-clamp-1 ${
-              current === index ? "text-xl" : ""
-            }`}
+            className={`hover:text-primary duration-200 line-clamp-1`}
           >
             {data.name}
           </Link>
         </h3>
-        <p
-          className={`text-sm text-muted-foreground line-clamp-1${
-            current === index ? "text-lg" : ""
-          }`}
-        >
+        <p className={`text-sm text-muted-foreground line-clamp-1`}>
           {data.role}
         </p>
       </div>

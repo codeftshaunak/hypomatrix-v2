@@ -1,9 +1,9 @@
 "use client";
 import { CarouselApi } from "@/components/ui/carousel";
-import React, { useEffect, useState } from "react";
-import MemberCard from "@/components/cards/member-card";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
+import CarouselCard from "@/components/carousel";
+import SectionHeader from "@/components/common/section-header";
 import {
   Carousel,
   CarouselContent,
@@ -11,10 +11,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import SectionHeader from "../../components/common/section-header";
 import CommonMotionBox from "@/lib/motion/common-motion";
+import { cn } from "@/lib/utils";
 import { TMember } from "@/types/cms/team";
-import CarouselCard from "@/components/carousel";
 
 type Props = {
   members: TMember[];
@@ -53,50 +52,16 @@ const TeamCarousel = (props: Props) => {
         />
 
         <Carousel opts={{ loop: true, align: "center" }} setApi={setApi}>
-          <CarouselContent className="mb-16 mt-5 items-center">
+          <CarouselContent className="mb-16 min-h-[500px] items-center ml-0">
             {members.map((member, index) => (
-              // <CarouselItem
-              //   key={member.id}
-              //   className={`md:flex-none  w-[220px] ${
-              //     current === index ? "w-[340px]" : "w-[240px]"
-              //   }`}
-              // >
-              //   <div
-              //     onClick={() => {
-              //       setCurrent(index);
-              //       api?.scrollTo(index);
-              //     }}
-              //     className={`transform transition-all duration-300 ease-in-out${
-              //       current === index ? "scale-100" : "scale-100"
-              //     }
-              //     `}
-              //   >
-              //     <CarouselCard data={member} current={current} index={index} />
-              //   </div>
-              // </CarouselItem>
               <CarouselItem
                 key={member.id}
-                className={`md:flex-none w-[220px] ${
-                  current === index ? "w-[340px]" : "w-[240px]"
-                }`}
+                className={cn(
+                  index === current ? `z-10 px-0` : `z-0 px-2`,
+                  "sm:basis-1/2 md:basis-1/3 lg:basis-1/4 2xl:basis-1/5"
+                )}
               >
-                <motion.div
-                  onClick={() => {
-                    setCurrent(index);
-                    api?.scrollTo(index);
-                  }}
-                  layout
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 100,
-                    damping: 10,
-                  }}
-                  className="transform transition-all duration-20"
-                >
-                  <CarouselCard data={member} current={current} index={index} />
-                </motion.div>
+                <CarouselCard data={member} isActive={index === current} />
               </CarouselItem>
             ))}
           </CarouselContent>
