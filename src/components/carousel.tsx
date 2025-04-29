@@ -19,7 +19,7 @@ const CarouselCard = (props: Props) => {
     <article
       className={cn(
         `group cursor-pointer relative duration-300`,
-        isActive ? "sm:scale-125" : "opacity-30"
+        isActive ? "sm:scale-110" : "opacity-50 sm:scale-100"
       )}
     >
       <div className="aspect-[3/4] rounded-lg overflow-hidden relative mb-4 ">

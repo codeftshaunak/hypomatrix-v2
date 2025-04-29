@@ -9,7 +9,9 @@ export type SocialIconsType =
   | "x"
   | "linkedin"
   | "github"
-  | "instagram";
+  | "instagram"
+  | "youtube"
+  | "portfolio";
 
 export type TSocial = {
   icon: SocialIconsType;

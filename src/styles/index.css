@@ -5,6 +5,9 @@
 @plugin "@tailwindcss/typography";
 @plugin "@designbycode/tailwindcss-text-stroke";
 
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -221,3 +224,5 @@
     @apply bg-background text-foreground font-body text-body scroll-smooth;
   }
 }
+
+

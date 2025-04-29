@@ -15,6 +15,7 @@ type Props = {
 
 const BlogCategoryView = (props: Props) => {
   const { category, posts } = props;
+
   return (
     <>
       <PageHeader

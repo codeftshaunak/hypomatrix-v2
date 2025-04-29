@@ -16,6 +16,7 @@ type Props = {
 
 const BlogView = (props: Props) => {
   const { page, posts } = props;
+
   return (
     <>
       <PageHeader
@@ -28,7 +29,7 @@ const BlogView = (props: Props) => {
           },
         ]}
       />
-      <div className="container md:py-[130px] py-[50px]">
+      <div className="container md:py-[130px] py-[50px] px-5 md:px:0">
         <div className="grid grid-cols-1 xl:grid-cols-3 md:gap-y-16 gap-x-8">
           {/* Main Content */}
           <div className="xl:col-span-2 space-y-16 @container/feed">

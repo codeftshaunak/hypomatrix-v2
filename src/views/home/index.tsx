@@ -10,7 +10,7 @@ import ProcessSection from "./work-process";
 
 const HomeView = () => {
   return (
-    <div className="px-3">
+    <div className="px-2">
       <BgGridEffect />
       <Hero />
       <Services />

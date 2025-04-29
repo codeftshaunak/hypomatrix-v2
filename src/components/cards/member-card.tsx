@@ -44,18 +44,16 @@ const MemberCard = (props: Props) => {
           })}
         </div>
       </div>
-      <div className="absolute left-1/2 -translate-x-1/2 flex-col items-center justify-center text-center bg-card bottom-5 sm:bottom-0 max-w-[80%] w-full py-5 rounded-2xl sm:opacity-0 group-hover:opacity-100 group-hover:bottom-5 duration-300 px-[10px]">
+      <div className="absolute left-1/2 -translate-x-1/2 flex-col items-center justify-center text-center bg-black/40 backdrop-blur-xl bottom-5 sm:bottom-0 max-w-[80%] w-full py-7 md:py-10 rounded-2xl sm:opacity-0 group-hover:opacity-100 group-hover:bottom-5 duration-300 px-[10px]">
         <h3 className="font-bold">
           <Link
             href={paths.team.details(data.slug)}
-            className="hover:text-primary duration-200 line-clamp-1"
+            className="hover:text-primary duration-200 line-clamp-1 md:text-lg"
           >
             {data.name}
           </Link>
         </h3>
-        <p className="text-sm text-muted-foreground line-clamp-1">
-          {data.role}
-        </p>
+        <p className="text-sm text-gray-300 line-clamp-1">{data.role}</p>
       </div>
     </article>
   );

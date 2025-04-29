@@ -15,7 +15,7 @@ const DefaultCard = (props: Props) => {
   return (
     <Card>
       <CardContent className="flex flex-col gap-8 sm:flex-row sm:gap-4 items-center">
-        <div className="w-full sm:w-[160px] xl:w-[260px] aspect-video sm:aspect-square relative shrink-0">
+        <div className="w-full sm:w-[160px] xl:w-[260px] aspect-video relative shrink-0">
           <Image
             src={data.thumbnail.url}
             alt={data.title}
@@ -24,8 +24,10 @@ const DefaultCard = (props: Props) => {
           />
         </div>
         <div>
-          <Badge>{data.category?.title}</Badge>
-          <h3 className="text-heading-4 font-heading font-bold mt-5 line-clamp-2">
+          <Badge className="md:hidden xl:inline-block">
+            {data.category?.title}
+          </Badge>
+          <h3 className="text-heading-4 font-heading font-bold mt-2 line-clamp-2">
             <Link
               href={paths.blog.details(data.slug)}
               className="hover:underline decoration-primary"
@@ -33,11 +35,11 @@ const DefaultCard = (props: Props) => {
               {data.title}
             </Link>
           </h3>
-          <p className="text-muted-foreground mt-2 line-clamp-2">
+          {/* <p className="text-muted-foreground mt-2 line-clamp-2">
             {data.description}
-          </p>
+          </p> */}
 
-          <p className="text-muted-foreground mt-5 xl:mt-12">
+          <p className="text-muted-foreground mt-5 xl:mt-2 text-end">
             {format(data.publishDate, "dd MMM, yyyy")}
           </p>
         </div>

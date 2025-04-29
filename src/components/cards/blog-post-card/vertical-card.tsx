@@ -15,7 +15,7 @@ const VerticalCard = (props: Props) => {
   return (
     <Card className="p-0 rounded-none bg-transparent border-none group">
       <Link href={paths.blog.details(data.slug)}>
-        <div className="w-full aspect-[4/3] relative mb-5">
+        <div className="w-full aspect-video relative mb-5">
           <Image
             src={data.thumbnail.url}
             alt={data.title}

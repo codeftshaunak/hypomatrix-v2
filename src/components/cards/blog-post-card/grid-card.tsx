@@ -5,6 +5,7 @@ import { LucideCalendarDays, LucideUser2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent } from "../../ui/card";
+import img from "@/assets/404.png";
 
 type Props = {
   data: TBlogPost;
@@ -16,7 +17,7 @@ const GridCard = (props: Props) => {
     <Card className="p-0 rounded-none bg-transparent border-none group">
       <Link
         href={paths.blog.details(data.slug)}
-        className="w-full aspect-square relative mb-5"
+        className="w-full aspect-video relative mb-5"
       >
         <Image
           src={data.thumbnail.url}

@@ -14,7 +14,7 @@ const DetailsSection = (props: Props) => {
   const { project } = props;
 
   return (
-    <section className="md:py-[130px] py-[50px] container">
+    <section className="md:py-[130px] py-[50px] container px-4 md:px:0">
       {/* Banner Image */}
       <div className="relative w-full aspect-video mb-16">
         <Image
@@ -72,7 +72,7 @@ const DetailsSection = (props: Props) => {
       </div>
 
       <div
-        className="prose prose-invert text-muted-foreground w-full max-w-full mb-16"
+        className="prose prose-invert text-muted-foreground w-full max-w-full"
         dangerouslySetInnerHTML={{ __html: project.content.html }}
       />
 

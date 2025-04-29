@@ -48,16 +48,20 @@ const TeamCarousel = (props: Props) => {
         <SectionHeader
           subtitle="Our Team"
           title="Meet Our Talented Skillful Team!"
-          className="max-w-[500px] mb-[60px]"
+          className="max-w-[590px] mb-[60px]"
         />
 
         <Carousel opts={{ loop: true, align: "center" }} setApi={setApi}>
           <CarouselContent className="mb-16 min-h-[500px] items-center ml-0">
             {members.map((member, index) => (
               <CarouselItem
+                onClick={() => {
+                  setCurrent(index);
+                  api?.scrollTo(index);
+                }}
                 key={member.id}
                 className={cn(
-                  index === current ? `z-10 px-0` : `z-0 px-2`,
+                  index === current ? `z-10 px-4` : `z-0 px-2`,
                   "sm:basis-1/2 md:basis-1/3 lg:basis-1/4 2xl:basis-1/5"
                 )}
               >
