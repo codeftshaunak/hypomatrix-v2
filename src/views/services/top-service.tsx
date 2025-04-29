@@ -6,7 +6,7 @@ import { getServices } from "@/services/apis/service";
 const OurServices = async () => {
   const servicesRes = await getServices();
   return (
-    <section className="container md:pb-[130px] pb-[50px]">
+    <section className="container md:pb-[130px] pb-[50px] px-4 md:px:0">
       <SectionHeader
         subtitle={"Our Services"}
         title={"Top Services We Offer"}

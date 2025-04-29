@@ -30,7 +30,7 @@ const BlogDetailsView = (props: Props) => {
           },
         ]}
       />
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-16 gap-x-12 container md:py-[130px] py-[50px]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-16 gap-x-12 container md:py-[130px] py-[50px] px-5 md:px:0">
         <div className="lg:col-span-2 space-y-12">
           <HeroSection post={post} />
           <div

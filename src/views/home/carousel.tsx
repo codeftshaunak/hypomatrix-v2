@@ -61,7 +61,7 @@ const TeamCarousel = (props: Props) => {
                 }}
                 key={member.id}
                 className={cn(
-                  index === current ? `z-10 px-0` : `z-0 px-2`,
+                  index === current ? `z-10 px-4` : `z-0 px-2`,
                   "sm:basis-1/2 md:basis-1/3 lg:basis-1/4 2xl:basis-1/5"
                 )}
               >

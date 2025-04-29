@@ -12,7 +12,7 @@ const ContentSection = (props: Props) => {
   const { service } = props;
 
   return (
-    <section className="md:py-[100px] lg:py-[130px] py-[50px] relative overflow-hidden">
+    <section className="md:py-[100px] lg:py-[130px] py-[50px] relative overflow-hidden px-2 md:px:0">
       <div className="absolute left-0 md:-bottom-[230px] lg:-bottom-[350px] w-full h-full md:bg-card -z-[1] " />
       <div className="container">
         <div className="relative w-full md:aspect-[2.58]">

@@ -7,7 +7,7 @@ const LatestBlogs = async () => {
   const blogPostsRes = await getFeaturedBlogPosts(true);
 
   return (
-    <section className="container md:pb-[130px] pb-[50px]">
+    <section className="container md:pb-[130px] pb-[50px] px-4 md:px:0">
       <CommonMotionBox>
         <div className="flex flex-col lg:flex-row lg:items-center justify-between">
           <SectionHeader
