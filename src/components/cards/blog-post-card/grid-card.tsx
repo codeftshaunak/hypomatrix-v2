@@ -27,14 +27,12 @@ const GridCard = (props: Props) => {
       </Link>
       <CardContent className="p-0">
         <div className="flex items-center text-muted-foreground gap-4 mb-3">
-          {data?.author?.name && (
-            <div className="inline-flex items-center gap-x-1.5">
-              <LucideUser2 size={18} />
-              <span>{data.author?.name}</span>
-            </div>
-          )}
+          <div className="inline-flex items-center gap-x-1">
+            <LucideUser2 size={18} />
+            <span>{data.author?.name ?? "HypoMatrix"}</span>
+          </div>
 
-          <div className="inline-flex items-center gap-x-1.5">
+          <div className="inline-flex items-center gap-x-1">
             <LucideCalendarDays size={18} />
             <span>{format(data.publishDate, "dd MMM, yyyy")}</span>
           </div>
