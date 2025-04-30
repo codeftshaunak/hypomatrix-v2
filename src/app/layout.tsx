@@ -26,7 +26,6 @@ const RootLayout = async (props: Props) => {
       <body
         className={cn(headingFont.variable, bodyFont.variable, "antialiased")}
       >
-        <link rel="icon" href="/Clip path group.svg" type="image/png" />
         <Providers>
           <MainLayout website={websiteResponse.data}>{children}</MainLayout>
         </Providers>
