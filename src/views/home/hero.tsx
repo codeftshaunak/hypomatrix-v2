@@ -33,14 +33,13 @@ export default function Hero() {
           alt="Profile picture"
           className="h-auto w-[150px] md:w-[200px] lg:w-[300px] object-cover absolute right-10 -top-16 md:-top-20 animate-spin duration-8000"
         />
-        <div className="">
+        <div>
           <p className="text-muted-foreground lg:mb-6 xl:mb-8 text-body max-w-[350px] text-start">
-            Achieve unparalleled digital success with {""}
+            Achieve digital success with HypoMatrix. Our expert team delivers
+            innovative solutions to elevate your brand.{" "}
             <span className="font-semibold text-foreground">
-              HypoMatrix{" "}
-            </span>{" "}
-            Our innovative solutions and expert team are here to elevate your
-            brand and reach new heights.
+              Book a free consultation with our experts today!
+            </span>
           </p>
         </div>
       </div>
@@ -51,7 +50,7 @@ export default function Hero() {
       >
         <Link href={`?${MEETING_MODAL_KEY}=true`}>
           <Button size={"xl"} className="mt-6 md:mt-3  md:mb-[90px] mb-[50px]">
-            Book A Free Consultation <ArrowRight size={20} />
+            Book Now <ArrowRight size={20} />
           </Button>
         </Link>
       </MotionBox>

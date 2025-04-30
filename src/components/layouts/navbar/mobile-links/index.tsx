@@ -40,7 +40,7 @@ const MobileLinks = async (props: Props) => {
         <Button
           size={"icon-lg"}
           variant={"secondary"}
-          className="lg:hidden -mt-2 md:-mt-0"
+          className="xl:hidden -mt-2 md:-mt-0"
         >
           <LucideMenu />
         </Button>
