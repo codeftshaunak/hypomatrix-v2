@@ -17,11 +17,11 @@ const InfoSection = async (props: Props) => {
         src={image}
         alt="world background"
         fill
-        className="object-cover z-0"
+        className="object-cover z-0 pointer-events-none"
         priority
       />
       <Card>
-        <CardContent className="md:pb-18 py-8 flex flex-col gap-y-14">
+        <CardContent className="md:pb-18 py-8 flex flex-col gap-y-14 ">
           <div>
             <h4 className="font-bold text-heading-4 md:text-heading-3 font-heading mb-3">
               Email
