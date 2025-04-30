@@ -7,6 +7,7 @@ import LatestPostSection from "../blog/latest-post-section";
 import PaginationSection from "../blog/pagination-section";
 import PostsWithPagination from "../blog/posts-with-pagination";
 import PostsWrapper from "../blog/posts-wrapper";
+import CommonMotionBox from "@/lib/motion/common-motion";
 
 type Props = {
   category: TBlogCategory;
@@ -43,10 +44,12 @@ const BlogCategoryView = (props: Props) => {
           </div>
 
           {/* Sidebar */}
-          <div className="space-y-8">
-            <CategoriesSection />
-            <LatestPostSection />
-          </div>
+          <CommonMotionBox>
+            <div className="space-y-8">
+              <CategoriesSection />
+              <LatestPostSection />
+            </div>
+          </CommonMotionBox>
         </div>
       </div>
     </>
