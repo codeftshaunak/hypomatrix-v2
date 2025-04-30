@@ -24,7 +24,7 @@ const HeroSection = (props: Props) => {
       <div className="flex items-center flex-wrap text-muted-foreground gap-4">
         <div className="inline-flex items-center gap-x-1">
           <LucideUser2 size={18} />
-          <span>{post?.author?.name || "HypoMatrix"}</span>
+          <span>{post?.author?.name ?? "HypoMatrix"}</span>
         </div>
 
         {post.category?.title && (
