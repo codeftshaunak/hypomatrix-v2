@@ -27,7 +27,7 @@ async function TestimonialsSection() {
             <CarouselContent className="md:mb-16 mb-10">
               {clientRes.data?.map((review) => (
                 <CarouselItem key={review.id}>
-                  <div className="relative overflow-hidden flex flex-col lg:flex-row lg:items-center lg:justify-center gap-12 md:gap-20">
+                  <div className="relative overflow-hidden flex flex-col lg:flex-row lg:items-center lg:justify-start gap-12 md:gap-20">
                     <Image
                       src={review.avatar.url}
                       alt="Image not found"
