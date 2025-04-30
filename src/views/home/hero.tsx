@@ -34,18 +34,12 @@ export default function Hero() {
           className="h-auto w-[150px] md:w-[200px] lg:w-[300px] object-cover absolute right-10 -top-16 md:-top-20 animate-spin duration-8000"
         />
         <div>
-          {/* <p className="text-muted-foreground lg:mb-6 xl:mb-8 text-body max-w-[350px] text-start">
-            Achieve unparalleled digital success with {""}
+          <p className="text-muted-foreground lg:mb-6 xl:mb-8 text-body max-w-[350px] text-start">
+            Achieve digital success with HypoMatrix. Our expert team delivers
+            innovative solutions to elevate your brand.{" "}
             <span className="font-semibold text-foreground">
-              HypoMatrix{" "}
-            </span>{" "}
-            Our innovative solutions and expert team are here to elevate your
-            brand and reach new heights.
-          </p> */}
-          <p className="lg:mb-6 xl:mb-2 text-body max-w-[280px] text-start">
-            <span className="font-semibold text-xl">
-              Book a free consultation with our expert !
-            </span>{" "}
+              Book a free consultation with our experts today!
+            </span>
           </p>
         </div>
       </div>
