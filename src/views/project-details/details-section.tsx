@@ -1,10 +1,10 @@
+import { Button } from "@/components/ui/button";
 import { TProject } from "@/types/cms/project";
 import { format } from "date-fns";
+import { LinkIcon } from "lucide-react";
 import Image from "next/image";
-import CarouselSection from "./carousel-section";
 import Link from "next/link";
-import { Link2, Link2Icon, LinkIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import CarouselSection from "./carousel-section";
 
 type Props = {
   project: TProject;
@@ -21,7 +21,7 @@ const DetailsSection = (props: Props) => {
           src={project.thumbnail.url}
           alt={project.title}
           fill
-          className="object-cover"
+          className="object-cover rounded-xl"
         />
       </div>
 

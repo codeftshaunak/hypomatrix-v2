@@ -30,7 +30,7 @@ const VerticalCard = (props: Props) => {
               <span className="p-0.5 bg-muted-foreground rounded-full" />
               <span>{format(data.publishDate, "dd MMM, yyyy")}</span>
             </div>
-            <h3 className="text-heading-4 lg:text-heading-3 font-heading font-bold line-clamp-2">
+            <h3 className="text-heading-4 lg:text-heading-3 font-heading font-bold line-clamp-2 hover:underline decoration-primary">
               {data.title}
             </h3>
           </div>

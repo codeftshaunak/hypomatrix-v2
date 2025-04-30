@@ -5,7 +5,6 @@ import { LucideCalendarDays, LucideUser2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent } from "../../ui/card";
-import img from "@/assets/404.png";
 
 type Props = {
   data: TBlogPost;
@@ -17,12 +16,12 @@ const GridCard = (props: Props) => {
     <Card className="p-0 rounded-none bg-transparent border-none group">
       <Link
         href={paths.blog.details(data.slug)}
-        className="w-full aspect-video relative mb-5"
+        className="w-full aspect-video relative"
       >
         <Image
           src={data.thumbnail.url}
           alt={data.title}
-          className="object-cover"
+          className="object-cover rounded-xl"
           fill
         />
       </Link>
@@ -43,7 +42,7 @@ const GridCard = (props: Props) => {
         <h2 className="text-heading-4 font-heading leading-normal font-bold line-clamp-2 mb-3">
           <Link
             href={paths.blog.details(data.slug)}
-            className="hover:underline"
+            className="hover:underline decoration-primary"
           >
             {data.title}
           </Link>
