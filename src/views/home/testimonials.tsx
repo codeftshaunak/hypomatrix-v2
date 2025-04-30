@@ -31,7 +31,7 @@ async function TestimonialsSection() {
                     <Image
                       src={review.avatar.url}
                       alt="Image not found"
-                      className="aspect-square rounded-2xl max-w-[410px] w-full"
+                      className="aspect-square rounded-2xl max-w-[310px] w-full"
                       height={100}
                       width={100}
                     />
