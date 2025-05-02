@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/carousel";
 import CommonMotionBox from "@/lib/motion/common-motion";
 import { getClients } from "@/services/apis/client";
-import Image from "next/image";
 
 async function TestimonialsSection() {
   const clientRes = await getClients();
@@ -23,20 +22,19 @@ async function TestimonialsSection() {
             className="max-w-[500px] mb-16"
           />
 
-          <Carousel className="w-full" opts={{ loop: true }}>
+          <Carousel
+            className="w-full"
+            opts={{
+              loop: true,
+              skipSnaps: true,
+              active: true,
+              align: "start",
+            }}
+          >
             <CarouselContent className="md:mb-16 mb-10">
               {clientRes.data?.map((review) => (
-                <CarouselItem key={review.id}>
-                  <div className="relative overflow-hidden flex flex-col lg:flex-row lg:items-center lg:justify-start gap-12 md:gap-20">
-                    <Image
-                      src={review.avatar.url}
-                      alt="Image not found"
-                      className="aspect-square rounded-2xl max-w-[310px] w-full"
-                      height={100}
-                      width={100}
-                    />
-                    <ReviewCard data={review} />
-                  </div>
+                <CarouselItem key={review.id} className="md:basis-1/2">
+                  <ReviewCard data={review} className="h-full" />
                 </CarouselItem>
               ))}
             </CarouselContent>

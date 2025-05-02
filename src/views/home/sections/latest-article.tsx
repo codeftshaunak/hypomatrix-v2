@@ -1,12 +1,11 @@
 import BlogPostCard from "@/components/cards/blog-post-card";
 import { Button } from "@/components/ui/button";
-import { MotionBox } from "@/lib/motion/box";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import paths from "@/router/paths";
 import { getFeaturedBlogPosts } from "@/services/apis/blog";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import SectionHeader from "../../components/common/section-header";
-import CommonMotionBox from "@/lib/motion/common-motion";
+import SectionHeader from "../../../components/common/section-header";
 
 export default async function LatestArticles() {
   const articlesRes = await getFeaturedBlogPosts(true);

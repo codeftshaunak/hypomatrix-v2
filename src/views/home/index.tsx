@@ -1,12 +1,12 @@
 import BgGridEffect from "@/components/common/bg-grid-effect";
-import Hero from "./hero";
-import LatestArticles from "./latest-article";
-import ProjectsSection from "./project";
-import Services from "./service";
-import TeamSection from "./team";
-import TestimonialsSection from "./testimonials";
-import TrustedCompanySection from "./trusted-company";
-import ProcessSection from "./work-process";
+import Hero from "./sections/hero";
+import LatestArticles from "./sections/latest-article";
+import ProjectsSection from "./sections/project";
+import Services from "./sections/service";
+import TeamSection from "./sections/team";
+import TestimonialsSection from "./sections/testimonials";
+import TrustedCompanySection from "./sections/trusted-company";
+import ProcessSection from "./sections/work-process";
 
 const HomeView = () => {
   return (
