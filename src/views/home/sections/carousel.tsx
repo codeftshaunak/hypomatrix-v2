@@ -2,7 +2,7 @@
 import { CarouselApi } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 
-import CarouselCard from "@/components/carousel";
+import MemberCard from "@/components/cards/member-card";
 import SectionHeader from "@/components/common/section-header";
 import {
   Carousel,
@@ -52,7 +52,7 @@ const TeamCarousel = (props: Props) => {
         />
 
         <Carousel opts={{ loop: true, align: "center" }} setApi={setApi}>
-          <CarouselContent className="mb-16 min-h-[500px] items-center ml-0">
+          <CarouselContent className="mb-16 items-center ml-0">
             {members.map((member, index) => (
               <CarouselItem
                 onClick={() => {
@@ -60,12 +60,9 @@ const TeamCarousel = (props: Props) => {
                   api?.scrollTo(index);
                 }}
                 key={member.id}
-                className={cn(
-                  index === current ? `z-10 px-4` : `z-0 px-2`,
-                  "sm:basis-1/2 md:basis-1/3 lg:basis-1/4 2xl:basis-1/5"
-                )}
+                className={cn("sm:basis-1/2 md:basis-1/3 lg:basis-1/4")}
               >
-                <CarouselCard data={member} isActive={index === current} />
+                <MemberCard data={member} isActive={index === current} />
               </CarouselItem>
             ))}
           </CarouselContent>
