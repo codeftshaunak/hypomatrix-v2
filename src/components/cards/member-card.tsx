@@ -24,7 +24,7 @@ const MemberCard = (props: Props) => {
         />
 
         {/* Social Links */}
-        <div className="absolute top-3 right-3 group/social focus-within:z-10 flex flex-col gap-2">
+        <div className="absolute top-3 right-3 group/social focus-within:z-10 flex flex-col gap-2 z-50">
           <Button size="icon" variant="secondary" className="relative z-10">
             <Plus />
           </Button>
