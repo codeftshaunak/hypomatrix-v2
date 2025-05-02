@@ -24,7 +24,7 @@ export function Footer(props: Props) {
         initial={{ y: "5vw", opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         <LeftSpiral />
         <RightSpiral />
