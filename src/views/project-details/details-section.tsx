@@ -35,7 +35,7 @@ const DetailsSection = (props: Props) => {
         </div>
 
         {/* Details */}
-        <div className="grid grid-cols-2 gap-y-10 gap-x-16 max-w-[500px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 sm:gap-y-10 gap-x-16 max-w-[500px]">
           <div>
             <span className="text-muted-foreground">Category</span>
             <p className="font-heading text-heading-5 font-bold">
@@ -46,11 +46,9 @@ const DetailsSection = (props: Props) => {
           {project.previewLink && (
             <div className="flex flex-col gap-[3px]">
               <span className="text-muted-foreground">Preview</span>
-              <Button variant="outline" size={"lg"} asChild className="w-fit">
+              <Button variant="outline" asChild>
                 <Link href={project.previewLink} target="_blank">
-                  <span className="font-heading text-[18px] font-bold">
-                    Visit Project
-                  </span>
+                  <span>Visit Project</span>
                   <LinkIcon size={18} />
                 </Link>
               </Button>
