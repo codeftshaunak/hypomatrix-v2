@@ -10,15 +10,15 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { MEETING_MODAL_KEY } from "@/config/keys";
 import paths from "@/router/paths";
+import { getWebsite } from "@/services/apis/website";
 import { TWebsite } from "@/types/cms/website";
 import { LucideMenu } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { NavLink } from "./nav-link";
 import { NavLinkGroup } from "./nav-link-group";
-import { MEETING_MODAL_KEY } from "@/config/keys";
-import Image from "next/image";
-import { getWebsite } from "@/services/apis/website";
 
 type Props = {
   navLinks: TWebsite["navLinks"];
@@ -51,20 +51,22 @@ const MobileLinks = async (props: Props) => {
       >
         <SheetHeader className="mt-8">
           <SheetTitle className="text-heading-4 font-heading font-bold mb-2">
-            <Link
-              href={paths.root}
-              className="h-11 px-5 border border-primary text-card-foreground inline-flex items-center justify-center rounded-full text-heading-5 font-heading font-semibold"
-            >
-              <Image
-                src={logo}
-                alt={title}
-                width={100}
-                height={100}
-                priority
-                className="rounded-full mr-2 w-[30px]"
-              />
-              <SheetClose> {title}</SheetClose>
-            </Link>
+            <SheetClose asChild>
+              <Link
+                href={paths.root}
+                className="h-11 px-5 border border-primary text-card-foreground inline-flex items-center justify-center rounded-full text-heading-5 font-heading font-semibold cursor-pointer"
+              >
+                <Image
+                  src={logo}
+                  alt={title}
+                  width={100}
+                  height={100}
+                  priority
+                  className="rounded-full mr-2 w-[30px]"
+                />
+                {title}
+              </Link>
+            </SheetClose>
           </SheetTitle>
           <SheetDescription className="mb-10">{description}</SheetDescription>
 

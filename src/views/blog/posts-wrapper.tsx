@@ -1,10 +1,9 @@
 import BlogPostCard from "@/components/cards/blog-post-card";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import { TBlogPost } from "@/types/cms/blog";
-import img from "@/assets/404.png";
-import Image from "next/image";
+import { ArrowRightIcon, LucideFile } from "lucide-react";
 import Link from "next/link";
-import CommonMotionBox from "@/lib/motion/common-motion";
-import { ArrowRightIcon } from "lucide-react";
 
 type Props = {
   posts: TBlogPost[];
@@ -16,18 +15,21 @@ const PostsWrapper = (props: Props) => {
   return (
     <div>
       {!posts || posts.length === 0 ? (
-        <div className="flex flex-col items-center justify-center bg-[#18191b] text-white py-28 px-4 space-y-2">
-          <Image src={img} alt="404 Error" className="w-[200px] md:w-auto" />
-          <p className="mt-4 text-lg font-bold font-sans text-heading-4 text-center">
-            The blog you are looking for doesn’t exist
-          </p>
-          <Link href="/blog">
-            <button className="mt-6 px-6 py-3 bg-primary text-black text-heading-6 font-semibold rounded-full transition cursor-pointer flex items-center gap-1">
-              Back To The Blog
-              <ArrowRightIcon size={20} />
-            </button>
-          </Link>
-        </div>
+        <Card className="py-10">
+          <CardContent className="items-center flex flex-col">
+            <LucideFile size={48} className="mb-4" />
+            <h4 className="text-2xl font-bold mb-2">No Posts Yet</h4>
+            <p className="mb-8 text-lg max-w-md text-center text-muted-foreground">
+              There are no posts to display right now. Please check back later
+              for new content.
+            </p>
+            <Button size={"xl"} asChild variant={"outline"}>
+              <Link href="/blog">
+                Back to the blog <ArrowRightIcon />
+              </Link>
+            </Button>
+          </CardContent>
+        </Card>
       ) : (
         <div className="grid @lg/feed:grid-cols-2 gap-x-6 gap-y-12">
           {posts.map((post, index) => (
