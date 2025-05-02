@@ -21,24 +21,22 @@ const CoverCard = (props: ProjectCardProps) => {
         src={data.cover?.url || data.thumbnail.url}
         alt={data.title}
         fill
-        className="rounded-2xl group-hover:scale-110 duration-400 object-cover cursor-pointer"
+        className="rounded-2xl group-hover:scale-110 duration-400 object-cover"
+        loading="lazy"
       />
-      <CardContent className="absolute left-1/2 -translate-x-1/2 flex-col items-center justify-center text-center bg-black/50 backdrop-blur-3xl bottom-5 sm:bottom-0 max-w-[80%] w-full py-5 rounded-2xl sm:opacity-0 group-hover:opacity-100 group-hover:bottom-5 duration-300">
-        <Badge
-          className="text-sm mb-4 px-4 py-1 border-primary"
-          variant={"outline"}
-        >
+      <CardContent className="absolute left-1/2 -translate-x-1/2 flex-col items-center justify-center text-center bg-background/50 backdrop-blur-md bottom-5 sm:bottom-0 max-w-[80%] w-full py-5 rounded-2xl sm:opacity-0 group-hover:opacity-100 group-hover:bottom-5 duration-300">
+        <Badge className="text-xs mb-4 px-4 py-1" variant={"default"}>
           {data.category}
         </Badge>
         <h3 className="text-heading-5 font-bold mb-1">
           <Link
-            className="hover:underline"
+            className="hover:underline decoration-primary"
             href={paths.works.details(data.slug)}
           >
             {data.title}
           </Link>
         </h3>
-        <p className="text-sm text-gray-100 line-clamp-1">{data.description}</p>
+        <p className="text-sm line-clamp-2">{data.description}</p>
       </CardContent>
     </Card>
   );
