@@ -52,7 +52,7 @@ const TeamCarousel = (props: Props) => {
         />
 
         <Carousel opts={{ loop: true, align: "center" }} setApi={setApi}>
-          <CarouselContent className="mb-16 items-center ml-0">
+          <CarouselContent className="mb-16 items-center -ml-4">
             {members.map((member, index) => (
               <CarouselItem
                 onClick={() => {
