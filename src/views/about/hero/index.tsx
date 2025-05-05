@@ -1,4 +1,4 @@
-import img from "@/assets/ceo.jpeg";
+import img from "@/assets/ceo.png";
 import SectionHeader from "@/components/common/section-header";
 import { Button } from "@/components/ui/button";
 import CommonMotionBox from "@/lib/motion/common-motion";
