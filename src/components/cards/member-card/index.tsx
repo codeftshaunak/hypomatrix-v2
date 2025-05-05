@@ -64,7 +64,7 @@ const MemberCard = (props: Props) => {
         <h3 className="">
           <Link
             href={paths.team.details(data.slug)}
-            className="font-bold hover:underline decoration-wavy underline-offset-2 decoration-primary  duration-200 line-clamp-1 md:text-lg"
+            className="font-bold hover:underline decoration-primary  duration-200 line-clamp-1 md:text-lg"
           >
             {data.name}
           </Link>
