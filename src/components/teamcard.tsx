@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import { useState } from "react";
 import type { TMember } from "@/types/cms/team";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 type PropsCard = {
   members: TMember[];
@@ -82,10 +83,11 @@ const CustomCard = ({ data, isActive }: Props) => {
         isActive ? "scale-110 shadow-lg" : "opacity-50 scale-100"
       }`}
     >
-      <div className="w-[300px]">
-        <img
+      <div className="w-[300px] relative">
+        <Image
           src={data.avatar.url}
           alt={data.name}
+          fill
           className="w-[300px] h-[400px] object-cover"
         />
         <div className="p-4 text-center">
