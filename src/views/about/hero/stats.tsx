@@ -11,9 +11,9 @@ const StatsSection = (props: Props) => {
 
   return (
     <div className={cn("flex gap-6 sm:gap-12 items-center", className)}>
-      <StatCard count={"03+"} title={"Projects success rate 100%"} />
+      <StatCard count={"08+"} title={"Trusted clients worldwide"} />
       <Separator orientation="vertical" className="!h-[80px]" />
-      <StatCard count={"20+"} title={"Award for digital innovation"} />
+      <StatCard count={"10+"} title={"Ideas turned into reality"} />
     </div>
   );
 };

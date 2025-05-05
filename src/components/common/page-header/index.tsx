@@ -1,5 +1,5 @@
 import img1 from "@/assets/icons/Join Cercle copy.png";
-import pattan from "@/assets/Pattan.png";
+import pattern from "@/assets/Pattan.png";
 import Image from "next/image";
 import React from "react";
 import Breadcrumb, { BreadcrumbLink } from "./breadcrumb";
@@ -32,7 +32,7 @@ const PageHeader: React.FC<Props> = (props) => {
         <div className="flex flex-col lg:flex-row items-center w-full gap-y-10 gap-x-6">
           <div className="flex items-center gap-x-6">
             <Image
-              src={pattan}
+              src={pattern}
               alt=""
               priority
               className="spin-in animate-spin duration-7000 max-sm:hidden"
