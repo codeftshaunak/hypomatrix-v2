@@ -1,11 +1,11 @@
 import { SocialIconsType } from "@/types/cms/common";
 import { IconType } from "react-icons/lib";
+import { Earth } from "lucide-react";
 import {
   SiFacebook,
   SiGithub,
   SiInstagram,
   SiLinkedin,
-  SiTorbrowser,
   SiX,
   SiYoutube,
 } from "react-icons/si";
@@ -17,7 +17,7 @@ const socialIcons: Record<SocialIconsType, IconType> = {
   github: SiGithub,
   instagram: SiInstagram,
   youtube: SiYoutube,
-  portfolio: SiTorbrowser,
+  portfolio: Earth,
 };
 
 export default socialIcons;
