@@ -16,25 +16,23 @@ const GridCard = (props: Props) => {
     <Card className="p-0 rounded-none bg-transparent border-none group">
       <Link
         href={paths.blog.details(data.slug)}
-        className="w-full aspect-square relative mb-5"
+        className="w-full aspect-video relative"
       >
         <Image
           src={data.thumbnail.url}
           alt={data.title}
-          className="object-cover"
+          className="object-cover rounded-xl"
           fill
         />
       </Link>
       <CardContent className="p-0">
         <div className="flex items-center text-muted-foreground gap-4 mb-3">
-          {data?.author?.name && (
-            <div className="inline-flex items-center gap-x-1.5">
-              <LucideUser2 size={18} />
-              <span>{data.author?.name}</span>
-            </div>
-          )}
+          <div className="inline-flex items-center gap-x-1">
+            <LucideUser2 size={18} />
+            <span>{data.author?.name ?? "HypoMatrix"}</span>
+          </div>
 
-          <div className="inline-flex items-center gap-x-1.5">
+          <div className="inline-flex items-center gap-x-1">
             <LucideCalendarDays size={18} />
             <span>{format(data.publishDate, "dd MMM, yyyy")}</span>
           </div>
@@ -42,7 +40,7 @@ const GridCard = (props: Props) => {
         <h2 className="text-heading-4 font-heading leading-normal font-bold line-clamp-2 mb-3">
           <Link
             href={paths.blog.details(data.slug)}
-            className="hover:underline"
+            className="hover:underline decoration-primary"
           >
             {data.title}
           </Link>

@@ -3,7 +3,6 @@ import paths from "@/router/paths";
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectCardProps } from ".";
-import { Badge } from "../../ui/badge";
 import { Card, CardContent } from "../../ui/card";
 
 const DefaultCard = (props: ProjectCardProps) => {
@@ -32,7 +31,7 @@ const DefaultCard = (props: ProjectCardProps) => {
         </h4>
         <h3 className="text-heading-4 font-bold mb-1">
           <Link
-            className="hover:underline"
+            className="hover:underline decoration-primary"
             href={paths.works.details(data.slug)}
           >
             {data.title}

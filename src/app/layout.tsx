@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { getWebsite } from "@/services/apis/website";
 import "@/styles/index.css";
 import { generatePageMetadata } from "@/utils/page-metadata";
+import { GoogleTagManager } from "@next/third-parties/google";
 import { Metadata } from "next";
 import { ReactNode } from "react";
 import { bodyFont, headingFont } from "./fonts";
@@ -23,10 +24,10 @@ const RootLayout = async (props: Props) => {
 
   return (
     <html lang="en">
+      <GoogleTagManager gtmId={process.env.GA_GTM_ID} />
       <body
         className={cn(headingFont.variable, bodyFont.variable, "antialiased")}
       >
-        <link rel="icon" href="/favicon.png" type="image/png" />
         <Providers>
           <MainLayout website={websiteResponse.data}>{children}</MainLayout>
         </Providers>

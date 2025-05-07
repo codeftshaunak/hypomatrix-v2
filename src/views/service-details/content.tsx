@@ -10,9 +10,10 @@ type Props = {
 
 const ContentSection = (props: Props) => {
   const { service } = props;
+
   return (
-    <section className="md:py-[100px] lg:py-[130px] py-[50px] relative overflow-hidden">
-      <div className="absolute left-0 md:-bottom-[230px] lg:-bottom-[300px] w-full h-full md:bg-card -z-[1] " />
+    <section className="md:py-[100px] lg:py-[130px] py-[50px] relative overflow-hidden px-2 md:px:0">
+      <div className="absolute left-0 md:-bottom-[230px] lg:-bottom-[350px] w-full h-full md:bg-card -z-[1] " />
       <div className="container">
         <div className="relative w-full md:aspect-[2.58]">
           <Image
@@ -32,7 +33,9 @@ const ContentSection = (props: Props) => {
 
             <div className="flex gap-10 mt-12 items-center flex-wrap">
               <StatCard
-                count={`${service.completeProjects}+`}
+                count={`${service.completeProjects < 10 ? "0" : ""}${
+                  service.completeProjects
+                }+`}
                 title={"Projects Completed"}
               />
               <Separator orientation="vertical" className="!h-[80px]" />

@@ -22,12 +22,10 @@ const HeroSection = (props: Props) => {
       </div>
 
       <div className="flex items-center flex-wrap text-muted-foreground gap-4">
-        {post?.author?.name && (
-          <div className="inline-flex items-center gap-x-1.5">
-            <LucideUser2 size={18} />
-            <span>{post.author?.name}</span>
-          </div>
-        )}
+        <div className="inline-flex items-center gap-x-1">
+          <LucideUser2 size={18} />
+          <span>{post?.author?.name ?? "HypoMatrix"}</span>
+        </div>
 
         {post.category?.title && (
           <div className="inline-flex items-center gap-x-1.5">
@@ -38,7 +36,7 @@ const HeroSection = (props: Props) => {
 
         <div className="flex-1"></div>
 
-        <div className="inline-flex items-center gap-x-1.5">
+        <div className="inline-flex items-center gap-x-1">
           <LucideCalendarDays size={18} />
           <span>{format(post.publishDate, "dd MMM, yyyy")}</span>
         </div>

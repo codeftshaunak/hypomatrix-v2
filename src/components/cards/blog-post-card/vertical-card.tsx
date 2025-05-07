@@ -15,7 +15,7 @@ const VerticalCard = (props: Props) => {
   return (
     <Card className="p-0 rounded-none bg-transparent border-none group">
       <Link href={paths.blog.details(data.slug)}>
-        <div className="w-full aspect-[4/3] relative mb-5">
+        <div className="w-full aspect-video relative mb-5">
           <Image
             src={data.thumbnail.url}
             alt={data.title}
@@ -30,7 +30,7 @@ const VerticalCard = (props: Props) => {
               <span className="p-0.5 bg-muted-foreground rounded-full" />
               <span>{format(data.publishDate, "dd MMM, yyyy")}</span>
             </div>
-            <h3 className="text-heading-4 lg:text-heading-3 font-heading font-bold line-clamp-2">
+            <h3 className="text-heading-4 lg:text-heading-3 font-heading font-bold line-clamp-2 hover:underline decoration-primary">
               {data.title}
             </h3>
           </div>

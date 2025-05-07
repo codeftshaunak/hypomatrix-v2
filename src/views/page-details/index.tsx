@@ -17,7 +17,7 @@ const PageDetailsView = (props: Props) => {
         description={page.description}
       />
       {page.content && (
-        <div className="container py-[130px]">
+        <div className="container py-[50px] md:py-[130px] px-6 md:px-0">
           <div
             className="prose prose-invert max-w-4xl break-words"
             dangerouslySetInnerHTML={{ __html: page.content.html }}

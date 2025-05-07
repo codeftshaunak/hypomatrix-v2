@@ -24,7 +24,7 @@ const TeamDetailsView = (props: Props) => {
           { title: "Details", href: paths.team.details(member.slug) },
         ]}
       />
-      <div className="flex flex-col gap-y-[80px] md:gap-y-[180px]">
+      <div className="flex flex-col gap-y-[80px] md:gap-y-[180px] px-2 md:px:0">
         <UserProfile member={member} />
         {/* <WhyChooseUs /> */}
         <JoinTeamSection />

@@ -1,10 +1,10 @@
+import { Button } from "@/components/ui/button";
 import { TProject } from "@/types/cms/project";
 import { format } from "date-fns";
+import { LinkIcon } from "lucide-react";
 import Image from "next/image";
-import CarouselSection from "./carousel-section";
 import Link from "next/link";
-import { Link2, Link2Icon, LinkIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import CarouselSection from "./carousel-section";
 
 type Props = {
   project: TProject;
@@ -14,14 +14,14 @@ const DetailsSection = (props: Props) => {
   const { project } = props;
 
   return (
-    <section className="md:py-[130px] py-[50px] container">
+    <section className="md:py-[130px] py-[50px] container px-4 md:px:0">
       {/* Banner Image */}
       <div className="relative w-full aspect-video mb-16">
         <Image
           src={project.thumbnail.url}
           alt={project.title}
           fill
-          className="object-cover"
+          className="object-cover rounded-xl"
         />
       </div>
 
@@ -35,7 +35,7 @@ const DetailsSection = (props: Props) => {
         </div>
 
         {/* Details */}
-        <div className="grid grid-cols-2 gap-y-10 gap-x-16 max-w-[500px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 sm:gap-y-10 gap-x-16 max-w-[500px]">
           <div>
             <span className="text-muted-foreground">Category</span>
             <p className="font-heading text-heading-5 font-bold">
@@ -46,11 +46,9 @@ const DetailsSection = (props: Props) => {
           {project.previewLink && (
             <div className="flex flex-col gap-[3px]">
               <span className="text-muted-foreground">Preview</span>
-              <Button variant="outline" size={"lg"} asChild className="w-fit">
+              <Button variant="outline" asChild>
                 <Link href={project.previewLink} target="_blank">
-                  <span className="font-heading text-[18px] font-bold">
-                    Visit Project
-                  </span>
+                  <span>Visit Project</span>
                   <LinkIcon size={18} />
                 </Link>
               </Button>
@@ -72,7 +70,7 @@ const DetailsSection = (props: Props) => {
       </div>
 
       <div
-        className="prose prose-invert text-muted-foreground w-full max-w-full mb-16"
+        className="prose prose-invert text-muted-foreground w-full max-w-full"
         dangerouslySetInnerHTML={{ __html: project.content.html }}
       />
 

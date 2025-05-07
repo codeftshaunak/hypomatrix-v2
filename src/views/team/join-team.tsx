@@ -4,6 +4,7 @@ import Image from "next/image";
 import img1 from "@/assets/telented-team/team.jpg";
 import img2 from "@/assets/telented-team/team_02.jpg";
 import img3 from "@/assets/telented-team/Tonmoy-Deb.jpg";
+import Link from "next/link";
 
 const JoinTeamSection: React.FC = () => {
   return (
@@ -17,14 +18,15 @@ const JoinTeamSection: React.FC = () => {
             <span className="lg:ml-28 xl:ml-36">Talented </span>
             <span className="text-left"> Team</span>
           </h2>
-          <Image
-            src={img}
-            alt="image not found"
-            width={80}
-            className="spin-in animate-spin duration-7000 absolute top-1/2 left-0 -translate-y-1/2 md:w-[100px] xl:w-[130px] hidden lg:inline-block"
-          />
+          <Link href={"/contact"}>
+            <Image
+              src={img}
+              alt="image not found"
+              width={80}
+              className="spin-in animate-spin duration-7000 absolute top-1/2 left-0 -translate-y-1/2 md:w-[100px] xl:w-[130px] hidden lg:inline-block"
+            />
+          </Link>
         </div>
-
         <div className="flex items-center gap-8 relative justify-center">
           <Image
             src={img1}

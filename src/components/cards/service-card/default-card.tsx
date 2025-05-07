@@ -19,10 +19,10 @@ function DefaultCard(props: ServiceCardProps) {
       <p className="text-muted-foreground grow w-full">{data.description}</p>
       <Link
         href={paths.services.details(data.slug)}
-        className="mt-4 font-semibold flex items-center group hover:text-primary "
+        className="mt-4 font-semibold flex items-center group"
       >
         Learn More
-        <span className="ml-2 w-6 h-px bg-foreground group-hover:w-16 transition-all"></span>
+        <span className="ml-2 w-6 h-px bg-foreground group-hover:w-16 group-hover:bg-primary transition-all"></span>
       </Link>
     </Card>
   );

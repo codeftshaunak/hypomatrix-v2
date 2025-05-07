@@ -1,4 +1,4 @@
-import img from "@/assets/sagar.jpg";
+import img from "@/assets/ceo.png";
 import SectionHeader from "@/components/common/section-header";
 import CommonMotionBox from "@/lib/motion/common-motion";
 import Image from "next/image";
@@ -9,7 +9,7 @@ const WhyChooseUs = () => {
   const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
   return (
     <CommonMotionBox>
-      <section className="container md:py-[130px] py-[50px] grid grid-cols-1 lg:grid-cols-3 gap-y-12 max-xl:gap-x-32">
+      <section className="container md:py-[130px] py-[50px] grid grid-cols-1 lg:grid-cols-3 gap-y-12 max-xl:gap-x-32 px-4 md:px:0">
         <div className="col-span-1 lg:col-span-2">
           <SectionHeader
             subtitle={"Why Choose Us"}

@@ -1,4 +1,4 @@
-import img from "@/assets/sagar.jpg";
+import img from "@/assets/ceo.png";
 import SectionHeader from "@/components/common/section-header";
 import { Button } from "@/components/ui/button";
 import CommonMotionBox from "@/lib/motion/common-motion";
@@ -46,8 +46,10 @@ const Hero = () => {
               fill
             />
             <div className="hidden sm:block absolute top-5 left-5 lg:top-1/2 lg:-translate-y-1/2 lg:-translate-x-1/2 bg-primary text-primary-foreground px-4 py-6 rounded-lg">
-              <h3 className="text-4xl font-semibold text-center">240+</h3>
-              <p className="text-sm text-center">Years on the market</p>
+              <h3 className="text-4xl font-semibold text-center">03+</h3>
+              <p className="text-sm font-semibold text-center">
+                Years on the market
+              </p>
             </div>
             <Link
               href={"https://youtu.be/j1WRT7gBeCk?si=mHOP4upOx4ZHwh-_"}

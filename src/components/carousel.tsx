@@ -19,7 +19,7 @@ const CarouselCard = (props: Props) => {
     <article
       className={cn(
         `group cursor-pointer relative duration-300`,
-        isActive ? "sm:scale-125" : "opacity-30"
+        isActive ? "sm:scale-110" : "opacity-50 sm:scale-100"
       )}
     >
       <div className="aspect-[3/4] rounded-lg overflow-hidden relative mb-4 ">
@@ -54,8 +54,8 @@ const CarouselCard = (props: Props) => {
       <div
         className={`absolute left-1/2 -translate-x-1/2 flex-col items-center justify-center text-center bg-black/50  backdrop-blur-xl bottom-5 sm:bottom-5  w-full py-4 rounded-2xl hidden ${
           isActive
-            ? "opacity-100 inline-block bg-black/50 backdrop-blur-xl max-w-[70%] duration-550"
-            : "group-hover:opacity-100 group-hover:inline-block max-w-[80%]"
+            ? "opacity-100 inline-block bg-black/50 backdrop-blur-xl max-w-[80%] py-6 duration-550"
+            : "group-hover:opacity-100 group-hover:inline-block max-w-[80%] py-5"
         } duration-300 px-[10px]`}
       >
         <h3 className="font-bold">
@@ -66,7 +66,9 @@ const CarouselCard = (props: Props) => {
             {data.name}
           </Link>
         </h3>
-        <p className={`text-sm text-muted-foreground line-clamp-1`}>
+        <p
+          className={`text-xs mt-[1px] font-bold text-muted-foreground line-clamp-1`}
+        >
           {data.role}
         </p>
       </div>
