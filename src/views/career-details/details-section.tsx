@@ -13,23 +13,13 @@ const DetailsSection = (props: Props) => {
 
   return (
     <section className="md:py-[130px] py-[50px] container px-4 md:px:0">
-      {/* Banner Image */}
-      {/* <div className="relative w-full aspect-video mb-16">
-        <Image
-          src={career.thumbnail.url}
-          alt={career.position}
-          fill
-          className="object-cover rounded-xl"
-        />
-      </div> */}
-
       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-10 mb-16">
         {/* Title and Description */}
         <div className="max-w-[500px] xl:max-w-[700px]">
           <h2 className="text-heading-3 md:text-heading-2 font-heading font-bold mb-5">
             {career.position}
           </h2>
-          <p className="text-muted-foreground">{career.position}</p>
+          <p className="text-muted-foreground">{career.description}</p>
         </div>
 
         {/* Details */}
@@ -42,10 +32,10 @@ const DetailsSection = (props: Props) => {
           </div>
 
           <div className="flex flex-col gap-[3px]">
-            <span className="text-muted-foreground">Preview</span>
+            <span className="text-muted-foreground">Application</span>
             <Button variant="outline" asChild>
               <Link href={career.applyUrl} target="_blank">
-                <span>Visit Project</span>
+                <span>Apply Now</span>
                 <LinkIcon size={18} />
               </Link>
             </Button>
@@ -59,6 +49,10 @@ const DetailsSection = (props: Props) => {
         </div>
       </div>
 
+      {/* <div
+        className="prose prose-invert text-muted-foreground w-full max-w-full"
+        dangerouslySetInnerHTML={{ __html: career.content.html }}
+      /> */}
       <div
         className="prose prose-invert text-muted-foreground w-full max-w-full"
         dangerouslySetInnerHTML={{ __html: career.content.html }}
