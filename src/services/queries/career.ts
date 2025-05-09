@@ -1,4 +1,4 @@
-import { metaTagsQuery } from "./common";
+import { assetImageQuery, metaTagsQuery } from "./common";
 
 const commonQuery = `
     applicationEndDate
@@ -6,6 +6,8 @@ const commonQuery = `
     contractType
     slug
     workType
+    title
+    thumbnail ${assetImageQuery}
     position
     description
     id

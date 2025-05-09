@@ -1,4 +1,4 @@
-import { TMetaTag } from "./common";
+import { TAsset, TMetaTag } from "./common";
 
 export type TCareer = {
   id: string;
@@ -6,6 +6,8 @@ export type TCareer = {
   applicationEndDate: string;
   sector: string;
   description: string;
+  title: string;
+  thumbnail: TAsset;
   content: {
     html: string;
   };
