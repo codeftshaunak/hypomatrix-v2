@@ -1,15 +1,12 @@
 import paths from "@/router/paths";
 import { getPage } from "@/services/apis/page";
 import { generatePageMetadata } from "@/utils/page-metadata";
-import AboutView from "@/views/about";
+import CareersView from "@/views/career";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-type Props = {};
-
-const AboutPage = async (props: Props) => {
-  const pageRes = await getPage("about");
-  console.log(pageRes);
+const CareersPage = async () => {
+  const pageRes = await getPage("careers");
 
   if (!pageRes.data) {
     notFound();
@@ -17,23 +14,23 @@ const AboutPage = async (props: Props) => {
 
   return (
     <>
-      <AboutView page={pageRes.data} />
+      <CareersView page={pageRes.data} />
     </>
   );
 };
 
-export default AboutPage;
+export default CareersPage;
 
 // ----------------------------------------------------------------------
 
 export const generateMetadata = async (): Promise<Metadata> => {
-  const { data } = await getPage("about");
+  const { data } = await getPage("careers");
 
   if (!data) {
     return {};
   }
 
   return {
-    ...generatePageMetadata(data?.metaTags, paths.about),
+    ...generatePageMetadata(data?.metaTags, paths.careers.root),
   };
 };
