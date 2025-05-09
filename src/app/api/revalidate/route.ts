@@ -1,5 +1,5 @@
 import { blogServiceTags } from "@/services/apis/blog";
-import { careerCareerTag } from "@/services/apis/career";
+import { careerServiceTag } from "@/services/apis/career";
 import { clientServiceTags } from "@/services/apis/client";
 import { faqServiceTags } from "@/services/apis/faq";
 import { memberServiceTags } from "@/services/apis/member";
@@ -99,8 +99,8 @@ export async function POST(req: NextRequest) {
       }
       case CmsContentType.Career: {
         const data = body.data as TCareer;
-        revalidateTag(careerCareerTag.careers);
-        revalidateTag(careerCareerTag.career(data.slug));
+        revalidateTag(careerServiceTag.careers);
+        revalidateTag(careerServiceTag.career(data.slug));
         break;
       }
       case CmsContentType.Website: {

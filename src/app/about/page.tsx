@@ -9,7 +9,6 @@ type Props = {};
 
 const AboutPage = async (props: Props) => {
   const pageRes = await getPage("about");
-  console.log(pageRes);
 
   if (!pageRes.data) {
     notFound();
