@@ -5,6 +5,7 @@ export type TCareer = {
   slug: string;
   applicationEndDate: string;
   sector: string;
+  description: string;
   content: {
     html: string;
   };

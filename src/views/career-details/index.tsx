@@ -14,7 +14,7 @@ const CareerDetailsView = (props: Props) => {
     <div>
       <PageHeader
         title={career.position}
-        description={career.position}
+        description={career.description}
         links={[
           { title: "Careers", href: paths.careers.root },
           { title: "Details", href: paths.careers.details(career.slug) },

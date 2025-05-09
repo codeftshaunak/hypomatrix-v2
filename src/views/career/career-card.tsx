@@ -11,12 +11,12 @@ const CareerCard = async (props: Props) => {
   const careerRes = await getCareers();
 
   return (
-    <div className="py-10 px-10 flex flex-wrap justify-between gap-4">
+    <div className="py-[50px] md:py-[100px] grid lg:grid-cols-2 xl:grid-cols-3 gap-4 container">
       {careerRes?.data?.map((career) => (
         <BackgroundGradient
           key={career.id}
           className="rounded-[22px] p-4 sm:p-10 bg-zinc-900"
-          containerClassName="w-lg"
+          containerClassName="w-full"
         >
           <div className="mb-4">
             <h3 className="text-2xl font-bold">{career.position}</h3>

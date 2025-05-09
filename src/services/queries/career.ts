@@ -7,6 +7,7 @@ const commonQuery = `
     slug
     workType
     position
+    description
     id
     sector
     featured
