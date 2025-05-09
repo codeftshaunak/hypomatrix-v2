@@ -33,23 +33,14 @@ const DetailsSection = (props: Props) => {
           <div className="max-w-[600px] xl:max-w-[700px]">
             <p className="text-muted-foreground">{career.description}</p>
           </div>
-          <div className="flex flex-col lg:flex-row lg:items-center gap-10 mb-16 mt-20">
+          <div className="mb-16 mt-10">
             {/* Details */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 sm:gap-y-4 gap-x-16 max-w-[600px] ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-5 sm:gap-y-4 gap-x-16">
               <div>
                 <span className="text-muted-foreground">Category</span>
                 <p className="font-heading text-heading-5 font-bold">
                   {career.sector}
                 </p>
-              </div>
-              <div className="flex flex-col gap-[3px]">
-                <span className="text-muted-foreground">Apply Now</span>
-                <Button variant="outline" asChild>
-                  <Link href={career.applyUrl} target="_blank">
-                    <span>Click Here</span>
-                    <LinkIcon size={18} />
-                  </Link>
-                </Button>
               </div>
               <div>
                 <span className="text-muted-foreground">Apply Before</span>
@@ -58,6 +49,17 @@ const DetailsSection = (props: Props) => {
                 </p>
               </div>
             </div>
+            <Button
+              variant="default"
+              asChild
+              size={"xl"}
+              className="mt-12 max-w-[300px] w-full"
+            >
+              <Link href={career.applyUrl} target="_blank">
+                <span>Apply Now</span>
+                <LinkIcon />
+              </Link>
+            </Button>
           </div>
         </div>
       </div>

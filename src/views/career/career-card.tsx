@@ -1,9 +1,9 @@
 import React from "react";
-import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { getCareers } from "@/services/apis/career";
 import paths from "@/router/paths";
 import FeaturedButton from "@/components/buttons/FeaturedButton";
 import NonFeaturedButton from "@/components/buttons/NonFeaturedButton";
+import { Card, CardContent } from "@/components/ui/card";
 
 type Props = {};
 
@@ -11,40 +11,30 @@ const CareerCard = async (props: Props) => {
   const careerRes = await getCareers();
 
   return (
-    <div className="py-[50px] md:py-[100px] grid lg:grid-cols-2 xl:grid-cols-3 gap-4 container">
+    <div className="py-[50px] md:py-[100px] grid lg:grid-cols-2 xl:grid-cols-3 gap-6 container">
       {careerRes?.data?.map((career) => (
-        <BackgroundGradient
-          key={career.id}
-          className="rounded-[22px] p-4 sm:p-10 bg-zinc-900"
-          containerClassName="w-full"
-        >
-          <div className="mb-4">
+        <Card key={career.id} className="rounded-[22px] bg-card">
+          <CardContent>
             <h3 className="text-2xl font-bold">{career.position}</h3>
-            <div className="flex gap-3">
-              <p className="text-gray-300 capitalize">{career.sector}</p>
-              <span>|</span>
-              <p className="text-gray-300">{career.contractType}</p>
-              <span>&</span>
-              <p className="text-gray-300">{career.workType}</p>
-            </div>
+            <p className="text-muted-foreground mt-3 mb-10">
+              <span className="text-primary">{career.sector}</span>
+              <span> | </span>
+              {career.contractType}
+              <span> & </span>
+              {career.workType}
+            </p>
 
             {career.featured === true ? (
-              <FeaturedButton
-                href={paths.careers.details(career.slug)}
-                className="flex justify-end mt-6"
-              >
+              <FeaturedButton href={paths.careers.details(career.slug)}>
                 Learn More
               </FeaturedButton>
             ) : (
-              <NonFeaturedButton
-                href={paths.careers.details(career.slug)}
-                className="flex justify-end mt-[27px]"
-              >
+              <NonFeaturedButton href={paths.careers.details(career.slug)}>
                 Learn More
               </NonFeaturedButton>
             )}
-          </div>
-        </BackgroundGradient>
+          </CardContent>
+        </Card>
       ))}
     </div>
   );
