@@ -1,13 +1,13 @@
 import PageHeader from "@/components/common/page-header";
+import CommonMotionBox from "@/lib/motion/common-motion";
 import paths from "@/router/paths";
 import { TBlogCategory, TBlogPost } from "@/types/cms/blog";
 import { Suspense } from "react";
-import CategoriesSection from "../blog/categories-section";
-import LatestPostSection from "../blog/latest-post-section";
-import PaginationSection from "../blog/pagination-section";
-import PostsWithPagination from "../blog/posts-with-pagination";
-import PostsWrapper from "../blog/posts-wrapper";
-import CommonMotionBox from "@/lib/motion/common-motion";
+import CategoriesSection from "../home/categories-section";
+import LatestPostSection from "../home/latest-post-section";
+import PaginationSection from "../home/pagination-section";
+import PostsWithPagination from "../home/posts-with-pagination";
+import PostsWrapper from "../home/posts-wrapper";
 
 type Props = {
   category: TBlogCategory;

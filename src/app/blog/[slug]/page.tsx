@@ -1,7 +1,8 @@
 import paths from "@/router/paths";
 import { getBlogPost, getBlogPosts } from "@/services/apis/blog";
 import { generatePageMetadata } from "@/utils/page-metadata";
-import BlogDetailsView from "@/views/blog-details";
+import BlogDetailsView from "@/views/blog/blog-details";
+
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 type Props = {
