@@ -1,7 +1,7 @@
 import paths from "@/router/paths";
 import { getProject, getProjects } from "@/services/apis/project";
 import { generatePageMetadata } from "@/utils/page-metadata";
-import ProjectDetailsView from "@/views/project-details";
+import ProjectDetailsView from "@/views/projects/details";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 

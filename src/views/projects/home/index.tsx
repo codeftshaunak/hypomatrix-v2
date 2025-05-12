@@ -1,7 +1,7 @@
 import PageHeader from "@/components/common/page-header";
 import paths from "@/router/paths";
 import { TPage } from "@/types/cms/page";
-import ProjectsGallery from "./project-gallery";
+import ProjectsGallery from "./gallery";
 
 type Props = {
   page: TPage;
