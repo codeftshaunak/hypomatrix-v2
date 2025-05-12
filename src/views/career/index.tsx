@@ -3,7 +3,7 @@ import paths from "@/router/paths";
 
 import { TPage } from "@/types/cms/page";
 import React from "react";
-import CareerCard from "./career-card";
+import PostsWrapper from "./post-wrapper";
 
 type Props = {
   page: TPage;
@@ -25,7 +25,7 @@ const CareersView = async (props: Props) => {
         description={page.description}
       />
 
-      <CareerCard />
+      <PostsWrapper />
     </div>
   );
 };
