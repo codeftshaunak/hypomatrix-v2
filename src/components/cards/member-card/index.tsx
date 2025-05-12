@@ -35,8 +35,7 @@ const MemberCard = (props: Props) => {
           <Button size="icon" variant="secondary" className="relative z-10">
             <Plus className="group-hover/social:rotate-45 duration-200" />
           </Button>
-
-          {data.socials.map((item, index) => {
+          {data.socials.slice(0, 5).map((item, index) => {
             return (
               <Link href={item.href} target="_blank" passHref key={index}>
                 <Button
