@@ -1,6 +1,6 @@
 "use client";
 
-import img2 from "@/assets/vector2.png";
+import img2 from "@/assets/icons/spiral.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
 

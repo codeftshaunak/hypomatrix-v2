@@ -2,7 +2,7 @@ import paths from "@/router/paths";
 import { getBlogPosts } from "@/services/apis/blog";
 import { getPage } from "@/services/apis/page";
 import { generatePageMetadata } from "@/utils/page-metadata";
-import BlogView from "@/views/blog";
+import BlogView from "@/views/blog/home";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
