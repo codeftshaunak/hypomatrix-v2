@@ -2,7 +2,7 @@ import img from "@/assets/ceo.jpeg";
 import SectionHeader from "@/components/common/section-header";
 import CommonMotionBox from "@/lib/motion/common-motion";
 import Image from "next/image";
-import StatsSection from "../about/hero/stats";
+import StatsSection from "../../about/hero/stats";
 
 const WhyChooseUs = () => {
   const videoId = "dTo6Prv2asc";
