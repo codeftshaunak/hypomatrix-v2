@@ -1,5 +1,5 @@
-import img1 from "@/assets/icons/join-circle.png";
-import pattan from "@/assets/Pattan.png";
+import join_circle from "@/assets/icons/join-circle.png";
+import pattern from "@/assets/icons/pattern.png";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -32,7 +32,7 @@ const PageHeader: React.FC<Props> = (props) => {
         <div className="flex flex-col lg:flex-row items-center w-full gap-y-10 gap-x-6">
           <div className="flex items-center gap-x-6">
             <Image
-              src={pattan}
+              src={pattern}
               alt=""
               priority
               className="spin-in animate-spin duration-7000 max-sm:hidden"
@@ -53,7 +53,7 @@ const PageHeader: React.FC<Props> = (props) => {
         <div className="absolute right-4 top-0 -translate-y-full md:-translate-y-1/2 md:right-20">
           <Link href={"/contact"}>
             <Image
-              src={img1}
+              src={join_circle}
               alt="Join Our Team"
               priority
               width={100}

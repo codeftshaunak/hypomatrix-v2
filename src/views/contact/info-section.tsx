@@ -1,9 +1,9 @@
+import image from "@/assets/bg/world.png";
 import SocialIcon from "@/components/common/social-icon";
 import { Card, CardContent } from "@/components/ui/card";
 import { getWebsite } from "@/services/apis/website";
 import Image from "next/image";
 import Link from "next/link";
-import image from "@/assets/world.png";
 
 type Props = {};
 
