@@ -1,9 +1,9 @@
-import img from "@/assets/icons/Join Cercle copy.png";
+import img from "@/assets/icons/join-circle.png";
+import img1 from "@/assets/talented-team/team_01.jpg";
+import img2 from "@/assets/talented-team/team_02.jpg";
+import img3 from "@/assets/talented-team/team_03.jpg";
 import CommonMotionBox from "@/lib/motion/common-motion";
 import Image from "next/image";
-import img1 from "@/assets/telented-team/team.jpg";
-import img2 from "@/assets/telented-team/team_02.jpg";
-import img3 from "@/assets/telented-team/Tonmoy-Deb.jpg";
 
 const JoinTeamSection: React.FC = () => {
   return (

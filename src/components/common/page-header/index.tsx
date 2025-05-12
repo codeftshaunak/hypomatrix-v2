@@ -1,9 +1,9 @@
-import img1 from "@/assets/icons/Join Cercle copy.png";
+import img1 from "@/assets/icons/join-circle.png";
 import pattan from "@/assets/Pattan.png";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import Breadcrumb, { BreadcrumbLink } from "./breadcrumb";
-import Link from "next/link";
 
 type Props = {
   title: string;
