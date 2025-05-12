@@ -5,7 +5,8 @@ import {
   getBlogPosts,
 } from "@/services/apis/blog";
 import { generatePageMetadata } from "@/utils/page-metadata";
-import BlogCategoryView from "@/views/blog-category";
+import BlogCategoryView from "@/views/blog/category";
+
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 type Props = {

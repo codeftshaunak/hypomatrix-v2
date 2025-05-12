@@ -1,6 +1,6 @@
 import { getMember, getMembers } from "@/services/apis/member";
 import { generatePageMetadata } from "@/utils/page-metadata";
-import TeamDetailsView from "@/views/team-details";
+import TeamDetailsView from "@/views/team/details";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
