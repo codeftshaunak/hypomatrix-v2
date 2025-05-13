@@ -4,6 +4,7 @@ import { LinkIcon } from "lucide-react";
 import Link from "next/link";
 import { TCareer } from "@/types/cms/career";
 import Image from "next/image";
+import Form from "./form";
 
 type Props = {
   career: TCareer;
@@ -11,7 +12,6 @@ type Props = {
 
 const DetailsSection = (props: Props) => {
   const { career } = props;
-
   return (
     <section className="md:py-[130px] py-[50px] container px-4 md:px:0">
       {/* Banner Image */}
@@ -55,7 +55,7 @@ const DetailsSection = (props: Props) => {
               size={"xl"}
               className="mt-12 max-w-[300px] w-full"
             >
-              <Link href={career.applyUrl} target="_blank">
+              <Link href="#apply-form" className="scroll-smooth duration-100">
                 <span>Apply Now</span>
                 <LinkIcon />
               </Link>
@@ -68,6 +68,8 @@ const DetailsSection = (props: Props) => {
         className="prose prose-invert text-muted-foreground w-full max-w-full"
         dangerouslySetInnerHTML={{ __html: career.content.html }}
       />
+
+      <Form id="apply-form" applyUrl={career.applyUrl} />
     </section>
   );
 };
