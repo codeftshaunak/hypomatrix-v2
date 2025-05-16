@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { TCareer } from "@/types/cms/career";
 import { format } from "date-fns";
 import { LinkIcon } from "lucide-react";
-import Link from "next/link";
-import { TCareer } from "@/types/cms/career";
 import Image from "next/image";
+import Link from "next/link";
 import Form from "./form";
 
 type Props = {

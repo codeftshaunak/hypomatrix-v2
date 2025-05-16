@@ -1,6 +1,5 @@
 "use client";
 import Script from "next/script";
-import React from "react";
 
 type Props = { id: string; applyUrl: string };
 

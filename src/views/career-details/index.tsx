@@ -1,9 +1,7 @@
 import PageHeader from "@/components/common/page-header";
 import paths from "@/router/paths";
 import { TCareer } from "@/types/cms/career";
-import React from "react";
 import DetailsSection from "./details-section";
-import FormSection from "./form-section";
 
 type Props = {
   career: TCareer;
