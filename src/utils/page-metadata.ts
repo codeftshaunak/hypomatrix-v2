@@ -5,7 +5,7 @@ export const generatePageMetadata = (
   meta?: TMetaTag,
   slug?: string
 ): Metadata => {
-  const url = slug ? `${process.env.NEXT_PUBLIC_APP_URL}/${slug}` : undefined;
+  const url = slug ? `${process.env.NEXT_PUBLIC_APP_URL}${slug}` : undefined;
 
   return {
     ...(meta?.title ? { title: meta?.title } : {}),

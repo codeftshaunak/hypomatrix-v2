@@ -38,7 +38,7 @@ const FaqView = (props: Props) => {
             </div>
             <div className="space-y-8">
               <ContactSection />
-              <BannerSection />
+              {/* <BannerSection /> */}
             </div>
           </div>
         </CommonMotionBox>

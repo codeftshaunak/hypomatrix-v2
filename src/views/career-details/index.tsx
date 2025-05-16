@@ -3,6 +3,7 @@ import paths from "@/router/paths";
 import { TCareer } from "@/types/cms/career";
 import React from "react";
 import DetailsSection from "./details-section";
+import FormSection from "./form-section";
 
 type Props = {
   career: TCareer;
@@ -21,6 +22,7 @@ const CareerDetailsView = (props: Props) => {
         ]}
       />
       <DetailsSection career={career} />
+      {/* <FormSection /> */}
     </div>
   );
 };
